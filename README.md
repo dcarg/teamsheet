@@ -16,6 +16,36 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Environment variables
+Ask another developer for the `.env` file
+
+## Database Setup
+
+The we use Prisma as our ORM.
+
+Create the database
+```bash
+
+```
+
+Generate and apply migrations from the Prisma schema (dev environment only)
+```bash
+npx prisma migrate dev
+```
+
+Seed initial data
+```bash
+yarn seed
+```
+
+You can now view the data by connecting your favourite tool (DBeaver, Valentina Studio, PG Admin etc) to the database. Alternatively Prisma provides a UI to explore your database:
+
+```bash
+npx prisma studio
+```
+
+Then view the database on `localhost:5555`
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

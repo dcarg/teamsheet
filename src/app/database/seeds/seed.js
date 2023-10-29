@@ -1,7 +1,6 @@
-import { createSportsTable, seedSports } from './sports.js'
+import seedSports from './sports.js'
 
 const seed = async () => {
-  await createSportsTable()
   await seedSports()
 }
 
