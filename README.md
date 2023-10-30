@@ -21,12 +21,7 @@ Ask another developer for the `.env` file
 
 ## Database Setup
 
-The we use Prisma as our ORM.
-
-Create the database
-```bash
-
-```
+We use Prisma as our ORM.
 
 Generate and apply migrations from the Prisma schema (dev environment only)
 ```bash

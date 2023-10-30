@@ -4,13 +4,13 @@ const prisma = new PrismaClient()
 
 const sports = [
   {
-    title: 'Rugby Union',
+    title: 'Rugby',
     key: 'rugby',
   },
 ]
 
 const seedSports = async () => {
-  const result = sports.map(async sport => {
+  sports.forEach(async sport => {
     const record = await prisma.sport.upsert({
       where: { key: sport.key },
       create: sport,
