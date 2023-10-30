@@ -25,7 +25,7 @@ We use Prisma as our ORM.
 
 Generate and apply migrations from the Prisma schema (dev environment only)
 ```bash
-npx prisma migrate dev
+yarn prisma migrate dev
 ```
 
 Seed initial data
@@ -36,7 +36,7 @@ yarn seed
 You can now view the data by connecting your favourite tool (DBeaver, Valentina Studio, PG Admin etc) to the database. Alternatively Prisma provides a UI to explore your database:
 
 ```bash
-npx prisma studio
+yarn prisma studio
 ```
 
 Then view the database on `localhost:5555`

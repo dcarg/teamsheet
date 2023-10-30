@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node ./src/app/database/seeds/seed.js"
+    "seed": "node ./src/app/database/seed.js"
   },
   "dependencies": {
     "@prisma/client": "5.5.2",
