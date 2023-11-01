@@ -1,8 +1,10 @@
-const seedTeams = (prisma, sports) => {
+import type { PrismaClient, Sport } from '@prisma/client'
+
+const seedTeams = (prisma: PrismaClient, sports: Sport[]) => {
   const teams = [
     {
       key: 'australia',
-      sportId: sports.find(sport => sport.key === 'rugby').id,
+      sportId: sports.find(sport => sport.key === 'rugby')!.id,
       title: 'Wallabies',
     },
   ]

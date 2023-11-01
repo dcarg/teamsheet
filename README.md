@@ -23,14 +23,14 @@ Ask another developer for the `.env` file
 
 We use Prisma as our ORM.
 
-Generate and apply migrations from the Prisma schema (dev environment only)
+Generate and apply migrations from the Prisma schema
 ```bash
-yarn prisma migrate dev
+yarn prisma db push
 ```
 
 Seed initial data
 ```bash
-yarn seed
+yarn prisma db seed
 ```
 
 You can now view the data by connecting your favourite tool (DBeaver, Valentina Studio, PG Admin etc) to the database. Alternatively Prisma provides a UI to explore your database:

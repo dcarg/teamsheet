@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 
-import seedSports from './seeds/sports.js'
-import seedTeams from './seeds/teams.js'
+import seedSports from './seeds/sports'
+import seedTeams from './seeds/teams'
 
 const prisma = new PrismaClient()
 

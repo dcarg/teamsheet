@@ -1,4 +1,6 @@
-const seedSports = (prisma) => {
+import type { PrismaClient } from '@prisma/client'
+
+const seedSports = (prisma: PrismaClient) => {
   const sports = [
     {
       key: 'rugby',
