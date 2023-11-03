@@ -6,6 +6,10 @@ const seedSports = (prisma: PrismaClient) => {
       key: 'rugby',
       title: 'Rugby',
     },
+    {
+      key: 'football',
+      title: 'Football',
+    },
   ]
 
   const records = sports.map(async sport => (
