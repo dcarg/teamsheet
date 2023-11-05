@@ -47,6 +47,7 @@ model Player {
   firstname String
   lastname String
 
+  playerPositions PlayerPosition[]
   teamMembers TeamMember[]
 
   @@map("players")
@@ -60,5 +61,27 @@ model TeamMember {
   playerId Int 
   
   @@map("teamMembers")
+}
+
+model Position {
+  id Int @id @default(autoincrement())
+  key String @unique // position name i.e. 'prop'
+  number Int // jersey/field number i.e. for rugby 1-23
+  title String // position name i.e. 'Prop'
+  category String // 'Forward' or 'Back'
+
+  PlayerPositions PlayerPosition[]
+
+  @@map("positions")
+}
+
+model PlayerPosition {
+  id Int @id @default(autoincrement())
+  player Player @relation(fields: [playerId], references: [id])
+  playerId Int
+  position Position @relation(fields: [positionId], references: [id])
+  positionId Int 
+  
+  @@map("playerPositions")
 }
 
