@@ -1,7 +1,7 @@
-import prisma from '@db/prismaSingleton'
+import { getSports } from '@queries/sport'
 
 const TopBar = async () => {
-  const sports = await prisma.sport.findMany()
+  const sports = await getSports()
 
   return (
     <div className="border-b border-slate-500 flex flex-col items-center p-2 m-1 w-full">
