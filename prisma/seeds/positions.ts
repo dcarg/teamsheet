@@ -1,6 +1,6 @@
 import type { PrismaClient, Sport } from '@prisma/client'
 
-const seedTeams = (prisma: PrismaClient, sports: Sport[]) => {
+const seedPositions = (prisma: PrismaClient, sports: Sport[]) => {
   const rugbyId = sports.find(sport => sport.key === 'rugby')!.id
 
   const positions = [
@@ -75,4 +75,4 @@ const seedTeams = (prisma: PrismaClient, sports: Sport[]) => {
   return records
 }
 
-export default seedTeams
+export default seedPositions
