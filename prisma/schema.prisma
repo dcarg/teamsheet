@@ -12,6 +12,7 @@ model Sport {
   title String
   key String @unique
 
+  positions Position[]
   teams Team[]
 
   @@map("sports")
@@ -65,8 +66,10 @@ model TeamMember {
 
 model Position {
   id Int @id @default(autoincrement())
+  sport Sport @relation(fields: [sportId], references: [id])
+  sportId Int
   key String @unique // position name i.e. 'prop'
-  number Int // jersey/field number i.e. for rugby 1-23
+  numbers Int[] // jersey numbers for the position. I.e. 'prop' can be [1,3]
   title String // position name i.e. 'Prop'
   category String // 'Forward' or 'Back'
 
