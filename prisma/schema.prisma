@@ -73,7 +73,7 @@ model Position {
   title String // position name i.e. 'Prop'
   category String // 'Forward' or 'Back'
 
-  PlayerPositions PlayerPosition[]
+  playerPositions PlayerPosition[]
 
   @@map("positions")
 }

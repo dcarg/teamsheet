@@ -20,14 +20,14 @@ const seedPositions = (prisma: PrismaClient, sports: Sport[]) => {
     },
     {
       key: 'lock',
-      numbers: [4,5],
+      numbers: [4, 5],
       title: 'Lock',
       category: 'forward',
       sportId: rugbyId,
     },
     {
       key: 'backrow',
-      numbers: [6,7,8],
+      numbers: [6, 7, 8],
       title: 'Backrow',
       category: 'forward',
       sportId: rugbyId,
@@ -48,14 +48,14 @@ const seedPositions = (prisma: PrismaClient, sports: Sport[]) => {
     },
     {
       key: 'centre',
-      numbers: [12,13],
+      numbers: [12, 13],
       title: 'Center',
       category: 'back',
       sportId: rugbyId,
     },
     {
-      key: 'outside_back',
-      numbers: [11,14,15],
+      key: 'outsideBack',
+      numbers: [11, 14, 15],
       title: 'Outside Back',
       category: 'back',
       sportId: rugbyId,
@@ -65,7 +65,7 @@ const seedPositions = (prisma: PrismaClient, sports: Sport[]) => {
   const records = positions.map(async position => (
     await prisma.position.upsert({
       where: { 
-        key: { key: position.key }
+        key: position.key,
       },
       create: position,
       update: position,
