@@ -1,8 +1,6 @@
-import Label from '@components/Label'
-
 import { getSports } from '@queries/sport'
 
-import SelectSport from './SelectSport'
+import SelectBoxes from './SelectBoxes'
 
 const TopBar = async () => {
   const sports = await getSports()
@@ -10,11 +8,7 @@ const TopBar = async () => {
   return (
     <div className="border-b border-slate-500 flex flex-col items-center p-2 m-1 w-full">
       <div className="flex items-start max-w-screen-lg w-full">
-        <div>
-          <Label text="Sport" />
-
-          <SelectSport sports={sports} />
-        </div>
+        <SelectBoxes sports={sports} />
       </div>
     </div>
   

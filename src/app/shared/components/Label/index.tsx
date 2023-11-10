@@ -1,12 +1,12 @@
 interface LabelProps {
-  text: string
+  children: React.ReactNode
 }
 
 const Label = (props: LabelProps) => {
-  const { text } = props
+  const { children } = props
 
   return (
-    <div className="mb-1 text-slate-500 text-sm tracking-wider">{text}</div>
+    <div className="mb-1 text-slate-500 text-sm tracking-wider">{children}</div>
   )
 }
 
