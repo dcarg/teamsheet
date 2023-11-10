@@ -14,6 +14,7 @@ interface SelectBoxProps {
   callbacks: {
     onChange: (e: ChangeEvent<HTMLSelectElement>) => void,
   }
+  divClasses?: string,
   label: string,
   selectOptions: SelectOption[],
 }
@@ -23,12 +24,13 @@ const SelectBox = (props: SelectBoxProps) => {
     callbacks: {
       onChange,
     },
+    divClasses,
     label,
     selectOptions,
   } = props
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col ${divClasses}`}>
       <Label>{label}</Label>
 
       <select
