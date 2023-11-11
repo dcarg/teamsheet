@@ -5,6 +5,8 @@ import { usePathname, useRouter } from 'next/navigation'
 
 import type { Sport, Team } from '@prisma/client'
 
+import { BASE_API_URL } from '@api/base'
+
 import SelectBox from './SelectBox'
 
 interface SelectSportProps {
@@ -15,17 +17,18 @@ const SelectBoxes = (props: SelectSportProps) => {
   const { sports } = props
 
   const router = useRouter()
-  const [teams, setTeams] = useState<Team[]>([])
 
   const pathname = usePathname()
   const [_, selectedSportKey] = pathname.split('/')
 
+  const [teams, setTeams] = useState<Team[]>([])
+
   useEffect(() => {
     if(selectedSportKey){
       const getTeams = async () => {
-        const response = await fetch('http://localhost:3000/api/teams?sportId=1')
+        const response = await fetch(`${BASE_API_URL}/teams?sportId=1`)
         const teamResponse: Team[] = await response.json()
-  
+
         setTeams(teamResponse)
       }
       getTeams()

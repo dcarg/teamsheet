@@ -6,7 +6,7 @@ type PageProps = {
 
 const Page = (props: PageProps) => {
   const {
-    params:{
+    params: {
       team,
     }
   } = props
@@ -14,8 +14,6 @@ const Page = (props: PageProps) => {
   // const teamsheet = prisma.teamsheet.find({
   //   where: { id }
   // })
-
-  console.log(props, "props")
 
   return (
     <div>Page for {team}</div>
