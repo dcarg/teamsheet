@@ -1,22 +1,42 @@
+import prisma from '@db/prismaSingleton'
+
 type PageProps = {
   params: {
     team: string,
   },
 }
 
-const Page = (props: PageProps) => {
+const Page = async (props: PageProps) => {
   const {
     params: {
-      team,
+      team: teamkey,
     }
   } = props
 
-  // const teamsheet = prisma.teamsheet.find({
-  //   where: { id }
-  // })
+  const players = await prisma.player.findMany({
+    where: {
+      teamMembers: {
+        some: {
+          team: {
+            key: teamkey,
+          },
+        },
+      },
+    },
+    orderBy: { lastname: 'asc'},
+  })
 
   return (
-    <div>Page for {team}</div>
+    <>
+      <div>Page for {teamkey}</div>
+
+      <ul>
+        {players.map(player => (
+          <li key={player.id}>{player.title}</li>
+        ))}
+      </ul>
+    </>
+
   )
 }
 
