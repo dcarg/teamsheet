@@ -23,7 +23,7 @@ const Page = async (props: PageProps) => {
         },
       },
     },
-    orderBy: { lastname: 'asc'},
+    orderBy: { lastname: 'asc' },
   })
 
   return (
