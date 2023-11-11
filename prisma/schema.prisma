@@ -12,6 +12,7 @@ model Sport {
   title String
   key String @unique
 
+  positions Position[]
   teams Team[]
 
   @@map("sports")
@@ -24,6 +25,7 @@ model Team {
   sport Sport @relation(fields: [sportId], references: [id])
   sportId Int
 
+  teamMembers TeamMember[]
   teamSheets TeamSheet[]
 
   @@unique([key, sportId])
@@ -38,3 +40,51 @@ model TeamSheet {
 
   @@map("teamSheets")
 }
+
+model Player {
+  id Int @id @default(autoincrement())
+  key String @unique
+  title String
+  firstname String
+  lastname String
+
+  playerPositions PlayerPosition[]
+  teamMembers TeamMember[]
+
+  @@map("players")
+}
+
+model TeamMember {
+  id Int @id @default(autoincrement())
+  team Team @relation(fields: [teamId], references: [id])
+  teamId Int
+  player Player @relation(fields: [playerId], references: [id])
+  playerId Int 
+  
+  @@map("teamMembers")
+}
+
+model Position {
+  id Int @id @default(autoincrement())
+  sport Sport @relation(fields: [sportId], references: [id])
+  sportId Int
+  key String @unique // position name i.e. 'prop'
+  numbers Int[] // jersey numbers for the position. I.e. 'prop' can be [1,3]
+  title String // position name i.e. 'Prop'
+  category String // 'Forward' or 'Back'
+
+  playerPositions PlayerPosition[]
+
+  @@map("positions")
+}
+
+model PlayerPosition {
+  id Int @id @default(autoincrement())
+  player Player @relation(fields: [playerId], references: [id])
+  playerId Int
+  position Position @relation(fields: [positionId], references: [id])
+  positionId Int 
+  
+  @@map("playerPositions")
+}
+
