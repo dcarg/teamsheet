@@ -1,8 +1,20 @@
-import prisma from "@/db/prismaSingleton"
+import type { NextRequest } from 'next/server'
 
-// https://www.youtube.com/watch?v=vrR4MlB7nBI
-export const GET = async (request: Request) => {
-  // can i get the query params from the request?
-  const teams = await prisma.team.findMany()
-  return Response.json({ teams })
+import prisma from '@db/prismaSingleton'
+
+export const GET = async (request: NextRequest) => {
+  const sportId = request.nextUrl.searchParams.get('sportId')
+
+  const sportIdWhereClause = sportId ? { sportId: Number(sportId) } : {}
+
+  const teams = await prisma.team.findMany({
+    where: {
+      ...sportIdWhereClause
+    },
+    orderBy: {
+      title: 'asc',
+    },
+  })
+
+  return Response.json(teams)
 }

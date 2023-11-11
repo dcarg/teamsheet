@@ -19,7 +19,6 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
       "@api/*": ["./src/app/api/*"],
       "@components/*": ["./src/app/shared/components/*"],
       "@db/*": ["./src/db/*.ts"],
