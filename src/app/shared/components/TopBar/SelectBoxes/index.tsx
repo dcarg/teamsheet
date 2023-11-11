@@ -21,17 +21,15 @@ const SelectBoxes = (props: SelectSportProps) => {
   const pathname = usePathname()
   const [_, selectedSportKey] = pathname.split('/')
 
+  const selectedSportId = sports.find(sport => sport.key === selectedSportKey)?.id
+
   const [teams, setTeams] = useState<Team[]>([])
 
   useEffect(() => {
     if(selectedSportKey){
-      const getTeams = async () => {
-        const response = await fetch(`${BASE_API_URL}/teams?sportId=1`)
-        const teamResponse: Team[] = await response.json()
-
-        setTeams(teamResponse)
-      }
-      getTeams()
+      fetch(`${BASE_API_URL}/teams?sportId=${selectedSportId}`)
+        .then(response => response.json())
+        .then(teamsResponse => setTeams(teamsResponse))
     }
   }, [selectedSportKey])
 
@@ -47,7 +45,7 @@ const SelectBoxes = (props: SelectSportProps) => {
 
       {shouldShowTeamSelect && (
         <SelectBox
-          callbacks={{ onChange: (e) => router.push(`/${e.target.value}`) }}
+          callbacks={{ onChange: (e) => router.push(window.location.pathname + `/${e.target.value}`) }}
           divClasses="ml-3"
           label="Team"
           selectOptions={teams}
