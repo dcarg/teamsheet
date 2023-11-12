@@ -38,10 +38,13 @@ const Bench = (props: BenchProps) => {
 
   const [selectedPosition, setSelectedPosition] = useState<string | null>(null)
 
-  const filteredPlayerList = players.filter(player => {
-    const { playerPositions } = player
-    return playerPositions.some(({ position }) => position.key === selectedPosition)
-  })
+  let filteredPlayerList = players
+  if (selectedPosition === 'hooker' || selectedPosition === 'prop'){
+    filteredPlayerList = players.filter(player => {
+      const { playerPositions } = player
+      return playerPositions.some(({ position }) => position.key === selectedPosition)
+    })
+  }
 
   return (
     <div>
@@ -62,7 +65,6 @@ const Bench = (props: BenchProps) => {
           <li key={player.id}>{player.title}</li>
         ))}
       </ul>
-
     </div>
   )
 }
