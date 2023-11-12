@@ -4,6 +4,17 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
   const sportId = sports.find(sport => sport.key === 'rugby')!.id // rugby
   const teamId = teams.find(team => (team.key === 'australia') && (team.sportId === sportId))!.id // wallabies
 
+  // rugby positon ids for initial seeds
+  const propId = positions.find(p => p.key === 'prop')!.id,
+  const hookerId = positions.find(p => p.key === 'hooker')!.id,
+  const lockId = positions.find(p => p.key === 'lock')!.id,
+  const backRowId = positions.find(p => p.key === 'backrow')!.id,
+  const scrumhalfId = positions.find(p => p.key === 'scrumhalf')!.id,
+  const flyhalfId = positions.find(p => p.key === 'flyhalf')!.id,
+  const centreId = positions.find(p => p.key === 'centre')!.id,
+  const outsideBackId = positions.find(p => p.key === 'outsideBack')!.id,
+
+
   const players = [
     {
       key: 'andrewKellaway',
@@ -17,7 +28,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'outsideBack')!.id,
+          positionId: outsideBackId,
         }
       },
     },
@@ -33,12 +44,12 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'prop')!.id,
+          positionId: propId,
         }
       },
     },
     {
-      key: 'bendDonaldson',
+      key: 'benDonaldson',
       title: 'Ben Donaldson',
       firstname: 'Ben',
       lastname: 'Donaldson',
@@ -49,7 +60,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'flyhalf')!.id,
+          positionId: flyhalfId,
         }
       },
     },
@@ -65,7 +76,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'prop')!.id,
+          positionId: propId,
         }
       },
     },
@@ -81,7 +92,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'flyhalf')!.id,
+          positionId: flyhalfId,
         }
       },
     },
@@ -97,7 +108,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'hooker')!.id,
+          positionId: hookerId,
         }
       },
     },
@@ -113,7 +124,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'backrow')!.id,
+          positionId: backRowId,
         }
       },
     },
@@ -129,7 +140,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'scrumhalf')!.id,
+          positionId: scrumhalfId,
         }
       },
     },
@@ -145,7 +156,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'centre')!.id,
+          positionId: centreId,
         }
       },
     },
@@ -161,7 +172,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'prop')!.id,
+          positionId: propId,
         }
       },
     },
@@ -177,7 +188,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'centre')!.id,
+          positionId: centreId,
         }
       },
     },
@@ -193,7 +204,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'hooker')!.id,
+          positionId: hookerId,
         }
       },
     },
@@ -209,7 +220,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'backrow')!.id,
+          positionId: backRowId,
         }
       },
     },
@@ -225,7 +236,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'centre')!.id,
+          positionId: centreId,
         }
       },
     },
@@ -241,7 +252,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'backrow')!.id,
+          positionId: backRowId,
         }
       },
     },
@@ -257,7 +268,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'outsideBack')!.id,
+          positionId: outsideBackId,
         }
       },
     },
@@ -273,7 +284,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'outsideBack')!.id,
+          positionId: outsideBackId,
         }
       },
     },
@@ -289,7 +300,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'hooker')!.id,
+          positionId: hookerId,
         }
       },
     },
@@ -305,7 +316,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'lock')!.id,
+          positionId: lockId,
         }
       },
     },
@@ -321,7 +332,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'outsideBack')!.id,
+          positionId: outsideBackId,
         }
       },
     },
@@ -337,7 +348,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'scrumhalf')!.id,
+          positionId: scrumhalfId,
         }
       },
     },
@@ -353,7 +364,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'lock')!.id,
+          positionId: lockId,
         }
       },
     },
@@ -369,7 +380,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'prop')!.id,
+          positionId: propId,
         }
       },
     },
@@ -385,7 +396,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'lock')!.id,
+          positionId: lockId,
         }
       },
     },
@@ -401,7 +412,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'backrow')!.id,
+          positionId: backRowId,
         }
       },
     },
@@ -417,7 +428,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'backrow')!.id,
+          positionId: backRowId,
         }
       },
     },
@@ -433,7 +444,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'centre')!.id,
+          positionId: centreId,
         }
       },
     },
@@ -449,7 +460,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'outsideBack')!.id,
+          positionId: outsideBackId,
         }
       },
     },
@@ -465,7 +476,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'prop')!.id,
+          positionId: propId,
         }
       },
     },
@@ -481,7 +492,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'scrumhalf')!.id,
+          positionId: scrumhalfId,
         }
       },
     },
@@ -497,7 +508,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'lock')!.id,
+          positionId: lockId,
         },
       },
     },
@@ -513,7 +524,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'lock')!.id,
+          positionId: lockId,
         },
       },
     },
@@ -529,7 +540,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
             playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'prop')!.id,
+          positionId: propId,
         },
       },
     },
@@ -545,7 +556,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], sports: Sport[
       },
       playerPositions: {
         create: {
-          positionId: positions.find(p => p.key === 'backrow')!.id,
+          positionId: backRowId,
         }
       },
     },
