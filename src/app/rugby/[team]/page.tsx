@@ -1,5 +1,7 @@
 import prisma from '@db/prismaSingleton'
 
+import Bench from '@components/Bench'
+
 type PageProps = {
   params: {
     team: string,
@@ -35,6 +37,8 @@ const Page = async (props: PageProps) => {
           <li key={player.id}>{player.title}</li>
         ))}
       </ul>
+
+      <Bench players={players} />
     </>
 
   )
