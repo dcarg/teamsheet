@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Player } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 
 import Seat from './Seat'
 
@@ -17,20 +17,31 @@ const benchData = [
   { key: 8, position: null },
 ]
 
+type PlayerWithIncludes = Prisma.PlayerGetPayload<
+  {
+    include: {
+      playerPositions: {
+        include: {
+          position: true
+        }
+      }
+    }
+  }
+>
+
 interface BenchProps {
-  players: Player[]
+  players: PlayerWithIncludes[]
 }
 
 const Bench = (props: BenchProps) => {
   const { players } = props
-  // the bench must be passed the list of players and positions
-  // render a list of bench slots (list items)
-  // the bench slot knows the position it must filter by, or any
-  // hardcode the position for now, but this must be passed in for the Bench to be useable for multiple sports
-  // when the bench slot is clicked, it opens a list of players for that position
 
   const [selectedPosition, setSelectedPosition] = useState<string | null>(null)
-  console.log(selectedPosition, 'selectedPosition')
+
+  const filteredPlayerList = players.filter(player => {
+    const { playerPositions } = player
+    return playerPositions.some(({ position }) => position.key === selectedPosition)
+  })
 
   return (
     <div>
@@ -39,15 +50,19 @@ const Bench = (props: BenchProps) => {
       <div>
         {benchData.map(({ key, position }) => (
           <Seat
+            callbacks={{ setSelectedPosition }}
             key={key}
             position={position}
-            // onClick={() => setSelectedPosition(position)}
           />
         ))}
       </div>
 
-      {/* when there is a click which identifies which position to display a list of */}
-      {/* show a  */}
+      <ul>
+        {filteredPlayerList.map(player =>(
+          <li key={player.id}>{player.title}</li>
+        ))}
+      </ul>
+
     </div>
   )
 }

@@ -1,12 +1,27 @@
+import type { Dispatch, SetStateAction } from "react"
+
 interface SeatProps {
+  callbacks: {
+    setSelectedPosition: Dispatch<SetStateAction<string | null>>
+  },
   position: string | null
 }
 
 const Seat = (props: SeatProps) => {
-  const { position } = props
+  const {
+    callbacks: {
+      setSelectedPosition,
+    },
+    position,
+  } = props
 
   return (
-    <div className="border h-10">Blank Seat for {position}</div>
+    <div
+      className="border h-10"
+      onClick={() => setSelectedPosition(position)}
+    >
+      Blank Seat for {position}
+    </div>
   )
 }
 

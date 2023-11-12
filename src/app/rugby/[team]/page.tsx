@@ -25,18 +25,19 @@ const Page = async (props: PageProps) => {
         },
       },
     },
+    include: {
+      playerPositions: {
+        include: {
+          position: true
+        }
+      },
+    },
     orderBy: { lastname: 'asc' },
   })
 
   return (
     <>
       <div>Page for {teamkey}</div>
-
-      <ul>
-        {players.map(player => (
-          <li key={player.id}>{player.title}</li>
-        ))}
-      </ul>
 
       <Bench players={players} />
     </>
