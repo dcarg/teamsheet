@@ -18,7 +18,7 @@ const seed = async () => {
   const positions = await Promise.all(seedPositions(prisma, sports))
   console.log('Seeded positions')
 
-  const players = await Promise.all(seedPlayers(prisma, positions, sports, teams))
+  const players = await Promise.all(seedPlayers(prisma, positions, teams))
   console.log('Seeded players')
 }
 
