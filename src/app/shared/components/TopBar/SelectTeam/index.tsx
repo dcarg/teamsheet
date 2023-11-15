@@ -45,7 +45,7 @@ const SelectTeam = () => {
             {teams.map(team => (
               <Link
                 className="hover:text-cyan-500"
-                href={team.key}
+                href={`${selectedSportKey}/${team.key}`}
                 key={team.id}
               >
                 {team.title}
