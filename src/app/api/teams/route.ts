@@ -3,13 +3,13 @@ import type { NextRequest } from 'next/server'
 import prisma from '@db/prismaSingleton'
 
 export const GET = async (request: NextRequest) => {
-  const sportId = request.nextUrl.searchParams.get('sportId')
+  const sportKey = request.nextUrl.searchParams.get('sportKey')
 
-  const sportIdWhereClause = sportId ? { sportId: Number(sportId) } : {}
+  const sportKeyWhereClause = sportKey ? { sport: { key: sportKey } } : {}
 
   const teams = await prisma.team.findMany({
     where: {
-      ...sportIdWhereClause
+      ...sportKeyWhereClause
     },
     orderBy: {
       title: 'asc',
