@@ -2,9 +2,9 @@ import type { Dispatch, SetStateAction } from "react"
 
 interface SeatProps {
   callbacks: {
-    setSelectedPosition: Dispatch<SetStateAction<string | null>>
+    setSelectedPosition: Dispatch<SetStateAction<string>>
   },
-  position: string | null
+  position: string,
 }
 
 const Seat = (props: SeatProps) => {

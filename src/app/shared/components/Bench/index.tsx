@@ -10,11 +10,11 @@ const benchData = [
   { key: 1, position: 'hooker' },
   { key: 2, position: 'prop' },
   { key: 3, position: 'prop' },
-  { key: 4, position: null },
-  { key: 5, position: null },
-  { key: 6, position: null },
-  { key: 7, position: null },
-  { key: 8, position: null },
+  { key: 4, position: '' },
+  { key: 5, position: '' },
+  { key: 6, position: '' },
+  { key: 7, position: '' },
+  { key: 8, position: '' },
 ]
 
 type PlayerWithIncludes = Prisma.PlayerGetPayload<
@@ -36,7 +36,7 @@ interface BenchProps {
 const Bench = (props: BenchProps) => {
   const { players } = props
 
-  const [selectedPosition, setSelectedPosition] = useState<string | null>(null)
+  const [selectedPosition, setSelectedPosition] = useState('')
 
   let filteredPlayerList = players
   if (selectedPosition === 'hooker' || selectedPosition === 'prop'){
@@ -59,12 +59,6 @@ const Bench = (props: BenchProps) => {
           />
         ))}
       </div>
-
-      <ul>
-        {filteredPlayerList.map(player =>(
-          <li key={player.id}>{player.title}</li>
-        ))}
-      </ul>
     </div>
   )
 }
