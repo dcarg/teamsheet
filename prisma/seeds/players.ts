@@ -25,9 +25,10 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
         }
       },
       playerPositions: {
-        create: {
-          positionId: outsideBackId,
-        }
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
       },
     },
     {
@@ -57,9 +58,10 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
         }
       },
       playerPositions: {
-        create: {
-          positionId: flyhalfId,
-        }
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ]
       },
     },
     {
@@ -153,9 +155,10 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
         }
       },
       playerPositions: {
-        create: {
-          positionId: centreId,
-        }
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ]
       },
     },
     {
@@ -185,9 +188,10 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
         }
       },
       playerPositions: {
-        create: {
-          positionId: centreId,
-        }
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ]
       },
     },
     {
@@ -409,9 +413,10 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
         }
       },
       playerPositions: {
-        create: {
-          positionId: backRowId,
-        }
+        create: [
+          { positionId: lockId },
+          { positionId: backRowId },
+        ]
       },
     },
     {
@@ -505,9 +510,10 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
         }
       },
       playerPositions: {
-        create: {
-          positionId: lockId,
-        },
+        create: [
+          { positionId: lockId },
+          { positionId: backRowId },
+        ]
       },
     },
     {
@@ -564,7 +570,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
     await prisma.player.upsert({
       where: { key: player.key },
       create: player,
-      update: player,
+      update: {},
     })
   ))
 
