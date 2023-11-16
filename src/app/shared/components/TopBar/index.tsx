@@ -7,7 +7,6 @@ const TopBar = async () => {
         <SelectTeam />
       </div>
     </div>
-  
   )
 }
 

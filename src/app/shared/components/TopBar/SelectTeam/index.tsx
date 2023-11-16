@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons' 
@@ -12,7 +13,6 @@ import type { Team } from '@prisma/client'
 import { BASE_API_URL } from '@api/base'
 
 import Label from '@components/Label'
-import { usePathname } from 'next/navigation'
 
 const SelectTeam = () => {
   const pathname = usePathname()
