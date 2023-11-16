@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import type { ChangeEvent } from 'react'
 
 import Link from 'next/link'
 
@@ -17,10 +16,12 @@ import { usePathname } from 'next/navigation'
 
 const SelectTeam = () => {
   const pathname = usePathname()
-  const [_, selectedSportKey] = pathname.split('/')
+  const [_, selectedSportKey, selectedTeamkey] = pathname.split('/')
 
   const [teams, setTeams] = useState<Team[]>([])
   const [isOpen, setIsOpen] = useState(false)
+
+  const selectedTeam = teams.find(team => team.key === selectedTeamkey)
 
   useEffect(() => {
     if(selectedSportKey){
@@ -35,10 +36,12 @@ const SelectTeam = () => {
       <Label>Team</Label>
 
       <div
-        className="border border-slate-500 hover:cursor-pointer relative rounded-md p-2 w-36"
+        className="flex border border-slate-500 hover:cursor-pointer justify-between items-center relative rounded-md p-2 w-36"
         onClick={() => setIsOpen(!isOpen)}
       >
-        Please Select <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} />
+        {selectedTeam?.title || 'Please Select'}
+
+        <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} />
 
         {isOpen && (
           <div className="absolute border border-slate-500 bg-white flex flex-col top-12 left-0 rounded-md p-2 w-36 z-10">
@@ -54,7 +57,6 @@ const SelectTeam = () => {
           </div>
         )}
       </div>
-
     </div>
   )
 }
