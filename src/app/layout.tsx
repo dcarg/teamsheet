@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col items-center`}>
         <TopBar />
 
-        <div className="max-w-screen-lg">
+        <div className="max-w-screen-lg w-full">
           {children}
         </div>
       </body>
