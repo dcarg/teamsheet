@@ -1,5 +1,7 @@
 import prisma from '@db/prismaSingleton'
 
+import Bench from '@components/Bench'
+
 type PageProps = {
   params: {
     team: string,
@@ -23,6 +25,13 @@ const Page = async (props: PageProps) => {
         },
       },
     },
+    include: {
+      playerPositions: {
+        include: {
+          position: true
+        }
+      },
+    },
     orderBy: { lastname: 'asc' },
   })
 
@@ -30,11 +39,7 @@ const Page = async (props: PageProps) => {
     <>
       <div>Page for {teamkey}</div>
 
-      <ul>
-        {players.map(player => (
-          <li key={player.id}>{player.title}</li>
-        ))}
-      </ul>
+      <Bench players={players} />
     </>
 
   )
