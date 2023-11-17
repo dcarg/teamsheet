@@ -68,7 +68,7 @@ const seedPositions = (prisma: PrismaClient, sports: Sport[]) => {
         key: position.key,
       },
       create: position,
-      update: position,
+      update: {},
     })
   ))
 

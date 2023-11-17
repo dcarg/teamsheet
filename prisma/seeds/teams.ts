@@ -5,7 +5,7 @@ const seedTeams = (prisma: PrismaClient, sports: Sport[]) => {
 
   const teams = [
     {
-      key: 'australia',
+      key: 'wallabies',
       sportId: rugbyId,
       title: 'Wallabies',
     },
@@ -13,11 +13,9 @@ const seedTeams = (prisma: PrismaClient, sports: Sport[]) => {
 
   const records = teams.map(async team => (
     await prisma.team.upsert({
-      where: { 
-        key_sportId: { key: team.key, sportId: rugbyId }
-      },
+      where: { key: team.key },
       create: team,
-      update: team,
+      update: {},
     })
   ))
 

@@ -16,7 +16,7 @@ const seedSports = (prisma: PrismaClient) => {
     await prisma.sport.upsert({
       where: { key: sport.key },
       create: sport,
-      update: sport,
+      update: {},
     })
   ))
 
