@@ -29,17 +29,6 @@ const TeamContent = (props: TeamContentProps) => {
   const [selectedPosition, setSelectedPosition] = useState('')
   const [showModal, setShowModal] = useState(false)
 
-  const teamContextValue = {
-    callbacks: {
-      closeModal: () => setShowModal(false),
-      openModal: () => setShowModal(true),
-      setSelectedPosition,
-    },
-    showModal,
-  }
-
-  console.log(selectedPosition, 'selectedPosition')
-
   let filteredPlayerList = players
   if (selectedPosition === 'hooker' || selectedPosition === 'prop'){
     filteredPlayerList = players.filter(player => {
@@ -47,7 +36,16 @@ const TeamContent = (props: TeamContentProps) => {
       return playerPositions.some(({ position }) => position.key === selectedPosition)
     })
   }
-  console.log(filteredPlayerList)
+  
+  const teamContextValue = {
+    callbacks: {
+      closeModal: () => setShowModal(false),
+      openModal: () => setShowModal(true),
+      setSelectedPosition,
+    },
+    filteredPlayerList,
+    showModal,
+  }
 
   return (
     <TeamContext.Provider value={teamContextValue}>

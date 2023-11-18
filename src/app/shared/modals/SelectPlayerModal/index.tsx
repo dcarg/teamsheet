@@ -2,30 +2,37 @@
 
 import { useContext } from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons' 
+
 import TeamContext from '@contexts/teamContext'
 
-import type { Player } from '@prisma/client'
-
-interface SelectPlayerModalProps {
-  players: Player[],
-}
-
-const SelectPlayerModal = (props: SelectPlayerModalProps) => {
-  const { players } = props
-
+const SelectPlayerModal = () => {
   const teamContextValue = useContext(TeamContext)
   const {
     callbacks: {
       closeModal,
     },
+    filteredPlayerList,
     showModal,
   } = teamContextValue
+
+  console.log(filteredPlayerList, 'filteredPlayerList')
 
   if (!showModal) return null
 
   return (
-    <div className="h-60 w-60 bg-red-500">
-      SelectPlayerModal
+    <div className="h-60 bg-red-500">
+      <div className="flex justify-between">
+        SelectPlayerModal
+
+        <div
+          className="flex items-center justify-center cursor-pointer h-5 w-5"
+          onClick={() => closeModal()}
+        >
+          <FontAwesomeIcon icon={faXmark} />
+        </div>
+      </div>
     </div>
   )
 }

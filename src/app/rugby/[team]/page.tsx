@@ -46,7 +46,7 @@ const Page = async (props: PageProps) => {
       <TeamContent players={players}>
         <Bench />
 
-        <SelectPlayerModal players={players} />
+        <SelectPlayerModal />
       </TeamContent>
     </>
   )
