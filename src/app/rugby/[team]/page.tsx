@@ -2,6 +2,10 @@ import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
 
+import SelectPlayerModal from '@modals/SelectPlayerModal'
+
+import TeamContent from './TeamContent'
+
 type PageProps = {
   params: {
     team: string,
@@ -12,7 +16,7 @@ const Page = async (props: PageProps) => {
   const {
     params: {
       team: teamkey,
-    }
+    },
   } = props
 
   const players = await prisma.player.findMany({
@@ -28,8 +32,8 @@ const Page = async (props: PageProps) => {
     include: {
       playerPositions: {
         include: {
-          position: true
-        }
+          position: true,
+        },
       },
     },
     orderBy: { lastname: 'asc' },
@@ -39,9 +43,12 @@ const Page = async (props: PageProps) => {
     <>
       <div>Page for {teamkey}</div>
 
-      <Bench players={players} />
-    </>
+      <TeamContent players={players}>
+        <Bench />
 
+        <SelectPlayerModal players={players} />
+      </TeamContent>
+    </>
   )
 }
 
