@@ -1,5 +1,4 @@
 'use client'
-// 3. modal transitions in from top
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
@@ -29,19 +28,10 @@ const BaseModal = (props: BaseModalProps) => {
   if (!showModal) return null
 
   // Calculate position for modal
-  const left = (window.innerWidth - CONSTANTS.MAX_SCREEN_WIDTH) / 2
-
-  // transition-transform
-
-  // `fixed top-0 left-[${left}px] bg-red-500 transition`
-
-  // start position (off screen)
-
-  // end position
-  // top-0 left-[${left}px]
+  const left = (window.innerWidth - CONSTANTS.MAX_SCREEN_WIDTH) / 2 // this works but shouldn't?
 
   return (
-    <div className={`bg-white border fixed top-10 left-[${left}px] w-[${CONSTANTS.MAX_SCREEN_WIDTH}px] translate-y-40`}>
+    <div className={`animate-slideFromTop bg-white border fixed h-screen top-0 left-[${left}px] w-fillColumn`}>
       <div className="border-b border-slate-500 flex justify-between">
         {title}
 
