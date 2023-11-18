@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import BaseModal from '@modals/.'
+import BaseModal from '@modals/BaseModal'
 
 const SelectPlayerModal = () => {
   const teamContextValue = useContext(TeamContext)
@@ -16,12 +16,10 @@ const SelectPlayerModal = () => {
     showModal,
   } = teamContextValue
 
-  console.log(filteredPlayerList, 'filteredPlayerList')
-
   return (
     <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
       <ul>
-        {filteredPlayerList.map(player => <li>{player.title}</li>)}
+        {filteredPlayerList.map(player => <li key={player.id}>{player.title}</li>)}
       </ul>
     </BaseModal>
   )

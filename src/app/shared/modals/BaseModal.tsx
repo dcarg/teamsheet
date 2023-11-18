@@ -31,13 +31,18 @@ const BaseModal = (props: BaseModalProps) => {
   // Calculate position for modal
   const left = (window.innerWidth - CONSTANTS.MAX_SCREEN_WIDTH) / 2
 
-  //transition-transform
+  // transition-transform
 
   // `fixed top-0 left-[${left}px] bg-red-500 transition`
 
+  // start position (off screen)
+
+  // end position
+  // top-0 left-[${left}px]
+
   return (
-    <div className={`fixed top-0 left-[${left}px] bg-red-500 transition`}>
-      <div className="flex justify-between">
+    <div className={`bg-white border fixed top-10 left-[${left}px] w-[${CONSTANTS.MAX_SCREEN_WIDTH}px] translate-y-40`}>
+      <div className="border-b border-slate-500 flex justify-between">
         {title}
 
         <div
