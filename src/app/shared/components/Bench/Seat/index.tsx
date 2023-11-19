@@ -27,7 +27,7 @@ const Seat = (props: SeatProps) => {
         openModal()
       }}
     >
-      Blank Seat for {position}
+      Blank Seat for {position || 'any'}
     </div>
   )
 }

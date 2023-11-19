@@ -11,18 +11,17 @@ const benchData = [
   { key: 8, position: '' },
 ]
 
-const Bench = () => {
-  return (
-    <div>
-      <div>Bench</div>
+const Bench = () => (
+  <div>
+    <div>Bench</div>
 
-      <div>
-        {benchData.map(({ key, position }) => (
-          <Seat key={key} position={position} />
-        ))}
-      </div>
+    <div>
+      {benchData.map(({ key, position }) => (
+        <Seat key={key} position={position} />
+      ))}
     </div>
-  )
-}
+  </div>
+)
+
 
 export default Bench
