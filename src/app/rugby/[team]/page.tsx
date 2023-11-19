@@ -1,6 +1,7 @@
 import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
+import Field from '@components/Field'
 
 type PageProps = {
   params: {
@@ -38,6 +39,8 @@ const Page = async (props: PageProps) => {
   return (
     <>
       <div>Page for {teamkey}</div>
+      
+      <Field players={players} />
 
       <Bench players={players} />
     </>
