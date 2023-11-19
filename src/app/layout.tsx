@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col items-center`}>
         <TopBar />
 
-        <div className={`max-w-column w-full`}>
+        <div className="max-w-column w-full">
           {children}
         </div>
       </body>
