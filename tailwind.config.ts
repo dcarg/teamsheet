@@ -17,7 +17,10 @@ const config: Config = {
         },
       },
       animation: {
-        slideFromTop: 'slideFromTop 0.5s linear 0s 1'
+        slideFromTop: 'slideFromTop 0.5s linear 0s 1',
+      },
+      height: {
+        topBarHeight: '85px',
       },
       maxWidth: {
         column: maxScreenWidth,

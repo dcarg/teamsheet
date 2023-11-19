@@ -3,8 +3,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-import CONSTANTS from '@constants'
-
 interface BaseModalProps {
   callbacks: {
     closeModal: () => void,
@@ -20,19 +18,15 @@ const BaseModal = (props: BaseModalProps) => {
       closeModal,
     },
     children,
-
     showModal,
     title,
   } = props
 
   if (!showModal) return null
 
-  // Calculate position for modal
-  const left = (window.innerWidth - CONSTANTS.MAX_SCREEN_WIDTH) / 2 // this works but shouldn't?
-
   return (
-    <div className={`animate-slideFromTop bg-white border fixed h-screen top-0 left-[${left}px] w-fillColumn`}>
-      <div className="border-b border-slate-500 flex justify-between">
+    <div className="animate-slideFromTop bg-white border-x border-b  fixed h-screen top-0 w-fillColumn">
+      <div className="border-b border-slate-500 flex items-center justify-between h-topBarHeight p-3">
         {title}
 
         <div
