@@ -24,7 +24,7 @@ const Field = () => (
   <div>
     <div>Field</div>
 
-    <div style={{ zIndex: -1, position: 'absolute', width: "1000px", height: "1500px" }}>
+    <div style={{ zIndex: -1, position: 'absolute' }}>
       <Image
         src="/rugby_field.svg"
         alt="Rugby Field"
