@@ -21,9 +21,10 @@
     "paths": {
       "@api/*": ["./src/app/api/*"],
       "@components/*": ["./src/app/shared/components/*"],
+      "@contexts/*": ["./src/app/shared/contexts/*.ts"],
       "@db/*": ["./src/db/*.ts"],
       "@functions/*": ["./src/app/shared/functions/*"],
-      "@queries/*": ["./src/app/shared/queries/*.ts"]
+      "@modals/*": ["./src/app/shared/modals/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
