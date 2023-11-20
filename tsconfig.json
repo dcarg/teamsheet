@@ -22,6 +22,7 @@
       "@api/*": ["./src/app/api/*"],
       "@components/*": ["./src/app/shared/components/*"],
       "@db/*": ["./src/db/*.ts"],
+      "@functions/*": ["./src/app/shared/functions/*"],
       "@queries/*": ["./src/app/shared/queries/*.ts"]
     }
   },

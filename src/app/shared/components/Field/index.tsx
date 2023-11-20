@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 import { Prisma } from '@prisma/client'
 
+import { filterPlayers } from '@functions/players'
+
 import PlayerCard from './PlayerCard';
 
 const fieldData = [
@@ -47,16 +49,7 @@ const Field = (props: FieldProps) => {
 
   const [selectedPosition, setSelectedPosition] = useState('')
 
-  let filteredPlayerList = players
-  if (selectedPosition === 'hooker' || selectedPosition === 'prop'){
-    filteredPlayerList = players.filter(player => {
-      const { playerPositions } = player
-      return playerPositions.some(({ position }) => position.key === selectedPosition)
-    })
-  }
-  
-  console.log(filteredPlayerList)
-  console.log(setSelectedPosition)
+  const filteredPlayers = filterPlayers({ players, selectedPosition })
 
   return (
     <div>
