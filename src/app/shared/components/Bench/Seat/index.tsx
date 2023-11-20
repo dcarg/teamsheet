@@ -1,26 +1,33 @@
-import type { Dispatch, SetStateAction } from "react"
+'use client'
+
+import { useContext } from 'react'
+
+import TeamContext from '@contexts/teamContext'
 
 interface SeatProps {
-  callbacks: {
-    setSelectedPosition: Dispatch<SetStateAction<string>>
-  },
   position: string,
 }
 
 const Seat = (props: SeatProps) => {
+  const { position } = props
+
+  const teamContextValue = useContext(TeamContext)
   const {
     callbacks: {
+      openModal,
       setSelectedPosition,
     },
-    position,
-  } = props
+  } = teamContextValue
 
   return (
     <div
-      className="border h-10"
-      onClick={() => setSelectedPosition(position)}
+      className="border cursor-pointer h-10 hover:bg-cyan-50 hover:border-cyan-300"
+      onClick={() => {
+        setSelectedPosition(position)
+        openModal()
+      }}
     >
-      Blank Seat for {position}
+      Blank Seat for {position || 'any'}
     </div>
   )
 }

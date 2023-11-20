@@ -1,9 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-
-import { Prisma } from '@prisma/client'
-
 import Seat from './Seat'
 
 const benchData = [
@@ -17,50 +11,17 @@ const benchData = [
   { key: 8, position: '' },
 ]
 
-type PlayerWithIncludes = Prisma.PlayerGetPayload<
-  {
-    include: {
-      playerPositions: {
-        include: {
-          position: true
-        }
-      }
-    }
-  }
->
+const Bench = () => (
+  <div>
+    <div>Bench</div>
 
-interface BenchProps {
-  players: PlayerWithIncludes[]
-}
-
-const Bench = (props: BenchProps) => {
-  const { players } = props
-
-  const [selectedPosition, setSelectedPosition] = useState('')
-
-  let filteredPlayerList = players
-  if (selectedPosition === 'hooker' || selectedPosition === 'prop'){
-    filteredPlayerList = players.filter(player => {
-      const { playerPositions } = player
-      return playerPositions.some(({ position }) => position.key === selectedPosition)
-    })
-  }
-
-  return (
     <div>
-      <div>Bench</div>
-
-      <div>
-        {benchData.map(({ key, position }) => (
-          <Seat
-            callbacks={{ setSelectedPosition }}
-            key={key}
-            position={position}
-          />
-        ))}
-      </div>
+      {benchData.map(({ key, position }) => (
+        <Seat key={key} position={position} />
+      ))}
     </div>
-  )
-}
+  </div>
+)
+
 
 export default Bench
