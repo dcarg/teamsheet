@@ -1,12 +1,4 @@
-'use client'
-
-import { useState } from 'react'
-
 import Image from 'next/image';
-
-import { Prisma } from '@prisma/client'
-
-import { filterPlayers } from '@functions/players'
 
 import PlayerCard from './PlayerCard';
 
@@ -28,61 +20,36 @@ const fieldData = [
   { key: 15, position: 'outsideBack', className: 'col-start-5 col-span-2' },
 ]
 
-type PlayerWithIncludes = Prisma.PlayerGetPayload<
-  {
-    include: {
-      playerPositions: {
-        include: {
-          position: true
-        }
-      }
-    }
-  }
->
+const Field = () => (
+  <div>
+    <div>Field</div>
 
-interface FieldProps {
-  players: PlayerWithIncludes[]
-}
-
-const Field = (props: FieldProps) => {
-  const { players } = props
-
-  const [selectedPosition, setSelectedPosition] = useState('')
-
-  const filteredPlayers = filterPlayers({ players, selectedPosition })
-
-  return (
-    <div>
-      <div>Field</div>
-
-      <div style={{ zIndex: -1, position: 'absolute', width: "1000px", height: "1500px" }}>
-        <Image
-          src="/rugby_field.svg"
-          alt="Rugby Field"
-          height={1500} // fix these to be responsive
-          width={1000}
-          style={{ opacity: 0.5 }}
-        />
-      </div>
-
-      <div
-        className="grid grid-cols-10 grid-rows-8 gap-4 justify-items-center content-center"
-        style={{
-          height: '1550px',
-          width: '1000px',
-        }}
-      >
-        {fieldData.map(({ className, key, position }) => (
-          <PlayerCard
-            className={className}
-            callbacks={{ setSelectedPosition }}
-            key={key}
-            position={position}
-          />
-        ))}
-      </div>
+    <div style={{ zIndex: -1, position: 'absolute', width: "1000px", height: "1500px" }}>
+      <Image
+        src="/rugby_field.svg"
+        alt="Rugby Field"
+        height={1500} // fix these to be responsive
+        width={1000}
+        style={{ opacity: 0.5 }}
+      />
     </div>
-  )
-}
+
+    <div
+      className="grid grid-cols-10 grid-rows-8 gap-4 justify-items-center content-center"
+      style={{
+        height: '1550px',
+        width: '1000px',
+      }}
+    >
+      {fieldData.map(({ className, key, position }) => (
+        <PlayerCard
+          className={className}
+          key={key}
+          position={position}
+        />
+      ))}
+    </div>
+  </div>
+)
 
 export default Field

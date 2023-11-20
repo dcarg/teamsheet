@@ -1,27 +1,33 @@
-import type { Dispatch, SetStateAction } from "react"
+'use client'
+
+import { useContext } from 'react'
+
+import TeamContext from '@contexts/teamContext'
 
 interface PlayerCardProps {
-  callbacks: {
-    setSelectedPosition: Dispatch<SetStateAction<string>>
-  },
   className: string,
   position: string,
 }
 
 const PlayerCard = (props: PlayerCardProps) => {
+  const { className, position } = props
+
+  const teamContextValue = useContext(TeamContext)
   const {
     callbacks: {
+      openModal,
       setSelectedPosition,
     },
-    className,
-    position,
-  } = props
+  } = teamContextValue
 
   return (
     <div className={className}>
       <div
         className="box-border h-32 w-32 border-2"
-        onClick={() => setSelectedPosition(position)}
+        onClick={() => {
+          setSelectedPosition(position)
+          openModal()
+        }}
       >
         PlayerCard for {position}
       </div>

@@ -43,10 +43,10 @@ const Page = async (props: PageProps) => {
   return (
     <>
       <div>Page for {teamkey}</div>
-      
-      <Field players={players} />
 
       <TeamContent players={players}>
+        <Field />
+
         <Bench />
 
         <SelectPlayerModal />
