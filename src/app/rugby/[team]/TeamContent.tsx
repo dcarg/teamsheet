@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Prisma } from '@prisma/client'
+import { Prisma, Team } from '@prisma/client'
 
 import TeamContext from '@contexts/teamContext'
 
@@ -21,12 +21,14 @@ type PlayerWithIncludes = Prisma.PlayerGetPayload<
 interface TeamContentProps {
   children: React.ReactNode,
   players: PlayerWithIncludes[],
+  team: Team,
 }
 
 const TeamContent = (props: TeamContentProps) => {
-  const { children, players } = props
+  const { children, players, team } = props
 
   const [selectedPosition, setSelectedPosition] = useState('')
+  const [selectedTeamSheetPlace, setSelectedTeamSheetPlace] = useState<number>()
   const [showModal, setShowModal] = useState(false)
 
   let filteredPlayerList = players
@@ -36,15 +38,18 @@ const TeamContent = (props: TeamContentProps) => {
       return playerPositions.some(({ position }) => position.key === selectedPosition)
     })
   }
-  
+
   const teamContextValue = {
     callbacks: {
       closeModal: () => setShowModal(false),
       openModal: () => setShowModal(true),
       setSelectedPosition,
+      setSelectedTeamSheetPlace,
     },
     filteredPlayerList,
+    selectedTeamSheetPlace,
     showModal,
+    team,
   }
 
   return (

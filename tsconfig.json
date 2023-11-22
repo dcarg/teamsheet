@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "@actions/*": ["./src/app/shared/actions/*.ts"],
       "@api/*": ["./src/app/api/*"],
       "@components/*": ["./src/app/shared/components/*"],
       "@contexts/*": ["./src/app/shared/contexts/*.ts"],
