@@ -15,15 +15,17 @@ type PlayerWithIncludes = Prisma.PlayerGetPayload<
   }
 >
 
+// can this just be a generic object?
+// { [key: string]: any }
 type TeamContext = {
   callbacks: {
     closeModal: () => void,
     openModal: () => void,
     setSelectedPosition: Dispatch<SetStateAction<string>>,
-    setSelectedTeamSheetPlace: Dispatch<SetStateAction<number | undefined>>,
+    setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<number | undefined>>,
   },
   filteredPlayerList: PlayerWithIncludes[],
-  selectedTeamSheetPlace?: number,
+  selectedTeamSheetLayoutId?: number,
   showModal: boolean,
   team: Team,
 }
@@ -33,10 +35,10 @@ const defaultTeamContextValue = {
     closeModal: () => null,
     openModal: () => null,
     setSelectedPosition: () => null,
-    setSelectedTeamSheetPlace: () => null,
+    setSelectedTeamSheetLayoutId: () => null,
   },
   filteredPlayerList: [],
-  selectedTeamSheetPlace: null,
+  selectedTeamSheetLayoutId: null,
   showModal: false,
   team: {},
 }

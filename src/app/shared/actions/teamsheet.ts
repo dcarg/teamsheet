@@ -12,9 +12,5 @@ export const createTeamsheet = async (payload: CreateTeamSheetPayload) => {
     data: payload
   })
 
-  console.log(teamsheet, 'teamsheet')
-
-  // get id from teamsheet and redirect
-
   return teamsheet
 }

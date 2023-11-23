@@ -1,14 +1,14 @@
 import Seat from './Seat'
 
 const benchData = [
-  { teamsheetPlace: 16, position: 'hooker' },
-  { teamsheetPlace: 17, position: 'prop' },
-  { teamsheetPlace: 18, position: 'prop' },
-  { teamsheetPlace: 19, position: '' },
-  { teamsheetPlace: 20, position: '' },
-  { teamsheetPlace: 21, position: '' },
-  { teamsheetPlace: 22, position: '' },
-  { teamsheetPlace: 23, position: '' },
+  { teamSheetLayoutId: 16, position: 'hooker' },
+  { teamSheetLayoutId: 17, position: 'prop' },
+  { teamSheetLayoutId: 18, position: 'prop' },
+  { teamSheetLayoutId: 19, position: '' },
+  { teamSheetLayoutId: 20, position: '' },
+  { teamSheetLayoutId: 21, position: '' },
+  { teamSheetLayoutId: 22, position: '' },
+  { teamSheetLayoutId: 23, position: '' },
 ]
 
 const Bench = () => (
@@ -16,8 +16,8 @@ const Bench = () => (
     <div>Bench</div>
 
     <div>
-      {benchData.map(({ position, teamsheetPlace }) => (
-        <Seat key={teamsheetPlace} position={position} teamsheetPlace={teamsheetPlace} />
+      {benchData.map(({ position, teamSheetLayoutId }) => (
+        <Seat key={teamSheetLayoutId} position={position} teamSheetLayoutId={teamSheetLayoutId} />
       ))}
     </div>
   </div>

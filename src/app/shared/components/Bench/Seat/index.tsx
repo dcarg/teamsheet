@@ -6,18 +6,18 @@ import TeamContext from '@contexts/teamContext'
 
 interface SeatProps {
   position: string,
-  teamsheetPlace: number,
+  teamSheetLayoutId: number,
 }
 
 const Seat = (props: SeatProps) => {
-  const { position, teamsheetPlace } = props
+  const { position, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
     callbacks: {
       openModal,
       setSelectedPosition,
-      setSelectedTeamSheetPlace,
+      setSelectedTeamSheetLayoutId,
     },
   } = teamContextValue
 
@@ -26,7 +26,7 @@ const Seat = (props: SeatProps) => {
       className="border cursor-pointer h-10 hover:bg-cyan-50 hover:border-cyan-300"
       onClick={() => {
         setSelectedPosition(position)
-        setSelectedTeamSheetPlace(teamsheetPlace)
+        setSelectedTeamSheetLayoutId(teamSheetLayoutId)
         openModal()
       }}
     >

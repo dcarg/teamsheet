@@ -2,6 +2,8 @@
 
 import { useContext } from 'react'
 
+import { redirect } from 'next/navigation'
+
 import { createTeamsheet } from '@actions/teamsheet'
 
 import TeamContext from '@contexts/teamContext'
@@ -11,14 +13,20 @@ import BaseModal from '@modals/BaseModal'
 type GenerateCreateTeamSheetPayloadParams = {
   playerId: number,
   teamId: number,
-  teamSheetPlace: number
+  teamSheetLayoutId: number
 }
 
+// the redirect probably should not be in the server action
+// server action should only have the logic for sending the create to the db
+// this function should 
+// 1. generate the payload
+// 2. call the server action with that payload
+// 3. redirect OR use the router to push the teamSheetId onto params
 const generateCreateTeamSheetPayload = (params: GenerateCreateTeamSheetPayloadParams) => {
-  const { playerId, teamId, teamSheetPlace } = params
+  const { playerId, teamId, teamSheetLayoutId } = params
 
   return {
-    data: { [teamSheetPlace]: playerId },
+    data: { [teamSheetLayoutId]: playerId },
     teamId,
   } 
 }
@@ -30,7 +38,7 @@ const SelectPlayerModal = () => {
       closeModal,
     },
     filteredPlayerList,
-    selectedTeamSheetPlace,
+    selectedTeamSheetLayoutId,
     showModal,
     team,
   } = teamContextValue
@@ -44,7 +52,7 @@ const SelectPlayerModal = () => {
           onClick={() => createTeamsheet(generateCreateTeamSheetPayload({
             playerId: player.id,
             teamId: team.id,
-            teamSheetPlace: selectedTeamSheetPlace!,
+            teamSheetLayoutId: selectedTeamSheetLayoutId!,
           }))}
         >
           {player.title}

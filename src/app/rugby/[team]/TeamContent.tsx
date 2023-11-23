@@ -28,7 +28,7 @@ const TeamContent = (props: TeamContentProps) => {
   const { children, players, team } = props
 
   const [selectedPosition, setSelectedPosition] = useState('')
-  const [selectedTeamSheetPlace, setSelectedTeamSheetPlace] = useState<number>()
+  const [selectedTeamSheetLayoutId, setSelectedTeamSheetLayoutId] = useState<number>()
   const [showModal, setShowModal] = useState(false)
 
   let filteredPlayerList = players
@@ -44,10 +44,10 @@ const TeamContent = (props: TeamContentProps) => {
       closeModal: () => setShowModal(false),
       openModal: () => setShowModal(true),
       setSelectedPosition,
-      setSelectedTeamSheetPlace,
+      setSelectedTeamSheetLayoutId,
     },
     filteredPlayerList,
-    selectedTeamSheetPlace,
+    selectedTeamSheetLayoutId,
     showModal,
     team,
   }
