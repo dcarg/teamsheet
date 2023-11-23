@@ -7,7 +7,7 @@ type CreateTeamSheetPayload = {
   teamId: number,
 }
 
-export const createTeamsheet = async (payload: CreateTeamSheetPayload) => {
+export const createTeamSheet = async (payload: CreateTeamSheetPayload) => {
   const teamsheet = await prisma.teamSheet.create({
     data: payload
   })
