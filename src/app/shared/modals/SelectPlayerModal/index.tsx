@@ -3,7 +3,6 @@
 import { useContext } from 'react'
 
 import { useRouter } from 'next/navigation'
-import type { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 
 import { createTeamSheet } from '@actions/teamSheet'
 
@@ -11,12 +10,14 @@ import TeamContext from '@contexts/teamContext'
 
 import BaseModal from '@modals/BaseModal'
 
+type Router = ReturnType<typeof useRouter>
+
 type HandlePlayerSelectParams = {
   callbacks: { closeModal: () => void },
   playerId: number,
-  router: AppRouterInstance
+  router: Router,
   teamId: number,
-  teamSheetLayoutId: number
+  teamSheetLayoutId: number,
 }
 
 const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {

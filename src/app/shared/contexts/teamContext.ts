@@ -15,8 +15,6 @@ type PlayerWithIncludes = Prisma.PlayerGetPayload<
   }
 >
 
-// can this just be a generic object?
-// { [key: string]: any }
 type TeamContext = {
   callbacks: {
     closeModal: () => void,
@@ -30,19 +28,7 @@ type TeamContext = {
   team: Team,
 }
 
-const defaultTeamContextValue = {
-  callbacks: {
-    closeModal: () => null,
-    openModal: () => null,
-    setSelectedPosition: () => null,
-    setSelectedTeamSheetLayoutId: () => null,
-  },
-  filteredPlayerList: [],
-  selectedTeamSheetLayoutId: null,
-  showModal: false,
-  team: {},
-}
-
-const TeamContext = createContext<TeamContext>(defaultTeamContextValue)
+// @ts-ignore: Argument of type {} is not assignable to paramter of type TeamContext
+const TeamContext = createContext<TeamContext>({})
 
 export default TeamContext
