@@ -10,19 +10,29 @@ import TeamContent from './TeamContent'
 
 type PageProps = {
   params: { team: string },
+  searchParams: { teamSheetId?: string },
 }
 
 const Page = async (props: PageProps) => {
   const {
     params: { team: teamkey },
+    searchParams: { teamSheetId },
   } = props
-  
+
   const team = await prisma.team.findUnique({
     where: {
       key: teamkey,
     },
   })
   if (!team) return notFound()
+
+  const teamSheet = teamSheetId
+    ? await prisma.teamSheet.findUnique({
+      where: {
+        id: teamSheetId
+      },
+    })
+    : null
 
   const players = await prisma.player.findMany({
     where: {
@@ -45,7 +55,7 @@ const Page = async (props: PageProps) => {
   })
 
   return (
-    <TeamContent players={players} team={team}>
+    <TeamContent players={players} team={team} teamSheet={teamSheet}>
       <Bench />
 
       <SelectPlayerModal />

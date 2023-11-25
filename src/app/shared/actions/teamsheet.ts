@@ -14,3 +14,16 @@ export const createTeamSheet = async (payload: CreateTeamSheetPayload) => {
 
   return teamsheet
 }
+
+type UpdateTeamSheetPayload = Partial<CreateTeamSheetPayload> & { id: string }
+
+export const updateTeamSheet = async (payload: UpdateTeamSheetPayload) => {
+  const { id, ...payloadData } = payload
+
+  const teamsheet = await prisma.teamSheet.update({
+    where: { id },
+    data: payloadData,
+  })
+
+  return teamsheet
+}

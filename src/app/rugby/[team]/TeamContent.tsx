@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Prisma, Team } from '@prisma/client'
+import { Prisma, Team, TeamSheet } from '@prisma/client'
 
 import TeamContext from '@contexts/teamContext'
 
@@ -22,10 +22,11 @@ interface TeamContentProps {
   children: React.ReactNode,
   players: PlayerWithIncludes[],
   team: Team,
+  teamSheet: TeamSheet | null,
 }
 
 const TeamContent = (props: TeamContentProps) => {
-  const { children, players, team } = props
+  const { children, players, team, teamSheet } = props
 
   const [selectedPosition, setSelectedPosition] = useState('')
   const [selectedTeamSheetLayoutId, setSelectedTeamSheetLayoutId] = useState<number>()
@@ -50,6 +51,7 @@ const TeamContent = (props: TeamContentProps) => {
     selectedTeamSheetLayoutId,
     showModal,
     team,
+    teamSheet,
   }
 
   return (

@@ -4,7 +4,9 @@ import { useContext } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-import { createTeamSheet } from '@actions/teamSheet'
+import type { TeamSheet } from '@prisma/client'
+
+import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
 
 import TeamContext from '@contexts/teamContext'
 
@@ -17,6 +19,7 @@ type HandlePlayerSelectParams = {
   playerId: number,
   router: Router,
   teamId: number,
+  teamSheet: TeamSheet | null,
   teamSheetLayoutId: number,
 }
 
@@ -26,6 +29,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
     playerId,
     router,
     teamId,
+    teamSheet,
     teamSheetLayoutId,
   } = params
 
@@ -34,9 +38,24 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
     teamId,
   }
 
-  const teamSheet = await createTeamSheet(payload)
+  if (teamSheet){
+    const existingData = teamSheet.data as object
 
-  router.push(`?teamSheetId=${teamSheet.id}`)
+    const updatedDataPayload = {
+      id: teamSheet.id,
+      data: {
+        ...existingData,
+        ...payload.data
+      },
+    }
+
+    await updateTeamSheet(updatedDataPayload)
+  } else {
+    const teamSheet = await createTeamSheet(payload)
+  
+    router.push(`?teamSheetId=${teamSheet.id}`)
+  }
+
   closeModal()
 }
 
@@ -52,6 +71,7 @@ const SelectPlayerModal = () => {
     selectedTeamSheetLayoutId,
     showModal,
     team,
+    teamSheet,
   } = teamContextValue
 
   return (
@@ -65,6 +85,7 @@ const SelectPlayerModal = () => {
             playerId: player.id,
             router,
             teamId: team.id,
+            teamSheet,
             teamSheetLayoutId: selectedTeamSheetLayoutId!,
           })}
         >
