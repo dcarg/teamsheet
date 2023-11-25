@@ -20,7 +20,7 @@ type HandlePlayerSelectParams = {
   router: Router,
   teamId: number,
   teamSheet: TeamSheet | null,
-  teamSheetLayoutId: number,
+  teamSheetLayoutId: string,
 }
 
 const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
