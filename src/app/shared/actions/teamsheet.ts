@@ -1,5 +1,7 @@
 'use server'
 
+import { revalidateTag } from 'next/cache'
+
 import prisma from '@db/prismaSingleton'
 
 type CreateTeamSheetPayload = {
@@ -24,6 +26,8 @@ export const updateTeamSheet = async (payload: UpdateTeamSheetPayload) => {
     where: { id },
     data: payloadData,
   })
+
+  revalidateTag('teamSheets')
 
   return teamsheet
 }
