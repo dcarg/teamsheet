@@ -30,7 +30,7 @@ type TeamContext = {
   teamSheet: TeamSheet | null,
 }
 
-// @ts-ignore: Argument of type {} is not assignable to paramter of type TeamContext
+// @ts-ignore: Argument of type {} is not assignable to parameter of type TeamContext
 const TeamContext = createContext<TeamContext>({})
 
 export default TeamContext

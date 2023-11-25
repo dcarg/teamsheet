@@ -5,7 +5,7 @@ import { revalidateTag } from 'next/cache'
 import prisma from '@db/prismaSingleton'
 
 type CreateTeamSheetPayload = {
-  data: { [key: number]: number },
+  data: { [key: string]: number },
   teamId: number,
 }
 
