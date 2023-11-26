@@ -23,13 +23,13 @@ const PlayerCard = (props: PlayerCardProps) => {
   return (
     <div className={className}>
       <div
-        className="box-border h-24 w-28 border-2"
+        className="box-border h-15 w-15 border-2"
         onClick={() => {
           setSelectedPosition(position)
           openModal()
         }}
       >
-        PlayerCard for {position}
+        {position}
       </div>
     </div>
   )
