@@ -23,6 +23,7 @@
       "@components/*": ["./src/app/shared/components/*"],
       "@contexts/*": ["./src/app/shared/contexts/*.ts"],
       "@db/*": ["./src/db/*.ts"],
+      "@functions/*": ["./src/app/shared/functions/*"],
       "@modals/*": ["./src/app/shared/modals/*"]
     }
   },

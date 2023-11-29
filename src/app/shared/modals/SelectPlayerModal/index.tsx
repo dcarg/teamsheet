@@ -12,14 +12,14 @@ const SelectPlayerModal = () => {
     callbacks: {
       closeModal,
     },
-    filteredPlayerList,
+    filteredPlayers,
     showModal,
   } = teamContextValue
 
   return (
     <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
       <ul>
-        {filteredPlayerList.map(player => <li key={player.id}>{player.title}</li>)}
+        {filteredPlayers.map(player => <li key={player.id}>{player.title}</li>)}
       </ul>
     </BaseModal>
   )

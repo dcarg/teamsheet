@@ -1,6 +1,7 @@
 import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
+import Field from '@components/Field'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
@@ -44,6 +45,8 @@ const Page = async (props: PageProps) => {
       <div>Page for {teamkey}</div>
 
       <TeamContent players={players}>
+        <Field />
+
         <Bench />
 
         <SelectPlayerModal />

@@ -21,7 +21,7 @@ type TeamContext = {
     openModal: () => void,
     setSelectedPosition: Dispatch<SetStateAction<string>>,
   },
-  filteredPlayerList: PlayerWithIncludes[],
+  filteredPlayers: PlayerWithIncludes[],
   showModal: boolean,
 }
 
@@ -31,7 +31,7 @@ const defaultTeamContextValue = {
     openModal: () => null,
     setSelectedPosition: () => null,
   },
-  filteredPlayerList: [],
+  filteredPlayers: [],
   showModal: false,
 }
 

@@ -1,14 +1,14 @@
 import Seat from './Seat'
 
 const benchData = [
-  { key: 1, position: 'hooker' },
-  { key: 2, position: 'prop' },
-  { key: 3, position: 'prop' },
-  { key: 4, position: '' },
-  { key: 5, position: '' },
-  { key: 6, position: '' },
-  { key: 7, position: '' },
-  { key: 8, position: '' },
+  { key: 16, position: 'hooker' },
+  { key: 17, position: 'prop' },
+  { key: 18, position: 'prop' },
+  { key: 19, position: '' },
+  { key: 20, position: '' },
+  { key: 21, position: '' },
+  { key: 22, position: '' },
+  { key: 23, position: '' },
 ]
 
 const Bench = () => (
