@@ -6,6 +6,8 @@ import { Prisma, Team } from '@prisma/client'
 
 import TeamContext from '@contexts/teamContext'
 
+import { filterPlayers } from '@functions/players'
+
 type PlayerWithIncludes = Prisma.PlayerGetPayload<
   {
     include: {
@@ -31,13 +33,7 @@ const TeamContent = (props: TeamContentProps) => {
   const [selectedTeamSheetLayoutId, setSelectedTeamSheetLayoutId] = useState<number>()
   const [showModal, setShowModal] = useState(false)
 
-  let filteredPlayerList = players
-  if (selectedPosition === 'hooker' || selectedPosition === 'prop'){
-    filteredPlayerList = players.filter(player => {
-      const { playerPositions } = player
-      return playerPositions.some(({ position }) => position.key === selectedPosition)
-    })
-  }
+  const filteredPlayers = filterPlayers({ players, selectedPosition })
 
   const teamContextValue = {
     callbacks: {
@@ -46,7 +42,7 @@ const TeamContent = (props: TeamContentProps) => {
       setSelectedPosition,
       setSelectedTeamSheetLayoutId,
     },
-    filteredPlayerList,
+    filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,
     team,

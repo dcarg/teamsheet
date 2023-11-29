@@ -48,7 +48,7 @@ const SelectPlayerModal = () => {
     callbacks: {
       closeModal,
     },
-    filteredPlayerList,
+    filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,
     team,
@@ -56,7 +56,7 @@ const SelectPlayerModal = () => {
 
   return (
     <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
-      {filteredPlayerList.map(player => (
+      {filteredPlayers.map(player => (
         <div
           className="cursor-pointer hover:text-cyan-500"
           key={player.id}
