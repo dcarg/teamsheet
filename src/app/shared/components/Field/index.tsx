@@ -1,6 +1,6 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
-import PlayerCard from './PlayerCard';
+import PlayerCard from './PlayerCard'
 
 const fieldData = [
   { key: 2, position: 'prop', className: 'col-start-3 col-span-2' },
