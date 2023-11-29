@@ -24,13 +24,12 @@ const Field = () => (
   <div className="max-w-column w-full min-h-fit">
     <div>Field</div>
 
-    <div className="max-w-column w-full" style={{ zIndex: -1, position: 'absolute' }}>
+    <div className="absolute max-w-column w-full -z-1">
       <Image
         src="/rugby_field.svg"
         alt="Rugby Field"
         height={0}
         width={0}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         style={{
           height: 'auto',
           opacity: 0.5,
