@@ -12,15 +12,11 @@ const benchData = [
 ]
 
 const Bench = () => (
-  <div>
-    <div>Bench</div>
-
-    <div>
-      {benchData.map(({ position, teamSheetLayoutId }) => (
-        <Seat key={teamSheetLayoutId} position={position} teamSheetLayoutId={teamSheetLayoutId} />
-      ))}
-    </div>
-  </div>
+  <>
+    {benchData.map(({ position, teamSheetLayoutId }) => (
+      <Seat key={teamSheetLayoutId} position={position} teamSheetLayoutId={teamSheetLayoutId} />
+    ))}
+  </>
 )
 
 
