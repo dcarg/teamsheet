@@ -4,6 +4,7 @@ import Bench from '@components/Bench'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
+import PlayerCard from '@components/PlayerCard'
 import TeamContent from './TeamContent'
 
 type PageProps = {
@@ -44,6 +45,8 @@ const Page = async (props: PageProps) => {
       <div>Page for {teamkey}</div>
 
       <TeamContent players={players}>
+        <PlayerCard />
+
         <Bench />
 
         <SelectPlayerModal />
