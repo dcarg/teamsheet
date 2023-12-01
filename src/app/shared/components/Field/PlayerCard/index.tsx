@@ -2,16 +2,31 @@
 
 import { useContext } from 'react'
 
+import type { Prisma } from '@prisma/client'
+
 import TeamContext from '@contexts/teamContext'
+
+type PlayerWithIncludes = Prisma.PlayerGetPayload<
+  {
+    include: {
+      playerPositions: {
+        include: {
+          position: true
+        }
+      }
+    }
+  }
+>
 
 interface PlayerCardProps {
   className: string,
+  player?: PlayerWithIncludes,
   position: string,
-  teamSheetLayoutId: number,
+  teamSheetLayoutId: string,
 }
 
 const PlayerCard = (props: PlayerCardProps) => {
-  const { className, position, teamSheetLayoutId } = props
+  const { className, player, position, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
@@ -25,14 +40,14 @@ const PlayerCard = (props: PlayerCardProps) => {
   return (
     <div className={className}>
       <div
-        className="box-border h-15 md:h-20 w-15 md:w-20 border-2 hover:border-cyan-300"
+        className="box-border cursor-pointer h-15 md:h-20 w-15 md:w-20 border-2 hover:border-cyan-300"
         onClick={() => {
           setSelectedPosition(position)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
           openModal()
         }}
       >
-        {position}
+        {player?.title || position}
       </div>
     </div>
   )

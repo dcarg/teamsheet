@@ -27,25 +27,21 @@ const Bench = () => {
   const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
 
   return (
-    <div>
-      <div>Bench</div>
+    <>
+      {benchData.map(({ position, teamSheetLayoutId }) => {
+        const playerId = data ? data[teamSheetLayoutId] : null
+        const player = players.find(player => player.id === playerId)
 
-      <div>
-        {benchData.map(({ position, teamSheetLayoutId }) => {
-          const playerId = data ? data[teamSheetLayoutId] : null
-          const player = players.find(player => player.id === playerId)
-
-          return (
-            <Seat
-              key={teamSheetLayoutId}
-              player={player}
-              position={position}
-              teamSheetLayoutId={teamSheetLayoutId}
-            />
-          )
-        })}
-      </div>
-    </div>
+        return (
+          <Seat
+            key={teamSheetLayoutId}
+            player={player}
+            position={position}
+            teamSheetLayoutId={teamSheetLayoutId}
+          />
+        )
+      })}
+    </>
   )
 }
 
