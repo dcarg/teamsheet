@@ -1,6 +1,9 @@
+import { notFound } from 'next/navigation'
+
 import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
+import Field from '@components/Field'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
@@ -8,17 +11,20 @@ import PlayerCard from '@components/PlayerCard'
 import TeamContent from './TeamContent'
 
 type PageProps = {
-  params: {
-    team: string,
-  },
+  params: { team: string },
 }
 
 const Page = async (props: PageProps) => {
   const {
-    params: {
-      team: teamkey,
-    },
+    params: { team: teamkey },
   } = props
+  
+  const team = await prisma.team.findUnique({
+    where: {
+      key: teamkey,
+    },
+  })
+  if (!team) return notFound()
 
   const players = await prisma.player.findMany({
     where: {
@@ -41,17 +47,15 @@ const Page = async (props: PageProps) => {
   })
 
   return (
-    <>
-      <div>Page for {teamkey}</div>
+    <TeamContent players={players} team={team}>
+      <Field />
 
-      <TeamContent players={players}>
-        <PlayerCard />
+      {/* <PlayerCard /> */}
 
-        <Bench />
+      <Bench />
 
-        <SelectPlayerModal />
-      </TeamContent>
-    </>
+      <SelectPlayerModal />
+    </TeamContent>
   )
 }
 
