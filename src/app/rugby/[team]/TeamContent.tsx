@@ -2,27 +2,17 @@
 
 import { useState } from 'react'
 
-import { Prisma, Team, TeamSheet } from '@prisma/client'
+import { Team, TeamSheet } from '@prisma/client'
 
 import TeamContext from '@contexts/teamContext'
 
 import { filterPlayers } from '@functions/players'
 
-type PlayerWithIncludes = Prisma.PlayerGetPayload<
-  {
-    include: {
-      playerPositions: {
-        include: {
-          position: true
-        }
-      }
-    }
-  }
->
+import type { PlayerWithPositions } from '@types'
 
 interface TeamContentProps {
   children: React.ReactNode,
-  players: PlayerWithIncludes[],
+  players: PlayerWithPositions[],
   team: Team,
   teamSheet: TeamSheet | null,
 }
