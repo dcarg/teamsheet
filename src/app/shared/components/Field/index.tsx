@@ -3,8 +3,8 @@ import Image from 'next/image'
 import PlayerCard from './PlayerCard'
 
 const fieldData = [
-  { teamSheetLayoutId: 2, position: 'prop', className: 'col-start-3 col-span-2' },
-  { teamSheetLayoutId: 1, position: 'hooker', className: 'col-span-2' },
+  { teamSheetLayoutId: 1, position: 'prop', className: 'col-start-3 col-span-2' },
+  { teamSheetLayoutId: 2, position: 'hooker', className: 'col-span-2' },
   { teamSheetLayoutId: 3, position: 'prop', className: 'col-span-2'  },
   { teamSheetLayoutId: 4, position: 'lock', className: 'col-start-4 col-span-2' },
   { teamSheetLayoutId: 5, position: 'lock', className: 'col-span-2' },
