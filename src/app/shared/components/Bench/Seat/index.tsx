@@ -2,15 +2,30 @@
 
 import { useContext } from 'react'
 
+import type { Prisma } from '@prisma/client'
+
 import TeamContext from '@contexts/teamContext'
 
+type PlayerWithIncludes = Prisma.PlayerGetPayload<
+  {
+    include: {
+      playerPositions: {
+        include: {
+          position: true
+        }
+      }
+    }
+  }
+>
+
 interface SeatProps {
+  player?: PlayerWithIncludes,
   position: string,
-  teamSheetLayoutId: number,
+  teamSheetLayoutId: string,
 }
 
 const Seat = (props: SeatProps) => {
-  const { position, teamSheetLayoutId } = props
+  const { player, position, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
@@ -30,7 +45,7 @@ const Seat = (props: SeatProps) => {
         openModal()
       }}
     >
-      Blank Seat for {position || 'any'}
+      {player?.title}
     </div>
   )
 }

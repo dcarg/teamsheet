@@ -4,7 +4,11 @@ import { useContext } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-import { createTeamSheet } from '@actions/teamSheet'
+import clsx from 'clsx'
+
+import type { TeamSheet } from '@prisma/client'
+
+import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
 
 import TeamContext from '@contexts/teamContext'
 
@@ -17,7 +21,8 @@ type HandlePlayerSelectParams = {
   playerId: number,
   router: Router,
   teamId: number,
-  teamSheetLayoutId: number,
+  teamSheet: TeamSheet | null,
+  teamSheetLayoutId: string,
 }
 
 const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
@@ -26,6 +31,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
     playerId,
     router,
     teamId,
+    teamSheet,
     teamSheetLayoutId,
   } = params
 
@@ -34,9 +40,24 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
     teamId,
   }
 
-  const teamSheet = await createTeamSheet(payload)
+  if (teamSheet){
+    const existingData = teamSheet.data as object
 
-  router.push(`?teamSheetId=${teamSheet.id}`)
+    const updatedDataPayload = {
+      id: teamSheet.id,
+      data: {
+        ...existingData,
+        ...payload.data
+      },
+    }
+
+    await updateTeamSheet(updatedDataPayload)
+  } else {
+    const teamSheet = await createTeamSheet(payload)
+  
+    router.push(`?teamSheetId=${teamSheet.id}`)
+  }
+
   closeModal()
 }
 
@@ -52,25 +73,36 @@ const SelectPlayerModal = () => {
     selectedTeamSheetLayoutId,
     showModal,
     team,
+    teamSheet,
   } = teamContextValue
+
+  const teamSheetData = teamSheet?.data as { [key: string]: number } | null
+  const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData) : []
 
   return (
     <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
-      {filteredPlayers.map(player => (
-        <div
-          className="cursor-pointer hover:text-cyan-500"
-          key={player.id}
-          onClick={() => handlePlayerSelect({
-            callbacks: { closeModal },
-            playerId: player.id,
-            router,
-            teamId: team.id,
-            teamSheetLayoutId: selectedTeamSheetLayoutId!,
-          })}
-        >
-          {player.title}
-        </div>
-      ))}
+      {filteredPlayers.map(player => {
+        const isAlreadyAssigned = selectedPlayerIds.includes(player.id)
+
+        return (
+          <div
+            className={clsx(
+              isAlreadyAssigned ? 'text-slate-400' : 'cursor-pointer text-black hover:text-cyan-500'
+            )}
+            key={player.id}
+            onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
+              callbacks: { closeModal },
+              playerId: player.id,
+              router,
+              teamId: team.id,
+              teamSheet,
+              teamSheetLayoutId: selectedTeamSheetLayoutId!,
+            })}
+          >
+            {player.title}
+          </div>
+        )
+      })}
     </BaseModal>
   )
 }

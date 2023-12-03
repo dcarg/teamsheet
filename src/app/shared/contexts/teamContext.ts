@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 
-import { Prisma, Team } from '@prisma/client'
+import type { Prisma, Team, TeamSheet } from '@prisma/client'
 
 type PlayerWithIncludes = Prisma.PlayerGetPayload<
   {
@@ -20,15 +20,17 @@ type TeamContext = {
     closeModal: () => void,
     openModal: () => void,
     setSelectedPosition: Dispatch<SetStateAction<string>>,
-    setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<number | undefined>>,
+    setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<string | undefined>>,
   },
   filteredPlayers: PlayerWithIncludes[],
-  selectedTeamSheetLayoutId?: number,
+  players: PlayerWithIncludes[],
+  selectedTeamSheetLayoutId?: string,
   showModal: boolean,
   team: Team,
+  teamSheet: TeamSheet | null,
 }
 
-// @ts-ignore: Argument of type {} is not assignable to paramter of type TeamContext
+// @ts-ignore: Argument of type {} is not assignable to parameter of type TeamContext
 const TeamContext = createContext<TeamContext>({})
 
 export default TeamContext
