@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
+import Field from '@components/Field'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
@@ -18,7 +19,7 @@ const Page = async (props: PageProps) => {
     params: { team: teamkey },
     searchParams: { teamSheetId },
   } = props
-
+  
   const team = await prisma.team.findUnique({
     where: {
       key: teamkey,
@@ -56,6 +57,8 @@ const Page = async (props: PageProps) => {
 
   return (
     <TeamContent players={players} team={team} teamSheet={teamSheet}>
+      <Field />
+
       <Bench />
 
       <SelectPlayerModal />

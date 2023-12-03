@@ -69,7 +69,7 @@ const SelectPlayerModal = () => {
     callbacks: {
       closeModal,
     },
-    filteredPlayerList,
+    filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,
     team,
@@ -81,7 +81,7 @@ const SelectPlayerModal = () => {
 
   return (
     <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
-      {filteredPlayerList.map(player => {
+      {filteredPlayers.map(player => {
         const isAlreadyAssigned = selectedPlayerIds.includes(player.id)
 
         return (
