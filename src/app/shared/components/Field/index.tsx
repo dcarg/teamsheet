@@ -41,6 +41,7 @@ const Field = () => {
         <Image
           src="/rugby_field.svg"
           alt="Rugby Field"
+          priority
           height={0}
           width={0}
           style={{
