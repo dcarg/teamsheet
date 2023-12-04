@@ -40,7 +40,7 @@ const PlayerCard = (props: PlayerCardProps) => {
   return (
     <div className={className}>
       <div
-        className="box-border cursor-pointer h-15 md:h-20 w-15 md:w-20 border-2 hover:border-cyan-300"
+        className="box-border cursor-pointer md:h-20 md:w-20 border-2 hover:border-cyan-300"
         onClick={() => {
           setSelectedPosition(position)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
