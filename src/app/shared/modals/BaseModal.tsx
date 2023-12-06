@@ -1,7 +1,11 @@
 'use client'
 
+import { useRef } from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+
+import useOutsideClick from '@hooks/useOutsideClick'
 
 interface BaseModalProps {
   callbacks: {
@@ -22,10 +26,20 @@ const BaseModal = (props: BaseModalProps) => {
     title,
   } = props
 
+  const ref = useRef<HTMLDivElement>(null)
+
+  useOutsideClick({
+    callbacks: {
+      action: closeModal,
+    },
+    enabled: showModal,
+    ref,
+  })
+
   if (!showModal) return null
 
   return (
-    <div className="animate-slideFromTop bg-white border-x border-b  fixed h-screen top-0 w-fillColumn">
+    <div className="animate-slideFromTop bg-white border-x border-b  fixed h-screen top-0 w-fillColumn" ref={ref}>
       <div className="border-b border-slate-500 flex items-center justify-between h-topBarHeight p-3">
         {title}
 

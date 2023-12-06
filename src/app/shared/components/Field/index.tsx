@@ -6,25 +6,9 @@ import Image from 'next/image'
 
 import TeamContext from '@contexts/teamContext'
 
-import PlayerCard from './PlayerCard'
+import teamSheetLayoutData from '@functions/teamSheet'
 
-const fieldData = [
-  { teamSheetLayoutId: '1', position: 'prop', className: 'col-start-3 col-span-2' },
-  { teamSheetLayoutId: '2', position: 'hooker', className: 'col-span-2' },
-  { teamSheetLayoutId: '3', position: 'prop', className: 'col-span-2' },
-  { teamSheetLayoutId: '4', position: 'lock', className: 'col-start-4 col-span-2' },
-  { teamSheetLayoutId: '5', position: 'lock', className: 'col-span-2' },
-  { teamSheetLayoutId: '6', position: 'backrow', className: 'col-start-3 col-span-2' },
-  { teamSheetLayoutId: '7', position: 'backrow', className: 'col-span-2' },
-  { teamSheetLayoutId: '8', position: 'backrow', className: 'col-span-2' },
-  { teamSheetLayoutId: '9', position: 'scrumhalf', className: 'col-start-3 col-span-2' },
-  { teamSheetLayoutId: '10', position: 'flyhalf', className: 'col-start-4 col-span-2' },
-  { teamSheetLayoutId: '12', position: 'centre', className: 'col-start-5 col-span-2' },
-  { teamSheetLayoutId: '13', position: 'centre', className: ' col-start-7 col-span-2' },
-  { teamSheetLayoutId: '11', position: 'outsideBack', className: 'col-start-2 col-span-2' },
-  { teamSheetLayoutId: '14', position: 'outsideBack', className: 'col-start-8 col-span-2' },
-  { teamSheetLayoutId: '15', position: 'outsideBack', className: 'col-start-5 col-span-2' },
-]
+import PlayerCard from './PlayerCard'
 
 const Field = () => {
   const teamContextValue = useContext(TeamContext)
@@ -41,6 +25,7 @@ const Field = () => {
         <Image
           src="/rugby_field.svg"
           alt="Rugby Field"
+          priority
           height={0}
           width={0}
           style={{
@@ -60,7 +45,7 @@ const Field = () => {
           width: '100%',
         }}
       >
-        {fieldData.map(({ className, position, teamSheetLayoutId }) => {
+        {teamSheetLayoutData.field.map(({ className, position, teamSheetLayoutId }) => {
           const playerId = data ? data[teamSheetLayoutId] : null
           const player = players.find(player => player.id === playerId)
 
