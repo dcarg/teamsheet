@@ -34,6 +34,7 @@ model Team {
 model TeamSheet {
   id String @id @default(uuid())
   data Json?
+  title String?
   team Team @relation(fields: [teamId], references: [id])
   teamId Int
 
