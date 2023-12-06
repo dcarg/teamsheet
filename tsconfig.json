@@ -26,7 +26,8 @@
       "@db/*": ["./src/db/*.ts"],
       "@functions/*": ["./src/app/shared/functions/*"],
       "@hooks/*": ["./src/app/shared/hooks/*"],
-      "@modals/*": ["./src/app/shared/modals/*"]
+      "@modals/*": ["./src/app/shared/modals/*"],
+      "@types": ["./src/app/shared/types"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

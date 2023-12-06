@@ -1,19 +1,9 @@
 import { createContext } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 
-import type { Prisma, Team, TeamSheet } from '@prisma/client'
+import type { Team, TeamSheet } from '@prisma/client'
 
-type PlayerWithIncludes = Prisma.PlayerGetPayload<
-  {
-    include: {
-      playerPositions: {
-        include: {
-          position: true
-        }
-      }
-    }
-  }
->
+import type { PlayerWithPositions } from '@types'
 
 type TeamContext = {
   callbacks: {
@@ -22,8 +12,8 @@ type TeamContext = {
     setSelectedPosition: Dispatch<SetStateAction<string>>,
     setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<string | undefined>>,
   },
-  filteredPlayers: PlayerWithIncludes[],
-  players: PlayerWithIncludes[],
+  filteredPlayers: PlayerWithPositions[],
+  players: PlayerWithPositions[],
   selectedTeamSheetLayoutId?: string,
   showModal: boolean,
   team: Team,

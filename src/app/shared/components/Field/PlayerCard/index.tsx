@@ -2,25 +2,13 @@
 
 import { useContext } from 'react'
 
-import type { Prisma } from '@prisma/client'
-
 import TeamContext from '@contexts/teamContext'
 
-type PlayerWithIncludes = Prisma.PlayerGetPayload<
-  {
-    include: {
-      playerPositions: {
-        include: {
-          position: true
-        }
-      }
-    }
-  }
->
+import type { PlayerWithPositions } from '@types'
 
 interface PlayerCardProps {
   className: string,
-  player?: PlayerWithIncludes,
+  player?: PlayerWithPositions,
   position: string,
   teamSheetLayoutId: string,
 }
