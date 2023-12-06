@@ -4,18 +4,9 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import Seat from './Seat'
+import teamSheetLayoutData from '@functions/teamSheet'
 
-const benchData = [
-  { teamSheetLayoutId: '16', position: 'hooker' },
-  { teamSheetLayoutId: '17', position: 'prop' },
-  { teamSheetLayoutId: '18', position: 'prop' },
-  { teamSheetLayoutId: '19', position: '' },
-  { teamSheetLayoutId: '20', position: '' },
-  { teamSheetLayoutId: '21', position: '' },
-  { teamSheetLayoutId: '22', position: '' },
-  { teamSheetLayoutId: '23', position: '' },
-]
+import Seat from './Seat'
 
 const Bench = () => {
   const teamContextValue = useContext(TeamContext)
@@ -28,7 +19,7 @@ const Bench = () => {
 
   return (
     <>
-      {benchData.map(({ position, teamSheetLayoutId }) => {
+      {teamSheetLayoutData.bench.map(({ position, teamSheetLayoutId }) => {
         const playerId = data ? data[teamSheetLayoutId] : null
         const player = players.find(player => player.id === playerId)
 
