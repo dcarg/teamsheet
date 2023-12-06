@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -12,6 +12,8 @@ import type { Team } from '@prisma/client'
 
 import { BASE_API_URL } from '@api/base'
 
+import useOutsideClick from '@hooks/useOutsideClick'
+
 import Label from '@components/Label'
 
 const SelectTeam = () => {
@@ -20,6 +22,16 @@ const SelectTeam = () => {
 
   const [teams, setTeams] = useState<Team[]>([])
   const [isOpen, setIsOpen] = useState(false)
+
+  const ref = useRef<HTMLDivElement>(null)
+
+  useOutsideClick({
+    callbacks: {
+      action: () => setIsOpen(false)
+    },
+    enabled: isOpen,
+    ref, 
+  })
 
   const selectedTeam = teams.find(team => team.key === selectedTeamkey)
 
@@ -44,7 +56,7 @@ const SelectTeam = () => {
         <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} />
 
         {isOpen && (
-          <div className="absolute border border-slate-500 bg-white flex flex-col top-12 left-0 rounded-md p-2 w-36 z-10">
+          <div className="absolute border border-slate-500 bg-white flex flex-col top-12 left-0 rounded-md p-2 w-36 z-10" ref={ref}>
             {teams.map(team => (
               <Link
                 className="hover:text-cyan-500"
