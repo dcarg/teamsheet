@@ -1,19 +1,7 @@
-import { Prisma } from '@prisma/client'
-
-type PlayerWithIncludes = Prisma.PlayerGetPayload<
-  {
-    include: {
-      playerPositions: {
-        include: {
-          position: true
-        }
-      }
-    }
-  }
->
+import type { PlayerWithPositions } from '@types'
 
 type FilterPlayersParams = {
-  players: PlayerWithIncludes[],
+  players: PlayerWithPositions[],
   selectedPosition: string,
 }
 
