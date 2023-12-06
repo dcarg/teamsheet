@@ -7,7 +7,6 @@ import Field from '@components/Field'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
-import PlayerCard from '@components/PlayerCard'
 import TeamContent from './TeamContent'
 
 type PageProps = {
@@ -59,8 +58,6 @@ const Page = async (props: PageProps) => {
   return (
     <TeamContent players={players} team={team} teamSheet={teamSheet}>
       <Field />
-
-      {/* <PlayerCard /> */}
 
       <Bench />
 
