@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${futura.className} ${inter.className} flex flex-col items-center`}>
-        <NavBar />
+        <NavBar title="TEAMSHEET" />
 
         <TopBar />
 

@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const NavBar = async () => {
+interface NavbarProps {
+  title: string,
+}
+
+const NavBar = async (props: NavbarProps) => {
+  const { title } = props
+
   return (
     <div className="bg-cyan-700 h-[60px] w-full ">
       <Link href="/">
@@ -17,7 +23,7 @@ const NavBar = async () => {
           </div>
           
           <div className="flex items-center h-full max-w-column w-full text-white text-xl ml-[5px]">
-            TEAMSHEET
+            {title}
           </div>
         </div>
       </Link>
