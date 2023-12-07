@@ -1,10 +1,31 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from "next/font/local"
 import './globals.css'
 
+const futura = localFont(
+  {
+    src: [
+      // {
+      //   path: "../../public/fonts/futura-pt.ttf",
+      //   weight: "400",
+      // },
+      {
+        path: "../../public/fonts/futura-pt-bold.ttf",
+        weight: "700",
+      },
+      // {
+      //   path: "../../public/fonts/futura-pt-light.ttf",
+      //   weight: "400",
+      // }
+    ],
+    variable: "--font-futura",
+  }
+)
+
 // Load fontawesome css at the root of the app to stop 'flashing' icon
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from "@fortawesome/fontawesome-svg-core";
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false;
 
 import NavBar from '@components/NavBar'
@@ -24,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col items-center`}>
+      <body className={`${futura.className} ${inter.className} flex flex-col items-center`}>
         <NavBar />
 
         <TopBar />
