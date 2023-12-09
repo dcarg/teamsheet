@@ -13,6 +13,7 @@ import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
 import TeamContext from '@contexts/teamContext'
 
 import BaseModal from '@modals/BaseModal'
+import PlayerListItem from '@components/PlayerListItem'
 
 type Router = ReturnType<typeof useRouter>
 
@@ -85,11 +86,10 @@ const SelectPlayerModal = () => {
         const isAlreadyAssigned = selectedPlayerIds.includes(player.id)
 
         return (
-          <div
-            className={clsx(
-              isAlreadyAssigned ? 'text-slate-400' : 'cursor-pointer text-black hover:text-cyan-500'
-            )}
+          <PlayerListItem
             key={player.id}
+            disabled={isAlreadyAssigned}
+            icon="faUserPlus"
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal },
               playerId: player.id,
@@ -98,9 +98,8 @@ const SelectPlayerModal = () => {
               teamSheet,
               teamSheetLayoutId: selectedTeamSheetLayoutId!,
             })}
-          >
-            {player.title}
-          </div>
+            player={player}
+          />
         )
       })}
     </BaseModal>

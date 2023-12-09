@@ -1,32 +1,30 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faUserPlus, faUserEdit } from '@fortawesome/free-solid-svg-icons' 
+import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 interface PlayerIconProps {
-  playerId: number | undefined,
-  teamSheetLayoutId: string,
+  icon: string,
+  margin: number,
+  number?: string,
+  size?: string,
 }
 
 const PlayerIcon = (props: PlayerIconProps) => {
-  const { playerId, teamSheetLayoutId } = props
+  const { icon, margin, number, size } = props
+
+  const faIcons = { faUser, faUserPlus }
 
   return (
-    // faUserPlus for positions needed to be added
-    // faUser for selected positions
-    // faUserEdit on hover for selected positions
-    
     <div className="flex relative w-full justify-center content-center">
       <FontAwesomeIcon
-        icon={playerId ? faUser : faUserPlus}
-        size='3x'
+        icon={faIcons[icon]}
+        size={size || '3x'}
         style={{
-          marginTop: 10,
-          marginRight: 10,
-          marginLeft: playerId ? 10 : 18,
+          margin,
         }}
       />
 
-      <div className="absolute inset-x-1/6 bottom-0 m-auto text-xl text-white">
-        {teamSheetLayoutId}
+      <div className={`absolute inset-x-${icon === 'faUser' ? '1/6' : '1/4'} bottom-1.5 m-auto text-xl text-white`}>
+        {number}
       </div>
     </div>
   )

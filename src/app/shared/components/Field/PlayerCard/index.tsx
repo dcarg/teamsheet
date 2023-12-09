@@ -6,6 +6,8 @@ import TeamContext from '@contexts/teamContext'
 
 import type { PlayerWithPositions } from '@types'
 
+import PlayerIcon from '@components/PlayerIcon'
+
 interface PlayerCardProps {
   className: string,
   player?: PlayerWithPositions,
@@ -46,4 +48,4 @@ const PlayerCard = (props: PlayerCardProps) => {
   )
 }
 
-export default PlayerCard
+  export default PlayerCard
