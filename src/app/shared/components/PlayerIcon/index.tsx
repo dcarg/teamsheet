@@ -23,7 +23,9 @@ const PlayerIcon = (props: PlayerIconProps) => {
         }}
       />
 
-      <div className={`absolute inset-x-${icon === 'faUser' ? '1/6' : '1/4'} bottom-1.5 m-auto text-xl text-white`}>
+      <div className={`absolute bottom-1.5 m-auto text-xl text-white
+        inset-x-${icon === 'faUser' ? '1/6' : '1/4'}`
+      }>
         {number}
       </div>
     </div>
