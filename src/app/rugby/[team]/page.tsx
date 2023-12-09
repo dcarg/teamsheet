@@ -58,12 +58,13 @@ const Page = async (props: PageProps) => {
     orderBy: { firstname: 'asc' },
   })
 
+  const hasTeamSheet = !!teamSheet
   const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
   const isTeamSheetComplete = !!data && Object.keys(data).length === teamSize
 
   return (
     <TeamContent players={players} team={team} teamSheet={teamSheet}>
-      {isTeamSheetComplete && <NameForm />}
+      {hasTeamSheet && isTeamSheetComplete && <NameForm teamSheet={teamSheet} />}
 
       <Field />
 

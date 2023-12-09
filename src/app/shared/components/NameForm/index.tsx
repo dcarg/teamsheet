@@ -1,56 +1,51 @@
 'use client'
 
-import { useContext, useState } from 'react'
+import { useState } from 'react'
+
+import clsx from 'clsx'
 
 import type { TeamSheet } from '@prisma/client'
 
 import { updateTeamSheet } from '@actions/teamSheet'
 
-import TeamContext from '@contexts/teamContext'
+import Label from '@components/Label'
 
-type HandleSaveParams = {
+type NameFormProps = {
   teamSheet: TeamSheet,
-  updatedTitle: string,
 }
 
-const handleSave = async (params: HandleSaveParams) => {
+const NameForm = (props: NameFormProps) => {
   const {
-    teamSheet: { id },
-    updatedTitle,
-  } = params
+    teamSheet: {
+      id,
+      title: initTitle,
+    },
+  } = props
 
-  const payload = {
-    id,
-    title: updatedTitle,
-  }
-
-  await updateTeamSheet(payload)
-}
-
-const NameForm = () => {
-  const teamContextValue = useContext(TeamContext)
-  const {
-    teamSheet,
-  } = teamContextValue
-
-  const { title } = teamSheet || {}
-
-  const [updatedTitle, setUpdatedTitle] = useState(title)
+  const [title, setTitle] = useState(initTitle || '')
 
   return (
-    <div className="p-3">
-      <input
-        className="border border-rose-500"
-        name="name"
-        onChange={(e) => setUpdatedTitle(e.target.value)}
-      />
+    <div className="py-3">
+      <Label>Team Name</Label>
 
-      <button
-        className="border"
-        onClick={() => handleSave({ teamSheet, updatedTitle })}
-      >
-        Save
-      </button>
+      <div className="flex justify-between">
+        <input
+          className={clsx(
+            "border rounded p-2",
+            title ? "border-slate-500" : "border-rose-500"
+          )}
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
+        />
+
+        <button
+          className="border border-black p-1 rounded bg-green-400 hover:bg-green-500 text-slate-900 w-28"
+          onClick={() => updateTeamSheet({ id, title })}
+        >
+          Save
+        </button>
+      </div>
+
     </div>
   )
 }
