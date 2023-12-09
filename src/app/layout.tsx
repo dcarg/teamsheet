@@ -3,6 +3,16 @@ import { Inter } from 'next/font/google'
 import localFont from "next/font/local"
 import './globals.css'
 
+// Load fontawesome css at the root of the app to stop 'flashing' icon
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false;
+
+import NavBar from '@components/NavBar'
+import TopBar from '@components/TopBar'
+
+const inter = Inter({ subsets: ['latin'] })
+
 const futura = localFont(
   {
     src: [
@@ -22,16 +32,6 @@ const futura = localFont(
     variable: "--font-futura",
   }
 )
-
-// Load fontawesome css at the root of the app to stop 'flashing' icon
-import '@fortawesome/fontawesome-svg-core/styles.css'
-import { config } from "@fortawesome/fontawesome-svg-core"
-config.autoAddCss = false;
-
-import NavBar from '@components/NavBar'
-import TopBar from '@components/TopBar'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Teamsheet',
