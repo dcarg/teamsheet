@@ -23,8 +23,8 @@ const PlayerListItem = (props: PlayerListItemProps) => {
       className={`
         border
         cursor-pointer
-        ${disabled && 'bg-gray-200'}
-        ${disabled && 'border-gray-300'}
+        ${disabled ? 'bg-gray-200' : 'hover:bg-cyan-50 hover:border-cyan-300'}
+        ${disabled ? 'border-gray-300' : 'hover:bg-cyan-50 hover:border-cyan-300'}
         flex
         w-full
         h-fit
