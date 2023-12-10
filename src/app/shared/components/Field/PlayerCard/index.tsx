@@ -28,21 +28,29 @@ const PlayerCard = (props: PlayerCardProps) => {
   } = teamContextValue
   
   return (
-    <div className={className}> 
+    <div className={`${className} h-[30px]`}> 
       <div
-        className="box-border cursor-pointer md:h-20 md:w-20 border-2 hover:border-cyan-300"
+        className="box-border cursor-pointer flex flex-col min-h-[50px] min-w-[60px] w-fit border-2 hover:border-cyan-300"
         onClick={() => {
           setSelectedPosition(position)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
           openModal()
         }}
       >
-        <PlayerIcon
-          playerId={player?.id}
-          teamSheetLayoutId={teamSheetLayoutId}
-        />
+        <div className="flex align-middle">
+          <div className='text-3xl text-white'>
+            {teamSheetLayoutId}
+          </div>
 
-        {player?.title || position}
+          <PlayerIcon
+            icon={player?.id ? "faUser" : "faUserPlus"}
+            // margin={5}
+            // number={teamSheetLayoutId}
+            size='2x'
+          />
+        </div>
+
+        {player?.lastname || position}
       </div>
     </div>
   )

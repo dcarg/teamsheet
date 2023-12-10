@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 interface PlayerIconProps {
-  icon: string,
+  icon: 'faUser' | 'faUserPlus',
   margin: number,
   number?: string,
   size?: string,

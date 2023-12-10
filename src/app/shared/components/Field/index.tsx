@@ -20,7 +20,7 @@ const Field = () => {
   const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
 
   return (
-    <div className="max-w-column w-full min-h-fit">
+    <div className="max-w-column w-full min-h-screen">
       <div className="absolute max-w-column w-full z-[-1]">
         <Image
           src="/rugby_field.svg"
@@ -37,7 +37,7 @@ const Field = () => {
       </div>
 
       <div
-        className="grid grid-cols-10 grid-rows-8 gap-4 justify-items-center content-center"
+        className="grid grid-cols-6 grid-rows-8 gap-4 mx-5"
         style={{
           height: '100%',
           paddingBottom: '40%',

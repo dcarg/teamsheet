@@ -21,13 +21,9 @@ const PlayerListItem = (props: PlayerListItemProps) => {
   return (
     <div 
       className={`
-        border
-        cursor-pointer
+        border cursor-pointer flex w-full h-fit
         ${disabled ? 'bg-gray-200' : 'hover:bg-cyan-50 hover:border-cyan-300'}
         ${disabled ? 'border-gray-300' : 'hover:bg-cyan-50 hover:border-cyan-300'}
-        flex
-        w-full
-        h-fit
       `}
       onClick={onClick}
     >
