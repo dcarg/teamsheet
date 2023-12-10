@@ -4,15 +4,17 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
+import PlayerListItem from '@components/PlayerListItem'
+
 import type { PlayerWithPositions } from '@types'
 
-interface SeatProps {
+interface BenchSeatProps {
   player?: PlayerWithPositions,
   position: string,
   teamSheetLayoutId: string,
 }
 
-const Seat = (props: SeatProps) => {
+const BenchSeat = (props: BenchSeatProps) => {
   const { player, position, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
@@ -25,17 +27,17 @@ const Seat = (props: SeatProps) => {
   } = teamContextValue
 
   return (
-    <div
-      className="border cursor-pointer h-10 hover:bg-cyan-50 hover:border-cyan-300"
+    <PlayerListItem
+      icon={player?.id ? "faUser" : "faUserPlus"}
       onClick={() => {
         setSelectedPosition(position)
         setSelectedTeamSheetLayoutId(teamSheetLayoutId)
         openModal()
       }}
-    >
-      {player?.title}
-    </div>
+      player={player}
+      teamSheetLayoutId={teamSheetLayoutId}
+    />
   )
 }
 
-export default Seat
+export default BenchSeat

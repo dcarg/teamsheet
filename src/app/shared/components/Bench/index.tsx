@@ -6,7 +6,7 @@ import TeamContext from '@contexts/teamContext'
 
 import teamSheetLayoutData from '@functions/teamSheet'
 
-import Seat from './Seat'
+import BenchSeat from './BenchSeat'
 
 const Bench = () => {
   const teamContextValue = useContext(TeamContext)
@@ -24,7 +24,7 @@ const Bench = () => {
         const player = players.find(player => player.id === playerId)
 
         return (
-          <Seat
+          <BenchSeat
             key={teamSheetLayoutId}
             player={player}
             position={position}
