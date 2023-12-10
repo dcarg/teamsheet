@@ -12,6 +12,9 @@ model Sport {
   title String
   key String @unique
 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   positions Position[]
   teams Team[]
 
@@ -24,6 +27,9 @@ model Team {
   key String @unique
   sport Sport @relation(fields: [sportId], references: [id])
   sportId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   teamMembers TeamMember[]
   teamSheets TeamSheet[]
@@ -38,6 +44,9 @@ model TeamSheet {
   team Team @relation(fields: [teamId], references: [id])
   teamId Int
 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   @@map("teamSheets")
 }
 
@@ -47,6 +56,9 @@ model Player {
   title String
   firstname String
   lastname String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   playerPositions PlayerPosition[]
   teamMembers TeamMember[]
@@ -59,7 +71,10 @@ model TeamMember {
   team Team @relation(fields: [teamId], references: [id])
   teamId Int
   player Player @relation(fields: [playerId], references: [id])
-  playerId Int 
+  playerId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   
   @@map("teamMembers")
 }
@@ -73,6 +88,9 @@ model Position {
   title String // position name i.e. 'Prop'
   category String // 'Forward' or 'Back'
 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   playerPositions PlayerPosition[]
 
   @@map("positions")
@@ -83,7 +101,10 @@ model PlayerPosition {
   player Player @relation(fields: [playerId], references: [id])
   playerId Int
   position Position @relation(fields: [positionId], references: [id])
-  positionId Int 
+  positionId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   
   @@map("playerPositions")
 }
