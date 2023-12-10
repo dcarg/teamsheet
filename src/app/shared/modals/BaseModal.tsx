@@ -39,7 +39,7 @@ const BaseModal = (props: BaseModalProps) => {
   if (!showModal) return null
 
   return (
-    <div className="animate-slideFromTop bg-white border-x border-b  fixed h-screen top-0 w-fillColumn" ref={ref}>
+    <div className="animate-slideFromTop bg-white border-x border-b fixed h-screen top-0 w-screen" ref={ref}>
       <div className="border-b border-slate-500 flex items-center justify-between h-topBarHeight p-3">
         {title}
 
