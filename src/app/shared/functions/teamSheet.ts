@@ -28,4 +28,6 @@ const teamSheetLayoutData = {
   ],
 }
 
+export const teamSize = 23
+
 export default teamSheetLayoutData
