@@ -4,6 +4,9 @@ import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
 import Field from '@components/Field'
+import NameForm from '@components/NameForm'
+
+import { teamSize } from '@functions/teamSheet'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
@@ -55,8 +58,14 @@ const Page = async (props: PageProps) => {
     orderBy: { firstname: 'asc' },
   })
 
+  const hasTeamSheet = !!teamSheet
+  const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
+  const isTeamSheetComplete = !!data && Object.keys(data).length === teamSize
+
   return (
     <TeamContent players={players} team={team} teamSheet={teamSheet}>
+      {hasTeamSheet && isTeamSheetComplete && <NameForm teamSheet={teamSheet} />}
+
       <Field />
 
       <Bench />
