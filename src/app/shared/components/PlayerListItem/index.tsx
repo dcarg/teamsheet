@@ -6,9 +6,9 @@ import PlayerIcon from '@components/PlayerIcon'
 
 interface PlayerListItemProps {
   disabled?: boolean,
-  icon?: string,
+  icon: 'faUser' | 'faUserPlus',
   onClick: () => void,
-  player: PlayerWithPositions,
+  player?: PlayerWithPositions,
   teamSheetLayoutId: string,
 }
 
