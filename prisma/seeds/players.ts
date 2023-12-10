@@ -2,8 +2,7 @@ import type { PrismaClient, Position, Team } from '@prisma/client'
 
 const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[]) => {
   const teamId = teams.find(team => team.key === 'wallabies')!.id
-
-  // rugby positon ids for initial seeds
+  
   const propId = positions.find(p => p.key === 'prop')!.id
   const hookerId = positions.find(p => p.key === 'hooker')!.id
   const lockId = positions.find(p => p.key === 'lock')!.id

@@ -35,7 +35,7 @@ const seedPositions = (prisma: PrismaClient, sports: Sport[]) => {
     {
       key: 'scrumhalf',
       numbers: [9],
-      title: 'Scrumhalf', // 'scrumhalf' or 'halfback'
+      title: 'Scrumhalf',
       category: 'back',
       sportId: rugbyId,
     },
