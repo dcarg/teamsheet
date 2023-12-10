@@ -10,7 +10,7 @@ const NavBar = async (props: NavbarProps) => {
 
   return (
     <div className="bg-cyan-700 w-full ">
-      <div className="max-w-column flex m-auto p-2 w-full items-center">
+      <div className="max-w-column flex m-auto p-2 w-full">
         <Link href="/">
           <div className="m-auto p-[5px] pl-0">
             <Image
@@ -23,7 +23,7 @@ const NavBar = async (props: NavbarProps) => {
           </div>
         </Link>
         
-        <div className="flex align-middle items-center h-full max-w-column w-full text-white text-xl ml-[5px]">
+        <div className="flex text-white text-xl ml-[5px] items-center">
           {title}
         </div>
       </div>
