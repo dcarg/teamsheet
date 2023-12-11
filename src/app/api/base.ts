@@ -1,6 +1,6 @@
 const apiUrls = {
   development: 'http://localhost:3000/api',
-  production: '',
+  production: 'https://teamsheet.online/api',
   test: '',
 }
 
