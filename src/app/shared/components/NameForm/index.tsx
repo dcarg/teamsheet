@@ -16,17 +16,21 @@ import Label from '@components/Label'
 
 type HandleEditTitleParams = {
   callbacks: {
-    afterActionFn: Dispatch<SetStateAction<null>>,
+    setIsEditing: Dispatch<SetStateAction<boolean>>,
   },
   id: string,
   title: string,
 }
 
 const  handleEditTitle = async (params: HandleEditTitleParams) => {
-  const { id, title, callbacks: { afterActionFn } } = params
+  const {
+    callbacks: { setIsEditing },
+    id,
+    title,
+  } = params
 
   await updateTeamSheet({ id, title })
-  return afterActionFn()
+  setIsEditing(false)
 }
 
 type NameFormProps = {
@@ -76,7 +80,7 @@ const NameForm = (props: NameFormProps) => {
             <button
               className="border border-black p-1 rounded bg-cyan-400 hover:bg-cyan-500 text-slate-900 w-28 ml-2"
               onClick={() => handleEditTitle({ 
-                callbacks: { afterActionFn: setIsEditing(false) },
+                callbacks: { setIsEditing },
                 id,
                 title, 
               })}
