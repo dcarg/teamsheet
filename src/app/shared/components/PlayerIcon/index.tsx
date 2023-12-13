@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
-
-import { SizeProp } from '@fortawesome/fontawesome-svg-core'
+import type { SizeProp } from '@fortawesome/fontawesome-svg-core'
 
 interface PlayerIconProps {
   icon: 'faUser' | 'faUserPlus',
