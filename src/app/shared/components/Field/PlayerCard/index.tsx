@@ -7,6 +7,7 @@ import TeamContext from '@contexts/teamContext'
 import type { PlayerWithPositions } from '@types'
 
 import PlayerIcon from '@components/PlayerIcon'
+import UnSelectPlayer from '@components/UnSelectPlayer'
 
 interface PlayerCardProps {
   className: string,
@@ -26,11 +27,11 @@ const PlayerCard = (props: PlayerCardProps) => {
       setSelectedTeamSheetLayoutId,
     },
   } = teamContextValue
-  
+
   return (
-    <div className={`${className} h-[30px]`}> 
+    <div className={`${className} h-[30px]`}>
       <div
-        className="box-border cursor-pointer flex flex-col min-h-[50px] min-w-[60px] w-fit border-2 hover:border-cyan-300"
+        className="box-border cursor-pointer flex flex-col min-h-[50px] min-w-[60px] w-fit border-2 hover:border-cyan-300 relative"
         onClick={() => {
           setSelectedPosition(position)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
@@ -48,6 +49,8 @@ const PlayerCard = (props: PlayerCardProps) => {
             // number={teamSheetLayoutId}
             size='2x'
           />
+
+          {player && <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />}
         </div>
 
         {player?.lastname || position}

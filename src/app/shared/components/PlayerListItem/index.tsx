@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import type { PlayerWithPositions } from '@types'
 
@@ -14,7 +14,7 @@ interface PlayerListItemProps {
 
 const PlayerListItem = (props: PlayerListItemProps) => {
   const { disabled, icon, onClick, player, teamSheetLayoutId } = props
-  const{ playerPositions } = player || {}
+  const { playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
   
