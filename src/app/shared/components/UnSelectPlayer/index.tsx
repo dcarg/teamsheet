@@ -49,10 +49,11 @@ const UnSelectPlayer = (props: UnSelectPlayerProps) => {
         border rounded-full
         h-5 w-5
         absolute -top-2.5 -right-2.5
+        bg-slate-200
       `}
       onClick={e => handleClick({ e, teamSheet, teamSheetLayoutId })}
     >
-      <FontAwesomeIcon icon={faXmark} color="#e5e7eb" />
+      <FontAwesomeIcon icon={faXmark} />
     </div>
   )
 }
