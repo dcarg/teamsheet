@@ -4,8 +4,6 @@ import { useContext } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-import clsx from 'clsx'
-
 import type { TeamSheet } from '@prisma/client'
 
 import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
