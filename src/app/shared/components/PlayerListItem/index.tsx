@@ -36,7 +36,7 @@ const PlayerListItem = (props: PlayerListItemProps) => {
         />
       </div>
 
-      <div className={`self-center overflow-hidden truncate ml-${player?.id ? 1 : 0}`}>
+      <div className={`ml-3 self-center overflow-hidden truncate ml-${player?.id ? 1 : 0}`}>
         <h2 className={`text-xl font-semibold mb-[2px] ${disabled && 'text-gray-400'}`}>{player?.title || "Select Player"}</h2>
         <p className={`${disabled ? 'text-gray-400' : 'text-gray-600'} text-sm`}>{playerPositionTitles?.join(', ')}</p>
       </div>

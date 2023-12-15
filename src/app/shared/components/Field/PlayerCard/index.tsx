@@ -41,10 +41,6 @@ const PlayerCard = (props: PlayerCardProps) => {
         }}
       >
         <div className="flex align-middle text-center">
-          {/* <div className='text-3xl text-white'>
-            {teamSheetLayoutId}
-          </div> */}
-
           <PlayerIcon
             icon={playerSelected ? "faUser" : "faUserPlus"}
             number={teamSheetLayoutId}

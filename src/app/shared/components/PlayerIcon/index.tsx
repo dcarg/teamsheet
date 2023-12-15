@@ -1,31 +1,23 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
-import type { SizeProp } from '@fortawesome/fontawesome-svg-core'
+import Image from 'next/image'
 
 interface PlayerIconProps {
-  icon: 'faUser' | 'faUserPlus',
   margin?: number,
   number?: string,
-  size?: SizeProp,
 }
 
 const PlayerIcon = (props: PlayerIconProps) => {
-  const { icon, margin, number, selected, size } = props
-
-  const faIcons = { faUser, faUserPlus }
+  const { number } = props
 
   return (
     <div className="flex relative w-full justify-center content-center">
-      <FontAwesomeIcon
-        color={selected ? 'rgb(14 116 144)' : 'black'}
-        icon={faIcons[icon]}
-        size={size || '3x'}
-        style={{ margin }}
+      <Image
+        src='/wallaby_jersey.svg'
+        height={40}
+        width={40}
       />
 
-      <div className={`absolute bottom-1.5 m-auto text-xl text-white
-        inset-x-${icon === 'faUser' ? '1/6' : '1/4'}`
-      }>
+      <div className={`absolute bottom-1.5 text-xl text-white inset-x-1/4`}
+      >
         {number}
       </div>
     </div>
