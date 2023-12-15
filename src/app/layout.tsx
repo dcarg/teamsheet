@@ -16,18 +16,21 @@ const inter = Inter({ subsets: ['latin'] })
 const futura = localFont(
   {
     src: [
-      // {
-      //   path: "../../public/fonts/futura-pt.ttf",
-      //   weight: "400",
-      // },
+      {
+        path: "../../public/fonts/futura-pt-medium.ttf",
+        weight: "500",
+        style: "normal",
+      },
       {
         path: "../../public/fonts/futura-pt-bold.ttf",
-        weight: "700",
+        weight: "600",
+        style: "normal",
       },
-      // {
-      //   path: "../../public/fonts/futura-pt-light.ttf",
-      //   weight: "400",
-      // }
+      {
+        path: "../../public/fonts/futura-pt.ttf",
+        weight: "400",
+        style: "normal",
+      }
     ],
     variable: "--font-futura",
   }
