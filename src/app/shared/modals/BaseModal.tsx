@@ -38,7 +38,8 @@ const BaseModal = (props: BaseModalProps) => {
 
   // Disable scrolling on screen behind the modal
   useEffect(() => {
-    document.body.classList.toggle('overflow-hidden')
+    if (showModal) document.body.classList.add('overflow-hidden')
+    if (!showModal) document.body.classList.remove('overflow-hidden')
   }, [showModal])
 
   if (!showModal) return null
