@@ -7,9 +7,9 @@ import PlayerIcon from '@components/PlayerIcon'
 interface PlayerListItemProps {
   disabled?: boolean,
   icon: 'faUser' | 'faUserPlus',
-  onClick: () => void,
+  onClick?: () => void,
   player?: PlayerWithPositions,
-  teamSheetLayoutId: string,
+  teamSheetLayoutId?: string,
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
@@ -17,7 +17,7 @@ const PlayerListItem = (props: PlayerListItemProps) => {
   const{ playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
-  
+
   return (
     <div 
       className={`
@@ -42,6 +42,6 @@ const PlayerListItem = (props: PlayerListItemProps) => {
       </div>
     </div>
   );
-};
+}
 
-export default PlayerListItem;
+export default PlayerListItem

@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import type { SizeProp } from '@fortawesome/fontawesome-svg-core'
 
 interface PlayerIconProps {
   icon: 'faUser' | 'faUserPlus',
-  margin: number,
+  margin?: number,
   number?: string,
-  selected?: boolean,
-  size?: string,
+  size?: SizeProp,
 }
 
 const PlayerIcon = (props: PlayerIconProps) => {
@@ -20,9 +20,7 @@ const PlayerIcon = (props: PlayerIconProps) => {
         color={selected ? 'rgb(14 116 144)' : 'black'}
         icon={faIcons[icon]}
         size={size || '3x'}
-        style={{
-          margin,
-        }}
+        style={{ margin }}
       />
 
       <div className={`absolute bottom-1.5 m-auto text-xl text-white
