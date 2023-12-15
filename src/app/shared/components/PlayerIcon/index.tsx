@@ -5,17 +5,19 @@ interface PlayerIconProps {
   icon: 'faUser' | 'faUserPlus',
   margin: number,
   number?: string,
+  selected?: boolean,
   size?: string,
 }
 
 const PlayerIcon = (props: PlayerIconProps) => {
-  const { icon, margin, number, size } = props
+  const { icon, margin, number, selected, size } = props
 
   const faIcons = { faUser, faUserPlus }
 
   return (
     <div className="flex relative w-full justify-center content-center">
       <FontAwesomeIcon
+        color={selected ? 'rgb(14 116 144)' : 'black'}
         icon={faIcons[icon]}
         size={size || '3x'}
         style={{
