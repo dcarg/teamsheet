@@ -28,12 +28,12 @@ const PlayerCard = (props: PlayerCardProps) => {
     },
   } = teamContextValue
 
-  const playerSelected = !!player?.id
+  const isPlayerSelected = !!player?.id
   
   return (
     <div className={`${className} h-[30px]`}> 
       <div
-        className="box-border border-black rounded cursor-pointer flex flex-col p-2 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300"
+        className="box-border border-black rounded cursor-pointer flex flex-col p-1 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300"
         onClick={() => {
           setSelectedPosition(position)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
@@ -42,9 +42,8 @@ const PlayerCard = (props: PlayerCardProps) => {
       >
         <div className="flex align-middle text-center">
           <PlayerIcon
-            icon={playerSelected ? "faUser" : "faUserPlus"}
             number={teamSheetLayoutId}
-            selected={playerSelected}
+            unSelected={!isPlayerSelected}
             size='2x'
           />
         </div>
