@@ -30,7 +30,7 @@ const PlayerCard = (props: PlayerCardProps) => {
   } = teamContextValue
 
   const isPlayerSelected = !!player?.id
-  
+
   return (
     <div className={`${className} h-[30px]`}>
       <div
