@@ -1,31 +1,28 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
 
 interface PlayerIconProps {
-  icon: 'faUser' | 'faUserPlus',
-  margin: number,
   number?: string,
-  size?: string,
+  unSelected?: boolean,
 }
 
 const PlayerIcon = (props: PlayerIconProps) => {
-  const { icon, margin, number, size } = props
+  const { number, unSelected } = props
 
-  const faIcons = { faUser, faUserPlus }
+  // Update this with an empty player silhouette svg when I figure out how to generate one for unselected players
 
   return (
     <div className="flex relative w-full justify-center content-center">
-      <FontAwesomeIcon
-        icon={faIcons[icon]}
-        size={size || '3x'}
+      <Image
+        src='/wallaby_jersey.svg'
+        alt="rugby jersey"
+        height={35}
+        width={35}
         style={{
-          margin,
+          opacity: unSelected ? 0.6 : 1,
         }}
       />
 
-      <div className={`absolute bottom-1.5 m-auto text-xl text-white
-        inset-x-${icon === 'faUser' ? '1/6' : '1/4'}`
-      }>
+      <div className="absolute bottom-1.5 text-xl text-white inset-x-1/4">
         {number}
       </div>
     </div>

@@ -13,11 +13,12 @@ interface PlayerCardProps {
   className: string,
   player?: PlayerWithPositions,
   position: string,
+  positionTitle: string,
   teamSheetLayoutId: string,
 }
 
 const PlayerCard = (props: PlayerCardProps) => {
-  const { className, player, position, teamSheetLayoutId } = props
+  const { className, player, position, positionTitle, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
@@ -28,32 +29,29 @@ const PlayerCard = (props: PlayerCardProps) => {
     },
   } = teamContextValue
 
+  const isPlayerSelected = !!player?.id
+  
   return (
     <div className={`${className} h-[30px]`}>
       <div
-        className="box-border cursor-pointer flex flex-col min-h-[50px] min-w-[60px] w-fit border-2 hover:border-cyan-300 relative"
+        className="box-border border-black rounded cursor-pointer flex flex-col p-1 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300 relative"
         onClick={() => {
           setSelectedPosition(position)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
           openModal()
         }}
       >
-        <div className="flex align-middle">
-          <div className='text-3xl text-white'>
-            {teamSheetLayoutId}
-          </div>
-
+        <div className="flex align-middle text-center">
           <PlayerIcon
-            icon={player?.id ? "faUser" : "faUserPlus"}
-            // margin={5}
-            // number={teamSheetLayoutId}
+            number={teamSheetLayoutId}
+            unSelected={!isPlayerSelected}
             size='2x'
           />
 
           {player && <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />}
         </div>
 
-        {player?.lastname || position}
+        {player?.lastname || positionTitle}
       </div>
     </div>
   )

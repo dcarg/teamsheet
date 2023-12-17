@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
@@ -36,10 +36,28 @@ const BaseModal = (props: BaseModalProps) => {
     ref,
   })
 
+  // Disable scrolling on screen behind the modal
+  useEffect(() => {
+    if (showModal) document.body.classList.add('overflow-hidden')
+    if (!showModal) document.body.classList.remove('overflow-hidden')
+  }, [showModal])
+
   if (!showModal) return null
 
+  // w-fillColumn
+
   return (
-    <div className="animate-slideFromTop bg-white border-x border-b fixed h-screen top-0 w-fillColumn" ref={ref}>
+    <div
+      className={`
+        animate-slideFromTop
+        bg-white
+        border-x
+        fixed top-0
+        h-full w-screen max-w-column
+        overflow-scroll
+      `}
+      ref={ref}
+    >
       <div className="border-b border-slate-500 flex items-center justify-between h-topBarHeight p-3">
         {title}
 

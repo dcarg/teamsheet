@@ -7,9 +7,9 @@ import PlayerIcon from '@components/PlayerIcon'
 interface PlayerListItemProps {
   disabled?: boolean,
   icon: 'faUser' | 'faUserPlus',
-  onClick: () => void,
+  onClick?: () => void,
   player?: PlayerWithPositions,
-  teamSheetLayoutId: string,
+  teamSheetLayoutId?: string,
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
@@ -17,11 +17,11 @@ const PlayerListItem = (props: PlayerListItemProps) => {
   const { playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
-  
+
   return (
     <div 
       className={`
-        border cursor-pointer flex w-full h-fit
+        border cursor-pointer flex w-full h-[50px]
         ${disabled ? 'bg-gray-200' : 'hover:bg-cyan-50 hover:border-cyan-300'}
         ${disabled ? 'border-gray-300' : 'hover:bg-cyan-50 hover:border-cyan-300'}
       `}
@@ -29,19 +29,16 @@ const PlayerListItem = (props: PlayerListItemProps) => {
     >
       <div>
         <PlayerIcon
-          icon={icon}
-          margin={10}
           number={teamSheetLayoutId}
-          size='3x'
         />
       </div>
 
-      <div className={`self-center overflow-hidden truncate ml-${player?.id ? 1 : 0}`}>
-        <h2 className={`text-xl font-semibold mb-[2px] ${disabled && 'text-gray-400'}`}>{player?.title || "Select Player"}</h2>
+      <div className="ml-3 self-center overflow-hidden truncate">
+        <h2 className={`text-xl font-semibold mb-[2px] ${disabled && 'text-gray-400'}`}>{player?.title || "+ Select Player"}</h2>
         <p className={`${disabled ? 'text-gray-400' : 'text-gray-600'} text-sm`}>{playerPositionTitles?.join(', ')}</p>
       </div>
     </div>
   );
-};
+}
 
-export default PlayerListItem;
+export default PlayerListItem

@@ -4,8 +4,6 @@ import { useContext } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-import clsx from 'clsx'
-
 import type { TeamSheet } from '@prisma/client'
 
 import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
@@ -13,6 +11,7 @@ import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
 import TeamContext from '@contexts/teamContext'
 
 import BaseModal from '@modals/BaseModal'
+
 import PlayerListItem from '@components/PlayerListItem'
 
 type Router = ReturnType<typeof useRouter>

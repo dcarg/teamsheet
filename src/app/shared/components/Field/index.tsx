@@ -2,8 +2,6 @@
 
 import { useContext } from 'react'
 
-import Image from 'next/image'
-
 import TeamContext from '@contexts/teamContext'
 
 import teamSheetLayoutData from '@functions/teamSheet'
@@ -22,32 +20,13 @@ const Field = () => {
   const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
 
   return (
-    <div className="max-w-column w-full min-h-screen">
-      <div className="absolute max-w-column w-full z-[-1]">
-        <Image
-          src="/rugby_field.svg"
-          alt="Rugby Field"
-          priority
-          height={0}
-          width={0}
-          style={{
-            height: 'auto',
-            opacity: 0.5,
-            width: '100%',
-          }}
-        />
-      </div>
-
+    <div className="max-w-column w-full min-h-[650px] bg-[url('/rugby_field.svg')] bg-no-repeat bg-contain bg-center bg-opacity-50 bg-origin-border">
       <div
-        className="grid grid-cols-6 grid-rows-8 gap-4 mx-5"
-        style={{
-          height: '100%',
-          paddingBottom: '40%',
-          paddingTop: '40%',
-          width: '100%',
-        }}
+        className=" 
+        min-h-[650px] grid grid-cols-6 grid-rows-8 gap-10
+        px-12 max-w-column w-full place-items-center content-center"
       >
-        {teamSheetLayoutData.field.map(({ className, position, teamSheetLayoutId }) => {
+        {teamSheetLayoutData.field.map(({ className, position, positionTitle, teamSheetLayoutId }) => {
           const playerId = data ? data[teamSheetLayoutId] : null
           const player = players.find(player => player.id === playerId)
 
@@ -57,6 +36,7 @@ const Field = () => {
               key={teamSheetLayoutId}
               player={player}
               position={position}
+              positionTitle={positionTitle}
               teamSheetLayoutId={teamSheetLayoutId}
             />
           )
