@@ -1,3 +1,5 @@
+'use client'
+
 import { useContext } from 'react'
 import type { MouseEvent } from 'react'
 
@@ -44,13 +46,7 @@ const UnSelectPlayer = (props: UnSelectPlayerProps) => {
 
   return (
     <div
-      className={`
-        flex items-center justify-center
-        border rounded-full
-        h-5 w-5
-        absolute -top-2.5 -right-2.5
-        bg-slate-200
-      `}
+      className="flex items-center justify-center"
       onClick={e => handleClick({ e, teamSheet: teamSheet!, teamSheetLayoutId })}
     >
       <FontAwesomeIcon icon={faXmark} />

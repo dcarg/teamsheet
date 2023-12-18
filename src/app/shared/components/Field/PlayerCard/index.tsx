@@ -48,7 +48,11 @@ const PlayerCard = (props: PlayerCardProps) => {
             size='2x'
           />
 
-          {player && <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />}
+          {player && (
+            <div className="flex justify-center items-center border rounded-full h-5 w-5 absolute -top-2.5 -right-2.5 bg-slate-200">
+              <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />
+            </div>
+          )}
         </div>
 
         {player?.lastname || positionTitle}
