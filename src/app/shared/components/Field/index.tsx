@@ -6,8 +6,6 @@ import TeamContext from '@contexts/teamContext'
 
 import teamSheetLayoutData from '@functions/teamSheet'
 
-import UnSelectPlayer from '@components/UnSelectPlayer'
-
 import PlayerCard from './PlayerCard'
 
 const Field = () => {

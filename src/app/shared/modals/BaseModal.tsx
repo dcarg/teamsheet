@@ -44,8 +44,6 @@ const BaseModal = (props: BaseModalProps) => {
 
   if (!showModal) return null
 
-  // w-fillColumn
-
   return (
     <div
       className={`
