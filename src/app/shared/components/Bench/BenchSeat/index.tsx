@@ -28,7 +28,6 @@ const BenchSeat = (props: BenchSeatProps) => {
 
   return (
     <PlayerListItem
-      icon={player?.id ? "faUser" : "faUserPlus"}
       onClick={() => {
         setSelectedPosition(position)
         setSelectedTeamSheetLayoutId(teamSheetLayoutId)

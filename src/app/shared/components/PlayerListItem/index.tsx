@@ -6,14 +6,13 @@ import PlayerIcon from '@components/PlayerIcon'
 
 interface PlayerListItemProps {
   disabled?: boolean,
-  icon: 'faUser' | 'faUserPlus',
   onClick?: () => void,
   player?: PlayerWithPositions,
   teamSheetLayoutId?: string,
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
-  const { disabled, icon, onClick, player, teamSheetLayoutId } = props
+  const { disabled, onClick, player, teamSheetLayoutId } = props
   const{ playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
