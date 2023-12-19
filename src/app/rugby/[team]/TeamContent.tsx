@@ -24,7 +24,7 @@ const TeamContent = (props: TeamContentProps) => {
   const [selectedTeamSheetLayoutId, setSelectedTeamSheetLayoutId] = useState<string>()
   const [showModal, setShowModal] = useState(false)
 
-  const filteredPlayers = filterPlayers({ players, selectedPosition })
+  const filteredPlayers = filterPlayers({ players, selectedPosition, selectedTeamSheetLayoutId })
 
   const teamContextValue = {
     callbacks: {
