@@ -52,7 +52,7 @@ const BaseModal = (props: BaseModalProps) => {
         border-x
         fixed top-0
         h-full w-screen max-w-column
-        overflow-scroll
+        overflow-auto
       `}
       ref={ref}
     >
