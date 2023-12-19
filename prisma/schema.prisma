@@ -106,7 +106,33 @@ model PlayerPosition {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
+
   @@map("playerPositions")
+}
+
+model Role {
+  id Int @id @default(autoincrement())
+  key String
+  title String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users User[]
+
+  @@map("roles")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  firstname String
+  lastname String
+  role Role @relation(fields: [roleId], references: [id])
+  roleId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
 }
 
