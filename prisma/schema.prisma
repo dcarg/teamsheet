@@ -112,7 +112,7 @@ model PlayerPosition {
 
 model Role {
   id Int @id @default(autoincrement())
-  key String
+  key String @unique
   title String
 
   createdAt DateTime @default(now())
