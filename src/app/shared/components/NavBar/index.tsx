@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { getKindeServerSession, LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/server"
+import { getKindeServerSession, LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/server'
 
 interface NavbarProps {
   title: string,
