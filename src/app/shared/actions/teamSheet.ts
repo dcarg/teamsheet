@@ -2,6 +2,8 @@
 
 import { revalidateTag } from 'next/cache'
 
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+
 import prisma from '@db/prismaSingleton'
 
 type CreateTeamSheetPayload = {
@@ -10,8 +12,14 @@ type CreateTeamSheetPayload = {
 }
 
 export const createTeamSheet = async (payload: CreateTeamSheetPayload) => {
+  const { getUser } = getKindeServerSession()
+  const user = await getUser()
+
   const teamsheet = await prisma.teamSheet.create({
-    data: payload
+    data: {
+      ...payload,
+      userId: user?.id,
+    }
   })
 
   return teamsheet
