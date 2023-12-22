@@ -110,3 +110,30 @@ model PlayerPosition {
 
   @@map("playerPositions")
 }
+
+model User {
+  id Int @id @default(autoincrement())
+  email String
+  firstname String
+  lastname String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userAccounts UserAccount[]
+
+  @@map("users")
+}
+
+model UserAccount {
+  id Int @id @default(autoincrement())
+  provider String
+  providerId String
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("userAccounts")
+}
