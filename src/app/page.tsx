@@ -1,5 +1,14 @@
 import { redirect } from 'next/navigation'
 
-export default function Home() {
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+
+import { findOrCreateUser } from '@functions/user'
+
+export default async function Home() {
+  const { getUser } = getKindeServerSession()
+  const kindeUser = await getUser()
+
+  findOrCreateUser(kindeUser)
+
   redirect('/rugby')
 }
