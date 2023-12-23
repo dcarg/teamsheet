@@ -6,6 +6,8 @@ import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 
 import prisma from '@db/prismaSingleton'
 
+import { findOrCreateUser } from '@functions/user'
+
 type CreateTeamSheetPayload = {
   data: { [key: string]: number },
   teamId: number,
@@ -13,7 +15,9 @@ type CreateTeamSheetPayload = {
 
 export const createTeamSheet = async (payload: CreateTeamSheetPayload) => {
   const { getUser } = getKindeServerSession()
-  const user = await getUser()
+  const kindeUser = await getUser()
+
+  const user = await findOrCreateUser(kindeUser)
 
   const teamsheet = await prisma.teamSheet.create({
     data: {
