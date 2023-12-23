@@ -113,9 +113,9 @@ model PlayerPosition {
 
 model User {
   id Int @id @default(autoincrement())
-  email String
-  firstname String
-  lastname String
+  email String?
+  firstname String?
+  lastname String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
