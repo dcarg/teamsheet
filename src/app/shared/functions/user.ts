@@ -4,6 +4,8 @@ import type { KindeUser } from '@kinde-oss/kinde-auth-nextjs/dist/types'
 
 import type { User } from '@prisma/client'
 
+import { createUser } from '@actions/user'
+
 export const findOrCreateUser = async (externalUser: KindeUser | null) => {
   if (!externalUser) return null
 
@@ -21,19 +23,19 @@ export const findOrCreateUser = async (externalUser: KindeUser | null) => {
   })
 
   if (!user) {
-    user = await prisma.user.create({
-      data: {
-        email: externalUser.email,
-        firstname: externalUser.given_name,
-        lastname: externalUser.family_name,
-        userAccounts: {
-          create: {
-            provider: 'Kinde',
-            providerId: externalUser.id,
-          },
+    const payload = {
+      email: externalUser.email,
+      firstname: externalUser.given_name,
+      lastname: externalUser.family_name,
+      userAccounts: {
+        create: {
+          provider: 'Kinde',
+          providerId: externalUser.id,
         },
       },
-    })
+    }
+
+    user = await createUser(payload)
   }
 
   return user
