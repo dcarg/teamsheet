@@ -55,7 +55,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   } else {
     const teamSheet = await createTeamSheet(payload)
   
-    router.push(`?teamSheetId=${teamSheet.id}`)
+    router.push(`?teamSheetId=${teamSheet.editId}`)
   }
 
   closeModal()
