@@ -19,7 +19,7 @@ const Bench = () => {
 
   return (
     <>
-      {teamSheetLayoutData.bench.map(({ position, teamSheetLayoutId }) => {
+      {teamSheetLayoutData.bench.map(({ positions, teamSheetLayoutId }) => {
         const playerId = data ? data[teamSheetLayoutId] : null
         const player = players.find(player => player.id === playerId)
 
@@ -27,7 +27,7 @@ const Bench = () => {
           <BenchSeat
             key={teamSheetLayoutId}
             player={player}
-            position={position}
+            positions={positions}
             teamSheetLayoutId={teamSheetLayoutId}
           />
         )

@@ -2,43 +2,20 @@ import type { PlayerWithPositions } from '@types'
 
 type FilterPlayersParams = {
   players: PlayerWithPositions[],
-  selectedPosition: string,
-  selectedTeamSheetLayoutId: string,
+  selectedPositions: string[],
 }
 
 export const filterPlayers = (params: FilterPlayersParams) => {
-  const { players, selectedPosition, selectedTeamSheetLayoutId } = params || {}
+  const { players, selectedPositions } = params || {}
 
   let filteredPlayerList = players
 
-  if (selectedPosition){
-    filteredPlayerList = players.filter(player => {
-      const { playerPositions } = player
+  if (!selectedPositions.length) return filteredPlayerList
 
-      return playerPositions.some(({ position }) => position.key === selectedPosition)
-    })
-    return filteredPlayerList
-  }
-
-  // If No Selected Position (i.e. Bench 19-23)
-  // Filter players by selectedTeamSheetLayoutId below:
   filteredPlayerList = players.filter(player => {
     const { playerPositions } = player
 
-    let filterPositions: String[] = []
-
-    switch (selectedTeamSheetLayoutId) {
-      case ('19' || '20'):
-        filterPositions = ['lock', 'backrow']
-
-        return playerPositions.some(({ position }) => filterPositions.includes(position.key))
-      case ('21' || '22' || '23'):
-        filterPositions = ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outside_back']
-
-        return playerPositions.some(({ position }) => filterPositions.includes(position.key))
-      default:
-        return player
-    }
+    return playerPositions.some(({ position }) => selectedPositions.includes(position.key))
   })
 
   return filteredPlayerList

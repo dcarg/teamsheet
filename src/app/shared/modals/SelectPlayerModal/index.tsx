@@ -8,8 +8,6 @@ import type { TeamSheet } from '@prisma/client'
 
 import { createTeamSheet, updateTeamSheet } from '@actions/teamSheet'
 
-import { sortSelectedPlayers } from '@functions/players'
-
 import TeamContext from '@contexts/teamContext'
 
 import BaseModal from '@modals/BaseModal'
@@ -81,18 +79,15 @@ const SelectPlayerModal = () => {
   const teamSheetData = teamSheet?.data as { [key: string]: number } | null
   const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData) : []
 
-  const sortedPlayers = sortSelectedPlayers({ filteredPlayers, selectedPlayerIds })
-
   return (
     <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
-      {sortedPlayers.map(player => {
+      {filteredPlayers.map(player => {
         const isAlreadyAssigned = selectedPlayerIds.includes(player.id)
 
         return (
           <PlayerListItem
             key={player.id}
             disabled={isAlreadyAssigned}
-            icon={isAlreadyAssigned ? "faUser" : "faUserPlus"}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal },
               playerId: player.id,
