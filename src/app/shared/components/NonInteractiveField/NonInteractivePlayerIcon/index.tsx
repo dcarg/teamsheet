@@ -11,12 +11,18 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
   return (
     <div
       style={{
+        alignItems: 'center',
         border: '1px solid black',
-        height: '100px',
-        width: '100px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '80px',
+        justifyContent: 'flex-end',
+        width: '80px',
         ...style,
       }}
     >
+      <img src="http://localhost:3000/wallaby_jersey.svg" width="35" />
+
       {player?.lastname}
     </div>
   )

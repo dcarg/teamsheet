@@ -41,9 +41,6 @@ export const GET = async (request: NextRequest) => {
       },
     })
 
-    // create a png of the field and use that as the background image?
-    // the largest the OG image can be is 630x1200, so image distortion should not be a problem
-
     return new ImageResponse(
       (
         <div style={{
@@ -51,9 +48,11 @@ export const GET = async (request: NextRequest) => {
           height: 630,
           width: 1200,
         }}>
-          <NonInteractiveField players={players} teamSheet={teamSheet} />
+          <div style={{ display: 'flex' }}>
+            <NonInteractiveField players={players} teamSheet={teamSheet} />
+          </div>
 
-          <div>Bench</div>
+          Bench
         </div>
       ),
       {

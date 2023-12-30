@@ -7,9 +7,9 @@ import NonInteractivePlayerIcon from './NonInteractivePlayerIcon'
 
 const teamSheetLayoutData = {
   field: [
-    { teamSheetLayoutId: '1', style: { top: '20px', left: '20px' } }, // absolute positoning CSS properties
+    { teamSheetLayoutId: '1', style: { top: '20px', left: '20px' } },
     { teamSheetLayoutId: '2', style: { top: '20px', left: '100px' } },
-    // { teamSheetLayoutId: '3', position: 'prop', positionTitle: 'Prop', className: 'col-span-2' },
+    { teamSheetLayoutId: '3', style: { top: '20px', left: '180px' } },
     // { teamSheetLayoutId: '4', position: 'lock', positionTitle: 'Lock', className: 'col-start-2 col-span-2' },
     // { teamSheetLayoutId: '5', position: 'lock', positionTitle: 'Lock', className: 'col-span-2' },
     // { teamSheetLayoutId: '6', position: 'backrow', positionTitle: 'Backrow', className: 'col-start-0 col-span-2' },
@@ -36,24 +36,21 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
   const data = teamSheet.data as Partial<{ [key: string]: number }>
 
   return (
-    <div
-      style={{
-        backgroundImage: "url('http://localhost:3000/rugby_field.svg')",
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        display: 'flex',
-        position: 'relative',
-        height: 630,
-        width: 600,
-      }}
-    >
-      {/* Loop through teamSheetLayoutData.field and render the player at the right spot */}
-      {teamSheetLayoutData.field.map(({ style, teamSheetLayoutId }) => {
-        const playerId = data ? data[teamSheetLayoutId] : null
-        const player = players.find(player => player.id === playerId)
+    <div style={{ display: 'flex' }}>
+      <img
+        height="630"
+        src="http://localhost:3000/rugby_field.svg"
+        width="600"
+      />
 
-        return <NonInteractivePlayerIcon key={teamSheetLayoutId} player={player} style={style} />
-      })}
+      <div style={{ display: 'flex', position: 'absolute' }}>
+        {teamSheetLayoutData.field.map(({ style, teamSheetLayoutId }) => {
+          const playerId = data ? data[teamSheetLayoutId] : null
+          const player = players.find(player => player.id === playerId)
+
+          return <NonInteractivePlayerIcon key={teamSheetLayoutId} player={player} style={style} />
+        })}
+      </div>
     </div>
   )
 }
