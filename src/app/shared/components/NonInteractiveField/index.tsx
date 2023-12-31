@@ -22,7 +22,7 @@ const teamSheetLayoutData = {
     // { teamSheetLayoutId: '11', position: 'outsideBack', positionTitle: 'Outside', className: 'col-start-1 col-span-2' },
     // { teamSheetLayoutId: '14', position: 'outsideBack', positionTitle: 'Outside', className: 'col-start-5 col-span-2' },
     // { teamSheetLayoutId: '15', position: 'outsideBack', positionTitle: 'Outside', className: 'col-start-3 col-span-2' },
-  ]
+  ],
 }
 
 interface NonInteractiveFieldProps {

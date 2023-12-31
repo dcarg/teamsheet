@@ -1,19 +1,26 @@
 import type { Player, TeamSheet } from '@prisma/client'
 
+import NonInteractiveBenchSeat from './NonInteractiveBenchSeat'
+
 const teamSheetLayoutData = {
   bench: [
     { teamSheetLayoutId: '16' },
     { teamSheetLayoutId: '17' },
     { teamSheetLayoutId: '18' },
-  ]
+    { teamSheetLayoutId: '19' },
+    { teamSheetLayoutId: '20' },
+    { teamSheetLayoutId: '21' },
+    { teamSheetLayoutId: '22' },
+    { teamSheetLayoutId: '23' },
+  ],
 }
 
-interface NonInteractiveBench {
+interface NonInteractiveBenchProps {
   players: Player[],
   teamSheet: TeamSheet,
 }
 
-const NonInteractiveBench = (props: NonInteractiveBench) => {
+const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
   const { players, teamSheet } = props
 
   const data = teamSheet.data as Partial<{ [key: string]: number }>
@@ -27,7 +34,7 @@ const NonInteractiveBench = (props: NonInteractiveBench) => {
         const playerId = data ? data[teamSheetLayoutId] : null
         const player = players.find(player => player.id === playerId)
 
-        return <div key={teamSheetLayoutId}>{player?.lastname}</div>
+        return <NonInteractiveBenchSeat key={teamSheetLayoutId} player={player} />
       })}
     </div>
   )
