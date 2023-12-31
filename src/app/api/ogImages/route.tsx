@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server'
 
 import prisma from '@db/prismaSingleton'
 
+import NonInteractiveBench from '@components/NonInteractiveBench'
 import NonInteractiveField from '@components/NonInteractiveField'
 
 // Why did we construct new HTML instead of re-using the existing Field and Bench?
@@ -48,11 +49,9 @@ export const GET = async (request: NextRequest) => {
           height: 630,
           width: 1200,
         }}>
-          <div style={{ display: 'flex' }}>
-            <NonInteractiveField players={players} teamSheet={teamSheet} />
-          </div>
+          <NonInteractiveField players={players} teamSheet={teamSheet} />
 
-          Bench
+          <NonInteractiveBench players={players} teamSheet={teamSheet} />
         </div>
       ),
       {
