@@ -6,8 +6,8 @@ import type { User } from '@prisma/client'
 
 import { createUser } from '@actions/user'
 
-export const findOrCreateUser = async (externalUser: KindeUser | null) => {
-  if (!externalUser) return null
+export const findOrCreateUser = async (authUser: KindeUser | null) => {
+  if (!authUser) return null
 
   let user: User | null
 
@@ -16,7 +16,7 @@ export const findOrCreateUser = async (externalUser: KindeUser | null) => {
       userAccounts: {
         some: {
           provider: 'Kinde',
-          providerId: externalUser.id,
+          providerId: authUser.id,
         },
       },
     },
@@ -24,13 +24,14 @@ export const findOrCreateUser = async (externalUser: KindeUser | null) => {
 
   if (!user) {
     const payload = {
-      email: externalUser.email,
-      firstname: externalUser.given_name,
-      lastname: externalUser.family_name,
+      email: authUser.email,
+      firstname: authUser.given_name,
+      lastname: authUser.family_name,
+      username: authUser.email,
       userAccounts: {
         create: {
           provider: 'Kinde',
-          providerId: externalUser.id,
+          providerId: authUser.id,
         },
       },
     }
