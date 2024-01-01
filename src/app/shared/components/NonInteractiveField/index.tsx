@@ -7,21 +7,21 @@ import NonInteractivePlayerIcon from './NonInteractivePlayerIcon'
 
 const teamSheetLayoutData = {
   field: [
-    { teamSheetLayoutId: '1', style: { top: '20px', left: '20px' } },
-    { teamSheetLayoutId: '2', style: { top: '20px', left: '100px' } },
-    { teamSheetLayoutId: '3', style: { top: '20px', left: '180px' } },
-    // { teamSheetLayoutId: '4', position: 'lock', positionTitle: 'Lock', className: 'col-start-2 col-span-2' },
-    // { teamSheetLayoutId: '5', position: 'lock', positionTitle: 'Lock', className: 'col-span-2' },
-    // { teamSheetLayoutId: '6', position: 'backrow', positionTitle: 'Backrow', className: 'col-start-0 col-span-2' },
-    // { teamSheetLayoutId: '7', position: 'backrow', positionTitle: 'Backrow', className: 'col-span-2' },
-    // { teamSheetLayoutId: '8', position: 'backrow', positionTitle: 'Backrow', className: 'col-span-2' },
-    // { teamSheetLayoutId: '9', position: 'scrumhalf', positionTitle: 'Scrumhalf', className: 'col-start-1 col-span-2' },
-    // { teamSheetLayoutId: '10', position: 'flyhalf', positionTitle: 'Flyhalf', className: 'col-start-3 col-span-2' },
-    // { teamSheetLayoutId: '12', position: 'centre', positionTitle: 'Centre', className: 'col-start-2 col-span-2' },
-    // { teamSheetLayoutId: '13', position: 'centre', positionTitle: 'Centre', className: 'col-span-2' },
-    // { teamSheetLayoutId: '11', position: 'outsideBack', positionTitle: 'Outside', className: 'col-start-1 col-span-2' },
-    // { teamSheetLayoutId: '14', position: 'outsideBack', positionTitle: 'Outside', className: 'col-start-5 col-span-2' },
-    // { teamSheetLayoutId: '15', position: 'outsideBack', positionTitle: 'Outside', className: 'col-start-3 col-span-2' },
+    { teamSheetLayoutId: '1', style: { top: '100px', left: '140px' } },
+    { teamSheetLayoutId: '2', style: { top: '100px', left: '360px' } },
+    { teamSheetLayoutId: '3', style: { top: '100px', left: '580px' } },
+    { teamSheetLayoutId: '4', style: { top: '180px', left: '250px' } },
+    { teamSheetLayoutId: '5', style: { top: '180px', left: '470px' } },
+    { teamSheetLayoutId: '6', style: { top: '260px', left: '140px' } },
+    { teamSheetLayoutId: '7', style: { top: '260px', left: '360px' } },
+    { teamSheetLayoutId: '8', style: { top: '260px', left: '580px' } },
+    { teamSheetLayoutId: '9', style: { top: '340px', left: '140px' } },
+    { teamSheetLayoutId: '10', style: { top: '340px', left: '360px' } },
+    { teamSheetLayoutId: '11', style: { top: '440px', left: '140px' } },
+    { teamSheetLayoutId: '12', style: { top: '390px', left: '250px' } },
+    { teamSheetLayoutId: '13', style: { top: '390px', left: '470px' } },
+    { teamSheetLayoutId: '14', style: { top: '440px', left: '580px' } },
+    { teamSheetLayoutId: '15', style: { top: '520px', left: '360px' } },
   ],
 }
 
@@ -48,7 +48,14 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
           const playerId = data ? data[teamSheetLayoutId] : null
           const player = players.find(player => player.id === playerId)
 
-          return <NonInteractivePlayerIcon key={teamSheetLayoutId} player={player} style={style} />
+          return (
+            <NonInteractivePlayerIcon
+              key={teamSheetLayoutId}
+              number={teamSheetLayoutId}
+              player={player}
+              style={style}
+            />
+          )
         })}
       </div>
     </div>

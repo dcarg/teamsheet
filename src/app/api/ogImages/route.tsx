@@ -7,13 +7,9 @@ import prisma from '@db/prismaSingleton'
 import NonInteractiveBench from '@components/NonInteractiveBench'
 import NonInteractiveField from '@components/NonInteractiveField'
 
-// Why did we construct new HTML instead of re-using the existing Field and Bench?
-// 1. this is server side, we cannot use client-site-only APIs like useContext here
-// 2. we do not need any interactivity here
-// 3. the components cannot be async (therefore no data fetching) or you get Error: failed to pipe response
-
 // Had to remove edge runtime because Prisma would not run on edge, problem?
 // Need edge runtime for the field fetch to work
+// If this does not work in Prod, can we create a show route for the teamsheet and fetch it here?
 // export const runtime = 'edge'
 
 export const GET = async (request: NextRequest) => {
