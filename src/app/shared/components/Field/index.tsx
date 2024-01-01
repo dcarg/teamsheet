@@ -24,7 +24,7 @@ const Field = () => {
         min-h-[650px] grid grid-cols-6 grid-rows-8 gap-10
         px-12 max-w-column w-full place-items-center content-center"
       >
-        {teamSheetLayoutData.field.map(({ className, position, positionTitle, teamSheetLayoutId }) => {
+        {teamSheetLayoutData.field.map(({ className, positions, positionTitle, teamSheetLayoutId }) => {
           const playerId = data ? data[teamSheetLayoutId] : null
           const player = players.find(player => player.id === playerId)
 
@@ -33,7 +33,7 @@ const Field = () => {
               className={className}
               key={teamSheetLayoutId}
               player={player}
-              position={position}
+              positions={positions}
               positionTitle={positionTitle}
               teamSheetLayoutId={teamSheetLayoutId}
             />

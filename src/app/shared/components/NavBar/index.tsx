@@ -23,7 +23,7 @@ const NavBar = async (props: NavbarProps) => {
           </div>
         </Link>
         
-        <div className="flex text-white text-xl ml-[5px] items-center">
+        <div className="flex text-white text-2xl font-bold ml-2 mt-2 items-center">
           {title}
         </div>
       </div>

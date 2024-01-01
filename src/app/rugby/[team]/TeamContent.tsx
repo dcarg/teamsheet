@@ -20,17 +20,17 @@ interface TeamContentProps {
 const TeamContent = (props: TeamContentProps) => {
   const { children, players, team, teamSheet } = props
 
-  const [selectedPosition, setSelectedPosition] = useState('')
+  const [selectedPositions, setSelectedPositions] = useState<string[]>([])
   const [selectedTeamSheetLayoutId, setSelectedTeamSheetLayoutId] = useState<string>()
   const [showModal, setShowModal] = useState(false)
 
-  const filteredPlayers = filterPlayers({ players, selectedPosition })
+  const filteredPlayers = filterPlayers({ players, selectedPositions })
 
   const teamContextValue = {
     callbacks: {
       closeModal: () => setShowModal(false),
       openModal: () => setShowModal(true),
-      setSelectedPosition,
+      setSelectedPositions,
       setSelectedTeamSheetLayoutId,
     },
     filteredPlayers,
