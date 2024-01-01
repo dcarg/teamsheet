@@ -40,7 +40,7 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
       <img
         height="630"
         src="http://localhost:3000/rugby_field.svg"
-        width="600"
+        width="800"
       />
 
       <div style={{ display: 'flex', position: 'absolute' }}>

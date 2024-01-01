@@ -20,7 +20,6 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
         borderColor: 'rgb(75 85 99)', // borderColor must come after borders, do not sort
         display: 'flex',
         padding: '8px',
-        width: '600px'
       }}
     >
       <img src="http://localhost:3000/wallaby_jersey.svg" width="35" />

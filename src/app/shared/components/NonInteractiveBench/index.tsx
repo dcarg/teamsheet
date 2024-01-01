@@ -28,7 +28,13 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
   const data = teamSheet.data as Partial<{ [key: string]: number }>
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '400px'
+      }}
+    >
       {teamSheetLayoutData.bench.map(({ teamSheetLayoutId }) => {
         const playerId = data ? data[teamSheetLayoutId] : null
         const player = players.find(player => player.id === playerId)
