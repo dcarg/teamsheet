@@ -22,9 +22,9 @@ const teamSheetLayoutData = {
     { teamSheetLayoutId: '18', positions: ['prop'] },
     { teamSheetLayoutId: '19', positions: ['lock', 'backrow'] },
     { teamSheetLayoutId: '20', positions: ['lock', 'backrow'] },
-    { teamSheetLayoutId: '21', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outside_back'] },
-    { teamSheetLayoutId: '22', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outside_back'] },
-    { teamSheetLayoutId: '23', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outside_back'] },
+    { teamSheetLayoutId: '21', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
+    { teamSheetLayoutId: '22', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
+    { teamSheetLayoutId: '23', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
   ],
 }
 

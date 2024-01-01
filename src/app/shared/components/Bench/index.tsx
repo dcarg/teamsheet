@@ -18,7 +18,7 @@ const Bench = () => {
   const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
 
   return (
-    <>
+    <div className="border-t">
       {teamSheetLayoutData.bench.map(({ positions, teamSheetLayoutId }) => {
         const playerId = data ? data[teamSheetLayoutId] : null
         const player = players.find(player => player.id === playerId)
@@ -32,7 +32,7 @@ const Bench = () => {
           />
         )
       })}
-    </>
+    </div>
   )
 }
 
