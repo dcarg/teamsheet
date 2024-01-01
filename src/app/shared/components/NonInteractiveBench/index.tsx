@@ -1,4 +1,6 @@
-import type { Player, TeamSheet } from '@prisma/client'
+import type { TeamSheet } from '@prisma/client'
+
+import type { PlayerWithPositions } from '@types'
 
 import NonInteractiveBenchSeat from './NonInteractiveBenchSeat'
 
@@ -16,7 +18,7 @@ const teamSheetLayoutData = {
 }
 
 interface NonInteractiveBenchProps {
-  players: Player[],
+  players: PlayerWithPositions[],
   teamSheet: TeamSheet,
 }
 
@@ -24,9 +26,6 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
   const { players, teamSheet } = props
 
   const data = teamSheet.data as Partial<{ [key: string]: number }>
-
-  // OG image is 630px height
-  // we have 8 slots
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>

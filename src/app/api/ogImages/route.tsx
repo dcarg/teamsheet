@@ -40,6 +40,13 @@ export const GET = async (request: NextRequest) => {
           },
         },
       },
+      include: {
+        playerPositions: {
+          include: {
+            position: true,
+          },
+        },
+      },
     })
 
     return new ImageResponse(
