@@ -54,7 +54,11 @@ export const GET = async (request: NextRequest) => {
         }}>
           <NonInteractiveField players={players} teamSheet={teamSheet} />
 
-          <NonInteractiveBench players={players} teamSheet={teamSheet} />
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <NonInteractiveBench players={players} teamSheet={teamSheet} />
+
+            <div style={{ margin: 'auto' }}>Created with Teamsheet</div>
+          </div>
         </div>
       ),
       {
