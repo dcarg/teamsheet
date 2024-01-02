@@ -39,7 +39,7 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
         const playerId = data ? data[teamSheetLayoutId] : null
         const player = players.find(player => player.id === playerId)
 
-        return <NonInteractiveBenchSeat key={teamSheetLayoutId} player={player} />
+        return <NonInteractiveBenchSeat key={teamSheetLayoutId} number={teamSheetLayoutId} player={player} />
       })}
     </div>
   )

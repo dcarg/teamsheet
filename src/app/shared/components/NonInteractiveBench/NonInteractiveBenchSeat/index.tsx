@@ -1,11 +1,12 @@
 import type { PlayerWithPositions } from '@types'
 
 interface NonInteractiveBenchSeatProps {
+  number: string,
   player?: PlayerWithPositions,
 }
 
 const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
-  const { player } = props
+  const { number, player } = props
   const { playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
@@ -22,7 +23,27 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
         padding: '8px',
       }}
     >
-      <img src="http://localhost:3000/wallaby_jersey.svg" width="35" />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'relative',
+        }}
+      >
+        <img src="http://localhost:3000/wallaby_jersey.svg" width="35" />
+
+        <div style={{
+          color: 'white',
+          position: 'absolute',
+          bottom: '14px',
+          left: '8px',
+          // fontSize: 16,
+          // fontStyle: 'normal',
+          // fontWeight: 'bold',
+        }}>
+          {number}
+        </div>
+      </div>
 
       <div style={{
         display: 'flex',
