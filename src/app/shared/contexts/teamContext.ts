@@ -9,7 +9,7 @@ type TeamContext = {
   callbacks: {
     closeModal: () => void,
     openModal: () => void,
-    setSelectedPosition: Dispatch<SetStateAction<string>>,
+    setSelectedPositions: Dispatch<SetStateAction<string[]>>,
     setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<string | undefined>>,
   },
   filteredPlayers: PlayerWithPositions[],

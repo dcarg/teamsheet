@@ -12,19 +12,19 @@ import UnSelectPlayer from '@components/UnSelectPlayer'
 interface PlayerCardProps {
   className: string,
   player?: PlayerWithPositions,
-  position: string,
+  positions: string[],
   positionTitle: string,
   teamSheetLayoutId: string,
 }
 
 const PlayerCard = (props: PlayerCardProps) => {
-  const { className, player, position, positionTitle, teamSheetLayoutId } = props
+  const { className, player, positions, positionTitle, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
     callbacks: {
       openModal,
-      setSelectedPosition,
+      setSelectedPositions,
       setSelectedTeamSheetLayoutId,
     },
   } = teamContextValue
@@ -36,7 +36,7 @@ const PlayerCard = (props: PlayerCardProps) => {
       <div
         className="box-border border-black rounded cursor-pointer flex flex-col p-1 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300 relative"
         onClick={() => {
-          setSelectedPosition(position)
+          setSelectedPositions(positions)
           setSelectedTeamSheetLayoutId(teamSheetLayoutId)
           openModal()
         }}

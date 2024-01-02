@@ -88,7 +88,6 @@ const SelectPlayerModal = () => {
           <PlayerListItem
             key={player.id}
             disabled={isAlreadyAssigned}
-            icon={isAlreadyAssigned ? "faUser" : "faUserPlus"}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal },
               playerId: player.id,

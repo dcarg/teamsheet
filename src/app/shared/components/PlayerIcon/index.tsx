@@ -22,7 +22,7 @@ const PlayerIcon = (props: PlayerIconProps) => {
         }}
       />
 
-      <div className="absolute bottom-1.5 text-xl text-white inset-x-1/4">
+      <div className="absolute bottom-1.5 text-l text-white font-semibold inset-x-1/4">
         {number}
       </div>
     </div>
