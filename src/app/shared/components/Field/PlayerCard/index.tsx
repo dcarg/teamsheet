@@ -4,6 +4,8 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
+import { getPlayerTitle } from '@functions/players'
+
 import type { PlayerWithPositions } from '@types'
 
 import PlayerIcon from '@components/PlayerIcon'
@@ -55,7 +57,7 @@ const PlayerCard = (props: PlayerCardProps) => {
           )}
         </div>
 
-        {player?.lastname || positionTitle}
+        {isPlayerSelected ? getPlayerTitle(player) : positionTitle}
       </div>
     </div>
   )
