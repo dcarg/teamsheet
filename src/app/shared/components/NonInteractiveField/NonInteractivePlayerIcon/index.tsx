@@ -23,7 +23,7 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
         ...style,
       }}
     >
-      <img src="http://localhost:3000/wallaby_jersey.svg" width="35" />
+      <img src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/wallaby_jersey.svg`} width="35" />
 
       <div style={{
         color: 'white',

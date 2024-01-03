@@ -1,6 +1,3 @@
-// NonInteractiveField is a version of Field with the interactivity removed
-// This exists to be used as an open graph image
-
 import type { Player, TeamSheet } from '@prisma/client'
 
 import NonInteractivePlayerIcon from './NonInteractivePlayerIcon'
@@ -39,7 +36,7 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
     <div style={{ display: 'flex' }}>
       <img
         height="630"
-        src="http://localhost:3000/rugby_field.svg"
+        src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby_field.svg`}
         width="800"
       />
 
