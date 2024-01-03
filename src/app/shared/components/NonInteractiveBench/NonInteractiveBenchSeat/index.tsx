@@ -7,11 +7,13 @@ interface NonInteractiveBenchSeatProps {
 
 const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
   const { number, player } = props
-  const { playerPositions } = player || {}
-
-  const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
 
   if (!player) return null
+
+  const { playerPositions } = player || {}
+  const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
+
+  const playerTitle = `${player.firstname[0]}. ${player.lastname}`
 
   return (
     <div
@@ -50,7 +52,7 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
         flexDirection: 'column',
         paddingLeft: '16px'
       }}>
-          {player?.lastname}
+          {playerTitle}
 
         <div style={{ color: 'rgb(75 85 99)', fontSize: '14px' }}>
           {playerPositionTitles?.join( ', ')}

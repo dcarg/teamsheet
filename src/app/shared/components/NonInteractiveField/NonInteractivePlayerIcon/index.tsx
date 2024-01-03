@@ -9,6 +9,10 @@ interface NonInteractivePlayerIcon {
 const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
   const { number, player, style } = props
 
+  if (!player) return null
+
+  const playerTitle = `${player.firstname[0]}. ${player.lastname}`
+
   return (
     <div
       style={{
@@ -36,7 +40,7 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
         {number}
       </div>
 
-      {player?.lastname}
+      {playerTitle}
     </div>
   )
 }
