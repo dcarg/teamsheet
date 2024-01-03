@@ -10,11 +10,6 @@ import prisma from '@db/prismaSingleton'
 import NonInteractiveBench from '@components/NonInteractiveBench'
 import NonInteractiveField from '@components/NonInteractiveField'
 
-// Had to remove edge runtime because Prisma would not run on edge, problem?
-// Need edge runtime for the field fetch to work
-// If this does not work in Prod, can we create a show route for the teamsheet and fetch it here?
-// export const runtime = 'edge'
-
 export const GET = async (request: NextRequest) => {
   try {
     const teamSheetId = request.nextUrl.searchParams.get('teamSheetId')
@@ -59,10 +54,10 @@ export const GET = async (request: NextRequest) => {
       (
         <div
           style={{
-          backgroundColor: 'white',
-          display: 'flex',
-          height: 630,
-          width: 1200,
+            backgroundColor: 'white',
+            display: 'flex',
+            height: 630,
+            width: 1200,
           }}
         >
           <NonInteractiveField players={players} teamSheet={teamSheet} />
