@@ -20,9 +20,9 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
       style={{
         borderBottom: '1px solid',
         borderLeft: '1px solid',
-        borderColor: 'rgb(75 85 99)', // borderColor must come after borders, do not sort
         display: 'flex',
         padding: '8px',
+        borderColor: 'rgb(75 85 99)', // borderColor must come after borders, do not sort
       }}
     >
       <div
@@ -35,13 +35,12 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
         <img src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/wallaby_jersey.svg`} width="35" />
 
         <div style={{
-          color: 'white',
-          position: 'absolute',
           bottom: '14px',
+          color: 'white',
+          fontFamily: 'Futura Bold',
+          fontWeight: 'bold',
           left: '8px',
-          // fontSize: 16,
-          // fontStyle: 'normal',
-          // fontWeight: 'bold',
+          position: 'absolute',
         }}>
           {number}
         </div>
@@ -50,11 +49,20 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
+        fontFamily: 'Futura Bold',
+        fontWeight: 'bold',
+        justifyContent: 'center',
         paddingLeft: '16px'
       }}>
-          {playerTitle}
+        {playerTitle}
 
-        <div style={{ color: 'rgb(75 85 99)', fontSize: '14px' }}>
+        <div
+          style={{
+            color: 'rgb(75 85 99)',
+            fontFamily: 'Futura',
+            fontSize: '14px',
+            marginTop: 4,
+          }}>
           {playerPositionTitles?.join( ', ')}
         </div>
       </div>
