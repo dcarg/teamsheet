@@ -29,14 +29,14 @@ const NavBar = async (props: NavbarProps) => {
             </div>
           </Link>
 
-          <div className="flex text-white text-xl ml-[5px] items-center">
+          <div className="flex text-white text-2xl font-bold ml-2 mt-2 items-center">
             {title}
           </div>
         </div>
 
         {authenticated
-          ? <LogoutLink className="text-white">Logout</LogoutLink>
-          : <LoginLink className="text-white">Login</LoginLink>
+          ? <LogoutLink className="text-white font-semibold">Logout</LogoutLink>
+          : <LoginLink className="text-white font-semibold">Login</LoginLink>
         }
       </div>
     </div>
