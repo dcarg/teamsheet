@@ -8,6 +8,7 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   } = props
 
   return {
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_VERCEL_URL}`),
     openGraph: {
       images: [
         {
