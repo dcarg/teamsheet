@@ -47,7 +47,6 @@ const PlayerCard = (props: PlayerCardProps) => {
           <PlayerIcon
             number={teamSheetLayoutId}
             unSelected={!isPlayerSelected}
-            size='2x'
           />
         </div>
 
@@ -56,7 +55,7 @@ const PlayerCard = (props: PlayerCardProps) => {
         </div>
 
         {player && (
-          <div className="flex justify-center items-center border rounded-full h-5 w-5 absolute -top-2.5 -right-2.5 bg-slate-200">
+          <div className="flex justify-center items-center border rounded-full h-5 w-5 absolute -top-2 -right-2 bg-slate-200">
             <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />
           </div>
         )}
