@@ -1,6 +1,12 @@
+import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 
 import prisma from '@db/prismaSingleton'
+
+import Bench from '@components/Bench'
+import Field from '@components/Field'
+
+import ShareContent from './ShareContent'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const {
@@ -35,15 +41,39 @@ const Page = async (props: PageProps) => {
   } = props
 
   const teamSheet = teamSheetId
-  ? await prisma.teamSheet.findUnique({
-    where: {
-      shareId: teamSheetId,
-    },
-  })
-  : null
+    ? await prisma.teamSheet.findUnique({
+      where: {
+        shareId: teamSheetId,
+      },
+    })
+    : null
+
+    if (!teamSheet) return notFound()
+
+    const players = await prisma.player.findMany({
+      where: {
+        teamMembers: {
+          some: {
+            team: {
+              id: teamSheet.teamId,
+            },
+          },
+        },
+      },
+      include: {
+        playerPositions: {
+          include: {
+            position: true,
+          },
+        },
+      },
+      orderBy: { firstname: 'asc' },
+    })
 
   return (
-    <div>share page here</div>
+    <ShareContent players={players} teamSheet={teamSheet}>
+      <Field nonInteractive />
+    </ShareContent>
   )
 }
 

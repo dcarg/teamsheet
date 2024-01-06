@@ -8,7 +8,13 @@ import teamSheetLayoutData from '@functions/teamSheet'
 
 import PlayerCard from './PlayerCard'
 
-const Field = () => {
+interface FieldProps {
+  nonInteractive?: boolean
+}
+
+const Field = (props: FieldProps) => {
+  const { nonInteractive } = props
+
   const teamContextValue = useContext(TeamContext)
   const {
     players,
@@ -31,6 +37,7 @@ const Field = () => {
           return (
             <PlayerCard
               className={className}
+              nonInteractive={nonInteractive}
               key={teamSheetLayoutId}
               player={player}
               positions={positions}

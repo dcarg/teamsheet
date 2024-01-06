@@ -6,17 +6,17 @@ import type { Team, TeamSheet } from '@prisma/client'
 import type { PlayerWithPositions } from '@types'
 
 type TeamContext = {
-  callbacks: {
+  callbacks?: {
     closeModal: () => void,
     openModal: () => void,
     setSelectedPositions: Dispatch<SetStateAction<string[]>>,
     setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<string | undefined>>,
   },
-  filteredPlayers: PlayerWithPositions[],
+  filteredPlayers?: PlayerWithPositions[],
   players: PlayerWithPositions[],
   selectedTeamSheetLayoutId?: string,
-  showModal: boolean,
-  team: Team,
+  showModal?: boolean,
+  team?: Team,
   teamSheet: TeamSheet | null,
 }
 
