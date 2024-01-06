@@ -8,7 +8,13 @@ import teamSheetLayoutData from '@functions/teamSheet'
 
 import BenchSeat from './BenchSeat'
 
-const Bench = () => {
+interface BenchProps {
+  nonInteractive?: boolean,
+}
+
+const Bench = (props: BenchProps) => {
+  const { nonInteractive } = props
+
   const teamContextValue = useContext(TeamContext)
   const {
     players,
@@ -26,6 +32,7 @@ const Bench = () => {
         return (
           <BenchSeat
             key={teamSheetLayoutId}
+            nonInteractive={nonInteractive}
             player={player}
             positions={positions}
             teamSheetLayoutId={teamSheetLayoutId}

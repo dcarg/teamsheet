@@ -37,7 +37,7 @@ const PlayerCard = (props: PlayerCardProps) => {
         className={`
           box-border rounded cursor-pointer flex flex-col p-1 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300 relative
           ${nonInteractive ? 'border-none' : 'border-black'}
-          `}
+        `}
         onClick={nonInteractive ? undefined : () => {
           setSelectedPositions!(positions)
           setSelectedTeamSheetLayoutId!(teamSheetLayoutId)

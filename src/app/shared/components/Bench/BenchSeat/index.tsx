@@ -9,29 +9,30 @@ import PlayerListItem from '@components/PlayerListItem'
 import type { PlayerWithPositions } from '@types'
 
 interface BenchSeatProps {
+  nonInteractive?: boolean,
   player?: PlayerWithPositions,
   positions: string[],
   teamSheetLayoutId: string,
 }
 
 const BenchSeat = (props: BenchSeatProps) => {
-  const { player, positions, teamSheetLayoutId } = props
+  const { nonInteractive, player, positions, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
+  const { callbacks } = teamContextValue
   const {
-    callbacks: {
-      openModal,
-      setSelectedPositions,
-      setSelectedTeamSheetLayoutId,
-    },
-  } = teamContextValue
+    openModal,
+    setSelectedPositions,
+    setSelectedTeamSheetLayoutId,
+  } = callbacks || {}
 
   return (
     <PlayerListItem
-      onClick={() => {
-        setSelectedPositions(positions)
-        setSelectedTeamSheetLayoutId(teamSheetLayoutId)
-        openModal()
+      nonInteractive={nonInteractive}
+      onClick={nonInteractive ? undefined : () => {
+        setSelectedPositions!(positions)
+        setSelectedTeamSheetLayoutId!(teamSheetLayoutId)
+        openModal!()
       }}
       player={player}
       teamSheetLayoutId={teamSheetLayoutId}

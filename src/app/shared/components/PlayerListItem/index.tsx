@@ -7,23 +7,25 @@ import UnSelectPlayer from '@components/UnSelectPlayer'
 
 interface PlayerListItemProps {
   disabled?: boolean,
+  nonInteractive?: boolean,
   onClick?: () => void,
   player?: PlayerWithPositions,
   teamSheetLayoutId?: string,
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
-  const { disabled, onClick, player, teamSheetLayoutId } = props
-  const{ playerPositions } = player || {}
+  const { disabled, nonInteractive, onClick, player, teamSheetLayoutId } = props
+  const { playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
 
   return (
     <div 
       className={`
-        border-b cursor-pointer flex justify-between items-center w-full min-h-[50px] relative
-        ${disabled ? 'bg-gray-200' : 'hover:bg-cyan-50 hover:border-cyan-300'}
-        ${disabled ? 'border-gray-300' : 'hover:bg-cyan-50 hover:border-cyan-300'}
+        border-b flex justify-between items-center w-full min-h-[50px] relative
+        ${disabled ? 'cursor-default border-gray-300 bg-gray-200' : 'cursor-pointer'}
+        ${nonInteractive ? 'cursor-default' : 'cursor-pointer'}
+        ${!disabled && !nonInteractive ? 'hover:border-cyan-300 hover:bg-cyan-50' : ''}
       `}
       onClick={onClick}
     >
@@ -38,7 +40,7 @@ const PlayerListItem = (props: PlayerListItemProps) => {
         </div>
       </div>
 
-      {player && teamSheetLayoutId && (
+      {player && teamSheetLayoutId && !nonInteractive && (
         <div className="mr-4">
           <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />
         </div>

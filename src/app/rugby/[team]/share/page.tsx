@@ -73,6 +73,8 @@ const Page = async (props: PageProps) => {
   return (
     <ShareContent players={players} teamSheet={teamSheet}>
       <Field nonInteractive />
+
+      <Bench nonInteractive />
     </ShareContent>
   )
 }
