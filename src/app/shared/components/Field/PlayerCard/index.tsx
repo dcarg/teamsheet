@@ -35,8 +35,8 @@ const PlayerCard = (props: PlayerCardProps) => {
     <div className={`${className} h-[30px]`}>
       <div
         className={`
-          box-border rounded cursor-pointer flex flex-col p-1 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300 relative
-          ${nonInteractive ? 'border-none' : 'border-black'}
+          box-border rounded flex flex-col p-1 min-h-[50px] min-w-[80px] w-fit border hover:border-cyan-300 relative
+          ${nonInteractive ? 'border-none cursor-default' : 'border-black cursor-pointer'}
         `}
         onClick={nonInteractive ? undefined : () => {
           setSelectedPositions!(positions)

@@ -25,11 +25,7 @@ const Field = (props: FieldProps) => {
 
   return (
     <div className="max-w-column w-full min-h-[650px] bg-[url('/rugby_field.svg')] bg-no-repeat bg-contain bg-center bg-opacity-50 bg-origin-border">
-      <div
-        className=" 
-        min-h-[650px] grid grid-cols-6 grid-rows-8 gap-10
-        px-12 max-w-column w-full place-items-center content-center"
-      >
+      <div className="min-h-[650px] grid grid-cols-6 grid-rows-8 gap-10 px-12 max-w-column w-full place-items-center content-center">
         {teamSheetLayoutData.field.map(({ className, positions, positionTitle, teamSheetLayoutId }) => {
           const playerId = data ? data[teamSheetLayoutId] : null
           const player = players.find(player => player.id === playerId)
