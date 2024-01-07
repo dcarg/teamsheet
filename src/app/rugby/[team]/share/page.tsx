@@ -8,10 +8,27 @@ import Field from '@components/Field'
 
 import ShareContent from './ShareContent'
 
+type PageProps = {
+  params: { team: string },
+  searchParams: { teamSheetId?: string },
+}
+
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const {
+    params: { team },
     searchParams: { teamSheetId },
   } = props
+
+  const teamSheet = teamSheetId
+    ? await prisma.teamSheet.findUnique({
+      where: {
+        shareId: teamSheetId,
+      },
+      include: {
+        team: true,
+      },
+    })
+    : null
 
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_VERCEL_URL}`),
@@ -24,15 +41,11 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
         },
       ],
       siteName: 'Teamsheet',
+      title: teamSheet?.title || `My ${teamSheet?.team?.title}`,
       type: 'website',
-      // need to access team key dynamically
-      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby/wallabies/share?teamSheetId=${teamSheetId}`
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby/${team}/share?teamSheetId=${teamSheetId}`
     },
   }
-}
-
-type PageProps = {
-  searchParams: { teamSheetId?: string },
 }
 
 const Page = async (props: PageProps) => {
