@@ -19,7 +19,7 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'column',
-        height: '80px',
+        height: '60px',
         justifyContent: 'flex-end',
         position: 'absolute',
         whiteSpace: 'nowrap',
