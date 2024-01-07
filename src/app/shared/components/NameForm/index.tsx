@@ -6,11 +6,14 @@ import { useState } from 'react'
 import clsx from 'clsx'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 import type { TeamSheet } from '@prisma/client'
 
 import { updateTeamSheet } from '@actions/teamSheet'
+
+import { copyToClipboard } from '@functions/utils' 
 
 import Label from '@components/Label'
 
@@ -18,7 +21,7 @@ type HandleEditTitleParams = {
   callbacks: {
     setIsEditing: Dispatch<SetStateAction<boolean>>,
   },
-  id: string,
+  id: number,
   title: string,
 }
 
@@ -41,6 +44,7 @@ const NameForm = (props: NameFormProps) => {
   const {
     teamSheet: {
       id,
+      shareId,
       title: initTitle,
     },
   } = props
@@ -56,10 +60,20 @@ const NameForm = (props: NameFormProps) => {
             {title}
           </div>
           
-          <FontAwesomeIcon
-            icon={faEdit}
-            onClick={() => setIsEditing(true)}
-          />
+          <div className="flex items-center">
+            <FontAwesomeIcon
+              icon={faEdit}
+              onClick={() => setIsEditing(true)}
+            />
+
+            <FontAwesomeIcon
+              className="ml-2"
+              icon={faCopy}
+              onClick={() => copyToClipboard(
+                `${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby/wallabies/share?teamSheetId=${shareId}`
+              )}
+            />
+          </div>
         </div>
       )}
 
