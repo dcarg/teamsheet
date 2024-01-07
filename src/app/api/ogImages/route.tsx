@@ -65,9 +65,21 @@ export const GET = async (request: NextRequest) => {
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <NonInteractiveBench players={players} teamSheet={teamSheet} />
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '32px' }}>
-              <div style={{ margin: 'auto', marginBottom: '8px' }}>Created with</div>
-              <div style={{ fontFamily: 'Futura Bold', fontWeight: 'bold', margin: 'auto' }}>teamsheet.online</div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '32px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <div style={{ margin: 'auto', marginBottom: '8px' }}>Created with</div>
+                <div style={{ fontFamily: 'Futura Bold', fontWeight: 'bold', margin: 'auto' }}>teamsheet.online</div>
+              </div>
+
+                <img
+                  src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/ts_logo_black.svg`}
+                  alt="TeamSheet Logo"
+                  height={30}
+                  width={30}
+                  style={{
+                    marginLeft: '32px'
+                  }}
+                />
             </div>
           </div>
         </div>
