@@ -4,21 +4,21 @@ import NonInteractivePlayerIcon from './NonInteractivePlayerIcon'
 
 const teamSheetLayoutData = {
   field: [
-    { teamSheetLayoutId: '1', style: { top: '120px', left: '140px' } },
-    { teamSheetLayoutId: '2', style: { top: '120px', left: '300px' } },
-    { teamSheetLayoutId: '3', style: { top: '120px', left: '480px' } },
-    { teamSheetLayoutId: '4', style: { top: '190px', left: '210px' } },
-    { teamSheetLayoutId: '5', style: { top: '190px', left: '390px' } },
-    { teamSheetLayoutId: '6', style: { top: '250px', left: '140px' } },
-    { teamSheetLayoutId: '8', style: { top: '280px', left: '300px' } },
-    { teamSheetLayoutId: '7', style: { top: '250px', left: '480px' } },
-    { teamSheetLayoutId: '9', style: { top: '350px', left: '180px' } },
-    { teamSheetLayoutId: '10', style: { top: '380px', left: '300px' } },
-    { teamSheetLayoutId: '11', style: { top: '520px', left: '100px' } },
-    { teamSheetLayoutId: '12', style: { top: '450px', left: '210px' } },
-    { teamSheetLayoutId: '13', style: { top: '450px', left: '390px' } },
-    { teamSheetLayoutId: '14', style: { top: '520px', left: '510px' } },
-    { teamSheetLayoutId: '15', style: { top: '560px', left: '300px' } },
+    { teamSheetLayoutId: '1', style: { top: '95px', left: '190px' } },
+    { teamSheetLayoutId: '2', style: { top: '100px', left: '350px' } },
+    { teamSheetLayoutId: '3', style: { top: '95px', left: '530px' } },
+    { teamSheetLayoutId: '4', style: { top: '160px', left: '260px' } },
+    { teamSheetLayoutId: '5', style: { top: '160px', left: '440px' } },
+    { teamSheetLayoutId: '6', style: { top: '220px', left: '190px' } },
+    { teamSheetLayoutId: '8', style: { top: '240px', left: '350px' } },
+    { teamSheetLayoutId: '7', style: { top: '220px', left: '530px' } },
+    { teamSheetLayoutId: '9', style: { top: '315px', left: '230px' } },
+    { teamSheetLayoutId: '10', style: { top: '335px', left: '350px' } },
+    { teamSheetLayoutId: '11', style: { top: '440px', left: '110px' } },
+    { teamSheetLayoutId: '12', style: { top: '400px', left: '270px' } },
+    { teamSheetLayoutId: '13', style: { top: '400px', left: '470px' } },
+    { teamSheetLayoutId: '14', style: { top: '440px', left: '600px' } },
+    { teamSheetLayoutId: '15', style: { top: '465px', left: '350px' } },
   ],
 }
 
@@ -35,9 +35,9 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
   return (
     <div style={{ display: 'flex' }}>
       <img
-        height="750"
+        height="630"
         src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby_field.svg`}
-        width="700"
+        width="800"
       />
 
       <div style={{ display: 'flex', position: 'absolute' }}>

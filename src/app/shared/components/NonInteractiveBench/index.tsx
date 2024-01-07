@@ -32,7 +32,7 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        width: '290px'
+        width: '390px'
       }}
     >
       <div style={{
@@ -41,7 +41,7 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
         fontFamily: 'Futura Bold',
         fontSize: 'xx-large',
         fontWeight: 'bold',
-        padding: '16px',
+        padding: '8px',
       }}>
         BENCH:
       </div>
@@ -51,7 +51,7 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
           borderTop: '1px solid',
           display: 'flex',
           flexDirection: 'column',
-          width: '290px',
+          width: '390px',
           borderColor: 'rgb(75 85 99)', // borderColor must come after borders, do not sort
         }}
       >

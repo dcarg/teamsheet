@@ -56,8 +56,8 @@ export const GET = async (request: NextRequest) => {
           style={{
             backgroundColor: 'white',
             display: 'flex',
-            height: 750,
-            width: 1000,
+            height: 630,
+            width: 1200,
           }}
         >
           <NonInteractiveField players={players} teamSheet={teamSheet} />
@@ -70,7 +70,8 @@ export const GET = async (request: NextRequest) => {
                 fontSize: '24px',
                 lineHeight: 1.2,
                 margin: 'auto',
-                maxWidth: '290px',
+                maxHeight: '60px',
+                maxWidth: '390px',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
@@ -81,7 +82,7 @@ export const GET = async (request: NextRequest) => {
 
             <NonInteractiveBench players={players} teamSheet={teamSheet} />
 
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '32px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column'}}>
                 <div style={{ margin: 'auto', marginBottom: '8px' }}>Created with</div>
                 <div style={{ fontFamily: 'Futura Bold', fontWeight: 'bold', margin: 'auto' }}>teamsheet.online</div>
@@ -101,8 +102,8 @@ export const GET = async (request: NextRequest) => {
         </div>
       ),
       {
-        width: 1000,
-        height: 750,
+        height: 630,
+        width: 1200,
         fonts: [
           {
             name: 'Futura',

@@ -22,7 +22,7 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
         borderLeft: '1px solid',
         borderRight: '1px solid',
         display: 'flex',
-        padding: '8px',
+        padding: '4px',
         borderColor: 'rgb(75 85 99)', // borderColor must come after borders, do not sort
       }}
     >
