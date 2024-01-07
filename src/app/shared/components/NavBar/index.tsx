@@ -20,7 +20,7 @@ const NavBar = async (props: NavbarProps) => {
           <Link href="/">
             <div className="m-auto p-[5px] pl-0">
               <Image
-                src="/ts-logo.svg"
+                src="/ts_logo_white.svg"
                 alt="TeamSheet Logo"
                 priority
                 height={30}
