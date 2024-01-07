@@ -24,7 +24,7 @@ export const GET = async (request: NextRequest) => {
 
     if (!teamSheet) return notFound()
 
-    const { teamId } = teamSheet
+    const { teamId, title } = teamSheet
 
     const players = await prisma.player.findMany({
       where: {
@@ -62,7 +62,23 @@ export const GET = async (request: NextRequest) => {
         >
           <NonInteractiveField players={players} teamSheet={teamSheet} />
 
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
+            {title && (
+              <div style={{
+                fontFamily: 'Futura Bold',
+                fontWeight: 'bold',
+                fontSize: '24px',
+                lineHeight: 1.2,
+                margin: 'auto',
+                maxWidth: '290px',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                }}>
+                  {title}
+              </div>
+            )}
+
             <NonInteractiveBench players={players} teamSheet={teamSheet} />
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '32px' }}>
