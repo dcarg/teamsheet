@@ -45,6 +45,10 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
       type: 'website',
       url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby/${team}/share?teamSheetId=${teamSheetId}`
     },
+    twitter: {
+      card: 'summary_large_image',
+      site: 'teamsheet.online', 
+    },
   }
 }
 
