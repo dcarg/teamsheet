@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const Page = () => (
-  <div className="absolute max-w-column w-full">
+  <div className="absolute max-w-column">
     <Image
       src="/rugby_field.svg"
       alt="Rugby Field"
