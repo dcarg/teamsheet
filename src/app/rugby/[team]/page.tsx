@@ -22,7 +22,7 @@ const Page = async (props: PageProps) => {
     params: { team: teamkey },
     searchParams: { teamSheetId },
   } = props
-  
+
   const team = await prisma.team.findUnique({
     where: {
       key: teamkey,
@@ -33,7 +33,7 @@ const Page = async (props: PageProps) => {
   const teamSheet = teamSheetId
     ? await prisma.teamSheet.findUnique({
       where: {
-        id: teamSheetId,
+        editId: teamSheetId,
       },
     })
     : null
