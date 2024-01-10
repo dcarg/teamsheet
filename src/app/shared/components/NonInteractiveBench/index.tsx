@@ -32,15 +32,38 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        width: '400px'
+        width: '390px'
       }}
     >
-      {teamSheetLayoutData.bench.map(({ teamSheetLayoutId }) => {
-        const playerId = data ? data[teamSheetLayoutId] : null
-        const player = players.find(player => player.id === playerId)
+      <div
+        style={{
+          backgroundColor: 'rgb(14 116 144)',
+          color: 'white',
+          fontFamily: 'Futura Bold',
+          fontSize: 'xx-large',
+          fontWeight: 'bold',
+          padding: '8px',
+        }}
+      >
+        BENCH:
+      </div>
 
-        return <NonInteractiveBenchSeat key={teamSheetLayoutId} number={teamSheetLayoutId} player={player} />
-      })}
+      <div
+        style={{
+          borderTop: '1px solid',
+          display: 'flex',
+          flexDirection: 'column',
+          width: '390px',
+          borderColor: 'rgb(75 85 99)', // borderColor must come after borders, do not sort
+        }}
+      >
+        {teamSheetLayoutData.bench.map(({ teamSheetLayoutId }) => {
+          const playerId = data ? data[teamSheetLayoutId] : null
+          const player = players.find(player => player.id === playerId)
+
+          return <NonInteractiveBenchSeat key={teamSheetLayoutId} number={teamSheetLayoutId} player={player} />
+        })}
+      </div>
     </div>
   )
 }

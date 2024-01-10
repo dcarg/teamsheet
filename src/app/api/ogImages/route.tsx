@@ -24,7 +24,7 @@ export const GET = async (request: NextRequest) => {
 
     if (!teamSheet) return notFound()
 
-    const { teamId } = teamSheet
+    const { teamId, title } = teamSheet
 
     const players = await prisma.player.findMany({
       where: {
@@ -62,16 +62,48 @@ export const GET = async (request: NextRequest) => {
         >
           <NonInteractiveField players={players} teamSheet={teamSheet} />
 
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
+            {title && (
+              <div
+                style={{
+                  fontFamily: 'Futura Bold',
+                  fontWeight: 'bold',
+                  fontSize: '24px',
+                  lineHeight: 1.2,
+                  margin: 'auto',
+                  maxHeight: '60px',
+                  maxWidth: '390px',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {title}
+              </div>
+            )}
+
             <NonInteractiveBench players={players} teamSheet={teamSheet} />
 
-            <div style={{ margin: 'auto' }}>Created with teamsheet.online</div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '16px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column'}}>
+                <div style={{ margin: 'auto', marginBottom: '8px' }}>Created with</div>
+                <div style={{ fontFamily: 'Futura Bold', fontWeight: 'bold', margin: 'auto' }}>teamsheet.online</div>
+              </div>
+
+              <img
+                src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/ts_logo_black.svg`}
+                alt="TeamSheet Logo"
+                height={30}
+                width={30}
+                style={{ marginLeft: '32px' }}
+              />
+            </div>
           </div>
         </div>
       ),
       {
-        width: 1200,
         height: 630,
+        width: 1200,
         fonts: [
           {
             name: 'Futura',

@@ -19,7 +19,7 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'column',
-        height: '80px',
+        height: '60px',
         justifyContent: 'flex-end',
         position: 'absolute',
         whiteSpace: 'nowrap',
@@ -29,13 +29,15 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
     >
       <img src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/wallaby_jersey.svg`} width="35" />
 
-      <div style={{
-        bottom: '30px',
-        color: 'white',
-        fontFamily: 'Futura Bold',
-        fontWeight: 'bold',
-        position: 'relative',
-      }}>
+      <div
+        style={{
+          bottom: '30px',
+          color: 'white',
+          fontFamily: 'Futura Bold',
+          fontWeight: 'bold',
+          position: 'relative',
+        }}
+      >
         {number}
       </div>
 
