@@ -1,5 +1,7 @@
 import React from 'react'
 
+import clsx from 'clsx'
+
 import type { PlayerWithPositions } from '@types'
 
 import PlayerIcon from '@components/PlayerIcon'
@@ -19,14 +21,18 @@ const PlayerListItem = (props: PlayerListItemProps) => {
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
 
+  const showCursorDefault = disabled || nonInteractive
+
   return (
-    <div 
-      className={`
-        border-b flex justify-between items-center w-full min-h-[50px] relative
-        ${disabled ? 'cursor-default border-gray-300 bg-gray-200' : 'cursor-pointer'}
-        ${nonInteractive ? 'cursor-default' : 'cursor-pointer'}
-        ${!disabled && !nonInteractive ? 'hover:border-cyan-300 hover:bg-cyan-50' : ''}
-      `}
+    <div
+      className={clsx(
+        'border-b flex justify-between items-center w-full min-h-[50px] relative',
+        showCursorDefault ? 'cursor-default' : 'cursor-pointer',
+        {
+          'hover:border-cyan-300 hover:bg-cyan-50': !disabled && !nonInteractive,
+          'border-gray-300 bg-gray-200' : disabled,
+        },
+      )}
       onClick={onClick}
     >
       <div className="flex m-2">
