@@ -65,27 +65,27 @@ const Page = async (props: PageProps) => {
     })
     : null
 
-    if (!teamSheet) return notFound()
+  if (!teamSheet) return notFound()
 
-    const players = await prisma.player.findMany({
-      where: {
-        teamMembers: {
-          some: {
-            team: {
-              id: teamSheet.teamId,
-            },
+  const players = await prisma.player.findMany({
+    where: {
+      teamMembers: {
+        some: {
+          team: {
+            id: teamSheet.teamId,
           },
         },
       },
-      include: {
-        playerPositions: {
-          include: {
-            position: true,
-          },
+    },
+    include: {
+      playerPositions: {
+        include: {
+          position: true,
         },
       },
-      orderBy: { firstname: 'asc' },
-    })
+    },
+    orderBy: { firstname: 'asc' },
+  })
 
   return (
     <ShareContent players={players} teamSheet={teamSheet}>
