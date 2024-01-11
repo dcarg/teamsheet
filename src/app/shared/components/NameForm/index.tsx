@@ -3,6 +3,8 @@
 import type { Dispatch, SetStateAction } from 'react'
 import { useState } from 'react'
 
+import { usePathname } from 'next/navigation'
+
 import clsx from 'clsx'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -49,6 +51,8 @@ const NameForm = (props: NameFormProps) => {
     },
   } = props
 
+  const pathname = usePathname()
+
   const [title, setTitle] = useState(initTitle || '')
   const [isEditing, setIsEditing] = useState(false)
 
@@ -59,18 +63,19 @@ const NameForm = (props: NameFormProps) => {
           <div className="text-xl"> 
             {title}
           </div>
-          
+
           <div className="flex items-center">
             <FontAwesomeIcon
+              className="cursor-pointer"
               icon={faEdit}
               onClick={() => setIsEditing(true)}
             />
 
             <FontAwesomeIcon
-              className="ml-2"
+              className="cursor-pointer ml-2"
               icon={faCopy}
               onClick={() => copyToClipboard(
-                `${process.env.NEXT_PUBLIC_VERCEL_URL}/rugby/wallabies/share?teamSheetId=${shareId}`
+                `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
               )}
             />
           </div>
@@ -104,8 +109,6 @@ const NameForm = (props: NameFormProps) => {
           </div>
         </>
       )}
-
-
     </div>
   )
 }
