@@ -41,6 +41,9 @@ model Team {
   id Int @id @default(autoincrement())
   title String
   key String @unique
+  primaryColor String
+  secondaryColor String
+  tertiaryColor String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
