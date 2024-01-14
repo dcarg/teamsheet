@@ -15,14 +15,14 @@ model Sport {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
+  
+  competitions Competition[]
   positions Position[]
-  teams Team[]
 
   @@map("sports")
 }
 
-model Team {
+model Competition {
   id Int @id @default(autoincrement())
   title String
   key String @unique
@@ -32,10 +32,36 @@ model Team {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  teams CompetitionTeams[]
+
+  @@map("competitions")
+}
+
+model Team {
+  id Int @id @default(autoincrement())
+  title String
+  key String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  competitions CompetitionTeams[]
   teamMembers TeamMember[]
   teamSheets TeamSheet[]
 
   @@map("teams")
+}
+
+model CompetitionTeams {
+  competition Competition @relation(fields: [competitionId], references: [id])
+  competitionId Int
+  team Team @relation(fields: [teamId], references: [id])
+  teamId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([competitionId, teamId])
 }
 
 model TeamSheet {

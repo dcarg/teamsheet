@@ -1,15 +1,13 @@
-import type { PrismaClient, Sport } from '@prisma/client'
+import { rugbyTeams } from './teams/sport/rugby'
 
-const seedTeams = (prisma: PrismaClient, sports: Sport[]) => {
-  const rugbyId = sports.find(sport => sport.key === 'rugby')!.id
+import type { PrismaClient } from '@prisma/client'
 
-  const teams = [
-    {
-      key: 'wallabies',
-      sportId: rugbyId,
-      title: 'Wallabies',
-    },
-  ]
+const seedTeams = (prisma: PrismaClient) => {
+  const teams = Object.values(rugbyTeams).map(competitionTeamsArray => {
+    // [ { key: 'wallabies' } ]
+    return competitionTeamsArray.map(ct => ct)
+   
+  })
 
   const records = teams.map(async team => (
     await prisma.team.upsert({
