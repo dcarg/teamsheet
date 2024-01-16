@@ -19,7 +19,7 @@ export const GET = async () => {
       <div
         style={{
           alignItems: 'center',
-          background: 'radial-gradient(circle, rgba(38,38,43,1) 0%, rgba(40,40,46,1) 80%, rgba(0,99,35,1) 100%)',
+          background: 'radial-gradient(circle, rgba(38,38,43,1) 0%, rgba(40,40,46,1) 80%, rgba(14,116,144,1) 100%)',
           display: 'flex',
           flexDirection: 'column',
           height: 630,
