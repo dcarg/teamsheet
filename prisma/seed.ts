@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
 import seedCompetitions from './seeds/competitions'
-import seedCompetitionTeams from './seeds/competitionTeams'
 import seedPlayers from './seeds/players'
 import seedPositions from './seeds/positions'
 import seedSports from './seeds/sports'
@@ -14,17 +13,14 @@ const seed = async () => {
   const sports = await Promise.all(seedSports(prisma))
   console.log('Seeded sports')
 
-  const competitions = await Promise.all(seedCompetitions(prisma, sports))
-  console.log('Seeded competitions')
-
   const positions = await Promise.all(seedPositions(prisma, sports))
   console.log('Seeded positions')
 
-  const teams = await Promise.all(seedTeams(prisma))
-  console.log('Seeded teams')
+  const competitions = await Promise.all(seedCompetitions(prisma, sports))
+  console.log('Seeded competitions')
 
-  const competitionTeams = await Promise.all(seedCompetitionTeams(prisma, competitions, teams))
-  console.log('Seeded competition teams')
+  const teams = await Promise.all(seedTeams(prisma, competitions))
+  console.log('Seeded teams')
 
   const players = await Promise.all(seedPlayers(prisma, positions, teams))
   console.log('Seeded players')
