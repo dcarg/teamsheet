@@ -64,7 +64,7 @@ model CompetitionTeams {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@id([competitionId, teamId])
+  id Int @id @default(autoincrement())
 }
 
 model TeamSheet {
