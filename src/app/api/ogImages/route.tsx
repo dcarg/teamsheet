@@ -38,7 +38,7 @@ export const GET = async () => {
             style={{
               color: 'white',
               fontFamily: 'Futura Bold',
-              fontSize: 48,
+              fontSize: 32,
               fontWeight: 'bold',
             }}
           >

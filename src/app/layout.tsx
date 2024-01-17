@@ -39,6 +39,22 @@ const futura = localFont(
 export const metadata: Metadata = {
   title: 'Teamsheet',
   description: 'Choose your Team',
+  openGraph: {
+    images: [
+      {
+        height: 630,
+        url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/ogImages`,
+        width: 1200,
+      },
+    ],
+    title: 'TeamSheet',
+    type: 'website',
+    url: process.env.NEXT_PUBLIC_VERCEL_URL,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'teamsheet.online',
+  }
 }
 
 export default function RootLayout({
