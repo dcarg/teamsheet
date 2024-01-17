@@ -2,23 +2,17 @@ import { competitionTeams } from './teams/rugby'
 
 import type { Competition, PrismaClient } from '@prisma/client'
 
-import type { CompetitionTeamModel } from './teams/rugby'
-
-const getCompetitionTeamsArray = (competitionKey: string) => {
-  return competitionTeams[competitionKey as keyof typeof competitionTeams] || []
+const getCompetitionTeamsArray = (competitionKey: keyof typeof competitionTeams) => {
+  return competitionTeams[competitionKey] || []
 }
 
 const seedTeams = (prisma: PrismaClient, competitions: Competition[]) => {
-
-  const teams = competitions.map(competition => {
+  const teams = competitions.flatMap(competition => {
     const { id: competitionId, key: competitionKey } = competition
-    console.log('competitionKey', competitionKey)
 
-    const competitionTeamsArray = getCompetitionTeamsArray(competitionKey)
-    console.log('competitionTeamsArray', competitionTeamsArray)
+    const competitionTeamsArray = getCompetitionTeamsArray(competitionKey as keyof typeof competitionTeams)
 
-    return competitionTeamsArray.map((competitionTeam: CompetitionTeamModel) => {
-      console.log('competitionTeam', competitionTeam)
+    return competitionTeamsArray.map((competitionTeam) => {
       return {
         ...competitionTeam,
         competitionTeams: {
@@ -29,7 +23,6 @@ const seedTeams = (prisma: PrismaClient, competitions: Competition[]) => {
       }
     })
   })
-  console.log('teams', teams)
 
   const records = teams.map(async team => (
     await prisma.team.upsert({

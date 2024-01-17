@@ -32,7 +32,7 @@ model Competition {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  teams CompetitionTeams[]
+  competitionTeams CompetitionTeams[]
 
   @@map("competitions")
 }
@@ -48,7 +48,7 @@ model Team {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  competitions CompetitionTeams[]
+  competitionTeams CompetitionTeams[]
   teamMembers TeamMember[]
   teamSheets TeamSheet[]
 
