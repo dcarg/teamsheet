@@ -64,19 +64,21 @@ export const GET = async (request: NextRequest) => {
 
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
             {title && (
-              <div style={{
-                fontFamily: 'Futura Bold',
-                fontWeight: 'bold',
-                fontSize: '24px',
-                lineHeight: 1.2,
-                margin: 'auto',
-                maxHeight: '60px',
-                maxWidth: '390px',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-                }}>
-                  {title}
+              <div
+                style={{
+                  fontFamily: 'Futura Bold',
+                  fontWeight: 'bold',
+                  fontSize: '24px',
+                  lineHeight: 1.2,
+                  margin: 'auto',
+                  maxHeight: '60px',
+                  maxWidth: '390px',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {title}
               </div>
             )}
 
@@ -88,15 +90,13 @@ export const GET = async (request: NextRequest) => {
                 <div style={{ fontFamily: 'Futura Bold', fontWeight: 'bold', margin: 'auto' }}>teamsheet.online</div>
               </div>
 
-                <img
-                  src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/ts_logo_black.svg`}
-                  alt="TeamSheet Logo"
-                  height={30}
-                  width={30}
-                  style={{
-                    marginLeft: '32px'
-                  }}
-                />
+              <img
+                src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/ts_logo_black.svg`}
+                alt="TeamSheet Logo"
+                height={30}
+                width={30}
+                style={{ marginLeft: '32px' }}
+              />
             </div>
           </div>
         </div>

@@ -35,26 +35,30 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
       >
         <img src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/wallaby_jersey.svg`} width="35" />
 
-        <div style={{
-          bottom: '14px',
-          color: 'white',
-          fontFamily: 'Futura Bold',
-          fontWeight: 'bold',
-          left: '8px',
-          position: 'absolute',
-        }}>
+        <div
+          style={{
+            bottom: '14px',
+            color: 'white',
+            fontFamily: 'Futura Bold',
+            fontWeight: 'bold',
+            left: '8px',
+            position: 'absolute',
+          }}
+        >
           {number}
         </div>
       </div>
 
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        fontFamily: 'Futura Bold',
-        fontWeight: 'bold',
-        justifyContent: 'center',
-        paddingLeft: '16px'
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          fontFamily: 'Futura Bold',
+          fontWeight: 'bold',
+          justifyContent: 'center',
+          paddingLeft: '16px'
+        }}
+      >
         {playerTitle}
 
         <div
@@ -63,7 +67,8 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
             fontFamily: 'Futura',
             fontSize: '14px',
             marginTop: 4,
-          }}>
+          }}
+        >
           {playerPositionTitles?.join( ', ')}
         </div>
       </div>
