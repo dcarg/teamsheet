@@ -16,13 +16,13 @@ model Sport {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  competitions Competition[]
   positions Position[]
-  teams Team[]
 
   @@map("sports")
 }
 
-model Team {
+model Competition {
   id Int @id @default(autoincrement())
   title String
   key String @unique
@@ -32,10 +32,40 @@ model Team {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  competitionTeams CompetitionTeam[]
+
+  @@map("competitions")
+}
+
+model Team {
+  id Int @id @default(autoincrement())
+  title String
+  key String @unique
+  primaryColor String
+  secondaryColor String
+  tertiaryColor String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  competitionTeams CompetitionTeam[]
   teamMembers TeamMember[]
   teamSheets TeamSheet[]
 
   @@map("teams")
+}
+
+model CompetitionTeam {
+  id Int @id @default(autoincrement())
+  competition Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  competitionId Int
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  teamId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("competitionTeams")
 }
 
 model TeamSheet {
