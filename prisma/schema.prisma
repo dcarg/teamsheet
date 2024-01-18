@@ -56,9 +56,9 @@ model Team {
 }
 
 model CompetitionTeams {
-  competition Competition @relation(fields: [competitionId], references: [id])
+  competition Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
   competitionId Int
-  team Team @relation(fields: [teamId], references: [id])
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
   teamId Int
 
   createdAt DateTime @default(now())
