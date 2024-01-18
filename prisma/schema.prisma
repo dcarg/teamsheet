@@ -15,7 +15,7 @@ model Sport {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
+
   competitions Competition[]
   positions Position[]
 
@@ -32,7 +32,7 @@ model Competition {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  competitionTeams CompetitionTeams[]
+  competitionTeams CompetitionTeam[]
 
   @@map("competitions")
 }
@@ -48,14 +48,15 @@ model Team {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  competitionTeams CompetitionTeams[]
+  competitionTeams CompetitionTeam[]
   teamMembers TeamMember[]
   teamSheets TeamSheet[]
 
   @@map("teams")
 }
 
-model CompetitionTeams {
+model CompetitionTeam {
+  id Int @id @default(autoincrement())
   competition Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
   competitionId Int
   team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
@@ -64,7 +65,7 @@ model CompetitionTeams {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  id Int @id @default(autoincrement())
+  @@map("competitionTeams")
 }
 
 model TeamSheet {
