@@ -1,5 +1,7 @@
 import React from 'react'
 
+import clsx from 'clsx'
+
 import type { PlayerWithPositions } from '@types'
 
 import PlayerIcon from '@components/PlayerIcon'
@@ -7,24 +9,30 @@ import UnSelectPlayer from '@components/UnSelectPlayer'
 
 interface PlayerListItemProps {
   disabled?: boolean,
+  nonInteractive?: boolean,
   onClick?: () => void,
   player?: PlayerWithPositions,
   teamSheetLayoutId?: string,
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
-  const { disabled, onClick, player, teamSheetLayoutId } = props
-  const{ playerPositions } = player || {}
+  const { disabled, nonInteractive, onClick, player, teamSheetLayoutId } = props
+  const { playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
 
+  const showCursorDefault = disabled || nonInteractive
+
   return (
-    <div 
-      className={`
-        border-b cursor-pointer flex justify-between items-center w-full min-h-[50px] relative
-        ${disabled ? 'bg-gray-200' : 'hover:bg-cyan-50 hover:border-cyan-300'}
-        ${disabled ? 'border-gray-300' : 'hover:bg-cyan-50 hover:border-cyan-300'}
-      `}
+    <div
+      className={clsx(
+        'border-b flex justify-between items-center w-full min-h-[50px] relative',
+        showCursorDefault ? 'cursor-default' : 'cursor-pointer',
+        {
+          'hover:border-cyan-300 hover:bg-cyan-50': !disabled && !nonInteractive,
+          'border-gray-300 bg-gray-200' : disabled,
+        },
+      )}
       onClick={onClick}
     >
       <div className="flex m-2">
@@ -38,7 +46,7 @@ const PlayerListItem = (props: PlayerListItemProps) => {
         </div>
       </div>
 
-      {player && teamSheetLayoutId && (
+      {player && teamSheetLayoutId && !nonInteractive && (
         <div className="mr-4">
           <UnSelectPlayer teamSheetLayoutId={teamSheetLayoutId} />
         </div>

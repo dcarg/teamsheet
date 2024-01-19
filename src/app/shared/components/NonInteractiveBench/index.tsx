@@ -35,14 +35,16 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
         width: '390px'
       }}
     >
-      <div style={{
-        backgroundColor: 'rgb(14 116 144)',
-        color: 'white',
-        fontFamily: 'Futura Bold',
-        fontSize: 'xx-large',
-        fontWeight: 'bold',
-        padding: '8px',
-      }}>
+      <div
+        style={{
+          backgroundColor: 'rgb(14 116 144)',
+          color: 'white',
+          fontFamily: 'Futura Bold',
+          fontSize: 'xx-large',
+          fontWeight: 'bold',
+          padding: '8px',
+        }}
+      >
         BENCH:
       </div>
 

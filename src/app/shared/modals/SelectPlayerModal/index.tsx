@@ -66,9 +66,7 @@ const SelectPlayerModal = () => {
 
   const teamContextValue = useContext(TeamContext)
   const {
-    callbacks: {
-      closeModal,
-    },
+    callbacks,
     filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,
@@ -76,12 +74,14 @@ const SelectPlayerModal = () => {
     teamSheet,
   } = teamContextValue
 
+  const { closeModal } = callbacks || {}
+
   const teamSheetData = teamSheet?.data as { [key: string]: number } | null
   const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData) : []
 
   return (
-    <BaseModal callbacks={{ closeModal }} showModal={showModal} title="Select Player">
-      {filteredPlayers.map(player => {
+    <BaseModal callbacks={{ closeModal: closeModal! }} showModal={showModal!} title="Select Player">
+      {filteredPlayers?.map(player => {
         const isAlreadyAssigned = selectedPlayerIds.includes(player.id)
 
         return (
@@ -89,10 +89,10 @@ const SelectPlayerModal = () => {
             key={player.id}
             disabled={isAlreadyAssigned}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
-              callbacks: { closeModal },
+              callbacks: { closeModal: closeModal! },
               playerId: player.id,
               router,
-              teamId: team.id,
+              teamId: team!.id,
               teamSheet,
               teamSheetLayoutId: selectedTeamSheetLayoutId!,
             })}
