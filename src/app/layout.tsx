@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import localFont from "next/font/local"
 import './globals.css'
@@ -57,6 +58,7 @@ export default function RootLayout({
           {children}
         </div>
       </body>
+      <Script src="https://platform.twitter.com/widgets.js" />
     </html>
   )
 }

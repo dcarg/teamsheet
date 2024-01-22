@@ -18,6 +18,7 @@ import { updateTeamSheet } from '@actions/teamSheet'
 import { copyToClipboard } from '@functions/utils' 
 
 import Label from '@components/Label'
+import TweetButton from '@components/TweetButton'
 
 type HandleEditTitleParams = {
   callbacks: {
@@ -56,6 +57,8 @@ const NameForm = (props: NameFormProps) => {
   const [title, setTitle] = useState(initTitle || '')
   const [isEditing, setIsEditing] = useState(false)
 
+  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
+
   return (
     <div className="p-2">
       {!isEditing && (
@@ -74,10 +77,10 @@ const NameForm = (props: NameFormProps) => {
             <FontAwesomeIcon
               className="cursor-pointer ml-2"
               icon={faCopy}
-              onClick={() => copyToClipboard(
-                `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
-              )}
+              onClick={() => copyToClipboard(shareUrl)}
             />
+
+            <TweetButton shareUrl={shareUrl} />
           </div>
         </div>
       )}
