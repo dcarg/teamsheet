@@ -90,7 +90,7 @@ const Page = async (props: PageProps) => {
 
   return (
     <ShareContent players={players} teamSheet={teamSheet}>
-      <ShareBar />
+      <ShareBar teamSheet={teamSheet} />
 
       <Field nonInteractive />
 
