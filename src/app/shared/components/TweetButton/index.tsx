@@ -16,9 +16,7 @@ const TweetButton = (props: TweetButtonProps) =>  {
       <a
         className="twitter-share-button"
         href={`https://twitter.com/intent/tweet?text=${text}&url=${shareUrl}`}
-      >
-        Tweet
-      </a>
+      />
     </div>
   )
 }
