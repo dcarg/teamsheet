@@ -17,6 +17,7 @@ import { updateTeamSheet } from '@actions/teamSheet'
 
 import { copyToClipboard } from '@functions/utils' 
 
+import Button from '@components/Button'
 import Label from '@components/Label'
 
 type HandleEditTitleParams = {
@@ -96,16 +97,17 @@ const NameForm = (props: NameFormProps) => {
               value={title}
             />
 
-            <button
-              className="border border-black p-1 rounded bg-cyan-400 hover:bg-cyan-500 text-slate-900 w-28 ml-2"
-              onClick={() => handleEditTitle({ 
+            <Button
+              className="ml-2"
+              onClick={() => handleEditTitle({
                 callbacks: { setIsEditing },
                 id,
-                title, 
+                title,
               })}
+              variant="create"
             >
               {title ? 'Update' : 'Save'}
-            </button>
+            </Button>
           </div>
         </>
       )}
