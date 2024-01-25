@@ -1,15 +1,15 @@
 import clsx from 'clsx'
 
+const variants = {
+  create: "bg-cyan-400 hover:bg-cyan-500",
+  delete: "bg-red-600 hover:bg-red-700",
+}
+
 interface ButtonProps {
   children: React.ReactNode,
   className?: string,
   onClick: () => void,
   variant: keyof typeof variants,
-}
-
-const variants = {
-  create: "bg-cyan-400 hover:bg-cyan-500",
-  delete: "bg-red-600 hover:bg-red-700",
 }
 
 const Button = (props: ButtonProps) => {
