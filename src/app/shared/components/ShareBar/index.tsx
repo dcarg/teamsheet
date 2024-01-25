@@ -1,20 +1,31 @@
 'use client'
 
 import Link from 'next/link'
-import { redirect, usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 import type { TeamSheet } from '@prisma/client'
 
 import { createTeamSheet } from '@actions/teamSheet'
 
-const createTeamSheetAndRedirect = async (teamSheet: TeamSheet) => {
+type Router = ReturnType<typeof useRouter>
+
+type CreateAndRedirectParams = {
+  teamSheet: TeamSheet,
+  router: Router,
+}
+
+const createTeamSheetAndRedirect = async (params: CreateAndRedirectParams) => {
+  const { router, teamSheet } = params
+
+  const data = teamSheet.data as { [key: string]: number }
+
   const payload = {
-    data: teamSheet.data,
+    data,
     teamId: teamSheet.teamId,
   }
 
   const newTeamSheet = await createTeamSheet(payload)
-  redirect(`/rugby/wallabies?teamSheetId=${newTeamSheet.editId}`)
+  router.push(`/rugby/wallabies?teamSheetId=${newTeamSheet.editId}`)
 }
 
 interface ShareBarProps {
@@ -23,6 +34,8 @@ interface ShareBarProps {
 
 const ShareBar = (props: ShareBarProps) => {
   const { teamSheet } = props
+
+  const router = useRouter()
 
   const pathname = usePathname()
   const sportHref = pathname.split('/')[1]
@@ -37,7 +50,7 @@ const ShareBar = (props: ShareBarProps) => {
 
       <button
         className="border border-black p-1 rounded bg-cyan-400 hover:bg-cyan-500 text-slate-900 w-28 ml-2"
-        onClick={() => createTeamSheetAndRedirect(teamSheet)}
+        onClick={() => createTeamSheetAndRedirect({ teamSheet, router })}
       >
         Duplicate
       </button>
