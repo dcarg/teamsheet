@@ -36,7 +36,7 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
       images: [
         {
           height: 630,
-          url: `/api/ogImages?teamSheetId=${teamSheetId}`,
+          url: `/api/ogImages/teamSheet/${teamSheetId}`,
           width: 1200,
         },
       ],
