@@ -80,7 +80,7 @@ const NameForm = (props: NameFormProps) => {
               onClick={() => copyToClipboard(shareUrl)}
             />
 
-            <TweetButton shareUrl={shareUrl} />
+            <TweetButton className="ml-2" shareUrl={shareUrl} />
           </div>
         </div>
       )}
