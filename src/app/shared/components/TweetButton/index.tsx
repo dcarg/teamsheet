@@ -10,7 +10,7 @@ interface TweetButtonProps {
 const TweetButton = (props: TweetButtonProps) =>  {
   const { className, shareUrl } = props
 
-  const text = "This%20is%20who%20I%20would%20pick"
+  const text = encodeURIComponent('This is who I would pick')
   const url = encodeURIComponent(shareUrl)
 
   return (
