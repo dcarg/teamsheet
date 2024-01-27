@@ -1,10 +1,11 @@
 import { ReactNode } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
 interface UserMenuItemProps {
   href?: string,
-  icon: object,
+  icon: IconDefinition,
   onClick?: () => void,
   text: string | ReactNode,
 }

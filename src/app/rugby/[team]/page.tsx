@@ -9,6 +9,7 @@ import NameForm from '@components/NameForm'
 import { teamSize } from '@functions/teamSheet'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
+import TopBar from '@components/TopBar'
 
 import TeamContent from './TeamContent'
 
@@ -64,6 +65,8 @@ const Page = async (props: PageProps) => {
 
   return (
     <TeamContent players={players} team={team} teamSheet={teamSheet}>
+      <TopBar />
+      
       {hasTeamSheet && isTeamSheetComplete && <NameForm teamSheet={teamSheet} />}
 
       <Field />

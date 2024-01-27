@@ -17,7 +17,7 @@ import { updateTeamSheet } from '@actions/teamSheet'
 
 import { copyToClipboard } from '@functions/utils' 
 
-import Label from '@components/Label'
+import FormField from '@components/FormField'
 
 type HandleEditTitleParams = {
   callbacks: {
@@ -83,9 +83,7 @@ const NameForm = (props: NameFormProps) => {
       )}
 
       {isEditing && (
-        <>
-          <Label>Team Name</Label>
-
+        <FormField className="mt-2" label="Team Name">
           <div className="flex justify-between">
             <input
               className={clsx(
@@ -107,7 +105,7 @@ const NameForm = (props: NameFormProps) => {
               {title ? 'Update' : 'Save'}
             </button>
           </div>
-        </>
+        </FormField>
       )}
     </div>
   )

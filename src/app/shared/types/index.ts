@@ -11,3 +11,11 @@ export type PlayerWithPositions = Prisma.PlayerGetPayload<
     },
   }
 >
+
+export type TeamSheetWithTeam = Prisma.TeamSheetGetPayload<
+  {
+    include: {
+      team: true,
+    },
+  }
+>

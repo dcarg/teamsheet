@@ -34,7 +34,7 @@ const UserMenu = (props: UserMenuProps) => {
         )}
         
         <FontAwesomeIcon
-          className={`${isOpen ? 'text-cyan-400' : 'text-white'} hover:text-cyan-400`}
+          className="hover:text-cyan-400"
           size="xl"
           icon={isOpen ? faBarsStaggered : faBars}
         />
@@ -44,15 +44,15 @@ const UserMenu = (props: UserMenuProps) => {
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg">
           <div className="py-2 items-center justify-items-center justify-center content-center">
             <UserMenuItem 
-              href="#"
+              href="/profile"
               icon={faUser}
               text="Profile"
             />
             
             <UserMenuItem 
-              href="#"
+              href="/teamSheets"
               icon={faUsersRectangle}
-              text="TeamSheets"
+              text="Team Sheets"
             />
 
             <UserMenuItem

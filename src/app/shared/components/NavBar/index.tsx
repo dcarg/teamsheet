@@ -47,4 +47,3 @@ const NavBar = async (props: NavbarProps) => {
 }
 
 export default NavBar
-{/* <LogoutLink className="text-white font-semibold">Logout</LogoutLink> */}
