@@ -40,6 +40,7 @@ const Page = async () => {
         },
       },
     },
+    orderBy: { updatedAt: 'desc' },
   })
 
   const hasTeamSheets = !!userTeamSheets?.length
