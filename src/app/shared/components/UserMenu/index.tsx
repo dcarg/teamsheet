@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 
+import isMobileBrowser from 'is-mobile'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faBarsStaggered, faRightFromBracket, faUser, faUsersRectangle } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,12 +19,11 @@ interface UserMenuProps {
 
 const UserMenu = (props: UserMenuProps) => {
   const { user } = props
-  const { username } = user
+  const { given_name } = user
 
   const [isOpen, setIsOpen] = useState(false)
 
-  // TODO: add is-mobile package
-  // only render username if not mobile
+  const isMobile = isMobileBrowser()
 
   return (
     <div className="relative">
@@ -36,7 +37,7 @@ const UserMenu = (props: UserMenuProps) => {
           />
         }
         onClick={() => setIsOpen(!isOpen)}
-        text={username ? username : ''}
+        text={!isMobile && given_name ? given_name : ''}
         textProps="font-semibold group-hover:text-cyan-400"
       />
 
