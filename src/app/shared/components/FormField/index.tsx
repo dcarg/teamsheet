@@ -13,7 +13,7 @@ const FormField = (props: FormFieldProps) => {
   const { className, children, label, labelProps } = props
 
   return (
-    <div className={clsx("flex flex-col ", className)}>
+    <div className={clsx("flex flex-col", className)}>
       <Label className={labelProps}>{label}</Label>
       
       {children}

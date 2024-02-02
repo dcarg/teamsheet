@@ -7,6 +7,8 @@ import { faBars, faBarsStaggered, faRightFromBracket, faUser, faUsersRectangle }
 
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
+import Button from '@components/Button'
+
 import UserMenuItem from './UserMenuItem'
 
 interface UserMenuProps {
@@ -19,35 +21,34 @@ const UserMenu = (props: UserMenuProps) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+  // TODO: add is-mobile package
+  // only render username if not mobile
 
   return (
     <div className="relative">
-      <button
-        className="flex items-center text-white focus:outline-none"
-        onClick={toggleMenu}
-      >
-        {username && (
-          <span className="mr-2">{username}</span>
-        )}
-        
-        <FontAwesomeIcon
-          className="hover:text-cyan-400"
-          size="xl"
-          icon={isOpen ? faBarsStaggered : faBars}
-        />
-      </button>
+      <Button
+        className="bg-transparent hover:bg-transparent"
+        icon={
+          <FontAwesomeIcon
+            className="group-hover:text-cyan-400"
+            size="xl"
+            icon={isOpen ? faBarsStaggered : faBars}
+          />
+        }
+        onClick={() => setIsOpen(!isOpen)}
+        text={username ? username : ''}
+        textProps="font-semibold group-hover:text-cyan-400"
+      />
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg">
-          <div className="py-2 items-center justify-items-center justify-center content-center">
-            <UserMenuItem 
+          <div className="py-2">
+            {/* TODO: Add Profile Page form functionality then show this UserMenuItem */}
+            {/* <UserMenuItem 
               href="/profile"
               icon={faUser}
               text="Profile"
-            />
+            /> */}
             
             <UserMenuItem 
               href="/teamSheets"
@@ -57,7 +58,7 @@ const UserMenu = (props: UserMenuProps) => {
 
             <UserMenuItem
               icon={faRightFromBracket}
-              text={<LogoutLink>Logout</LogoutLink> }
+              textComponent={<LogoutLink>Logout</LogoutLink> }
             />
           </div>
         </div>

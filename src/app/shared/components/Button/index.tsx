@@ -1,21 +1,34 @@
+import clsx from 'clsx'
+
 interface ButtonProps {
   className?: string,
   disabled?: boolean,
-  href?: string,
-  onClick?: Function,
-  text: string,
+  icon?: React.ReactNode,
+  iconMargin?: string,
+  onClick?: () => void,
+  text?: string,
+  textProps?: string,
 }
 
 const Button = (props: ButtonProps) => {
-  const { className, disabled, href, onClick, text } = props
+  const { className, disabled, icon, iconMargin = '2', onClick, text, textProps } = props
 
   return (
     <button
-      className={`align-middle  rounded bg-cyan-400 hover:bg-cyan-500 text-slate-900 ${className}`}
-      href={href}
+      className={clsx(
+        "flex group p-2 align-middle rounded bg-cyan-400 hover:bg-cyan-500 text-white",
+        className,
+      )}
+      disabled={disabled}
       onClick={onClick}
     >
-      {text}
+      <div className={textProps}>{text}</div>
+
+      {icon && (
+        <div className={`ml-${text ? iconMargin : 0}`}>
+          {icon}
+        </div>
+      )}
     </button>
   )
 }

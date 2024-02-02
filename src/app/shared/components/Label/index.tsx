@@ -9,11 +9,12 @@ const Label = (props: LabelProps) => {
   const { children, className } = props
 
   return (
-    <div className={clsx(
-      "mb-1 text-slate-500 text-sm tracking-wider",
-      className,
-    )}
-      >
+    <div
+      className={clsx(
+        "mb-1 text-slate-500 text-sm tracking-wider",
+        className,
+      )}
+    >
       {children}
     </div>
   )
