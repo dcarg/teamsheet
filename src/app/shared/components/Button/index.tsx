@@ -16,7 +16,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       className={clsx(
-        "flex group p-2 align-middle rounded bg-cyan-400 hover:bg-cyan-500 text-white",
+        "flex group p-2 items-center rounded bg-cyan-400 hover:bg-cyan-500 text-white",
         className,
       )}
       disabled={disabled}
