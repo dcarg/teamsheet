@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import { getShortPlayerTitle } from '@functions/players'
+import { getPlayerTitle } from '@functions/players'
 
 import type { PlayerWithPositions } from '@types'
 
@@ -60,7 +60,7 @@ const PlayerCard = (props: PlayerCardProps) => {
         )}
 
         <div className="truncate text-xs text-center mt-1">
-          {isPlayerSelected ? getShortPlayerTitle(player) : positionTitle}
+          {isPlayerSelected ? getPlayerTitle(player) : positionTitle}
         </div>
       </div>
     </div>

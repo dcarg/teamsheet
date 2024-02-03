@@ -1,4 +1,4 @@
-import type { Player, TeamSheet } from '@prisma/client'
+import type { TeamSheet } from '@prisma/client'
 
 import type { PlayerWithPositions } from '@types'
 
