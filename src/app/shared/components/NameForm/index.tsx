@@ -17,6 +17,7 @@ import { updateTeamSheet } from '@actions/teamSheet'
 
 import { copyToClipboard } from '@functions/utils' 
 
+import DownloadButton from '@components/DownloadButton'
 import Label from '@components/Label'
 
 type HandleEditTitleParams = {
@@ -64,7 +65,7 @@ const NameForm = (props: NameFormProps) => {
             {title}
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <FontAwesomeIcon
               className="cursor-pointer"
               icon={faEdit}
@@ -72,12 +73,14 @@ const NameForm = (props: NameFormProps) => {
             />
 
             <FontAwesomeIcon
-              className="cursor-pointer ml-2"
+              className="cursor-pointer"
               icon={faCopy}
               onClick={() => copyToClipboard(
                 `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
               )}
             />
+
+            <DownloadButton href={`/api/ogImages/teamSheet/${shareId}`} />
           </div>
         </div>
       )}
