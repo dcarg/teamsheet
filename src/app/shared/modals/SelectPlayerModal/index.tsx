@@ -78,8 +78,8 @@ const SelectPlayerModal = () => {
 
   const { closeModal } = callbacks || {}
 
-  const teamSheetData = teamSheet?.data as { [key: string]: number } | null
-  const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData) : []
+  const teamSheetData = teamSheet?.data as { [key: string]: PlayerWithPositions } | null
+  const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData).map(player => player.id) : []
 
   return (
     <BaseModal callbacks={{ closeModal: closeModal! }} showModal={showModal!} title="Select Player">

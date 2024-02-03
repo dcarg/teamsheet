@@ -10,6 +10,8 @@ import { teamSize } from '@functions/teamSheet'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
+import type { PlayerWithPositions } from '@types'
+
 import TeamContent from './TeamContent'
 
 type PageProps = {
@@ -59,7 +61,7 @@ const Page = async (props: PageProps) => {
   })
 
   const hasTeamSheet = !!teamSheet
-  const data = teamSheet?.data as Partial<{ [key: string]: number }> | null
+  const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null
   const isTeamSheetComplete = !!data && Object.keys(data).length === teamSize
 
   return (
