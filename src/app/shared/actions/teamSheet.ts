@@ -8,8 +8,13 @@ import prisma from '@db/prismaSingleton'
 
 import { findOrCreateUser } from '@functions/user'
 
+type SimplePlayerRecord = {
+  name: string,
+  positions: string[],
+}
+
 type CreateTeamSheetPayload = {
-  data: { [key: string]: number },
+  data: { [key: string]: SimplePlayerRecord },
   teamId: number,
 }
 

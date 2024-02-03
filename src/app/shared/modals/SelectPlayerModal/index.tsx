@@ -12,13 +12,15 @@ import TeamContext from '@contexts/teamContext'
 
 import BaseModal from '@modals/BaseModal'
 
+import type { PlayerWithPositions } from '@types'
+
 import PlayerListItem from '@components/PlayerListItem'
 
 type Router = ReturnType<typeof useRouter>
 
 type HandlePlayerSelectParams = {
   callbacks: { closeModal: () => void },
-  playerId: number,
+  player: PlayerWithPositions,
   router: Router,
   teamId: number,
   teamSheet: TeamSheet | null,
@@ -28,15 +30,20 @@ type HandlePlayerSelectParams = {
 const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   const {
     callbacks: { closeModal },
-    playerId,
+    player,
     router,
     teamId,
     teamSheet,
     teamSheetLayoutId,
   } = params
 
+  const simplePlayerRecord = {
+    name: player.title,
+    positions: player.playerPositions.map(playerPosition => playerPosition.position.title)
+  }
+
   const payload = {
-    data: { [teamSheetLayoutId]: playerId },
+    data: { [teamSheetLayoutId]: simplePlayerRecord }, 
     teamId,
   }
 
@@ -90,7 +97,7 @@ const SelectPlayerModal = () => {
             disabled={isAlreadyAssigned}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal: closeModal! },
-              playerId: player.id,
+              player,
               router,
               teamId: team!.id,
               teamSheet,
