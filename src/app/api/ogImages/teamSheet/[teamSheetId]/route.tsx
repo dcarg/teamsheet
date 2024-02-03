@@ -30,7 +30,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
 
     if (!teamSheet) return notFound()
 
-    const { teamId, title } = teamSheet
+    const { title } = teamSheet
 
     const futuraFilePath = resolve('public/fonts/futura-pt.ttf')
     const futuraBoldFilePath = resolve('public/fonts/futura-pt-bold.ttf')
