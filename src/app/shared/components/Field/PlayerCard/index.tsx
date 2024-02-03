@@ -6,7 +6,7 @@ import TeamContext from '@contexts/teamContext'
 
 import { getShortPlayerTitle } from '@functions/players'
 
-import type { SimplePlayerRecord } from '@types'
+import type { PlayerWithPositions } from '@types'
 
 import PlayerIcon from '@components/PlayerIcon'
 import UnSelectPlayer from '@components/UnSelectPlayer'
@@ -14,7 +14,7 @@ import UnSelectPlayer from '@components/UnSelectPlayer'
 interface PlayerCardProps {
   className: string,
   nonInteractive?: boolean,
-  player?: SimplePlayerRecord,
+  player?: PlayerWithPositions,
   positions: string[],
   positionTitle: string,
   teamSheetLayoutId: string,

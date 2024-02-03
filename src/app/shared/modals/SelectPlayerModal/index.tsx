@@ -37,13 +37,8 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
     teamSheetLayoutId,
   } = params
 
-  const simplePlayerRecord = {
-    positions: player.playerPositions.map(playerPosition => playerPosition.position.title),
-    title: player.title,
-  }
-
   const payload = {
-    data: { [teamSheetLayoutId]: simplePlayerRecord }, 
+    data: { [teamSheetLayoutId]: player }, 
     teamId,
   }
 

@@ -6,7 +6,7 @@ import TeamContext from '@contexts/teamContext'
 
 import teamSheetLayoutData from '@functions/teamSheet'
 
-import type { SimplePlayerRecord } from '@types'
+import type { PlayerWithPositions } from '@types'
 
 import PlayerCard from './PlayerCard'
 
@@ -22,7 +22,7 @@ const Field = (props: FieldProps) => {
     teamSheet,
   } = teamContextValue
 
-  const data = teamSheet?.data as Partial<{ [key: string]: SimplePlayerRecord }> | null
+  const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null
 
   return (
     <div className="max-w-column min-h-[720px] bg-[url('/rugby_field.svg')] bg-no-repeat bg-cover bg-center bg-opacity-50 bg-origin-border aspect-auto">

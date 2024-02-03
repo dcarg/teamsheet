@@ -11,8 +11,3 @@ export type PlayerWithPositions = Prisma.PlayerGetPayload<
     },
   }
 >
-
-export type SimplePlayerRecord = {
-  positions: string[],
-  title: string,
-}
