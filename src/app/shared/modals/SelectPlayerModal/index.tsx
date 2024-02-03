@@ -38,7 +38,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   } = params
 
   const payload = {
-    data: { [teamSheetLayoutId]: player }, 
+    data: { [teamSheetLayoutId]: player },
     teamId,
   }
 
