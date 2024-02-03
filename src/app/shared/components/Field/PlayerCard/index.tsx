@@ -4,9 +4,9 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import { getPlayerTitle } from '@functions/players'
+import { getShortPlayerTitle } from '@functions/players'
 
-import type { PlayerWithPositions } from '@types'
+import type { SimplePlayerRecord } from '@types'
 
 import PlayerIcon from '@components/PlayerIcon'
 import UnSelectPlayer from '@components/UnSelectPlayer'
@@ -14,7 +14,7 @@ import UnSelectPlayer from '@components/UnSelectPlayer'
 interface PlayerCardProps {
   className: string,
   nonInteractive?: boolean,
-  player?: PlayerWithPositions,
+  player?: SimplePlayerRecord,
   positions: string[],
   positionTitle: string,
   teamSheetLayoutId: string,
@@ -31,7 +31,7 @@ const PlayerCard = (props: PlayerCardProps) => {
     setSelectedTeamSheetLayoutId,
   } = callbacks || {}
 
-  const isPlayerSelected = !!player?.id
+  const isPlayerSelected = !!player
 
   return (
     <div className={`${className}`}>
@@ -60,7 +60,7 @@ const PlayerCard = (props: PlayerCardProps) => {
         )}
 
         <div className="truncate text-xs text-center mt-1">
-          {isPlayerSelected ? getPlayerTitle(player) : positionTitle}
+          {isPlayerSelected ? getShortPlayerTitle(player) : positionTitle}
         </div>
       </div>
     </div>

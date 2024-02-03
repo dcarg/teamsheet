@@ -1,11 +1,18 @@
 import type { PlayerWithPositions } from '@types'
 
-export const getPlayerTitle = (player: PlayerWithPositions) => {
-  if (!player.id) return ''
+type ReducedPlayerType = {
+  title: string,
+  [key: string]: any,
+}
 
-  const { firstname, lastname } = player || {}
+export const getShortPlayerTitle = (player: ReducedPlayerType) => {
+  if (!player) return ''
 
-  const firstNameInitial = firstname?.slice(0,1)?.toUpperCase()
+  const { title } = player
+
+  const [firstname, lastname] = title.split(' ')
+
+  const firstNameInitial = firstname[0].toUpperCase()
 
   return `${firstNameInitial}. ${lastname}`
 }

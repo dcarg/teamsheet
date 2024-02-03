@@ -38,8 +38,8 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   } = params
 
   const simplePlayerRecord = {
-    name: player.title,
-    positions: player.playerPositions.map(playerPosition => playerPosition.position.title)
+    positions: player.playerPositions.map(playerPosition => playerPosition.position.title),
+    title: player.title,
   }
 
   const payload = {
