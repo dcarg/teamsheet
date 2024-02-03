@@ -32,23 +32,6 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
 
     const { teamId, title } = teamSheet
 
-    const players = await prisma.player.findMany({
-      where: {
-        teamMembers: {
-          some: {
-            teamId,
-          },
-        },
-      },
-      include: {
-        playerPositions: {
-          include: {
-            position: true,
-          },
-        },
-      },
-    })
-
     const futuraFilePath = resolve('public/fonts/futura-pt.ttf')
     const futuraBoldFilePath = resolve('public/fonts/futura-pt-bold.ttf')
     const futuraFont = fs.readFile(futuraFilePath)
@@ -66,7 +49,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
             width: 1200,
           }}
         >
-          <NonInteractiveField players={players} teamSheet={teamSheet} />
+          <NonInteractiveField teamSheet={teamSheet} />
 
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
             {title && (
@@ -88,7 +71,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
               </div>
             )}
 
-            <NonInteractiveBench players={players} teamSheet={teamSheet} />
+            <NonInteractiveBench teamSheet={teamSheet} />
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column'}}>
