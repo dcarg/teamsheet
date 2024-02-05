@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import localFont from "next/font/local"
 import './globals.css'
@@ -37,19 +38,20 @@ const futura = localFont(
 )
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_VERCEL_URL}`),
   title: 'Teamsheet',
   description: 'Choose your Team',
   openGraph: {
     images: [
       {
         height: 630,
-        url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/ogImages`,
+        url: '/api/ogImages',
         width: 1200,
       },
     ],
     title: 'TeamSheet',
     type: 'website',
-    url: process.env.NEXT_PUBLIC_VERCEL_URL,
+    url: '/',
   },
   twitter: {
     card: 'summary_large_image',
@@ -73,6 +75,7 @@ export default function RootLayout({
           {children}
         </div>
       </body>
+      <Script src="https://platform.twitter.com/widgets.js" />
     </html>
   )
 }
