@@ -5,6 +5,7 @@ import prisma from '@db/prismaSingleton'
 
 import Bench from '@components/Bench'
 import Field from '@components/Field'
+import ShareBar from '@components/ShareBar'
 
 import ShareContent from './ShareContent'
 
@@ -89,6 +90,8 @@ const Page = async (props: PageProps) => {
 
   return (
     <ShareContent players={players} teamSheet={teamSheet}>
+      <ShareBar teamSheet={teamSheet} />
+
       <Field nonInteractive />
 
       <Bench nonInteractive />
