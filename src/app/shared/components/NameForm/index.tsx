@@ -1,7 +1,7 @@
 'use client'
 
 import type { Dispatch, SetStateAction } from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { usePathname } from 'next/navigation'
 
@@ -17,6 +17,7 @@ import { updateTeamSheet } from '@actions/teamSheet'
 
 import { copyToClipboard } from '@functions/utils' 
 
+import Button from '@components/Button'
 import Label from '@components/Label'
 
 type HandleEditTitleParams = {
@@ -56,6 +57,12 @@ const NameForm = (props: NameFormProps) => {
   const [title, setTitle] = useState(initTitle || '')
   const [isEditing, setIsEditing] = useState(false)
 
+  useEffect(() => {
+    if (!title && !isEditing){
+      setIsEditing(true)
+    }
+  }, [id, isEditing])
+
   return (
     <div className="p-2">
       {!isEditing && (
@@ -88,24 +95,22 @@ const NameForm = (props: NameFormProps) => {
 
           <div className="flex justify-between">
             <input
-              className={clsx(
-                "border rounded p-2 w-full",
-                title ? "border-slate-500" : "border-rose-500"
-              )}
+              className="border rounded p-2 w-full border-slate-500"
               onChange={(e) => setTitle(e.target.value)}
               value={title}
             />
 
-            <button
-              className="border border-black p-1 rounded bg-cyan-400 hover:bg-cyan-500 text-slate-900 w-28 ml-2"
-              onClick={() => handleEditTitle({ 
+            <Button
+              className="ml-2"
+              onClick={() => handleEditTitle({
                 callbacks: { setIsEditing },
                 id,
-                title, 
+                title,
               })}
+              variant="create"
             >
               {title ? 'Update' : 'Save'}
-            </button>
+            </Button>
           </div>
         </>
       )}
