@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react'
 
 import { usePathname } from 'next/navigation'
 
-import clsx from 'clsx'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
@@ -20,6 +18,7 @@ import { copyToClipboard } from '@functions/utils'
 import Button from '@components/Button'
 import DownloadButton from '@components/DownloadButton'
 import FormField from '@components/FormField'
+import TweetButton from '@components/TweetButton'
 
 type HandleEditTitleParams = {
   callbacks: {
@@ -58,6 +57,8 @@ const NameForm = (props: NameFormProps) => {
   const [title, setTitle] = useState(initTitle || '')
   const [isEditing, setIsEditing] = useState(false)
 
+  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
+  
   useEffect(() => {
     if (!title && !isEditing){
       setIsEditing(true)
@@ -82,12 +83,12 @@ const NameForm = (props: NameFormProps) => {
             <FontAwesomeIcon
               className="cursor-pointer"
               icon={faCopy}
-              onClick={() => copyToClipboard(
-                `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
-              )}
+              onClick={() => copyToClipboard(shareUrl)}
             />
 
             <DownloadButton href={`/api/ogImages/teamSheet/${shareId}`} />
+
+            <TweetButton shareUrl={shareUrl} />
           </div>
         </div>
       )}
