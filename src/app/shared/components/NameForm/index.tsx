@@ -88,7 +88,7 @@ const NameForm = (props: NameFormProps) => {
 
             <DownloadButton href={`/api/ogImages/teamSheet/${shareId}`} />
 
-            <TweetButton className="ml-2" shareUrl={shareUrl} />
+            <TweetButton shareUrl={shareUrl} />
           </div>
         </div>
       )}
