@@ -14,7 +14,7 @@ const TeamSheetListItem = (props: TeamSheetListItemProps) => {
   const { editId, shareId, team, title: teamSheetTitle } = teamSheet
   const { competitionTeams, key: teamKey, title: teamTitle } = team
 
-  const hasMultipleCompetitionTeams = !!competitionTeams.length
+  const hasMultipleCompetitionTeams = competitionTeams.length > 1
   const firstCompetitionTeam = competitionTeams[0]
   const { 
     competition: {
