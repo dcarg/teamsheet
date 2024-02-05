@@ -1,127 +1,89 @@
-import * as fs from 'node:fs/promises'
-import { resolve } from 'node:path'
-
 import { ImageResponse } from 'next/og'
-import { notFound } from 'next/navigation'
-import type { NextRequest } from 'next/server'
 
-import prisma from '@db/prismaSingleton'
+export const runtime = 'edge'
 
-import NonInteractiveBench from '@components/NonInteractiveBench'
-import NonInteractiveField from '@components/NonInteractiveField'
+const futuraFont = fetch(new URL('public/fonts/futura-pt.ttf', import.meta.url)).then(
+  res => res.arrayBuffer(),
+)
 
-export const GET = async (request: NextRequest) => {
-  try {
-    const teamSheetId = request.nextUrl.searchParams.get('teamSheetId')
+const futuraBoldFont = fetch(new URL('public/fonts/futura-pt-bold.ttf', import.meta.url)).then(
+  res => res.arrayBuffer(),
+)
 
-    const teamSheet = teamSheetId
-      ? await prisma.teamSheet.findUnique({
-        where: {
-          shareId: teamSheetId,
-        },
-      })
-      : null
+export const GET = async () => {
+  const futuraFontData = await futuraFont
+  const futuraBoldFontData = await futuraBoldFont
 
-    if (!teamSheet) return notFound()
-
-    const { teamId, title } = teamSheet
-
-    const players = await prisma.player.findMany({
-      where: {
-        teamMembers: {
-          some: {
-            teamId,
-          },
-        },
-      },
-      include: {
-        playerPositions: {
-          include: {
-            position: true,
-          },
-        },
-      },
-    })
-
-    const futuraFilePath = resolve('public/fonts/futura-pt.ttf')
-    const futuraBoldFilePath = resolve('public/fonts/futura-pt-bold.ttf')
-    const futuraFont = fs.readFile(futuraFilePath)
-    const futuraBoldFont = fs.readFile(futuraBoldFilePath)
-    const futuraFontData = await futuraFont
-    const futuraBoldFontData = await futuraBoldFont
-
-    return new ImageResponse(
-      (
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'radial-gradient(circle, rgba(38,38,43,1) 0%, rgba(40,40,46,1) 80%, rgba(14,116,144,1) 100%)',
+          display: 'flex',
+          flexDirection: 'column',
+          height: 630,
+          justifyContent: 'center',
+          width: 1200,
+        }}
+      >
         <div
           style={{
-            backgroundColor: 'white',
+            alignItems: 'center',
             display: 'flex',
-            height: 630,
-            width: 1200,
+            justifyContent: 'center',
           }}
         >
-          <NonInteractiveField players={players} teamSheet={teamSheet} />
-
-          <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
-            {title && (
-              <div
-                style={{
-                  fontFamily: 'Futura Bold',
-                  fontWeight: 'bold',
-                  fontSize: '24px',
-                  lineHeight: 1.2,
-                  margin: 'auto',
-                  maxHeight: '60px',
-                  maxWidth: '390px',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {title}
-              </div>
-            )}
-
-            <NonInteractiveBench players={players} teamSheet={teamSheet} />
-
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '16px' }}>
-              <div style={{ display: 'flex', flexDirection: 'column'}}>
-                <div style={{ margin: 'auto', marginBottom: '8px' }}>Created with</div>
-                <div style={{ fontFamily: 'Futura Bold', fontWeight: 'bold', margin: 'auto' }}>teamsheet.online</div>
-              </div>
-
-              <img
-                src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/ts_logo_black.svg`}
-                alt="TeamSheet Logo"
-                height={30}
-                width={30}
-                style={{ marginLeft: '32px' }}
-              />
-            </div>
+          <div
+            style={{
+              color: 'white',
+              fontFamily: 'Futura Bold',
+              fontSize: 32,
+              fontWeight: 'bold',
+            }}
+          >
+            teamsheet.online
           </div>
+
+          <img
+            src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/ts_logo_white.svg`}
+            alt="TeamSheet Logo"
+            height={50}
+            width={50}
+            style={{ marginLeft: '32px' }}
+          />
         </div>
-      ),
-      {
-        height: 630,
-        width: 1200,
-        fonts: [
-          {
-            name: 'Futura',
-            data: futuraFontData,
-            style: 'normal',
-            weight: 400,
-          },
-          {
-            name: 'Futura Bold',
-            data: futuraBoldFontData,
-            style: 'normal',
-            weight: 700,
-          },
-        ],
-      },
-    )
-  } catch (e: any) {
-    console.log(`${e.message}`)
-    return new Response('Failed to generate the image', { status: 500 })
-  }
+
+        <div
+          style={{
+            color: 'white',
+            fontFamily: 'Futura Bold',
+            fontSize: 48,
+            fontWeight: 'bold',
+            marginTop: 40,
+          }}
+        >
+          Who would you pick?
+        </div>
+      </div>
+    ),
+    {
+      height: 630,
+      width: 1200,
+      fonts: [
+        {
+          name: 'Futura',
+          data: futuraFontData,
+          style: 'normal',
+          weight: 400,
+        },
+        {
+          name: 'Futura Bold',
+          data: futuraBoldFontData,
+          style: 'normal',
+          weight: 700,
+        },
+      ],
+    },
+  )
 }
