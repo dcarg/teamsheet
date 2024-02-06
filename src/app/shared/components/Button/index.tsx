@@ -22,7 +22,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       className={clsx(
-        "flex group p-2 justify-center items-center rounded bg-cyan-400 hover:bg-cyan-500 text-white",
+        "flex group p-2 justify-center items-center rounded bg-cyan-400 hover:bg-cyan-500 text-white w-fit",
         className,
         variants[variant],
       )}

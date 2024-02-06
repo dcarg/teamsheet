@@ -28,11 +28,9 @@ const TeamSheetListItem = (props: TeamSheetListItemProps) => {
   return (
     <div className="flex border rounded mb-3 p-4 w-full justify-between">
       <div className="flex flex-col">
-        {teamSheetTitle && (
-          <div className="font-semibold">
-            {teamSheetTitle}
-          </div>
-        )}
+        <div className="font-semibold">
+          {teamSheetTitle || `Team Sheet #${shareId.substring(0,8)}`}
+        </div>
         
         <div className="flex text-sm text-slate-400">
           <div>{teamTitle}</div>
@@ -47,15 +45,13 @@ const TeamSheetListItem = (props: TeamSheetListItemProps) => {
         <Link href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/${sportKey}/${teamKey}/share?teamSheetId=${shareId}`}>
           <FontAwesomeIcon
             className="cursor-pointer ml-3 hover:text-cyan-400"
-            
             icon={faShareFromSquare}
           />
         </Link>
 
         <Link href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/${sportKey}/${teamKey}?teamSheetId=${editId}`}>
           <FontAwesomeIcon
-            className="cursor-pointer ml-3 hover:text-cyan-400"
-            
+            className="cursor-pointer ml-3 hover:text-cyan-400"   
             icon={faEdit}
           />
         </Link>
