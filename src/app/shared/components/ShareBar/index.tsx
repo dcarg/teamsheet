@@ -51,10 +51,9 @@ const ShareBar = (props: ShareBarProps) => {
       </div>
 
       <Button
-        className="ml-2"
+        className="ml-2 w-[190px]"
         onClick={() => createTeamSheetAndRedirect({ teamSheet, router })}
         text="Duplicate Team Sheet"
-        textProps='w'
         variant="create"
       />
     </div>

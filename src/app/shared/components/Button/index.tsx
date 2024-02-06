@@ -1,10 +1,10 @@
 import clsx from 'clsx'
 
-
 const variants = {
   create: "w-[80px] font-semibold bg-cyan-400 hover:bg-cyan-500",
   delete: "w-[80px] font-semibold bg-red-600 hover:bg-red-700",
 }
+
 interface ButtonProps {
   className?: string,
   disabled?: boolean,
@@ -13,7 +13,7 @@ interface ButtonProps {
   onClick?: () => void,
   text?: string,
   textProps?: string,
-  variant: keyof typeof variants,
+  variant?: keyof typeof variants,
 }
 
 const Button = (props: ButtonProps) => {
@@ -23,12 +23,11 @@ const Button = (props: ButtonProps) => {
     <button
       className={clsx(
         "flex group p-2 justify-center items-center rounded bg-cyan-400 hover:bg-cyan-500 text-white w-fit",
+        !!variant && variants[variant],
         className,
-        variants[variant],
       )}
       disabled={disabled}
       onClick={onClick}
-      
     >
       <div className={textProps}>{text}</div>
 

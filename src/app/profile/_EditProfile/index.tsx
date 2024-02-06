@@ -39,7 +39,7 @@ const EditProfile = (props: EditProfileProps) => {
       <Button
         className="mt-3 py-2 px-3 w-auto font-semibold text-white"
         onClick={() => console.log('Update User')}
-        text=" Update Profile"
+        text="Update Profile"
       />
     </div>
   )

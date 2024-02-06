@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import isMobileBrowser from 'is-mobile'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faBarsStaggered, faRightFromBracket, faUser, faUsersRectangle } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBarsStaggered, faRightFromBracket, faUsersRectangle } from '@fortawesome/free-solid-svg-icons'
 
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
