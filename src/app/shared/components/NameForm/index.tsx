@@ -17,7 +17,7 @@ import { copyToClipboard } from '@functions/utils'
 
 import Button from '@components/Button'
 import DownloadButton from '@components/DownloadButton'
-import Label from '@components/Label'
+import FormField from '@components/FormField'
 import TweetButton from '@components/TweetButton'
 
 type HandleEditTitleParams = {
@@ -94,9 +94,7 @@ const NameForm = (props: NameFormProps) => {
       )}
 
       {isEditing && (
-        <>
-          <Label>Team Name</Label>
-
+        <FormField className="mt-2" label="Team Name">
           <div className="flex justify-between">
             <input
               className="border rounded p-2 w-full border-slate-500"
@@ -111,12 +109,11 @@ const NameForm = (props: NameFormProps) => {
                 id,
                 title,
               })}
+              text={title ? 'Update' : 'Save'}
               variant="create"
-            >
-              {title ? 'Update' : 'Save'}
-            </Button>
+            />
           </div>
-        </>
+        </FormField>
       )}
     </div>
   )

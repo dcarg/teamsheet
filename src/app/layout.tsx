@@ -10,7 +10,6 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false;
 
 import NavBar from '@components/NavBar'
-import TopBar from '@components/TopBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -68,8 +67,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${futura.className} ${inter.className} flex flex-col items-center`}>
         <NavBar title="TEAMSHEET" />
-
-        <TopBar />
 
         <div className="max-w-column w-full">
           {children}

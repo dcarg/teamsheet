@@ -43,20 +43,19 @@ const ShareBar = (props: ShareBarProps) => {
   const sportHref = pathname.split('/')[1]
 
   return (
-    <div className="flex p-2">
-      <div className="border border-black p-1 rounded bg-cyan-400 hover:bg-cyan-500 text-slate-900 p-1">
+    <div className="flex p-3">
+      <div className="p-2 border rounded bg-cyan-400 hover:bg-cyan-500 text-white font-semibold">
         <Link href={`/${sportHref}`}>
           Create your own
         </Link>
       </div>
 
       <Button
-        className="ml-2"
+        className="ml-2 w-[190px]"
         onClick={() => createTeamSheetAndRedirect({ teamSheet, router })}
+        text="Duplicate Team Sheet"
         variant="create"
-      >
-        Duplicate
-      </Button>
+      />
     </div>
   )
 }

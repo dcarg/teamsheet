@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { getKindeServerSession, LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/server'
+import { getKindeServerSession, LoginLink } from '@kinde-oss/kinde-auth-nextjs/server'
+
+import UserMenu from '@components/UserMenu'
 
 interface NavbarProps {
   title: string,
@@ -10,12 +12,13 @@ interface NavbarProps {
 const NavBar = async (props: NavbarProps) => {
   const { title } = props
 
-  const { isAuthenticated } = getKindeServerSession()
-  const authenticated = await isAuthenticated()
+  const { getUser, isAuthenticated } = getKindeServerSession()
+  const authenticated =  await isAuthenticated()
+  const user = await getUser()
 
   return (
     <div className="bg-cyan-700 w-full ">
-      <div className="max-w-column flex justify-between items-center m-auto p-2 w-full">
+      <div className="max-w-column flex justify-between items-center m-auto p-3 w-full">
         <div className="flex">
           <Link href="/">
             <div className="m-auto p-[5px] pl-0">
@@ -35,8 +38,8 @@ const NavBar = async (props: NavbarProps) => {
         </div>
 
         {authenticated
-          ? <LogoutLink className="text-white font-semibold">Logout</LogoutLink>
-          : <LoginLink className="text-white font-semibold">Login</LoginLink>
+          ? <UserMenu user={user} />
+          : <LoginLink className="font-semibold text-white hover:text-cyan-400">Login</LoginLink>
         }
       </div>
     </div>

@@ -11,3 +11,23 @@ export type PlayerWithPositions = Prisma.PlayerGetPayload<
     },
   }
 >
+
+export type TeamSheetWithRelations = Prisma.TeamSheetGetPayload<
+  {
+    include: {
+      team: {
+        include: {
+          competitionTeams: {
+            include: {
+              competition: {
+                include: {
+                  sport: true,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  }
+>
