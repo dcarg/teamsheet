@@ -24,12 +24,14 @@ const PlayerCard = (props: PlayerCardProps) => {
   const { className, nonInteractive, player, positions, positionTitle, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
-  const { callbacks } = teamContextValue
+  const { callbacks, team } = teamContextValue
   const {
     openModal,
     setSelectedPositions,
     setSelectedTeamSheetLayoutId,
   } = callbacks || {}
+
+  const { primaryColor, secondaryColor } = team || {}
 
   const isPlayerSelected = !!player?.id
 
@@ -49,6 +51,8 @@ const PlayerCard = (props: PlayerCardProps) => {
         <div className="flex align-middle text-center">
           <PlayerIcon
             number={teamSheetLayoutId}
+            primaryColor={primaryColor}
+            secondaryColor={secondaryColor}
             unSelected={!isPlayerSelected}
           />
         </div>
