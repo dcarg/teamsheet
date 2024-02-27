@@ -1,12 +1,16 @@
 import type { PlayerWithPositions } from '@types'
 
+import RugbyJersey from '@components/RugbyJersey'
+
 interface NonInteractiveBenchSeatProps {
   number: string,
   player?: PlayerWithPositions,
+  primaryColor: string,
+  secondaryColor: string,
 }
 
 const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
-  const { number, player } = props
+  const { number, player, primaryColor, secondaryColor } = props
 
   if (!player) return null
 
@@ -33,7 +37,7 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
           position: 'relative',
         }}
       >
-        <img src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/wallaby_jersey.svg`} width="35" />
+        <RugbyJersey primaryColor={primaryColor} secondaryColor={secondaryColor} />
 
         <div
           style={{
