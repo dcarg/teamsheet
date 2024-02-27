@@ -32,7 +32,7 @@ const PlayerCard = (props: PlayerCardProps) => {
     setSelectedTeamSheetLayoutId,
   } = callbacks || {}
 
-  const { primaryColor, secondaryColor } = team || {}
+  const { primaryColor, secondaryColor } = team
 
   const isPlayerSelected = !!player?.id
 

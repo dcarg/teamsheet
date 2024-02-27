@@ -1,6 +1,6 @@
 'use client'
 
-import { TeamSheet } from '@prisma/client'
+import { Team, TeamSheet } from '@prisma/client'
 
 import TeamContext from '@contexts/teamContext'
 
@@ -9,14 +9,16 @@ import type { PlayerWithPositions } from '@types'
 interface ShareContentProps {
   children: React.ReactNode,
   players: PlayerWithPositions[],
+  team: Team,
   teamSheet: TeamSheet | null,
 }
 
 const ShareContent = (props: ShareContentProps) => {
-  const { children, players, teamSheet } = props
+  const { children, players, team, teamSheet } = props
 
   const teamContextValue = {
     players,
+    team,
     teamSheet,
   }
 

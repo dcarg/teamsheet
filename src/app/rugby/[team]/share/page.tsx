@@ -63,6 +63,7 @@ const Page = async (props: PageProps) => {
       where: {
         shareId: teamSheetId,
       },
+      include: { team: true },
     })
     : null
 
@@ -89,7 +90,7 @@ const Page = async (props: PageProps) => {
   })
 
   return (
-    <ShareContent players={players} teamSheet={teamSheet}>
+    <ShareContent players={players} team={teamSheet.team} teamSheet={teamSheet}>
       <ShareBar teamSheet={teamSheet} />
 
       <Field nonInteractive />

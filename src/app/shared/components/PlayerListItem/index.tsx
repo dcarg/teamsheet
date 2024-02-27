@@ -20,7 +20,7 @@ interface PlayerListItemProps {
 const PlayerListItem = (props: PlayerListItemProps) => {
   const { disabled, nonInteractive, onClick, player, team, teamSheetLayoutId } = props
 
-  const { primaryColor, secondaryColor } = team || {} // there is no team in the modal?
+  const { primaryColor, secondaryColor } = team
 
   const { playerPositions } = player || {}
 
