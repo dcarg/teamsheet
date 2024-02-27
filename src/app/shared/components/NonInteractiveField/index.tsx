@@ -1,4 +1,4 @@
-import type { Player, TeamSheet } from '@prisma/client'
+import type { Player, Team, TeamSheet } from '@prisma/client'
 
 import NonInteractivePlayerIcon from './NonInteractivePlayerIcon'
 
@@ -24,13 +24,16 @@ const teamSheetLayoutData = {
 
 interface NonInteractiveFieldProps {
   players: Player[],
+  team: Team,
   teamSheet: TeamSheet,
 }
 
 const NonInteractiveField = (props: NonInteractiveFieldProps) => {
-  const { players, teamSheet } = props
+  const { players, team, teamSheet } = props
 
   const data = teamSheet.data as Partial<{ [key: string]: number }>
+
+  const { primaryColor, secondaryColor } = team
 
   return (
     <div style={{ display: 'flex' }}>
@@ -50,6 +53,8 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
               key={teamSheetLayoutId}
               number={teamSheetLayoutId}
               player={player}
+              primaryColor={primaryColor}
+              secondaryColor={secondaryColor}
               style={style}
             />
           )

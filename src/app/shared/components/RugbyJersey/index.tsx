@@ -7,7 +7,6 @@ interface RugbyJerseyProps {
 
 const RugbyJersey = (props: RugbyJerseyProps) => {
   const {
-    // maybe change these to grey for unselected players?
     primaryColor = '#ffffff', // white
     secondaryColor = '#000000', // black
     height = '48',

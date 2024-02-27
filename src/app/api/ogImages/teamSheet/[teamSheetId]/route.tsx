@@ -25,6 +25,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
         where: {
           shareId: teamSheetId,
         },
+        include: { team: true },
       })
       : null
 
@@ -66,7 +67,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
             width: 1200,
           }}
         >
-          <NonInteractiveField players={players} teamSheet={teamSheet} />
+          <NonInteractiveField players={players} team={teamSheet.team} teamSheet={teamSheet} />
 
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
             {title && (
