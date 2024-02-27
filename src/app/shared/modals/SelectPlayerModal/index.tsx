@@ -97,6 +97,7 @@ const SelectPlayerModal = () => {
               teamSheetLayoutId: selectedTeamSheetLayoutId!,
             })}
             player={player}
+            team={team}
           />
         )
       })}
