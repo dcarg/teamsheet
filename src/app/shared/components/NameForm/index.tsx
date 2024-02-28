@@ -49,6 +49,7 @@ const NameForm = (props: NameFormProps) => {
       id,
       shareId,
       title: initTitle,
+      updatedAt,
     },
   } = props
 
@@ -56,6 +57,8 @@ const NameForm = (props: NameFormProps) => {
 
   const [title, setTitle] = useState(initTitle || '')
   const [isEditing, setIsEditing] = useState(false)
+
+  const cacheKey = new Date(updatedAt).getTime()
 
   const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}${pathname}/share?teamSheetId=${shareId}`
   
@@ -86,7 +89,7 @@ const NameForm = (props: NameFormProps) => {
               onClick={() => copyToClipboard(shareUrl)}
             />
 
-            <DownloadButton href={`/api/ogImages/teamSheet/${shareId}`} />
+            <DownloadButton href={`/api/ogImages/teamSheet/${shareId}?cacheKey=${cacheKey}`} />
 
             <TweetButton shareUrl={shareUrl} />
           </div>
