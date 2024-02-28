@@ -34,7 +34,7 @@ const PlayerCard = (props: PlayerCardProps) => {
 
   const { primaryColor, secondaryColor } = team
 
-  const isPlayerSelected = !!player?.id
+  const isPlayerSelected = !!player
 
   return (
     <div className={`${className}`}>

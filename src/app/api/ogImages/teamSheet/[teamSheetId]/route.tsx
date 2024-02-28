@@ -31,24 +31,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
 
     if (!teamSheet) return notFound()
 
-    const { teamId, title } = teamSheet
-
-    const players = await prisma.player.findMany({
-      where: {
-        teamMembers: {
-          some: {
-            teamId,
-          },
-        },
-      },
-      include: {
-        playerPositions: {
-          include: {
-            position: true,
-          },
-        },
-      },
-    })
+    const { title } = teamSheet
 
     const futuraFilePath = resolve('public/fonts/futura-pt.ttf')
     const futuraBoldFilePath = resolve('public/fonts/futura-pt-bold.ttf')
@@ -67,7 +50,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
             width: 1200,
           }}
         >
-          <NonInteractiveField players={players} team={teamSheet.team} teamSheet={teamSheet} />
+          <NonInteractiveField team={teamSheet.team} teamSheet={teamSheet} />
 
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
             {title && (
@@ -89,7 +72,7 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
               </div>
             )}
 
-            <NonInteractiveBench players={players} team={teamSheet.team} teamSheet={teamSheet} />
+            <NonInteractiveBench team={teamSheet.team} teamSheet={teamSheet} />
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column'}}>
