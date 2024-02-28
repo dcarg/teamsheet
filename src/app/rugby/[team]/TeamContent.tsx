@@ -34,7 +34,6 @@ const TeamContent = (props: TeamContentProps) => {
       setSelectedTeamSheetLayoutId,
     },
     filteredPlayers,
-    players,
     selectedTeamSheetLayoutId,
     showModal,
     team,

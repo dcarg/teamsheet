@@ -23,7 +23,7 @@ const handleClick = (params: HandleClickParams) => {
 
   e.stopPropagation()
 
-  const data = teamSheet.data as { [key: string]: number }
+  const data = teamSheet.data as any
   delete data[teamSheetLayoutId]
 
   const payload = {
