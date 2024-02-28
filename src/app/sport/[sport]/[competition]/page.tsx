@@ -41,17 +41,22 @@ const Page = async (props: PageProps) => {
     }
   })
 
+  const teams = await prisma.team.findMany()
+  // need to filter teams here by competitionTeams
+  // i.e. super rugby teams only
+
   return (
     <div className="max-w-column">
-      <div className="p-2 w-full">
+      <div className="p-2 w-full justify-center">
         {}
         <div className="font-semibold text-center my-3">
           SELECT A {competitionKey?.toUpperCase()} TEAM:
         </div>
 
         <SelectGrid
-          entityKey="team"
-          entities={competitionTeams}
+          entityKey={competitionKey} // superRugby
+          entities={teams}
+          hideTitles
         />
       </div>
     </div>
