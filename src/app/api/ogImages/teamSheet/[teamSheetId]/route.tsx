@@ -52,24 +52,22 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
           <NonInteractiveField teamSheet={teamSheet} />
 
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
-            {title && (
-              <div
-                style={{
-                  fontFamily: 'Futura Bold',
-                  fontWeight: 'bold',
-                  fontSize: '24px',
-                  lineHeight: 1.2,
-                  margin: 'auto',
-                  maxHeight: '60px',
-                  maxWidth: '390px',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {title}
-              </div>
-            )}
+            <div
+              style={{
+                fontFamily: 'Futura Bold',
+                fontWeight: 'bold',
+                fontSize: '24px',
+                lineHeight: 1.2,
+                margin: 'auto',
+                maxHeight: '60px',
+                maxWidth: '390px',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {title}
+            </div>
 
             <NonInteractiveBench teamSheet={teamSheet} />
 
