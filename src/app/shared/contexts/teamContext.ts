@@ -13,7 +13,6 @@ type TeamContext = {
     setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<string | undefined>>,
   },
   filteredPlayers?: PlayerWithPositions[],
-  players: PlayerWithPositions[],
   selectedTeamSheetLayoutId?: string,
   showModal?: boolean,
   team?: Team,

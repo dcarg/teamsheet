@@ -31,13 +31,15 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
     })
     : null
 
+  const cacheKey = new Date(teamSheet?.updatedAt || '').getTime()
+
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_VERCEL_URL}`),
     openGraph: {
       images: [
         {
           height: 630,
-          url: `/api/ogImages/teamSheet/${teamSheetId}`,
+          url: `/api/ogImages/teamSheet/${teamSheetId}?cacheKey=${cacheKey}`,
           width: 1200,
         },
       ],

@@ -31,7 +31,7 @@ const PlayerCard = (props: PlayerCardProps) => {
     setSelectedTeamSheetLayoutId,
   } = callbacks || {}
 
-  const isPlayerSelected = !!player?.id
+  const isPlayerSelected = !!player
 
   return (
     <div className={`${className}`}>

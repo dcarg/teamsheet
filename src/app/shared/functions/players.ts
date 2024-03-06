@@ -3,9 +3,9 @@ import type { PlayerWithPositions } from '@types'
 export const getPlayerTitle = (player: PlayerWithPositions) => {
   if (!player.id) return ''
 
-  const { firstname, lastname } = player || {}
+  const { firstname, lastname } = player
 
-  const firstNameInitial = firstname?.slice(0,1)?.toUpperCase()
+  const firstNameInitial = firstname[0].toUpperCase()
 
   return `${firstNameInitial}. ${lastname}`
 }
