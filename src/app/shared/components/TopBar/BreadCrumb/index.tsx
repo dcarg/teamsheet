@@ -21,7 +21,7 @@ const BreadCrumb = (props: BreadCrumbProps) => {
   const entityLogoKey = `${entityKey}Logos`
   const entityLogos = logos[entityLogoKey] || {}
 
-  // Need to add smaller square logos to use as breadcrumb links instead of text
+  // WIP Need to add smaller square logos to use as breadcrumb links instead of text
 
   return (
     <div className="pr-1 hover:text-cyan-400">

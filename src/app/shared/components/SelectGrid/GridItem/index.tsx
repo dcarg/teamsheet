@@ -24,7 +24,7 @@ const GridItem = (props: GridItemProps) => {
 
   const pathname = usePathname()
 
-  // the backgroundColor here on line 35 isn't working because tailwind doesn't handle dhynamic class names
+  // WIP the backgroundColor here on line 35 isn't working because tailwind doesn't handle dynamic class names
   // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 
   return (
