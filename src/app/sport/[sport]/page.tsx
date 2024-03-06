@@ -1,6 +1,7 @@
 import prisma from '@db/prismaSingleton'
 
 import SelectGrid from '@components/SelectGrid'
+import TopBar from '@components/TopBar'
 
 type PageProps = {
   params: { sport: string },
@@ -16,7 +17,7 @@ const Page = async (props: PageProps) => {
       key: sportKey,
     },
   })
-  const { id: sportId, title: sportTitle } = sport
+  const { id: sportId, title: sportTitle } = sport || {}
 
   const competitions = await prisma.competition.findMany({
     where: {
@@ -28,10 +29,12 @@ const Page = async (props: PageProps) => {
 
   return (
     <div className="max-w-column">
+      <TopBar />
+
       <div className="p-2 w-full">
         {!hasCompetitions && (
           <div>
-            {sportTitle.toUpperCase()} Coming Soon
+            {sportTitle?.toUpperCase()} Coming Soon
           </div>
         )}
 

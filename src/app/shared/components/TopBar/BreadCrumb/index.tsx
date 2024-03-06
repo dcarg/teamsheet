@@ -1,45 +1,49 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-
 import Image from "next/image"
 import Link from "next/link"
+
+import { getBreadCrumbPath } from '@functions/paths'
 
 import * as logos from '@logos/index'
 
 interface BreadCrumbProps {
   entityKey: string,
+  isLast: boolean,
+  pathArray: string[],
 }
 
 const BreadCrumb = (props: BreadCrumbProps) => {
-  const { entityKey } = props
+  const { entityKey, isLast, pathArray } = props
+
+  const breadCrumbPath = getBreadCrumbPath(entityKey, pathArray)
+  console.log('breadCrumbPath', breadCrumbPath)
 
   const entityLogoKey = `${entityKey}Logos`
-  console.log('entityLogoKey', entityLogoKey)
   const entityLogos = logos[entityLogoKey] || {}
-  console.log('entityLogos', entityLogos)
+
+  // Need to add smaller square logos to use as breadcrumb links instead of text
 
   return (
-    <Link
-    href="#"
-    // href={`${pathname}/${key}`}
-    >
-      <div
-        className="flex flex-col h-[20px] w-[20px] justify-center items-center border rounded p-2"
-        
-      >
-        {/* <Image
-          src={src}
-          alt={title}
-          height={150}
-          width={150}
-        /> */}
+    <div className="pr-1 hover:text-cyan-400">
+      <Link href={breadCrumbPath}>
+        <div
+          // className="flex flex-col h-[20px] w-[20px] justify-center items-center border rounded p-2"
+          
+        >
+          {/* <Image
+            src={src}
+            alt={title}
+            height={150}
+            width={150}
+          /> */}
 
-        <div className="flex justify-center mt-2">
-          {entityKey.toUpperCase()}
+          <div className="flex justify-center mt-2">
+            {entityKey.toUpperCase()}{isLast ? " > " : ""}
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 import prisma from '@db/prismaSingleton'
 
 import SelectGrid from '@components/SelectGrid'
+import TopBar from '@components/TopBar'
 
 type PageProps = {
   params: {
@@ -47,6 +48,8 @@ const Page = async (props: PageProps) => {
 
   return (
     <div className="max-w-column">
+      <TopBar />
+
       <div className="p-2 w-full justify-center">
         <div className="font-semibold text-center my-3">
           SELECT A {competitionTitle?.toUpperCase()} TEAM:
