@@ -17,7 +17,6 @@ const BreadCrumb = (props: BreadCrumbProps) => {
   const { entityKey, isLast, pathArray } = props
 
   const breadCrumbPath = getBreadCrumbPath(entityKey, pathArray)
-  console.log('breadCrumbPath', breadCrumbPath)
 
   const entityLogoKey = `${entityKey}Logos`
   const entityLogos = logos[entityLogoKey] || {}
