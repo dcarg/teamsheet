@@ -30,7 +30,7 @@ const Page = async (props: PageProps) => {
       sportId: sportId,
     },
   })
-  const { id: competitionId } = competition || {}
+  const { id: competitionId, title: competitionTitle } = competition || {}
 
   const competitionTeams = await prisma.competitionTeam.findMany({
     where: {
@@ -48,9 +48,8 @@ const Page = async (props: PageProps) => {
   return (
     <div className="max-w-column">
       <div className="p-2 w-full justify-center">
-        {}
         <div className="font-semibold text-center my-3">
-          SELECT A {competitionKey?.toUpperCase()} TEAM:
+          SELECT A {competitionTitle?.toUpperCase()} TEAM:
         </div>
 
         <SelectGrid

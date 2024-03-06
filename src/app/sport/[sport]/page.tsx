@@ -16,7 +16,7 @@ const Page = async (props: PageProps) => {
       key: sportKey,
     },
   })
-  const { id: sportId } = sport || {}
+  const { id: sportId, title: sportTitle } = sport
 
   const competitions = await prisma.competition.findMany({
     where: {
@@ -31,7 +31,7 @@ const Page = async (props: PageProps) => {
       <div className="p-2 w-full">
         {!hasCompetitions && (
           <div>
-            {sportKey.toUpperCase()} Coming Soon
+            {sportTitle.toUpperCase()} Coming Soon
           </div>
         )}
 
