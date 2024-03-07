@@ -3,6 +3,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 import type { PlayerWithPositions } from '@types'
+import type { Team } from '@prisma/client'
 
 import PlayerIcon from '@components/PlayerIcon'
 import UnSelectPlayer from '@components/UnSelectPlayer'
@@ -12,11 +13,15 @@ interface PlayerListItemProps {
   nonInteractive?: boolean,
   onClick?: () => void,
   player?: PlayerWithPositions,
+  team: Team,
   teamSheetLayoutId?: string,
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
-  const { disabled, nonInteractive, onClick, player, teamSheetLayoutId } = props
+  const { disabled, nonInteractive, onClick, player, team, teamSheetLayoutId } = props
+
+  const { primaryColor, secondaryColor } = team
+
   const { playerPositions } = player || {}
 
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
@@ -37,7 +42,12 @@ const PlayerListItem = (props: PlayerListItemProps) => {
     >
       <div className="flex m-2">
         <div className="mr-3">
-          <PlayerIcon number={teamSheetLayoutId} />
+          <PlayerIcon
+            isFaded={disabled}
+            number={teamSheetLayoutId}
+            primaryColor={primaryColor}
+            secondaryColor={secondaryColor}
+          />
         </div>
 
         <div className="flex-column self-center overflow-hidden truncate items-center justify-center">
