@@ -15,7 +15,7 @@ type TeamContext = {
   filteredPlayers?: PlayerWithPositions[],
   selectedTeamSheetLayoutId?: string,
   showModal?: boolean,
-  team?: Team,
+  team: Team,
   teamSheet: TeamSheet | null,
 }
 

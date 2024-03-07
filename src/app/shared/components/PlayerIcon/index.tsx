@@ -1,26 +1,22 @@
-import Image from 'next/image'
+import clsx from 'clsx'
+
+import RugbyJersey from '@components/RugbyJersey'
 
 interface PlayerIconProps {
   number?: string,
-  unSelected?: boolean,
+  primaryColor?: string,
+  secondaryColor?: string,
+  isFaded?: boolean,
 }
 
 const PlayerIcon = (props: PlayerIconProps) => {
-  const { number, unSelected } = props
-
-  // Update this with an empty player silhouette svg when I figure out how to generate one for unselected players
+  const { isFaded, number, primaryColor, secondaryColor } = props
 
   return (
     <div className="flex relative w-full justify-center content-center">
-      <Image
-        src='/wallaby_jersey.svg'
-        alt="rugby jersey"
-        height={35}
-        width={35}
-        style={{
-          opacity: unSelected ? 0.6 : 1,
-        }}
-      />
+      <div className={clsx({ 'opacity-60': isFaded })}>
+        <RugbyJersey primaryColor={primaryColor} secondaryColor={secondaryColor} />
+      </div>
 
       <div className="absolute bottom-1.5 text-l text-white font-semibold inset-x-1/4">
         {number}
