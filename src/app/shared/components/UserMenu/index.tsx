@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import isMobileBrowser from 'is-mobile'
 
@@ -10,6 +10,8 @@ import { faBars, faBarsStaggered, faRightFromBracket, faUsersRectangle } from '@
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 import Button from '@components/Button'
+
+import useOutsideClick from '@hooks/useOutsideClick'
 
 import UserMenuItem from './UserMenuItem'
 
@@ -25,8 +27,18 @@ const UserMenu = (props: UserMenuProps) => {
 
   const isMobile = isMobileBrowser()
 
+  const ref = useRef<HTMLDivElement>(null)
+
+  useOutsideClick({
+    callbacks: {
+      action: () => setIsOpen(false)
+    },
+    enabled: isOpen,
+    ref, 
+  })
+
   return (
-    <div className="relative">
+    <div className="relative" ref={ref}>
       <Button
         className="bg-transparent hover:bg-transparent"
         icon={
