@@ -8,6 +8,7 @@ import type { TeamSheet } from '@prisma/client'
 import { createTeamSheet } from '@actions/teamSheet'
 
 import Button from '@components/Button'
+import { PlayerWithPositions } from '@types'
 
 type Router = ReturnType<typeof useRouter>
 
@@ -19,7 +20,7 @@ type CreateAndRedirectParams = {
 const createTeamSheetAndRedirect = async (params: CreateAndRedirectParams) => {
   const { router, teamSheet } = params
 
-  const data = teamSheet.data as { [key: string]: number }
+  const data = teamSheet.data as { [key: string]: PlayerWithPositions }
 
   const payload = {
     data,
@@ -44,11 +45,11 @@ const ShareBar = (props: ShareBarProps) => {
 
   return (
     <div className="flex p-3">
-      <div className="p-2 border rounded bg-cyan-400 hover:bg-cyan-500 text-white font-semibold">
-        <Link href={`/${sportHref}`}>
+      <Link href={`/${sportHref}`}>
+        <div className="p-2 border rounded bg-green-500 hover:bg-green-600 text-white font-semibold">
           Create your own
-        </Link>
-      </div>
+        </div>
+      </Link>
 
       <Button
         className="ml-2 w-[190px]"
