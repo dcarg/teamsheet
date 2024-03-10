@@ -16,25 +16,15 @@ import type { PlayerWithPositions } from '@types'
 import TeamContent from './TeamContent'
 
 type PageProps = {
-  params: { 
-    competition: string,
-    sport: string,
-    team: string,
-  },
+  params: { team: string },
   searchParams: { teamSheetId?: string },
 }
 
 const Page = async (props: PageProps) => {
   const {
-    params: {
-      competition: competitionKey,
-      sport: sportKey,
-      team: teamkey,
-    },
+    params: { team: teamkey },
     searchParams: { teamSheetId },
   } = props
-
-  // Can use the competitonKey and sportKey params to help specify the below prisma queries
 
   const team = await prisma.team.findUnique({
     where: {

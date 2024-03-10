@@ -9,14 +9,16 @@ import * as logos from '@logos/index'
 
 interface BreadCrumbProps {
   entityKey: string,
+  index: number,
   isLast: boolean,
   pathArray: string[],
 }
 
 const BreadCrumb = (props: BreadCrumbProps) => {
-  const { entityKey, isLast, pathArray } = props
+  const { entityKey, index, isLast, pathArray } = props
 
-  const breadCrumbPath = getBreadCrumbPath(entityKey, pathArray)
+  const breadCrumbPath = getBreadCrumbPath(index, pathArray)
+  console.log('breadCrumbPath', breadCrumbPath)
 
   const entityLogoKey = `${entityKey}Logos`
   const entityLogos = logos[entityLogoKey] || {}
@@ -38,7 +40,7 @@ const BreadCrumb = (props: BreadCrumbProps) => {
           /> */}
 
           <div className="flex justify-center mt-2">
-            {entityKey.toUpperCase()}{isLast ? " > " : ""}
+            {entityKey.toUpperCase()}{!isLast ? " > " : ""}
           </div>
         </div>
       </Link>

@@ -51,7 +51,6 @@ const Page = async (props: PageProps) => {
             />
           </>
         )}
-
       </div>
     </div>
   )

@@ -16,7 +16,8 @@ const TopBar = () => {
           <BreadCrumb
             key={path}
             entityKey={path}
-            isLast={!!pathArray[index+1]}
+            index={index}
+            isLast={pathArray.length === index + 1}
             pathArray={pathArray}
           />
         )}

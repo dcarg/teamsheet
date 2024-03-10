@@ -1,10 +1,12 @@
 import * as logos from '@logos/index'
 
+import type { Sport } from '@prisma/client'
+
 import GridItem from "./GridItem"
 
 type SelectGridProps = {
   entityKey: string,
-  entities: object,
+  entities: Sport[],
   hideTitles?: boolean,
 }
 
