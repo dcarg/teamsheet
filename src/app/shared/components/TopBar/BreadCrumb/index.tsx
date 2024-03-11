@@ -18,7 +18,6 @@ const BreadCrumb = (props: BreadCrumbProps) => {
   const { entityKey, index, isLast, pathArray } = props
 
   const breadCrumbPath = getBreadCrumbPath(index, pathArray)
-  console.log('breadCrumbPath', breadCrumbPath)
 
   const entityLogoKey = `${entityKey}Logos`
   const entityLogos = logos[entityLogoKey] || {}
@@ -40,7 +39,7 @@ const BreadCrumb = (props: BreadCrumbProps) => {
           /> */}
 
           <div className="flex justify-center mt-2">
-            {entityKey.toUpperCase()}{!isLast ? " > " : ""}
+            {entityKey.toUpperCase()}{isLast ? "" : " > " }
           </div>
         </div>
       </Link>

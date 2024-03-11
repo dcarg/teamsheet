@@ -18,9 +18,9 @@ type GridItemProps = {
 }
 
 const GridItem = (props: GridItemProps) => {
-  const { entityLogo, entity, hideTitle } = props || {}
+  const { entityLogo, entity, hideTitle } = props
   const { src } = entityLogo || {}
-  const { key, primaryColor, title } = entity || {}
+  const { key, primaryColor, title } = entity
 
   const pathname = usePathname()
 

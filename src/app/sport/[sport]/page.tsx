@@ -12,16 +12,11 @@ const Page = async (props: PageProps) => {
     params: { sport: sportKey },
   } = props
 
-  const sport = await prisma.team.findUnique({
-    where: {
-      key: sportKey,
-    },
-  })
-  const { id: sportId, title: sportTitle } = sport || {}
-
   const competitions = await prisma.competition.findMany({
     where: {
-      sportId,
+      sport: {
+        key: sportKey,
+      },
     },
   })
 
@@ -34,7 +29,7 @@ const Page = async (props: PageProps) => {
       <div className="p-2 w-full">
         {!hasCompetitions && (
           <div>
-            {sportTitle?.toUpperCase()} Coming Soon
+            {sportKey?.toUpperCase()} Coming Soon
           </div>
         )}
 

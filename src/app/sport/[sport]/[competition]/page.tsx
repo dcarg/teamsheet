@@ -11,40 +11,27 @@ type PageProps = {
 }
 
 const Page = async (props: PageProps) => {
-  const {
-    params: { 
-      competition: competitionKey,
-      sport: sportKey,
-    },
-  } = props
-
-  const sport = await prisma.sport.findUnique({
-    where: {
-      key: sportKey,
-    },
-  })
-  const { id: sportId } = sport || {}
+  const { params: { competition: competitionKey } } = props
 
   const competition = await prisma.competition.findUnique({
     where: {
       key: competitionKey,
-      sportId: sportId,
     },
   })
-  const { id: competitionId, title: competitionTitle } = competition || {}
+  const { title: competitionTitle } = competition || {}
 
-  const competitionTeams = await prisma.competitionTeam.findMany({
+  const teams = await prisma.team.findMany({
     where: {
-      competitionId: competitionId,
+      competitionTeams: {
+        some: {
+          competition: {
+            key: competitionKey,
+          },
+        },
+      },
     },
-    include: {
-      team: true,
-    }
+    orderBy: { title: 'asc' },
   })
-
-  const teams = await prisma.team.findMany()
-  // need to filter teams here by competitionTeams
-  // i.e. super rugby teams only
 
   return (
     <div className="max-w-column">
@@ -56,7 +43,7 @@ const Page = async (props: PageProps) => {
         </div>
 
         <SelectGrid
-          entityKey={competitionKey} // superRugby
+          entityKey={competitionKey}
           entities={teams}
           hideTitles
         />

@@ -1,6 +1,6 @@
 
 import wallabiesLogo from './wallabies.jpeg'
 
-export const interationalLogos = {
+export const internationalLogos = {
   wallabies: wallabiesLogo,
 }
