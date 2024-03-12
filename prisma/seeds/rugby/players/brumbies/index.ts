@@ -6,7 +6,7 @@ export const brumbies = [
     lastname: "Wright",
     team: "Brumbies",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "lachlanLonergan",
@@ -15,7 +15,7 @@ export const brumbies = [
     lastname: "Lonergan",
     team: "Brumbies",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "robValetini",
@@ -24,7 +24,7 @@ export const brumbies = [
     lastname: "Valetini",
     team: "Brumbies",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "coreyToole",
@@ -33,7 +33,7 @@ export const brumbies = [
     lastname: "Toole",
     team: "Brumbies",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "ryanLonergan",
@@ -42,7 +42,7 @@ export const brumbies = [
     lastname: "Lonergan",
     team: "Brumbies",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "andyMuirhead",
@@ -51,7 +51,7 @@ export const brumbies = [
     lastname: "Muirhead",
     team: "Brumbies",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "jamesSlipper",
@@ -60,7 +60,7 @@ export const brumbies = [
     lastname: "Slipper",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "lenIkitau",
@@ -69,7 +69,7 @@ export const brumbies = [
     lastname: "Ikitau",
     team: "Brumbies",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "tomHooper",
@@ -78,7 +78,7 @@ export const brumbies = [
     lastname: "Hooper",
     team: "Brumbies",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow", "lock"],
   },
   {
     key: "connalMcInerney",
@@ -87,7 +87,7 @@ export const brumbies = [
     lastname: "McInerney",
     team: "Brumbies",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "nickFrost",
@@ -96,7 +96,7 @@ export const brumbies = [
     lastname: "Frost",
     team: "Brumbies",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "noahLolesio",
@@ -105,7 +105,7 @@ export const brumbies = [
     lastname: "Lolesio",
     team: "Brumbies",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "tamatiTua",
@@ -114,7 +114,7 @@ export const brumbies = [
     lastname: "Tua",
     team: "Brumbies",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "ollieSapsford",
@@ -123,7 +123,7 @@ export const brumbies = [
     lastname: "Sapsford",
     team: "Brumbies",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "benO'Donnell",
@@ -132,7 +132,7 @@ export const brumbies = [
     lastname: "O'Donnell",
     team: "Brumbies",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "lukeReimer",
@@ -141,7 +141,7 @@ export const brumbies = [
     lastname: "Reimer",
     team: "Brumbies",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "jackDebreczeni",
@@ -150,7 +150,7 @@ export const brumbies = [
     lastname: "Debreczeni",
     team: "Brumbies",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "roryScott",
@@ -159,7 +159,7 @@ export const brumbies = [
     lastname: "Scott",
     team: "Brumbies",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "cadeyrnNeville",
@@ -168,7 +168,7 @@ export const brumbies = [
     lastname: "Neville",
     team: "Brumbies",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "jahromeBrown",
@@ -177,7 +177,7 @@ export const brumbies = [
     lastname: "Brown",
     team: "Brumbies",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "charlieCale",
@@ -186,7 +186,7 @@ export const brumbies = [
     lastname: "Cale",
     team: "Brumbies",
     position: "lock",
-    positions: "lock"
+    positions: ["lock", "backRow"],
   },
   {
     key: "darcySwain",
@@ -195,7 +195,7 @@ export const brumbies = [
     lastname: "Swain",
     team: "Brumbies",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "harrisonGoddard",
@@ -204,7 +204,7 @@ export const brumbies = [
     lastname: "Goddard",
     team: "Brumbies",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "hudsonCreighton",
@@ -213,7 +213,7 @@ export const brumbies = [
     lastname: "Creighton",
     team: "Brumbies",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "austinAnderson",
@@ -222,7 +222,7 @@ export const brumbies = [
     lastname: "Anderson",
     team: "Brumbies",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "declanMeredith",
@@ -231,7 +231,7 @@ export const brumbies = [
     lastname: "Meredith",
     team: "Brumbies",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "edKennedy",
@@ -240,7 +240,7 @@ export const brumbies = [
     lastname: "Kennedy",
     team: "Brumbies",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "klaytonThorn",
@@ -249,7 +249,7 @@ export const brumbies = [
     lastname: "Thorn",
     team: "Brumbies",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "lachlanShaw",
@@ -258,7 +258,7 @@ export const brumbies = [
     lastname: "Shaw",
     team: "Brumbies",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "allanAlaalatoa",
@@ -267,7 +267,7 @@ export const brumbies = [
     lastname: "Alaalatoa",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "fredKaihea",
@@ -276,7 +276,7 @@ export const brumbies = [
     lastname: "Kaihea",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "sefoKautai",
@@ -285,7 +285,7 @@ export const brumbies = [
     lastname: "Kautai",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "billyPollard",
@@ -294,7 +294,7 @@ export const brumbies = [
     lastname: "Pollard",
     team: "Brumbies",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "blakeSchoupp",
@@ -303,7 +303,7 @@ export const brumbies = [
     lastname: "Schoupp",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "rhysVan Nek",
@@ -312,7 +312,7 @@ export const brumbies = [
     lastname: "Van Nek",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "harryVella",
@@ -321,6 +321,6 @@ export const brumbies = [
     lastname: "Vella",
     team: "Brumbies",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   }
 ]

@@ -6,7 +6,7 @@ export const force = [
     lastname: "Tizzano",
     team: "Force",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "willHarris",
@@ -15,7 +15,7 @@ export const force = [
     lastname: "Harris",
     team: "Force",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "samSpink",
@@ -24,7 +24,7 @@ export const force = [
     lastname: "Spink",
     team: "Force",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "jeremyWilliams",
@@ -33,7 +33,7 @@ export const force = [
     lastname: "Williams",
     team: "Force",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "harryPotter",
@@ -42,7 +42,7 @@ export const force = [
     lastname: "Potter",
     team: "Force",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "santiagoMedrano",
@@ -51,7 +51,7 @@ export const force = [
     lastname: "Medrano",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "issakFines-Leleiwasa",
@@ -60,7 +60,7 @@ export const force = [
     lastname: "Fines-Leleiwasa",
     team: "Force",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "benDonaldson",
@@ -69,7 +69,7 @@ export const force = [
     lastname: "Donaldson",
     team: "Force",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "chaseTiatia",
@@ -78,7 +78,7 @@ export const force = [
     lastname: "Tiatia",
     team: "Force",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "hamishStewart",
@@ -87,7 +87,7 @@ export const force = [
     lastname: "Stewart",
     team: "Force",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "flyhalf"],
   },
   {
     key: "timAnstee",
@@ -96,7 +96,7 @@ export const force = [
     lastname: "Anstee",
     team: "Force",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "felixKalapu",
@@ -105,7 +105,7 @@ export const force = [
     lastname: "Kalapu",
     team: "Force",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "bayleyKuenzle",
@@ -114,7 +114,7 @@ export const force = [
     lastname: "Kuenzle",
     team: "Force",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
     key: "michaelWells",
@@ -123,7 +123,7 @@ export const force = [
     lastname: "Wells",
     team: "Force",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "maxBurey",
@@ -132,7 +132,7 @@ export const force = [
     lastname: "Burey",
     team: "Force",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "nicWhite",
@@ -141,7 +141,7 @@ export const force = [
     lastname: "White",
     team: "Force",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "ollieCallan",
@@ -150,7 +150,7 @@ export const force = [
     lastname: "Callan",
     team: "Force",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "georgePoolman",
@@ -159,7 +159,7 @@ export const force = [
     lastname: "Poolman",
     team: "Force",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "ianPrior",
@@ -168,7 +168,7 @@ export const force = [
     lastname: "Prior",
     team: "Force",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "jacksonPugh",
@@ -177,7 +177,7 @@ export const force = [
     lastname: "Pugh",
     team: "Force",
     position: "lock",
-    positions: "lock"
+    positions: ["lock", "backRow"],
   },
   {
     key: "lopetiFaifua",
@@ -186,7 +186,7 @@ export const force = [
     lastname: "Faifua",
     team: "Force",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "izackRodda",
@@ -195,7 +195,7 @@ export const force = [
     lastname: "Rodda",
     team: "Force",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "nikolaiFoliaki",
@@ -204,7 +204,7 @@ export const force = [
     lastname: "Foliaki",
     team: "Force",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "campbellParata",
@@ -213,7 +213,7 @@ export const force = [
     lastname: "Parata",
     team: "Force",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "henryO'Donnell",
@@ -222,7 +222,7 @@ export const force = [
     lastname: "O'Donnell",
     team: "Force",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "henryRobertson",
@@ -231,7 +231,7 @@ export const force = [
     lastname: "Robertson",
     team: "Force",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "ollieCummins",
@@ -240,7 +240,7 @@ export const force = [
     lastname: "Cummins",
     team: "Force",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "papillonSevele",
@@ -249,7 +249,7 @@ export const force = [
     lastname: "Sevele",
     team: "Force",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "reesjanPasitoa",
@@ -258,7 +258,7 @@ export const force = [
     lastname: "Pasitoa",
     team: "Force",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "centre", "outsideBack"],
   },
   {
     key: "siosifaAmone",
@@ -267,7 +267,7 @@ export const force = [
     lastname: "Amone",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "charlieHancock",
@@ -276,7 +276,7 @@ export const force = [
     lastname: "Hancock",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "harryHoopert",
@@ -285,7 +285,7 @@ export const force = [
     lastname: "Hoopert",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "tomHorton",
@@ -294,7 +294,7 @@ export const force = [
     lastname: "Horton",
     team: "Force",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "feletiKaitu'u",
@@ -303,7 +303,7 @@ export const force = [
     lastname: "Kaitu'u",
     team: "Force",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "atuMoli",
@@ -312,7 +312,7 @@ export const force = [
     lastname: "Moli",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "marleyPearce",
@@ -321,7 +321,7 @@ export const force = [
     lastname: "Pearce",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "angusWagner",
@@ -330,6 +330,6 @@ export const force = [
     lastname: "Wagner",
     team: "Force",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   }
 ]

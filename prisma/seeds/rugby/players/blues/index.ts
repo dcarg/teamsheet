@@ -6,7 +6,7 @@ export const blues = [
     lastname: "Telea",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "hoskinsSotutu",
@@ -15,7 +15,7 @@ export const blues = [
     lastname: "Sotutu",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "stephenPerofeta",
@@ -24,7 +24,7 @@ export const blues = [
     lastname: "Perofeta",
     team: "Blues",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "calebClarke",
@@ -33,7 +33,7 @@ export const blues = [
     lastname: "Clarke",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "rickyRiccitelli",
@@ -42,7 +42,7 @@ export const blues = [
     lastname: "Riccitelli",
     team: "Blues",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "riekoIoane",
@@ -51,7 +51,7 @@ export const blues = [
     lastname: "Ioane",
     team: "Blues",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "coreyEvans",
@@ -60,7 +60,7 @@ export const blues = [
     lastname: "Evans",
     team: "Blues",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "daltonPapali'i",
@@ -69,7 +69,7 @@ export const blues = [
     lastname: "Papali'i",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "finlayChristie",
@@ -78,7 +78,7 @@ export const blues = [
     lastname: "Christie",
     team: "Blues",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "harryPlummer",
@@ -87,7 +87,7 @@ export const blues = [
     lastname: "Plummer",
     team: "Blues",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "flyhalf"],
   },
   {
     key: "zarnSullivan",
@@ -96,7 +96,7 @@ export const blues = [
     lastname: "Sullivan",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "bryceHeem",
@@ -105,7 +105,7 @@ export const blues = [
     lastname: "Heem",
     team: "Blues",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "cameronSuafoa",
@@ -114,7 +114,7 @@ export const blues = [
     lastname: "Suafoa",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow", "lock"],
   },
   {
     key: "antonSegner",
@@ -123,7 +123,7 @@ export const blues = [
     lastname: "Segner",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "adrianChoat",
@@ -132,7 +132,7 @@ export const blues = [
     lastname: "Choat",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "ajLam",
@@ -141,7 +141,7 @@ export const blues = [
     lastname: "Lam",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack", "centre"],
   },
   {
     key: "akiraIoane",
@@ -150,7 +150,7 @@ export const blues = [
     lastname: "Ioane",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "samDarry",
@@ -159,7 +159,7 @@ export const blues = [
     lastname: "Darry",
     team: "Blues",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "taufaFunaki",
@@ -168,7 +168,7 @@ export const blues = [
     lastname: "Funaki",
     team: "Blues",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "samNock",
@@ -177,7 +177,7 @@ export const blues = [
     lastname: "Nock",
     team: "Blues",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "laghlanMcWhannell",
@@ -186,7 +186,7 @@ export const blues = [
     lastname: "McWhannell",
     team: "Blues",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "calebTangitau",
@@ -195,7 +195,7 @@ export const blues = [
     lastname: "Tangitau",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "robRush",
@@ -204,7 +204,7 @@ export const blues = [
     lastname: "Rush",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "coleForbes",
@@ -213,7 +213,7 @@ export const blues = [
     lastname: "Forbes",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "jamesThompson",
@@ -222,7 +222,7 @@ export const blues = [
     lastname: "Thompson",
     team: "Blues",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "joshBeehre",
@@ -231,7 +231,7 @@ export const blues = [
     lastname: "Beehre",
     team: "Blues",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "kadeBanks",
@@ -240,7 +240,7 @@ export const blues = [
     lastname: "Banks",
     team: "Blues",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "lucasCashmore",
@@ -249,7 +249,7 @@ export const blues = [
     lastname: "Cashmore",
     team: "Blues",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "meihanaGrindlay",
@@ -258,7 +258,7 @@ export const blues = [
     lastname: "Grindlay",
     team: "Blues",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "kurtEklund",
@@ -267,7 +267,7 @@ export const blues = [
     lastname: "Eklund",
     team: "Blues",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "joshFusitua",
@@ -276,7 +276,7 @@ export const blues = [
     lastname: "Fusitua",
     team: "Blues",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "jordanLay",
@@ -285,7 +285,7 @@ export const blues = [
     lastname: "Lay",
     team: "Blues",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "marcelRenata",
@@ -294,7 +294,7 @@ export const blues = [
     lastname: "Renata",
     team: "Blues",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "pjSheck",
@@ -303,7 +303,7 @@ export const blues = [
     lastname: "Sheck",
     team: "Blues",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "angusTa'avao",
@@ -312,7 +312,7 @@ export const blues = [
     lastname: "Ta'avao",
     team: "Blues",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "ofaTu'ungafasi",
@@ -321,7 +321,7 @@ export const blues = [
     lastname: "Tu'ungafasi",
     team: "Blues",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "soaneVikena",
@@ -330,7 +330,7 @@ export const blues = [
     lastname: "Vikena",
     team: "Blues",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "patrickTuipulotu",
@@ -339,6 +339,6 @@ export const blues = [
     lastname: "Tuipulotu",
     team: "Blues",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   }
 ]

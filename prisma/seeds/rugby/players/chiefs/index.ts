@@ -6,7 +6,7 @@ export const chiefs = [
     lastname: "Taukei'aho",
     team: "Chiefs",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "emoniNarawa",
@@ -15,7 +15,7 @@ export const chiefs = [
     lastname: "Narawa",
     team: "Chiefs",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "damianMcKenzie",
@@ -24,7 +24,7 @@ export const chiefs = [
     lastname: "McKenzie",
     team: "Chiefs",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "shaunStevenson",
@@ -33,7 +33,7 @@ export const chiefs = [
     lastname: "Stevenson",
     team: "Chiefs",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "eteneNanai-Seturo",
@@ -42,7 +42,7 @@ export const chiefs = [
     lastname: "Nanai-Seturo",
     team: "Chiefs",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "cortezRatima",
@@ -51,7 +51,7 @@ export const chiefs = [
     lastname: "Ratima",
     team: "Chiefs",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "tupouVaa'i",
@@ -60,7 +60,7 @@ export const chiefs = [
     lastname: "Vaa'i",
     team: "Chiefs",
     position: "lock",
-    positions: "lock"
+    positions: ["lock", "backRow"],
   },
   {
     key: "quinnTupaea",
@@ -69,7 +69,7 @@ export const chiefs = [
     lastname: "Tupaea",
     team: "Chiefs",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "antonLienert-Brown",
@@ -78,7 +78,7 @@ export const chiefs = [
     lastname: "Lienert-Brown",
     team: "Chiefs",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "samipeniFinau",
@@ -87,7 +87,7 @@ export const chiefs = [
     lastname: "Finau",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "xavierRoe",
@@ -96,7 +96,7 @@ export const chiefs = [
     lastname: "Roe",
     team: "Chiefs",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "lukeJacobson",
@@ -105,7 +105,7 @@ export const chiefs = [
     lastname: "Jacobson",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "danielRona",
@@ -114,7 +114,7 @@ export const chiefs = [
     lastname: "Rona",
     team: "Chiefs",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "joshIoane",
@@ -123,7 +123,7 @@ export const chiefs = [
     lastname: "Ioane",
     team: "Chiefs",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "simonParker",
@@ -132,7 +132,7 @@ export const chiefs = [
     lastname: "Parker",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "ramekaPoihipi",
@@ -141,7 +141,7 @@ export const chiefs = [
     lastname: "Poihipi",
     team: "Chiefs",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "naitoaAh Kuoi",
@@ -150,7 +150,7 @@ export const chiefs = [
     lastname: "Ah Kuoi",
     team: "Chiefs",
     position: "lock",
-    positions: "lock"
+    positions: ["lock", "backRow"],
   },
   {
     key: "liamCoombes-Fabling",
@@ -159,7 +159,7 @@ export const chiefs = [
     lastname: "Coombes-Fabling",
     team: "Chiefs",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "kaylumBoshier",
@@ -168,7 +168,7 @@ export const chiefs = [
     lastname: "Boshier",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "gideonWrampling",
@@ -177,7 +177,7 @@ export const chiefs = [
     lastname: "Wrampling",
     team: "Chiefs",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "manaakiSelby-Rickit",
@@ -186,7 +186,7 @@ export const chiefs = [
     lastname: "Selby-Rickit",
     team: "Chiefs",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "te toiroaTahuriorangi",
@@ -195,7 +195,7 @@ export const chiefs = [
     lastname: "Tahuriorangi",
     team: "Chiefs",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "peniasiMalimali",
@@ -204,7 +204,7 @@ export const chiefs = [
     lastname: "Malimali",
     team: "Chiefs",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "joshLord",
@@ -213,7 +213,7 @@ export const chiefs = [
     lastname: "Lord",
     team: "Chiefs",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "jimmyTupou",
@@ -222,7 +222,7 @@ export const chiefs = [
     lastname: "Tupou",
     team: "Chiefs",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "kalebTrask",
@@ -231,7 +231,7 @@ export const chiefs = [
     lastname: "Trask",
     team: "Chiefs",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf", "outsideBack"],
   },
   {
     key: "malachiWrampling-Alec",
@@ -240,7 +240,7 @@ export const chiefs = [
     lastname: "Wrampling-Alec",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "tomFlorence",
@@ -249,7 +249,7 @@ export const chiefs = [
     lastname: "Florence",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "wallaceSititi",
@@ -258,7 +258,7 @@ export const chiefs = [
     lastname: "Sititi",
     team: "Chiefs",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "sioneAhio",
@@ -267,7 +267,7 @@ export const chiefs = [
     lastname: "Ahio",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "georgeDyer",
@@ -276,7 +276,7 @@ export const chiefs = [
     lastname: "Dyer",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "kauvakaKaivelata",
@@ -285,7 +285,7 @@ export const chiefs = [
     lastname: "Kaivelata",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "ollieNorris",
@@ -294,7 +294,7 @@ export const chiefs = [
     lastname: "Norris",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "reubenO'Neill",
@@ -303,7 +303,7 @@ export const chiefs = [
     lastname: "O'Neill",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "jaredProffit",
@@ -312,7 +312,7 @@ export const chiefs = [
     lastname: "Proffit",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "aidanRoss",
@@ -321,7 +321,7 @@ export const chiefs = [
     lastname: "Ross",
     team: "Chiefs",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "bradleySlater",
@@ -330,7 +330,7 @@ export const chiefs = [
     lastname: "Slater",
     team: "Chiefs",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "tyroneThompson",
@@ -339,6 +339,6 @@ export const chiefs = [
     lastname: "Thompson",
     team: "Chiefs",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   }
 ]

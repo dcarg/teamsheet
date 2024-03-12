@@ -6,7 +6,7 @@ export const hurricanes = [
     lastname: "Roigard",
     team: "Hurricanes",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "kiniNaholo",
@@ -15,7 +15,7 @@ export const hurricanes = [
     lastname: "Naholo",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "asafoAumua",
@@ -24,7 +24,7 @@ export const hurricanes = [
     lastname: "Aumua",
     team: "Hurricanes",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "salesiRayasi",
@@ -33,7 +33,7 @@ export const hurricanes = [
     lastname: "Rayasi",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "joshuaMoorby",
@@ -42,7 +42,7 @@ export const hurricanes = [
     lastname: "Moorby",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "jordieBarrett",
@@ -51,7 +51,7 @@ export const hurricanes = [
     lastname: "Barrett",
     team: "Hurricanes",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "billyProctor",
@@ -60,7 +60,7 @@ export const hurricanes = [
     lastname: "Proctor",
     team: "Hurricanes",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "xavierNumia",
@@ -69,7 +69,7 @@ export const hurricanes = [
     lastname: "Numia",
     team: "Hurricanes",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "du'plessisKirifi",
@@ -78,7 +78,7 @@ export const hurricanes = [
     lastname: "Kirifi",
     team: "Hurricanes",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "rubenLove",
@@ -87,7 +87,7 @@ export const hurricanes = [
     lastname: "Love",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack", "flyhalf"],
   },
   {
     key: "devanFlanders",
@@ -96,7 +96,7 @@ export const hurricanes = [
     lastname: "Flanders",
     team: "Hurricanes",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "aidanMorgan",
@@ -105,7 +105,7 @@ export const hurricanes = [
     lastname: "Morgan",
     team: "Hurricanes",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "braydenIose",
@@ -114,7 +114,7 @@ export const hurricanes = [
     lastname: "Iose",
     team: "Hurricanes",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "calebDelany",
@@ -123,7 +123,7 @@ export const hurricanes = [
     lastname: "Delany",
     team: "Hurricanes",
     position: "lock",
-    positions: "lock"
+    positions: ["lock", "backRow"],
   },
   {
     key: "peterLakai",
@@ -132,7 +132,7 @@ export const hurricanes = [
     lastname: "Lakai",
     team: "Hurricanes",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "brettCameron",
@@ -141,7 +141,7 @@ export const hurricanes = [
     lastname: "Cameron",
     team: "Hurricanes",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "bailynSullivan",
@@ -150,7 +150,7 @@ export const hurricanes = [
     lastname: "Sullivan",
     team: "Hurricanes",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "harryGodfrey",
@@ -159,7 +159,7 @@ export const hurricanes = [
     lastname: "Godfrey",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack", "flyhalf"],
   },
   {
     key: "jamesTucker",
@@ -168,7 +168,7 @@ export const hurricanes = [
     lastname: "Tucker",
     team: "Hurricanes",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "tkHowden",
@@ -177,7 +177,7 @@ export const hurricanes = [
     lastname: "Howden",
     team: "Hurricanes",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "peterUmaga-Jensen",
@@ -186,7 +186,7 @@ export const hurricanes = [
     lastname: "Umaga-Jensen",
     team: "Hurricanes",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "danielSinkinson",
@@ -195,7 +195,7 @@ export const hurricanes = [
     lastname: "Sinkinson",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "isaiaWalker-Leawere",
@@ -204,7 +204,7 @@ export const hurricanes = [
     lastname: "Walker-Leawere",
     team: "Hurricanes",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "rileyHiggins",
@@ -213,7 +213,7 @@ export const hurricanes = [
     lastname: "Higgins",
     team: "Hurricanes",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "justinSangster",
@@ -222,7 +222,7 @@ export const hurricanes = [
     lastname: "Sangster",
     team: "Hurricanes",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "benGrant",
@@ -231,7 +231,7 @@ export const hurricanes = [
     lastname: "Grant",
     team: "Hurricanes",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "bradShields",
@@ -240,7 +240,7 @@ export const hurricanes = [
     lastname: "Shields",
     team: "Hurricanes",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "joshTaula",
@@ -249,7 +249,7 @@ export const hurricanes = [
     lastname: "Taula",
     team: "Hurricanes",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "richardJudd",
@@ -258,7 +258,7 @@ export const hurricanes = [
     lastname: "Judd",
     team: "Hurricanes",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "tjPerenara",
@@ -267,7 +267,7 @@ export const hurricanes = [
     lastname: "Perenara",
     team: "Hurricanes",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "ngatunganePunivai",
@@ -276,7 +276,7 @@ export const hurricanes = [
     lastname: "Punivai",
     team: "Hurricanes",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "jacobDevery",
@@ -285,7 +285,7 @@ export const hurricanes = [
     lastname: "Devery",
     team: "Hurricanes",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "sialeLauaki",
@@ -294,7 +294,7 @@ export const hurricanes = [
     lastname: "Lauaki",
     team: "Hurricanes",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "tyrelLomax",
@@ -303,7 +303,7 @@ export const hurricanes = [
     lastname: "Lomax",
     team: "Hurricanes",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "tevitaMafileo",
@@ -312,7 +312,7 @@ export const hurricanes = [
     lastname: "Mafileo",
     team: "Hurricanes",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "jamesO'Reilly",
@@ -321,7 +321,7 @@ export const hurricanes = [
     lastname: "O'Reilly",
     team: "Hurricanes",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "pouriRakete-Stones",
@@ -330,7 +330,7 @@ export const hurricanes = [
     lastname: "Rakete-Stones",
     team: "Hurricanes",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "pasilioTosi",
@@ -339,6 +339,6 @@ export const hurricanes = [
     lastname: "Tosi",
     team: "Hurricanes",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   }
 ]

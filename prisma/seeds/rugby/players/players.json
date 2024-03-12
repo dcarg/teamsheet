@@ -6,6 +6,8 @@
 // Download above sheet as CSV then upload to the below website to convert
 // https://www.convertcsv.com/csv-to-json.htm
 
+// in future we probably want to find away to ingest JSON/XML/CSV to create player records
+
 [
   {
     "key": "markTelea",

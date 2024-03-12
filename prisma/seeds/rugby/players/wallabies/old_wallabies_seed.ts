@@ -12,8 +12,8 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: [
-        { positionId: "centre"Id },
-        { positionId: "outsideBack"Id },
+        { positionId: centreId },
+        { positionId: outsideBackId },
       ],
     },
   },
@@ -29,7 +29,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "prop"Id,
+        positionId: propId,
       }
     },
   },
@@ -45,8 +45,8 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: [
-        { positionId: "flyhalf"Id },
-        { positionId: "outsideBack"Id },
+        { positionId: flyhalfId },
+        { positionId: outsideBackId },
       ]
     },
   },
@@ -62,7 +62,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "prop"Id,
+        positionId: propId,
       }
     },
   },
@@ -78,7 +78,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "flyhalf"Id,
+        positionId: flyhalfId,
       }
     },
   },
@@ -94,7 +94,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "hooker"Id,
+        positionId: hookerId,
       }
     },
   },
@@ -110,7 +110,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "backRow"Id,
+        positionId: backRowId,
       }
     },
   },
@@ -126,7 +126,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "scrumhalf"Id,
+        positionId: scrumhalfId,
       }
     },
   },
@@ -142,8 +142,8 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: [
-        { positionId: "centre"Id },
-        { positionId: "outsideBack"Id },
+        { positionId: centreId },
+        { positionId: outsideBackId },
       ]
     },
   },
@@ -159,7 +159,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "prop"Id,
+        positionId: propId,
       }
     },
   },
@@ -175,8 +175,8 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: [
-        { positionId: "centre"Id },
-        { positionId: "outsideBack"Id },
+        { positionId: centreId },
+        { positionId: outsideBackId },
       ]
     },
   },
@@ -192,7 +192,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "hooker"Id,
+        positionId: hookerId,
       }
     },
   },
@@ -208,7 +208,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "backRow"Id,
+        positionId: backRowId,
       }
     },
   },
@@ -224,7 +224,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "centre"Id,
+        positionId: centreId,
       }
     },
   },
@@ -240,7 +240,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "backRow"Id,
+        positionId: backRowId,
       }
     },
   },
@@ -256,7 +256,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "outsideBack"Id,
+        positionId: outsideBackId,
       }
     },
   },
@@ -272,7 +272,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "outsideBack"Id,
+        positionId: outsideBackId,
       }
     },
   },
@@ -288,7 +288,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "hooker"Id,
+        positionId: hookerId,
       }
     },
   },
@@ -304,7 +304,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "lock"Id,
+        positionId: lockId,
       }
     },
   },
@@ -320,7 +320,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "outsideBack"Id,
+        positionId: outsideBackId,
       }
     },
   },
@@ -336,7 +336,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "scrumhalf"Id,
+        positionId: scrumhalfId,
       }
     },
   },
@@ -352,7 +352,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "lock"Id,
+        positionId: lockId,
       }
     },
   },
@@ -368,7 +368,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "prop"Id,
+        positionId: propId,
       }
     },
   },
@@ -384,7 +384,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "lock"Id,
+        positionId: lockId,
       }
     },
   },
@@ -400,8 +400,8 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: [
-        { positionId: "lock"Id },
-        { positionId: "backRow"Id },
+        { positionId: lockId },
+        { positionId: backRowId },
       ]
     },
   },
@@ -417,7 +417,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "backRow"Id,
+        positionId: backRowId,
       }
     },
   },
@@ -433,7 +433,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "centre"Id,
+        positionId: centreId,
       }
     },
   },
@@ -449,7 +449,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "outsideBack"Id,
+        positionId: outsideBackId,
       }
     },
   },
@@ -465,7 +465,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "prop"Id,
+        positionId: propId,
       }
     },
   },
@@ -481,7 +481,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "scrumhalf"Id,
+        positionId: scrumhalfId,
       }
     },
   },
@@ -497,8 +497,8 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: [
-        { positionId: "lock"Id },
-        { positionId: "backRow"Id },
+        { positionId: lockId },
+        { positionId: backRowId },
       ]
     },
   },
@@ -514,7 +514,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "lock"Id,
+        positionId: lockId,
       },
     },
   },
@@ -530,7 +530,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "prop"Id,
+        positionId: propId,
       },
     },
   },
@@ -546,7 +546,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: "backRow"Id,
+        positionId: backRowId,
       }
     },
   },

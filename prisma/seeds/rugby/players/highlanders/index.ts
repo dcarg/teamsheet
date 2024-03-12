@@ -6,7 +6,7 @@ export const highlanders = [
     lastname: "Tavatavanawai",
     team: "Highlanders",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "billyHarmon",
@@ -15,7 +15,7 @@ export const highlanders = [
     lastname: "Harmon",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "jonaNareki",
@@ -24,7 +24,7 @@ export const highlanders = [
     lastname: "Nareki",
     team: "Highlanders",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "hughRenton",
@@ -33,7 +33,7 @@ export const highlanders = [
     lastname: "Renton",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "folauFakatava",
@@ -42,7 +42,7 @@ export const highlanders = [
     lastname: "Fakatava",
     team: "Highlanders",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "samGilbert",
@@ -51,7 +51,7 @@ export const highlanders = [
     lastname: "Gilbert",
     team: "Highlanders",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
     key: "jacobRatumaitavuki-Kneepkens",
@@ -60,7 +60,7 @@ export const highlanders = [
     lastname: "Ratumaitavuki-Kneepkens",
     team: "Highlanders",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "tanieluTele'a",
@@ -69,7 +69,7 @@ export const highlanders = [
     lastname: "Tele'a",
     team: "Highlanders",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "ethanDe Groot",
@@ -78,7 +78,7 @@ export const highlanders = [
     lastname: "De Groot",
     team: "Highlanders",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "nikoraBroughton",
@@ -87,7 +87,7 @@ export const highlanders = [
     lastname: "Broughton",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "jonahLowe",
@@ -96,7 +96,7 @@ export const highlanders = [
     lastname: "Lowe",
     team: "Highlanders",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "seanWithy",
@@ -105,7 +105,7 @@ export const highlanders = [
     lastname: "Withy",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "ajayFaleafaga",
@@ -114,7 +114,7 @@ export const highlanders = [
     lastname: "Faleafaga",
     team: "Highlanders",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "connorGarden-Bachop",
@@ -123,7 +123,7 @@ export const highlanders = [
     lastname: "Garden-Bachop",
     team: "Highlanders",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "mattWhaanga",
@@ -132,7 +132,7 @@ export const highlanders = [
     lastname: "Whaanga",
     team: "Highlanders",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "joshTimu",
@@ -141,7 +141,7 @@ export const highlanders = [
     lastname: "Timu",
     team: "Highlanders",
     position: "centre",
-    positions: "centre"
+    positions: ["centre", "outsideBack"],
   },
   {
     key: "martinBogado",
@@ -150,7 +150,7 @@ export const highlanders = [
     lastname: "Bogado",
     team: "Highlanders",
     position: "outsideBack",
-    positions: "outsideBack"
+    positions: ["outsideBack"],
   },
   {
     key: "pari pariParkinson",
@@ -159,7 +159,7 @@ export const highlanders = [
     lastname: "Parkinson",
     team: "Highlanders",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "maxHicks",
@@ -168,7 +168,7 @@ export const highlanders = [
     lastname: "Hicks",
     team: "Highlanders",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "cameronMillar",
@@ -177,7 +177,7 @@ export const highlanders = [
     lastname: "Millar",
     team: "Highlanders",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "jamesArscott",
@@ -186,7 +186,7 @@ export const highlanders = [
     lastname: "Arscott",
     team: "Highlanders",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "willTucker",
@@ -195,7 +195,7 @@ export const highlanders = [
     lastname: "Tucker",
     team: "Highlanders",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "mitchellDunshea",
@@ -204,7 +204,7 @@ export const highlanders = [
     lastname: "Dunshea",
     team: "Highlanders",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "fabianHolland",
@@ -213,7 +213,7 @@ export const highlanders = [
     lastname: "Holland",
     team: "Highlanders",
     position: "lock",
-    positions: "lock"
+    positions: ["lock"],
   },
   {
     key: "nathanHastie",
@@ -222,7 +222,7 @@ export const highlanders = [
     lastname: "Hastie",
     team: "Highlanders",
     position: "scrumhalf",
-    positions: "scrumhalf"
+    positions: ["scrumhalf"],
   },
   {
     key: "jakeTe Hiwi",
@@ -231,7 +231,7 @@ export const highlanders = [
     lastname: "Te Hiwi",
     team: "Highlanders",
     position: "centre",
-    positions: "centre"
+    positions: ["centre"],
   },
   {
     key: "haydenMichaels",
@@ -240,7 +240,7 @@ export const highlanders = [
     lastname: "Michaels",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "oliverHaig",
@@ -249,7 +249,7 @@ export const highlanders = [
     lastname: "Haig",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "rhysPatchell",
@@ -258,7 +258,7 @@ export const highlanders = [
     lastname: "Patchell",
     team: "Highlanders",
     position: "flyhalf",
-    positions: "flyhalf"
+    positions: ["flyhalf"],
   },
   {
     key: "tomSanders",
@@ -267,7 +267,7 @@ export const highlanders = [
     lastname: "Sanders",
     team: "Highlanders",
     position: "backRow",
-    positions: "backRow"
+    positions: ["backRow"],
   },
   {
     key: "jermaineAinsley",
@@ -276,7 +276,7 @@ export const highlanders = [
     lastname: "Ainsley",
     team: "Highlanders",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "henryBell",
@@ -285,7 +285,7 @@ export const highlanders = [
     lastname: "Bell",
     team: "Highlanders",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "lucaInch",
@@ -294,7 +294,7 @@ export const highlanders = [
     lastname: "Inch",
     team: "Highlanders",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "rickyJackson",
@@ -303,7 +303,7 @@ export const highlanders = [
     lastname: "Jackson",
     team: "Highlanders",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   },
   {
     key: "aydenJohnstone",
@@ -312,7 +312,7 @@ export const highlanders = [
     lastname: "Johnstone",
     team: "Highlanders",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "danLienert-Brown",
@@ -321,7 +321,7 @@ export const highlanders = [
     lastname: "Lienert-Brown",
     team: "Highlanders",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "saulaMau",
@@ -330,7 +330,7 @@ export const highlanders = [
     lastname: "Mau",
     team: "Highlanders",
     position: "prop",
-    positions: "prop"
+    positions: ["prop"],
   },
   {
     key: "jackTaylor",
@@ -339,6 +339,6 @@ export const highlanders = [
     lastname: "Taylor",
     team: "Highlanders",
     position: "hooker",
-    positions: "hooker"
+    positions: ["hooker"],
   }
 ]
