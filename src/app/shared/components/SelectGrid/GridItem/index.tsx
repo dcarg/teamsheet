@@ -1,7 +1,5 @@
 'use client'
 
-import clsx from 'clsx'
-
 import { usePathname } from 'next/navigation'
 
 import Image from "next/image"
@@ -20,22 +18,13 @@ type GridItemProps = {
 const GridItem = (props: GridItemProps) => {
   const { entityLogo, entity, hideTitle } = props
   const { src } = entityLogo || {}
-  const { key, primaryColor, title } = entity
+  const { key, title } = entity
 
   const pathname = usePathname()
 
-  // WIP the backgroundColor here on line 35 isn't working because tailwind doesn't handle dynamic class names
-  // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
-
   return (
     <Link href={`${pathname}/${key}`}>
-      <div
-        className={clsx(
-          "flex flex-col h-[200px] w-[200px] justify-center items-center border rounded p-2",
-          primaryColor && `bg-[${primaryColor}]`
-        )}
-        
-      >
+      <div className="flex flex-col h-[200px] w-[200px] justify-center items-center border rounded p-2">
         <Image
           src={src}
           alt={title}

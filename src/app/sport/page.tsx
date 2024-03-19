@@ -3,7 +3,9 @@ import prisma from '@db/prismaSingleton'
 import SelectGrid from '@components/SelectGrid'
 
 const Page = async () => {
-  const sports = await prisma.sport.findMany()
+  const sports = await prisma.sport.findMany({
+    orderBy: { title: 'asc' },
+  })
 
   return (
     <div className="max-w-column">

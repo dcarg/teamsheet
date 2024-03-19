@@ -18,6 +18,7 @@ const Page = async (props: PageProps) => {
         key: sportKey,
       },
     },
+    orderBy: { title: 'asc' },
   })
 
   const hasCompetitions = !!competitions?.length
