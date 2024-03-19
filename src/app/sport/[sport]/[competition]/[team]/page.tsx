@@ -5,11 +5,11 @@ import prisma from '@db/prismaSingleton'
 import Bench from '@components/Bench'
 import Field from '@components/Field'
 import NameForm from '@components/NameForm'
+import TopBar from '@components/TopBar'
 
 import { teamSize } from '@functions/teamSheet'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
-import TopBar from '@components/TopBar'
 
 import type { PlayerWithPositions } from '@types'
 
