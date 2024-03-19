@@ -69,10 +69,15 @@ const UserMenu = (props: UserMenuProps) => {
               text="Team Sheets"
             />
 
-            <UserMenuItem
-              icon={faRightFromBracket}
-              textComponent={<LogoutLink>Logout</LogoutLink> }
-            />
+            <LogoutLink className="flex px-4 py-2 group">
+              <div className="flex justify-center w-[30px] group-hover:text-cyan-400">
+                <FontAwesomeIcon icon={faRightFromBracket}/>
+              </div>
+
+              <div className="ml-2 font-semibold text-gray-800 group-hover:text-cyan-400">
+                Logout
+              </div>
+            </LogoutLink>
           </div>
         </div>
       )}
