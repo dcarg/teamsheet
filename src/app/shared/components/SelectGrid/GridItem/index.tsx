@@ -9,7 +9,6 @@ type GridItemProps = {
   entityLogo?: object,
   entity: {
     key?: string,
-    primaryColor?: string,
     title: string,
   },
   hideTitle?: boolean,
