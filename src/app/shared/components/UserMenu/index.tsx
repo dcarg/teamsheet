@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react'
 
-import isMobileBrowser from 'is-mobile'
+import type { KindeUser } from '@kinde-oss/kinde-auth-nextjs/dist/types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faBarsStaggered, faRightFromBracket, faUsersRectangle } from '@fortawesome/free-solid-svg-icons'
@@ -11,12 +11,13 @@ import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 import Button from '@components/Button'
 
+import useIsMounted from '@hooks/useIsMounted'
 import useOutsideClick from '@hooks/useOutsideClick'
 
 import UserMenuItem from './UserMenuItem'
 
 interface UserMenuProps {
-  user: any,
+  user: KindeUser,
 }
 
 const UserMenu = (props: UserMenuProps) => {
@@ -25,9 +26,10 @@ const UserMenu = (props: UserMenuProps) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const isMobile = isMobileBrowser()
-
   const ref = useRef<HTMLDivElement>(null)
+
+  const isMounted = useIsMounted()
+  const shouldDisplayName = isMounted && window.innerWidth < 500 && given_name
 
   useOutsideClick({
     callbacks: {
@@ -49,7 +51,7 @@ const UserMenu = (props: UserMenuProps) => {
           />
         }
         onClick={() => setIsOpen(!isOpen)}
-        text={!isMobile && given_name ? given_name : ''}
+        text={shouldDisplayName ? given_name : ''}
         textProps="font-semibold group-hover:text-cyan-400"
       />
 
