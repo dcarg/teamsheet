@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 
-import type { Team, TeamSheet } from '@prisma/client'
+import type { Competition, Team, TeamSheet } from '@prisma/client'
 
 import type { PlayerWithPositions } from '@types'
 
@@ -12,6 +12,7 @@ type TeamContext = {
     setSelectedPositions: Dispatch<SetStateAction<string[]>>,
     setSelectedTeamSheetLayoutId: Dispatch<SetStateAction<string | undefined>>,
   },
+  competition: Competition,
   filteredPlayers?: PlayerWithPositions[],
   selectedTeamSheetLayoutId?: string,
   showModal?: boolean,

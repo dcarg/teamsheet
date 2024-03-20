@@ -40,6 +40,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   const payload = {
     data: { [teamSheetLayoutId]: player },
     teamId,
+    // now need competitionId
   }
 
   if (teamSheet){
@@ -69,6 +70,7 @@ const SelectPlayerModal = () => {
   const teamContextValue = useContext(TeamContext)
   const {
     callbacks,
+    competition,
     filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,
