@@ -1,13 +1,17 @@
 import { Player } from '@prisma/client'
 
+import RugbyJersey from '@components/RugbyJersey'
+
 interface NonInteractivePlayerIcon {
   number: string,
   player?: Player,
+  primaryColor: string,
+  secondaryColor: string,
   style: { [key: string]: string },
 }
 
 const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
-  const { number, player, style } = props
+  const { number, player, primaryColor, secondaryColor, style } = props
 
   if (!player) return null
 
@@ -27,7 +31,7 @@ const NonInteractivePlayerIcon = (props: NonInteractivePlayerIcon) => {
         ...style,
       }}
     >
-      <img src={`${process.env.NEXT_PUBLIC_VERCEL_URL}/wallaby_jersey.svg`} width="35" />
+      <RugbyJersey primaryColor={primaryColor} secondaryColor={secondaryColor} />
 
       <div
         style={{

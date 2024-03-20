@@ -25,29 +25,13 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
         where: {
           shareId: teamSheetId,
         },
+        include: { team: true },
       })
       : null
 
     if (!teamSheet) return notFound()
 
-    const { teamId, title } = teamSheet
-
-    const players = await prisma.player.findMany({
-      where: {
-        teamMembers: {
-          some: {
-            teamId,
-          },
-        },
-      },
-      include: {
-        playerPositions: {
-          include: {
-            position: true,
-          },
-        },
-      },
-    })
+    const { title } = teamSheet
 
     const futuraFilePath = resolve('public/fonts/futura-pt.ttf')
     const futuraBoldFilePath = resolve('public/fonts/futura-pt-bold.ttf')
@@ -66,29 +50,27 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
             width: 1200,
           }}
         >
-          <NonInteractiveField players={players} teamSheet={teamSheet} />
+          <NonInteractiveField team={teamSheet.team} teamSheet={teamSheet} />
 
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
-            {title && (
-              <div
-                style={{
-                  fontFamily: 'Futura Bold',
-                  fontWeight: 'bold',
-                  fontSize: '24px',
-                  lineHeight: 1.2,
-                  margin: 'auto',
-                  maxHeight: '60px',
-                  maxWidth: '390px',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {title}
-              </div>
-            )}
+            <div
+              style={{
+                fontFamily: 'Futura Bold',
+                fontWeight: 'bold',
+                fontSize: '24px',
+                lineHeight: 1.2,
+                margin: 'auto',
+                maxHeight: '60px',
+                maxWidth: '390px',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {title}
+            </div>
 
-            <NonInteractiveBench players={players} teamSheet={teamSheet} />
+            <NonInteractiveBench team={teamSheet.team} teamSheet={teamSheet} />
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column'}}>

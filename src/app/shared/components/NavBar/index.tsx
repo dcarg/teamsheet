@@ -38,7 +38,7 @@ const NavBar = async (props: NavbarProps) => {
         </div>
 
         {authenticated
-          ? <UserMenu user={user} />
+          ? <UserMenu user={user!} />
           : <LoginLink className="font-semibold text-white hover:text-cyan-400">Login</LoginLink>
         }
       </div>

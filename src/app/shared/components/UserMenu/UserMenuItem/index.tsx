@@ -8,11 +8,10 @@ interface UserMenuItemProps {
   icon: IconDefinition,
   onClick?: () => void,
   text?: string,
-  textComponent?: React.ReactNode,
 }
 
 const UserMenuItem = (props: UserMenuItemProps) => {
-  const { href, icon, onClick, text, textComponent } = props
+  const { href, icon, onClick, text } = props
 
   return (
     <a
@@ -25,7 +24,7 @@ const UserMenuItem = (props: UserMenuItemProps) => {
       </div>
 
       <div className="ml-2 font-semibold text-gray-800 group-hover:text-cyan-400">
-        {text || textComponent}
+        {text}
       </div>
     </a>
   )

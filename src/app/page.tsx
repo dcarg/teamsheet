@@ -10,5 +10,5 @@ export default async function Home() {
 
   findOrCreateUser(kindeUser)
 
-  redirect('/rugby')
+  redirect('/sport/rugby')
 }

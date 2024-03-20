@@ -12,13 +12,15 @@ import TeamContext from '@contexts/teamContext'
 
 import BaseModal from '@modals/BaseModal'
 
+import type { PlayerWithPositions } from '@types'
+
 import PlayerListItem from '@components/PlayerListItem'
 
 type Router = ReturnType<typeof useRouter>
 
 type HandlePlayerSelectParams = {
   callbacks: { closeModal: () => void },
-  playerId: number,
+  player: PlayerWithPositions,
   router: Router,
   teamId: number,
   teamSheet: TeamSheet | null,
@@ -28,7 +30,7 @@ type HandlePlayerSelectParams = {
 const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   const {
     callbacks: { closeModal },
-    playerId,
+    player,
     router,
     teamId,
     teamSheet,
@@ -36,7 +38,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   } = params
 
   const payload = {
-    data: { [teamSheetLayoutId]: playerId },
+    data: { [teamSheetLayoutId]: player },
     teamId,
   }
 
@@ -76,8 +78,8 @@ const SelectPlayerModal = () => {
 
   const { closeModal } = callbacks || {}
 
-  const teamSheetData = teamSheet?.data as { [key: string]: number } | null
-  const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData) : []
+  const teamSheetData = teamSheet?.data as { [key: string]: PlayerWithPositions } | null
+  const selectedPlayerIds = teamSheetData ? Object.values(teamSheetData).map(player => player.id) : []
 
   return (
     <BaseModal callbacks={{ closeModal: closeModal! }} showModal={showModal!} title="Select Player">
@@ -90,13 +92,14 @@ const SelectPlayerModal = () => {
             disabled={isAlreadyAssigned}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal: closeModal! },
-              playerId: player.id,
+              player,
               router,
               teamId: team!.id,
               teamSheet,
               teamSheetLayoutId: selectedTeamSheetLayoutId!,
             })}
             player={player}
+            team={team}
           />
         )
       })}

@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
-import isMobileBrowser from 'is-mobile'
+import type { KindeUser } from '@kinde-oss/kinde-auth-nextjs/dist/types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faBarsStaggered, faRightFromBracket, faUsersRectangle } from '@fortawesome/free-solid-svg-icons'
@@ -11,10 +11,13 @@ import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 import Button from '@components/Button'
 
+import useIsMounted from '@hooks/useIsMounted'
+import useOutsideClick from '@hooks/useOutsideClick'
+
 import UserMenuItem from './UserMenuItem'
 
 interface UserMenuProps {
-  user: any,
+  user: KindeUser,
 }
 
 const UserMenu = (props: UserMenuProps) => {
@@ -23,10 +26,21 @@ const UserMenu = (props: UserMenuProps) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const isMobile = isMobileBrowser()
+  const ref = useRef<HTMLDivElement>(null)
+
+  const isMounted = useIsMounted()
+  const shouldDisplayName = isMounted && window.innerWidth < 500 && given_name
+
+  useOutsideClick({
+    callbacks: {
+      action: () => setIsOpen(false)
+    },
+    enabled: isOpen,
+    ref, 
+  })
 
   return (
-    <div className="relative">
+    <div className="relative" ref={ref}>
       <Button
         className="bg-transparent hover:bg-transparent"
         icon={
@@ -37,7 +51,7 @@ const UserMenu = (props: UserMenuProps) => {
           />
         }
         onClick={() => setIsOpen(!isOpen)}
-        text={!isMobile && given_name ? given_name : ''}
+        text={shouldDisplayName ? given_name : ''}
         textProps="font-semibold group-hover:text-cyan-400"
       />
 
@@ -57,10 +71,15 @@ const UserMenu = (props: UserMenuProps) => {
               text="Team Sheets"
             />
 
-            <UserMenuItem
-              icon={faRightFromBracket}
-              textComponent={<LogoutLink>Logout</LogoutLink> }
-            />
+            <LogoutLink className="flex px-4 py-2 group">
+              <div className="flex justify-center w-[30px] group-hover:text-cyan-400">
+                <FontAwesomeIcon icon={faRightFromBracket}/>
+              </div>
+
+              <div className="ml-2 font-semibold text-gray-800 group-hover:text-cyan-400">
+                Logout
+              </div>
+            </LogoutLink>
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 const variants = {
-  create: "w-[80px] font-semibold bg-cyan-400 hover:bg-cyan-500",
+  create: "w-[80px] font-semibold bg-green-500 hover:bg-green-600",
   delete: "w-[80px] font-semibold bg-red-600 hover:bg-red-700",
 }
 

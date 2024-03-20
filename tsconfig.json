@@ -26,6 +26,7 @@
       "@db/*": ["./src/db/*.ts"],
       "@functions/*": ["./src/app/shared/functions/*"],
       "@hooks/*": ["./src/app/shared/hooks/*"],
+      "@logos/*": ["./public/logos/*"],
       "@modals/*": ["./src/app/shared/modals/*"],
       "@types": ["./src/app/shared/types"]
     }
