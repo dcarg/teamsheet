@@ -6,44 +6,58 @@ const getTeamPlayers = (teamKey: keyof typeof players) => {
   return players[teamKey] || []
 }
 
-const getPlayerPosition = (positionKey: keyof typeof players, positions: Position[]) => {
-  return positions[positionKey] || {}
+const getPlayerPosition = (positionKey: string, positions: Position[]): Position => {
+  return positions.find(position => position.key === positionKey)!
 }
 
 const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[]) => {
-  const players = teams.map(team => {
+  const playerRecords = teams.flatMap(team => {
     const { id: teamId, key: teamKey } = team
   
     const teamPlayersArray = getTeamPlayers(teamKey as keyof typeof players)
 
     return teamPlayersArray.map((teamPlayer) => {
-      const { position: positionKey } = teamPlayer
+      const {
+        key,
+        firstname,
+        lastname,
+        title,
+        positions: positionsKeyArray,
+      } = teamPlayer
 
-      // Need to update this to map through player.positions array and get all positions
-      const position = getPlayerPosition(positionKey as keyof typeof positions, positions)
-      const { id: positionId } = position
+      const playerPositionIds = positionsKeyArray.map((positionKey) => {
+        const position = getPlayerPosition(positionKey, positions)
+        const { id: positionId } = position
+        
+        return positionId
+      })
+
+      const playerPositionSeeds = playerPositionIds.map(id => {
+        return { positionId: id }
+      })
 
       return {
-        ...teamPlayer,
+        key,
+        firstname,
+        lastname,
+        title,
         teamMembers: {
           create: {
             teamId,
           }
         },
         playerPositions: {
-          create: {
-            positionId,
-          }
+          create: playerPositionSeeds,
         },
       }
     })
   })
 
-  const records = players.map(async player => (
+  const records = playerRecords.map(async player => (
     await prisma.player.upsert({
       where: { key: player.key },
       create: player,
-      update: {},
+      update: player,
     })
   ))
 

@@ -110,7 +110,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: backRowId,
+        positionId: backrowId,
       }
     },
   },
@@ -208,7 +208,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: backRowId,
+        positionId: backrowId,
       }
     },
   },
@@ -240,7 +240,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: backRowId,
+        positionId: backrowId,
       }
     },
   },
@@ -401,7 +401,7 @@ export const wallabiesPlayers = [
     playerPositions: {
       create: [
         { positionId: lockId },
-        { positionId: backRowId },
+        { positionId: backrowId },
       ]
     },
   },
@@ -417,7 +417,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: backRowId,
+        positionId: backrowId,
       }
     },
   },
@@ -498,7 +498,7 @@ export const wallabiesPlayers = [
     playerPositions: {
       create: [
         { positionId: lockId },
-        { positionId: backRowId },
+        { positionId: backrowId },
       ]
     },
   },
@@ -546,7 +546,7 @@ export const wallabiesPlayers = [
     },
     playerPositions: {
       create: {
-        positionId: backRowId,
+        positionId: backrowId,
       }
     },
   },

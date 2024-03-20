@@ -50,8 +50,8 @@ export const drua = [
     firstname: "Kitione",
     lastname: "Salawa",
     team: "Fijian Drua",
-    position: "backRow",
-    positions: ["backRow"],
+    position: "backrow",
+    positions: ["backrow"],
   },
   {
     key: "viliveMiramira",
@@ -59,8 +59,8 @@ export const drua = [
     firstname: "Vilive",
     lastname: "Miramira",
     team: "Fijian Drua",
-    position: "backRow",
-    positions: ["backRow"],
+    position: "backrow",
+    positions: ["backrow"],
   },
   {
     key: "tanielaRakuro",
@@ -95,8 +95,8 @@ export const drua = [
     firstname: "Elia",
     lastname: "Canakaivata",
     team: "Fijian Drua",
-    position: "backRow",
-    positions: ["backRow"],
+    position: "backrow",
+    positions: ["backrow"],
   },
   {
     key: "meliDerenalagi",
@@ -104,8 +104,8 @@ export const drua = [
     firstname: "Meli",
     lastname: "Derenalagi",
     team: "Fijian Drua",
-    position: "backRow",
-    positions: ["backRow"],
+    position: "backrow",
+    positions: ["backrow"],
   },
   {
     key: "peniMatawalu",
@@ -150,7 +150,7 @@ export const drua = [
     lastname: "Cirikidaveta",
     team: "Fijian Drua",
     position: "lock",
-    positions: ["lock", "backRow"],
+    positions: ["lock", "backrow"],
   },
   {
     key: "michaelNaitokani",
@@ -213,7 +213,7 @@ export const drua = [
     lastname: "Waqa",
     team: "Fijian Drua",
     position: "lock",
-    positions: ["lock", "backRow"],
+    positions: ["lock", "backrow"],
   },
   {
     key: "isaiahRavula",
@@ -239,8 +239,8 @@ export const drua = [
     firstname: "Motikiai",
     lastname: "Murray",
     team: "Fijian Drua",
-    position: "backRow",
-    positions: ["backRow"],
+    position: "backrow",
+    positions: ["backrow"],
   },
   {
     key: "sailosiVukalokalo",

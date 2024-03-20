@@ -24,8 +24,8 @@
     "firstname": "Hoskins",
     "lastname": "Sotutu",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "stephenPerofeta",
@@ -78,8 +78,8 @@
     "firstname": "Dalton",
     "lastname": "Papali'i",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "finlayChristie",
@@ -123,8 +123,8 @@
     "firstname": "Cameron",
     "lastname": "Suafoa",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "antonSegner",
@@ -132,8 +132,8 @@
     "firstname": "Anton",
     "lastname": "Segner",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "adrianChoat",
@@ -141,8 +141,8 @@
     "firstname": "Adrian",
     "lastname": "Choat",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "ajLam",
@@ -159,8 +159,8 @@
     "firstname": "Akira",
     "lastname": "Ioane",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "samDarry",
@@ -213,8 +213,8 @@
     "firstname": "Rob",
     "lastname": "Rush",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "coleForbes",
@@ -231,8 +231,8 @@
     "firstname": "James",
     "lastname": "Thompson",
     "Team": "Blues",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "joshBeehre",
@@ -375,8 +375,8 @@
     "firstname": "Rob",
     "lastname": "Valetini",
     "Team": "Brumbies",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "coreyToole",
@@ -429,8 +429,8 @@
     "firstname": "Tom",
     "lastname": "Hooper",
     "Team": "Brumbies",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "connalMcInerney",
@@ -492,8 +492,8 @@
     "firstname": "Luke",
     "lastname": "Reimer",
     "Team": "Brumbies",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jackDebreczeni",
@@ -510,8 +510,8 @@
     "firstname": "Rory",
     "lastname": "Scott",
     "Team": "Brumbies",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "cadeyrnNeville",
@@ -528,8 +528,8 @@
     "firstname": "Jahrome",
     "lastname": "Brown",
     "Team": "Brumbies",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "charlieCale",
@@ -591,8 +591,8 @@
     "firstname": "Ed",
     "lastname": "Kennedy",
     "Team": "Brumbies",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "klaytonThorn",
@@ -762,8 +762,8 @@
     "firstname": "Samipeni",
     "lastname": "Finau",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "xavierRoe",
@@ -780,8 +780,8 @@
     "firstname": "Luke",
     "lastname": "Jacobson",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "danielRona",
@@ -807,8 +807,8 @@
     "firstname": "Simon",
     "lastname": "Parker",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "ramekaPoihipi",
@@ -843,8 +843,8 @@
     "firstname": "Kaylum",
     "lastname": "Boshier",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "gideonWrampling",
@@ -915,8 +915,8 @@
     "firstname": "Malachi",
     "lastname": "Wrampling-Alec",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "tomFlorence",
@@ -924,8 +924,8 @@
     "firstname": "Tom",
     "lastname": "Florence",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "wallaceSititi",
@@ -933,8 +933,8 @@
     "firstname": "Wallace",
     "lastname": "Sititi",
     "Team": "Chiefs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "sioneAhio",
@@ -1068,8 +1068,8 @@
     "firstname": "Ethan",
     "lastname": "Blackadder",
     "Team": "Crusaders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "rivezReihana",
@@ -1158,8 +1158,8 @@
     "firstname": "Christian",
     "lastname": "Lio-Willie",
     "Team": "Crusaders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "tahaKemara",
@@ -1176,8 +1176,8 @@
     "firstname": "Tom",
     "lastname": "Christie",
     "Team": "Crusaders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jamieHannah",
@@ -1212,8 +1212,8 @@
     "firstname": "Dom",
     "lastname": "Gardiner",
     "Team": "Crusaders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "mitchellDrummond",
@@ -1230,8 +1230,8 @@
     "firstname": "Cullen",
     "lastname": "Grace",
     "Team": "Crusaders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "zachGallagher",
@@ -1311,8 +1311,8 @@
     "firstname": "Corey",
     "lastname": "Kellow",
     "Team": "Crusaders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "georgeBower",
@@ -1428,8 +1428,8 @@
     "firstname": "Kitione",
     "lastname": "Salawa",
     "Team": "Fijian Drua",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "viliveMiramira",
@@ -1437,8 +1437,8 @@
     "firstname": "Vilive",
     "lastname": "Miramira",
     "Team": "Fijian Drua",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "tanielaRakuro",
@@ -1473,8 +1473,8 @@
     "firstname": "Elia",
     "lastname": "Canakaivata",
     "Team": "Fijian Drua",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "meliDerenalagi",
@@ -1482,8 +1482,8 @@
     "firstname": "Meli",
     "lastname": "Derenalagi",
     "Team": "Fijian Drua",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "peniMatawalu",
@@ -1617,8 +1617,8 @@
     "firstname": "Motikiai",
     "lastname": "Murray",
     "Team": "Fijian Drua",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "sailosiVukalokalo",
@@ -1716,8 +1716,8 @@
     "firstname": "Carlo",
     "lastname": "Tizzano",
     "Team": "Force",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "willHarris",
@@ -1725,8 +1725,8 @@
     "firstname": "Will",
     "lastname": "Harris",
     "Team": "Force",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "samSpink",
@@ -1806,8 +1806,8 @@
     "firstname": "Tim",
     "lastname": "Anstee",
     "Team": "Force",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "felixKalapu",
@@ -1833,8 +1833,8 @@
     "firstname": "Michael",
     "lastname": "Wells",
     "Team": "Force",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "maxBurey",
@@ -1860,8 +1860,8 @@
     "firstname": "Ollie",
     "lastname": "Callan",
     "Team": "Force",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "georgePoolman",
@@ -1959,8 +1959,8 @@
     "firstname": "Papillon",
     "lastname": "Sevele",
     "Team": "Force",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "reesjanPasitoa",
@@ -2058,8 +2058,8 @@
     "firstname": "Billy",
     "lastname": "Harmon",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jonaNareki",
@@ -2076,8 +2076,8 @@
     "firstname": "Hugh",
     "lastname": "Renton",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "folauFakatava",
@@ -2130,8 +2130,8 @@
     "firstname": "Nikora",
     "lastname": "Broughton",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jonahLowe",
@@ -2148,8 +2148,8 @@
     "firstname": "Sean",
     "lastname": "Withy",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "ajayFaleafaga",
@@ -2283,8 +2283,8 @@
     "firstname": "Hayden",
     "lastname": "Michaels",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "oliverHaig",
@@ -2292,8 +2292,8 @@
     "firstname": "Oliver",
     "lastname": "Haig",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "rhysPatchell",
@@ -2310,8 +2310,8 @@
     "firstname": "Tom",
     "lastname": "Sanders",
     "Team": "Highlanders",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jermaineAinsley",
@@ -2463,8 +2463,8 @@
     "firstname": "Du'Plessis",
     "lastname": "Kirifi",
     "Team": "Hurricanes",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "rubenLove",
@@ -2481,8 +2481,8 @@
     "firstname": "Devan",
     "lastname": "Flanders",
     "Team": "Hurricanes",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "aidanMorgan",
@@ -2499,8 +2499,8 @@
     "firstname": "Brayden",
     "lastname": "Iose",
     "Team": "Hurricanes",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "calebDelany",
@@ -2517,8 +2517,8 @@
     "firstname": "Peter",
     "lastname": "Lakai",
     "Team": "Hurricanes",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "brettCameron",
@@ -2562,8 +2562,8 @@
     "firstname": "TK",
     "lastname": "Howden",
     "Team": "Hurricanes",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "peterUmaga-Jensen",
@@ -2625,8 +2625,8 @@
     "firstname": "Brad",
     "lastname": "Shields",
     "Team": "Hurricanes",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "joshTaula",
@@ -2733,8 +2733,8 @@
     "firstname": "Solomone",
     "lastname": "Funaki",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "lotuInisi",
@@ -2742,8 +2742,8 @@
     "firstname": "Lotu",
     "lastname": "Inisi",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "neriaFomai",
@@ -2778,8 +2778,8 @@
     "firstname": "Miracle",
     "lastname": "Faiilagi",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "christianLeali'ifano",
@@ -2832,8 +2832,8 @@
     "firstname": "Alamanda",
     "lastname": "Motuga",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "sioneHavili",
@@ -2841,8 +2841,8 @@
     "firstname": "Sione",
     "lastname": "Havili",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "anzeloTuitavuki",
@@ -2940,8 +2940,8 @@
     "firstname": "Ola",
     "lastname": "Tauelangi",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "otumakaMausia",
@@ -2958,8 +2958,8 @@
     "firstname": "Semisi",
     "lastname": "Paea",
     "Team": "Moana Pasifika",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "tomSavage",
@@ -3102,8 +3102,8 @@
     "firstname": "Josh",
     "lastname": "Kemeny",
     "Team": "Rebels",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "ryanLouwrens",
@@ -3156,8 +3156,8 @@
     "firstname": "Brad",
     "lastname": "Wilkin",
     "Team": "Rebels",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "mattGibbon",
@@ -3174,8 +3174,8 @@
     "firstname": "Vaiolini",
     "lastname": "Ekuasi",
     "Team": "Rebels",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "joePincus",
@@ -3255,8 +3255,8 @@
     "firstname": "Daniel",
     "lastname": "Maiava",
     "Team": "Rebels",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "darbyLancaster",
@@ -3336,8 +3336,8 @@
     "firstname": "Rob",
     "lastname": "Leota",
     "Team": "Rebels",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "zacHough",
@@ -3345,8 +3345,8 @@
     "firstname": "Zac",
     "lastname": "Hough",
     "Team": "Rebels",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "isaacAedo Kailea",
@@ -3426,8 +3426,8 @@
     "firstname": "Harry",
     "lastname": "Wilson",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jordanPetaia",
@@ -3453,8 +3453,8 @@
     "firstname": "Fraser",
     "lastname": "McReight",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "liamWright",
@@ -3462,8 +3462,8 @@
     "firstname": "Liam",
     "lastname": "Wright",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "joshFlook",
@@ -3570,8 +3570,8 @@
     "firstname": "Seru",
     "lastname": "Uru",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "connorVest",
@@ -3606,8 +3606,8 @@
     "firstname": "Connor",
     "lastname": "Anderson",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "cormacDaly",
@@ -3642,8 +3642,8 @@
     "firstname": "Joe",
     "lastname": "Brial",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "johnBryant",
@@ -3651,8 +3651,8 @@
     "firstname": "John",
     "lastname": "Bryant",
     "Team": "Reds",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "louisWerchon",
@@ -3822,8 +3822,8 @@
     "firstname": "Langi",
     "lastname": "Gleeson",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "dylanPietsch",
@@ -3903,8 +3903,8 @@
     "firstname": "Charlie",
     "lastname": "Gamble",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "hughSinclair",
@@ -3912,8 +3912,8 @@
     "firstname": "Hugh",
     "lastname": "Sinclair",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "nedHanigan",
@@ -3948,8 +3948,8 @@
     "firstname": "Lachlan",
     "lastname": "Swinton",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "teddyWilson",
@@ -3975,8 +3975,8 @@
     "firstname": "Fergus",
     "lastname": "Lee-Warner",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "jackGrant",
@@ -4002,8 +4002,8 @@
     "firstname": "Mesu",
     "lastname": "Kunavula",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "nedSlack-Smith",
@@ -4011,8 +4011,8 @@
     "firstname": "Ned",
     "lastname": "Slack-Smith",
     "Team": "Waratahs",
-    "Position": "backRow",
-    "Positions": "backRow"
+    "Position": "backrow",
+    "Positions": "backrow"
   },
   {
     "key": "vuateKarawalevu",
