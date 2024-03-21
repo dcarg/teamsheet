@@ -10,7 +10,7 @@ import { findOrCreateUser } from '@functions/user'
 
 import PageHeader from '@components/PageHeader'
 
-import type { TeamSheetWithRelations } from '@types'
+import type { TeamSheetWithCompetitionSportAndTeam } from '@types'
 
 import TeamSheetListItem from './_TeamSheetListItem'
 
@@ -19,31 +19,22 @@ const Page = async () => {
   const kindeCurrentUser = await getUser()
 
   const currentUser = await findOrCreateUser(kindeCurrentUser)
-  if (!currentUser?.id) redirect('/#')
+  if (!currentUser?.id) redirect('/')
 
-  const userTeamSheets = await prisma.teamSheet.findMany({
+  const teamSheets = await prisma.teamSheet.findMany({
     where: {
       userId: currentUser?.id,
     },
     include: {
-      team: {
-        include: {
-          competitionTeams: {
-            include: {
-              competition: {
-                include: {
-                  sport: true,
-                },
-              },
-            },
-          },
-        },
+      competition: {
+        include: { sport: true },
       },
+      team: true,
     },
     orderBy: { updatedAt: 'desc' },
   })
 
-  const hasTeamSheets = !!userTeamSheets?.length
+  const hasTeamSheets = !!teamSheets?.length
 
   return (
     <div className="flex flex-col max-w-column p-3">
@@ -54,7 +45,7 @@ const Page = async () => {
       
       {hasTeamSheets && (
         <div>
-          {userTeamSheets.map((teamSheet: TeamSheetWithRelations) => (
+          {teamSheets.map((teamSheet: TeamSheetWithCompetitionSportAndTeam) => (
             <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
           ))}
         </div>
