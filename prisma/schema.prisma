@@ -33,7 +33,7 @@ model Competition {
   updatedAt DateTime @updatedAt
 
   competitionTeams CompetitionTeam[]
-  teamSheeets TeamSheet[]
+  teamSheets TeamSheet[]
 
   @@map("competitions")
 }

@@ -10,8 +10,6 @@ import { findOrCreateUser } from '@functions/user'
 
 import PageHeader from '@components/PageHeader'
 
-import type { TeamSheetWithCompetitionSportAndTeam } from '@types'
-
 import TeamSheetListItem from './_TeamSheetListItem'
 
 const Page = async () => {
@@ -42,14 +40,10 @@ const Page = async () => {
         icon={faUsersRectangle}
         title="My Team Sheets"
       />
-      
-      {hasTeamSheets && (
-        <div>
-          {teamSheets.map((teamSheet: TeamSheetWithCompetitionSportAndTeam) => (
-            <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
-          ))}
-        </div>
-      )}
+
+      {hasTeamSheets && teamSheets.map(teamSheet => (
+        <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
+      ))}
     </div>
   )
 }
