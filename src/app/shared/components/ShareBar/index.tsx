@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 
 import type { TeamSheet } from '@prisma/client'
 
@@ -13,22 +13,26 @@ import { PlayerWithPositions } from '@types'
 type Router = ReturnType<typeof useRouter>
 
 type CreateAndRedirectParams = {
-  teamSheet: TeamSheet,
+  competitionKey: string,
   router: Router,
+  sportKey: string,
+  teamKey: string,
+  teamSheet: TeamSheet,
 }
 
 const createTeamSheetAndRedirect = async (params: CreateAndRedirectParams) => {
-  const { router, teamSheet } = params
+  const { competitionKey, sportKey, teamKey, router, teamSheet } = params
 
   const data = teamSheet.data as { [key: string]: PlayerWithPositions }
 
   const payload = {
+    competitionId: teamSheet.competitionId,
     data,
     teamId: teamSheet.teamId,
   }
 
   const newTeamSheet = await createTeamSheet(payload)
-  router.push(`/rugby/wallabies?teamSheetId=${newTeamSheet.editId}`)
+  router.push(`/sport/${sportKey}/${competitionKey}/${teamKey}?teamSheetId=${newTeamSheet.editId}`)
 }
 
 interface ShareBarProps {
@@ -38,14 +42,18 @@ interface ShareBarProps {
 const ShareBar = (props: ShareBarProps) => {
   const { teamSheet } = props
 
-  const router = useRouter()
+  const params: { competition: string, sport: string, team: string } = useParams()
+  const {
+    competition: competitionKey,
+    sport: sportKey,
+    team: teamKey,
+  } = params
 
-  const pathname = usePathname()
-  const sportHref = pathname.split('/')[1]
+  const router = useRouter()
 
   return (
     <div className="flex p-3">
-      <Link href={`/${sportHref}`}>
+      <Link href={`/sport/${sportKey}`}>
         <div className="p-2 border rounded bg-green-500 hover:bg-green-600 text-white font-semibold">
           Create your own
         </div>
@@ -53,7 +61,7 @@ const ShareBar = (props: ShareBarProps) => {
 
       <Button
         className="ml-2 w-[190px]"
-        onClick={() => createTeamSheetAndRedirect({ teamSheet, router })}
+        onClick={() => createTeamSheetAndRedirect({ competitionKey, sportKey, teamKey, teamSheet, router })}
         text="Duplicate Team Sheet"
         variant="create"
       />
