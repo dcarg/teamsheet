@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
@@ -44,6 +45,8 @@ export default async function Home() {
           Start
         </Link>
       </div>
+
+      <div className="h-[1227px] w-screen mt-[200px] bg-cover bg-[url('/landing-page-background.svg')]" />
     </div>
   )
 }
