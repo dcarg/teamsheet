@@ -6,4 +6,11 @@ export const internationalTeams = [
     secondaryColor: '#15534C',
     tertiaryColor: '',
   },
+  {
+    key: 'allBlacks',
+    title: 'All Blacks',
+    primaryColor: '#000000',
+    secondaryColor: '#FFFFFF',
+    tertiaryColor: '',
+  }
 ]

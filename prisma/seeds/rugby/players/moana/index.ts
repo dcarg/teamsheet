@@ -4,8 +4,7 @@ export const moana = [
     title: "Solomone Funaki",
     firstname: "Solomone",
     lastname: "Funaki",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow"],
   },
   {
@@ -13,8 +12,7 @@ export const moana = [
     title: "Lotu Inisi",
     firstname: "Lotu",
     lastname: "Inisi",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow"],
   },
   {
@@ -22,8 +20,7 @@ export const moana = [
     title: "Neria Fomai",
     firstname: "Neria",
     lastname: "Fomai",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack"],
   },
   {
@@ -31,8 +28,7 @@ export const moana = [
     title: "Danny Toala",
     firstname: "Danny",
     lastname: "Toala",
-    team: "Moana Pasifika",
-    position: "centre",
+    teams: ["moana"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -40,8 +36,7 @@ export const moana = [
     title: "William Havili",
     firstname: "William",
     lastname: "Havili",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack", "flyhalf"],
   },
   {
@@ -49,8 +44,7 @@ export const moana = [
     title: "Miracle Faiilagi",
     firstname: "Miracle",
     lastname: "Faiilagi",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow", "lock"],
   },
   {
@@ -58,8 +52,7 @@ export const moana = [
     title: "Christian Leali'ifano",
     firstname: "Christian",
     lastname: "Leali'ifano",
-    team: "Moana Pasifika",
-    position: "flyhalf",
+    teams: ["moana"],
     positions: ["flyhalf"],
   },
   {
@@ -67,8 +60,7 @@ export const moana = [
     title: "Samiuela Moli",
     firstname: "Samiuela",
     lastname: "Moli",
-    team: "Moana Pasifika",
-    position: "hooker",
+    teams: ["moana"],
     positions: ["hooker"],
   },
   {
@@ -76,8 +68,7 @@ export const moana = [
     title: "Fine Inisi",
     firstname: "Fine",
     lastname: "Inisi",
-    team: "Moana Pasifika",
-    position: "centre",
+    teams: ["moana"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -85,8 +76,7 @@ export const moana = [
     title: "Julian Savea",
     firstname: "Julian",
     lastname: "Savea",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -94,8 +84,7 @@ export const moana = [
     title: "Ere Enari",
     firstname: "Ere",
     lastname: "Enari",
-    team: "Moana Pasifika",
-    position: "scrumhalf",
+    teams: ["moana"],
     positions: ["scrumhalf"],
   },
   {
@@ -103,8 +92,7 @@ export const moana = [
     title: "Alamanda Motuga",
     firstname: "Alamanda",
     lastname: "Motuga",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow"],
   },
   {
@@ -112,8 +100,7 @@ export const moana = [
     title: "Sione Havili",
     firstname: "Sione",
     lastname: "Havili",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow"],
   },
   {
@@ -121,8 +108,7 @@ export const moana = [
     title: "Anzelo Tuitavuki",
     firstname: "Anzelo",
     lastname: "Tuitavuki",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack"],
   },
   {
@@ -130,8 +116,7 @@ export const moana = [
     title: "Henry Taefu",
     firstname: "Henry",
     lastname: "Taefu",
-    team: "Moana Pasifika",
-    position: "centre",
+    teams: ["moana"],
     positions: ["centre"],
   },
   {
@@ -139,8 +124,7 @@ export const moana = [
     title: "D'Angelo Leuila",
     firstname: "D'Angelo",
     lastname: "Leuila",
-    team: "Moana Pasifika",
-    position: "centre",
+    teams: ["moana"],
     positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
@@ -148,8 +132,7 @@ export const moana = [
     title: "Jonathan Taumateine",
     firstname: "Jonathan",
     lastname: "Taumateine",
-    team: "Moana Pasifika",
-    position: "scrumhalf",
+    teams: ["moana"],
     positions: ["scrumhalf"],
   },
   {
@@ -157,8 +140,7 @@ export const moana = [
     title: "Pepesana Patafilo",
     firstname: "Pepesana",
     lastname: "Patafilo",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -166,8 +148,7 @@ export const moana = [
     title: "Lalomilo Lalomilo",
     firstname: "Lalomilo",
     lastname: "Lalomilo",
-    team: "Moana Pasifika",
-    position: "centre",
+    teams: ["moana"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -175,8 +156,7 @@ export const moana = [
     title: "Samuel Slade",
     firstname: "Samuel",
     lastname: "Slade",
-    team: "Moana Pasifika",
-    position: "lock",
+    teams: ["moana"],
     positions: ["lock"],
   },
   {
@@ -184,8 +164,7 @@ export const moana = [
     title: "Irie Papuni",
     firstname: "Irie",
     lastname: "Papuni",
-    team: "Moana Pasifika",
-    position: "lock",
+    teams: ["moana"],
     positions: ["lock"],
   },
   {
@@ -193,8 +172,7 @@ export const moana = [
     title: "Nigel Ah Wong",
     firstname: "Nigel",
     lastname: "Ah Wong",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -202,8 +180,7 @@ export const moana = [
     title: "Ofa Tauatevalu",
     firstname: "Ofa",
     lastname: "Tauatevalu",
-    team: "Moana Pasifika",
-    position: "lock",
+    teams: ["moana"],
     positions: ["lock"],
   },
   {
@@ -211,8 +188,7 @@ export const moana = [
     title: "Ola Tauelangi",
     firstname: "Ola",
     lastname: "Tauelangi",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow"],
   },
   {
@@ -220,8 +196,7 @@ export const moana = [
     title: "Otumaka Mausia",
     firstname: "Otumaka",
     lastname: "Mausia",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack"],
   },
   {
@@ -229,8 +204,7 @@ export const moana = [
     title: "Semisi Paea",
     firstname: "Semisi",
     lastname: "Paea",
-    team: "Moana Pasifika",
-    position: "backrow",
+    teams: ["moana"],
     positions: ["backrow"],
   },
   {
@@ -238,8 +212,7 @@ export const moana = [
     title: "Tom Savage",
     firstname: "Tom",
     lastname: "Savage",
-    team: "Moana Pasifika",
-    position: "lock",
+    teams: ["moana"],
     positions: ["lock"],
   },
   {
@@ -247,8 +220,7 @@ export const moana = [
     title: "Viliami Fine",
     firstname: "Viliami",
     lastname: "Fine",
-    team: "Moana Pasifika",
-    position: "outsideBack",
+    teams: ["moana"],
     positions: ["outsideBack"],
   },
   {
@@ -256,8 +228,7 @@ export const moana = [
     title: "Suetena Asomua",
     firstname: "Suetena",
     lastname: "Asomua",
-    team: "Moana Pasifika",
-    position: "prop",
+    teams: ["moana"],
     positions: ["prop"],
   },
   {
@@ -265,8 +236,7 @@ export const moana = [
     title: "Donald Brighouse",
     firstname: "Donald",
     lastname: "Brighouse",
-    team: "Moana Pasifika",
-    position: "prop",
+    teams: ["moana"],
     positions: ["prop"],
   },
   {
@@ -274,8 +244,7 @@ export const moana = [
     title: "Aisea Halo",
     firstname: "Aisea",
     lastname: "Halo",
-    team: "Moana Pasifika",
-    position: "scrumhalf",
+    teams: ["moana"],
     positions: ["scrumhalf"],
   },
   {
@@ -283,8 +252,7 @@ export const moana = [
     title: "Sekope Kepu",
     firstname: "Sekope",
     lastname: "Kepu",
-    team: "Moana Pasifika",
-    position: "prop",
+    teams: ["moana"],
     positions: ["prop"],
   },
   {
@@ -292,8 +260,7 @@ export const moana = [
     title: "Sateki Latu",
     firstname: "Sateki",
     lastname: "Latu",
-    team: "Moana Pasifika",
-    position: "prop",
+    teams: ["moana"],
     positions: ["prop"],
   },
   {
@@ -301,8 +268,7 @@ export const moana = [
     title: "James Lay",
     firstname: "James",
     lastname: "Lay",
-    team: "Moana Pasifika",
-    position: "prop",
+    teams: ["moana"],
     positions: ["prop"],
   },
   {
@@ -310,8 +276,7 @@ export const moana = [
     title: "Tomasi Maka",
     firstname: "Tomasi",
     lastname: "Maka",
-    team: "Moana Pasifika",
-    position: "hooker",
+    teams: ["moana"],
     positions: ["hooker"],
   },
   {
@@ -319,8 +284,7 @@ export const moana = [
     title: "Sama Malolo",
     firstname: "Sama",
     lastname: "Malolo",
-    team: "Moana Pasifika",
-    position: "hooker",
+    teams: ["moana"],
     positions: ["hooker"],
   },
   {
@@ -328,8 +292,7 @@ export const moana = [
     title: "Viliami Napa'a",
     firstname: "Viliami",
     lastname: "Napa'a",
-    team: "Moana Pasifika",
-    position: "lock",
+    teams: ["moana"],
     positions: ["lock"],
   },
   {
@@ -337,8 +300,7 @@ export const moana = [
     title: "Abraham Pole",
     firstname: "Abraham",
     lastname: "Pole",
-    team: "Moana Pasifika",
-    position: "prop",
+    teams: ["moana"],
     positions: ["prop"],
   }
 ]

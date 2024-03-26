@@ -4,8 +4,7 @@ export const reds = [
     title: "Matt Faessler",
     firstname: "Matt",
     lastname: "Faessler",
-    team: "reds",
-    position: "hooker",
+    teams: ["reds", "wallabies"],
     positions: ["hooker"],
   },
   {
@@ -13,8 +12,7 @@ export const reds = [
     title: "Harry Wilson",
     firstname: "Harry",
     lastname: "Wilson",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -22,8 +20,7 @@ export const reds = [
     title: "Jordan Petaia",
     firstname: "Jordan",
     lastname: "Petaia",
-    team: "reds",
-    position: "outsideBack",
+    teams: ["reds", "wallabies"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -31,8 +28,7 @@ export const reds = [
     title: "Tate McDermott",
     firstname: "Tate",
     lastname: "McDermott",
-    team: "reds",
-    position: "scrumhalf",
+    teams: ["reds", "wallabies"],
     positions: ["scrumhalf"],
   },
   {
@@ -40,8 +36,7 @@ export const reds = [
     title: "Fraser McReight",
     firstname: "Fraser",
     lastname: "McReight",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -49,8 +44,7 @@ export const reds = [
     title: "Liam Wright",
     firstname: "Liam",
     lastname: "Wright",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds"],
     positions: ["backrow"],
   },
   {
@@ -58,8 +52,7 @@ export const reds = [
     title: "Josh Flook",
     firstname: "Josh",
     lastname: "Flook",
-    team: "reds",
-    position: "centre",
+    teams: ["reds"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -67,8 +60,7 @@ export const reds = [
     title: "Jock Campbell",
     firstname: "Jock",
     lastname: "Campbell",
-    team: "reds",
-    position: "outsideBack",
+    teams: ["reds"],
     positions: ["outsideBack"],
   },
   {
@@ -76,8 +68,7 @@ export const reds = [
     title: "Suliasi Vunivalu",
     firstname: "Suliasi",
     lastname: "Vunivalu",
-    team: "reds",
-    position: "outsideBack",
+    teams: ["reds", "wallabies"],
     positions: ["outsideBack"],
   },
   {
@@ -85,8 +76,7 @@ export const reds = [
     title: "James O'Connor",
     firstname: "James",
     lastname: "O'Connor",
-    team: "reds",
-    position: "flyhalf",
+    teams: ["reds", "wallabies"],
     positions: ["flyhalf", "centre"],
   },
   {
@@ -94,8 +84,7 @@ export const reds = [
     title: "Harry McLaughlin-Phillips",
     firstname: "Harry",
     lastname: "McLaughlin-Phillips",
-    team: "reds",
-    position: "flyhalf",
+    teams: ["reds"],
     positions: ["flyhalf"],
   },
   {
@@ -103,8 +92,7 @@ export const reds = [
     title: "Hunter Paisami",
     firstname: "Hunter",
     lastname: "Paisami",
-    team: "reds",
-    position: "centre",
+    teams: ["reds", "wallabies"],
     positions: ["centre"],
   },
   {
@@ -112,8 +100,7 @@ export const reds = [
     title: "Lawson Creighton",
     firstname: "Lawson",
     lastname: "Creighton",
-    team: "reds",
-    position: "flyhalf",
+    teams: ["reds"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -121,8 +108,7 @@ export const reds = [
     title: "Tom Lynagh",
     firstname: "Tom",
     lastname: "Lynagh",
-    team: "reds",
-    position: "flyhalf",
+    teams: ["reds"],
     positions: ["flyhalf"],
   },
   {
@@ -130,8 +116,7 @@ export const reds = [
     title: "Isaac Henry",
     firstname: "Isaac",
     lastname: "Henry",
-    team: "reds",
-    position: "centre",
+    teams: ["reds"],
     positions: ["centre"],
   },
   {
@@ -139,8 +124,7 @@ export const reds = [
     title: "Kalani Thomas",
     firstname: "Kalani",
     lastname: "Thomas",
-    team: "reds",
-    position: "scrumhalf",
+    teams: ["reds"],
     positions: ["scrumhalf"],
   },
   {
@@ -148,8 +132,7 @@ export const reds = [
     title: "Ryan Smith",
     firstname: "Ryan",
     lastname: "Smith",
-    team: "reds",
-    position: "lock",
+    teams: ["reds"],
     positions: ["lock"],
   },
   {
@@ -157,8 +140,7 @@ export const reds = [
     title: "Seru Uru",
     firstname: "Seru",
     lastname: "Uru",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds"],
     positions: ["backrow", "lock"],
   },
   {
@@ -166,8 +148,7 @@ export const reds = [
     title: "Connor Vest",
     firstname: "Connor",
     lastname: "Vest",
-    team: "reds",
-    position: "lock",
+    teams: ["reds"],
     positions: ["lock", "backrow"],
   },
   {
@@ -175,8 +156,7 @@ export const reds = [
     title: "Mac Grealy",
     firstname: "Mac",
     lastname: "Grealy",
-    team: "reds",
-    position: "outsideBack",
+    teams: ["reds"],
     positions: ["outsideBack"],
   },
   {
@@ -184,8 +164,7 @@ export const reds = [
     title: "Taj Annan",
     firstname: "Taj",
     lastname: "Annan",
-    team: "reds",
-    position: "centre",
+    teams: ["reds"],
     positions: ["centre"],
   },
   {
@@ -193,8 +172,7 @@ export const reds = [
     title: "Connor Anderson",
     firstname: "Connor",
     lastname: "Anderson",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds"],
     positions: ["backrow"],
   },
   {
@@ -202,8 +180,7 @@ export const reds = [
     title: "Cormac Daly",
     firstname: "Cormac",
     lastname: "Daly",
-    team: "reds",
-    position: "lock",
+    teams: ["reds"],
     positions: ["lock"],
   },
   {
@@ -211,8 +188,7 @@ export const reds = [
     title: "Floyd Aubrey",
     firstname: "Floyd",
     lastname: "Aubrey",
-    team: "reds",
-    position: "outsideBack",
+    teams: ["reds"],
     positions: ["outsideBack"],
   },
   {
@@ -220,8 +196,7 @@ export const reds = [
     title: "Frankie Goldsbrough",
     firstname: "Frankie",
     lastname: "Goldsbrough",
-    team: "reds",
-    position: "centre",
+    teams: ["reds"],
     positions: ["centre"],
   },
   {
@@ -229,8 +204,7 @@ export const reds = [
     title: "Joe Brial",
     firstname: "Joe",
     lastname: "Brial",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds"],
     positions: ["backrow"],
   },
   {
@@ -238,8 +212,7 @@ export const reds = [
     title: "John Bryant",
     firstname: "John",
     lastname: "Bryant",
-    team: "reds",
-    position: "backrow",
+    teams: ["reds"],
     positions: ["backrow"],
   },
   {
@@ -247,8 +220,7 @@ export const reds = [
     title: "Louis Werchon",
     firstname: "Louis",
     lastname: "Werchon",
-    team: "reds",
-    position: "scrumhalf",
+    teams: ["reds"],
     positions: ["scrumhalf"],
   },
   {
@@ -256,8 +228,7 @@ export const reds = [
     title: "Taine Roiri",
     firstname: "Taine",
     lastname: "Roiri",
-    team: "reds",
-    position: "lock",
+    teams: ["reds"],
     positions: ["lock"],
   },
   {
@@ -265,8 +236,7 @@ export const reds = [
     title: "Tim Ryan",
     firstname: "Tim",
     lastname: "Ryan",
-    team: "reds",
-    position: "outsideBack",
+    teams: ["reds"],
     positions: ["outsideBack"],
   },
   {
@@ -274,8 +244,7 @@ export const reds = [
     title: "Angus Blyth",
     firstname: "Angus",
     lastname: "Blyth",
-    team: "reds",
-    position: "lock",
+    teams: ["reds"],
     positions: ["lock"],
   },
   {
@@ -283,8 +252,7 @@ export const reds = [
     title: "Richie Asiata",
     firstname: "Richie",
     lastname: "Asiata",
-    team: "reds",
-    position: "hooker",
+    teams: ["reds"],
     positions: ["hooker"],
   },
   {
@@ -292,8 +260,7 @@ export const reds = [
     title: "George Blake",
     firstname: "George",
     lastname: "Blake",
-    team: "reds",
-    position: "prop",
+    teams: ["reds"],
     positions: ["prop"],
   },
   {
@@ -301,8 +268,7 @@ export const reds = [
     title: "Max Craig",
     firstname: "Max",
     lastname: "Craig",
-    team: "reds",
-    position: "hooker",
+    teams: ["reds"],
     positions: ["hooker"],
   },
   {
@@ -310,8 +276,7 @@ export const reds = [
     title: "Massimo De Lutiis",
     firstname: "Massimo",
     lastname: "De Lutiis",
-    team: "reds",
-    position: "prop",
+    teams: ["reds"],
     positions: ["prop"],
   },
   {
@@ -319,8 +284,7 @@ export const reds = [
     title: "Sef Fa'agase",
     firstname: "Sef",
     lastname: "Fa'agase",
-    team: "reds",
-    position: "prop",
+    teams: ["reds"],
     positions: ["prop"],
   },
   {
@@ -328,8 +292,7 @@ export const reds = [
     title: "Alex Hodgman",
     firstname: "Alex",
     lastname: "Hodgman",
-    team: "reds",
-    position: "prop",
+    teams: ["reds"],
     positions: ["prop"],
   },
   {
@@ -337,8 +300,7 @@ export const reds = [
     title: "Josh Nasser",
     firstname: "Josh",
     lastname: "Nasser",
-    team: "reds",
-    position: "hooker",
+    teams: ["reds"],
     positions: ["hooker"],
   },
   {
@@ -346,8 +308,7 @@ export const reds = [
     title: "Zane Nonggorr",
     firstname: "Zane",
     lastname: "Nonggorr",
-    team: "reds",
-    position: "prop",
+    teams: ["reds", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -355,8 +316,7 @@ export const reds = [
     title: "Peni Ravai",
     firstname: "Peni",
     lastname: "Ravai",
-    team: "reds",
-    position: "prop",
+    teams: ["reds"],
     positions: ["prop"],
   },
   {
@@ -364,8 +324,7 @@ export const reds = [
     title: "Jeff Toomaga-Allen",
     firstname: "Jeff",
     lastname: "Toomaga-Allen",
-    team: "reds",
-    position: "prop",
+    teams: ["reds"],
     positions: ["prop"],
   }
 ]

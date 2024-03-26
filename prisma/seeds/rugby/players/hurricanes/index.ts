@@ -4,8 +4,7 @@ export const hurricanes = [
     title: "Cam Roigard",
     firstname: "Cam",
     lastname: "Roigard",
-    team: "Hurricanes",
-    position: "scrumhalf",
+    teams: ["hurricanes", "allBlacks"],
     positions: ["scrumhalf"],
   },
   {
@@ -13,8 +12,7 @@ export const hurricanes = [
     title: "Kini Naholo",
     firstname: "Kini",
     lastname: "Naholo",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack"],
   },
   {
@@ -22,8 +20,7 @@ export const hurricanes = [
     title: "Asafo Aumua",
     firstname: "Asafo",
     lastname: "Aumua",
-    team: "Hurricanes",
-    position: "hooker",
+    teams: ["hurricanes", "allBlacks"],
     positions: ["hooker"],
   },
   {
@@ -31,8 +28,7 @@ export const hurricanes = [
     title: "Salesi Rayasi",
     firstname: "Salesi",
     lastname: "Rayasi",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack"],
   },
   {
@@ -40,8 +36,7 @@ export const hurricanes = [
     title: "Joshua Moorby",
     firstname: "Joshua",
     lastname: "Moorby",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack"],
   },
   {
@@ -49,8 +44,7 @@ export const hurricanes = [
     title: "Jordie Barrett",
     firstname: "Jordie",
     lastname: "Barrett",
-    team: "Hurricanes",
-    position: "centre",
+    teams: ["hurricanes", "allBlacks"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -58,8 +52,7 @@ export const hurricanes = [
     title: "Billy Proctor",
     firstname: "Billy",
     lastname: "Proctor",
-    team: "Hurricanes",
-    position: "centre",
+    teams: ["hurricanes"],
     positions: ["centre"],
   },
   {
@@ -67,8 +60,7 @@ export const hurricanes = [
     title: "Xavier Numia",
     firstname: "Xavier",
     lastname: "Numia",
-    team: "Hurricanes",
-    position: "prop",
+    teams: ["hurricanes"],
     positions: ["prop"],
   },
   {
@@ -76,8 +68,7 @@ export const hurricanes = [
     title: "Du'Plessis Kirifi",
     firstname: "Du'Plessis",
     lastname: "Kirifi",
-    team: "Hurricanes",
-    position: "backrow",
+    teams: ["hurricanes"],
     positions: ["backrow"],
   },
   {
@@ -85,8 +76,7 @@ export const hurricanes = [
     title: "Ruben Love",
     firstname: "Ruben",
     lastname: "Love",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack", "flyhalf"],
   },
   {
@@ -94,8 +84,7 @@ export const hurricanes = [
     title: "Devan Flanders",
     firstname: "Devan",
     lastname: "Flanders",
-    team: "Hurricanes",
-    position: "backrow",
+    teams: ["hurricanes"],
     positions: ["backrow"],
   },
   {
@@ -103,8 +92,7 @@ export const hurricanes = [
     title: "Aidan Morgan",
     firstname: "Aidan",
     lastname: "Morgan",
-    team: "Hurricanes",
-    position: "flyhalf",
+    teams: ["hurricanes"],
     positions: ["flyhalf"],
   },
   {
@@ -112,8 +100,7 @@ export const hurricanes = [
     title: "Brayden Iose",
     firstname: "Brayden",
     lastname: "Iose",
-    team: "Hurricanes",
-    position: "backrow",
+    teams: ["hurricanes"],
     positions: ["backrow"],
   },
   {
@@ -121,8 +108,7 @@ export const hurricanes = [
     title: "Caleb Delany",
     firstname: "Caleb",
     lastname: "Delany",
-    team: "Hurricanes",
-    position: "lock",
+    teams: ["hurricanes"],
     positions: ["lock", "backrow"],
   },
   {
@@ -130,8 +116,7 @@ export const hurricanes = [
     title: "Peter Lakai",
     firstname: "Peter",
     lastname: "Lakai",
-    team: "Hurricanes",
-    position: "backrow",
+    teams: ["hurricanes"],
     positions: ["backrow"],
   },
   {
@@ -139,8 +124,7 @@ export const hurricanes = [
     title: "Brett Cameron",
     firstname: "Brett",
     lastname: "Cameron",
-    team: "Hurricanes",
-    position: "flyhalf",
+    teams: ["hurricanes"],
     positions: ["flyhalf"],
   },
   {
@@ -148,8 +132,7 @@ export const hurricanes = [
     title: "Bailyn Sullivan",
     firstname: "Bailyn",
     lastname: "Sullivan",
-    team: "Hurricanes",
-    position: "centre",
+    teams: ["hurricanes"],
     positions: ["centre"],
   },
   {
@@ -157,8 +140,7 @@ export const hurricanes = [
     title: "Harry Godfrey",
     firstname: "Harry",
     lastname: "Godfrey",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack", "flyhalf"],
   },
   {
@@ -166,8 +148,7 @@ export const hurricanes = [
     title: "James Tucker",
     firstname: "James",
     lastname: "Tucker",
-    team: "Hurricanes",
-    position: "lock",
+    teams: ["hurricanes"],
     positions: ["lock"],
   },
   {
@@ -175,8 +156,7 @@ export const hurricanes = [
     title: "TK Howden",
     firstname: "TK",
     lastname: "Howden",
-    team: "Hurricanes",
-    position: "backrow",
+    teams: ["hurricanes"],
     positions: ["backrow"],
   },
   {
@@ -184,8 +164,7 @@ export const hurricanes = [
     title: "Peter Umaga-Jensen",
     firstname: "Peter",
     lastname: "Umaga-Jensen",
-    team: "Hurricanes",
-    position: "centre",
+    teams: ["hurricanes"],
     positions: ["centre"],
   },
   {
@@ -193,8 +172,7 @@ export const hurricanes = [
     title: "Daniel Sinkinson",
     firstname: "Daniel",
     lastname: "Sinkinson",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack"],
   },
   {
@@ -202,8 +180,7 @@ export const hurricanes = [
     title: "Isaia Walker-Leawere",
     firstname: "Isaia",
     lastname: "Walker-Leawere",
-    team: "Hurricanes",
-    position: "lock",
+    teams: ["hurricanes"],
     positions: ["lock"],
   },
   {
@@ -211,8 +188,7 @@ export const hurricanes = [
     title: "Riley Higgins",
     firstname: "Riley",
     lastname: "Higgins",
-    team: "Hurricanes",
-    position: "centre",
+    teams: ["hurricanes"],
     positions: ["centre"],
   },
   {
@@ -220,8 +196,7 @@ export const hurricanes = [
     title: "Justin Sangster",
     firstname: "Justin",
     lastname: "Sangster",
-    team: "Hurricanes",
-    position: "lock",
+    teams: ["hurricanes"],
     positions: ["lock"],
   },
   {
@@ -229,8 +204,7 @@ export const hurricanes = [
     title: "Ben Grant",
     firstname: "Ben",
     lastname: "Grant",
-    team: "Hurricanes",
-    position: "lock",
+    teams: ["hurricanes"],
     positions: ["lock"],
   },
   {
@@ -238,8 +212,7 @@ export const hurricanes = [
     title: "Brad Shields",
     firstname: "Brad",
     lastname: "Shields",
-    team: "Hurricanes",
-    position: "backrow",
+    teams: ["hurricanes"],
     positions: ["backrow"],
   },
   {
@@ -247,8 +220,7 @@ export const hurricanes = [
     title: "Josh Taula",
     firstname: "Josh",
     lastname: "Taula",
-    team: "Hurricanes",
-    position: "lock",
+    teams: ["hurricanes"],
     positions: ["lock"],
   },
   {
@@ -256,8 +228,7 @@ export const hurricanes = [
     title: "Richard Judd",
     firstname: "Richard",
     lastname: "Judd",
-    team: "Hurricanes",
-    position: "scrumhalf",
+    teams: ["hurricanes"],
     positions: ["scrumhalf"],
   },
   {
@@ -265,8 +236,7 @@ export const hurricanes = [
     title: "TJ Perenara",
     firstname: "TJ",
     lastname: "Perenara",
-    team: "Hurricanes",
-    position: "scrumhalf",
+    teams: ["hurricanes"],
     positions: ["scrumhalf"],
   },
   {
@@ -274,8 +244,7 @@ export const hurricanes = [
     title: "Ngatungane Punivai",
     firstname: "Ngatungane",
     lastname: "Punivai",
-    team: "Hurricanes",
-    position: "outsideBack",
+    teams: ["hurricanes"],
     positions: ["outsideBack"],
   },
   {
@@ -283,8 +252,7 @@ export const hurricanes = [
     title: "Jacob Devery",
     firstname: "Jacob",
     lastname: "Devery",
-    team: "Hurricanes",
-    position: "hooker",
+    teams: ["hurricanes"],
     positions: ["hooker"],
   },
   {
@@ -292,8 +260,7 @@ export const hurricanes = [
     title: "Siale Lauaki",
     firstname: "Siale",
     lastname: "Lauaki",
-    team: "Hurricanes",
-    position: "prop",
+    teams: ["hurricanes"],
     positions: ["prop"],
   },
   {
@@ -301,8 +268,7 @@ export const hurricanes = [
     title: "Tyrel Lomax",
     firstname: "Tyrel",
     lastname: "Lomax",
-    team: "Hurricanes",
-    position: "prop",
+    teams: ["hurricanes", "allBlacks"],
     positions: ["prop"],
   },
   {
@@ -310,8 +276,7 @@ export const hurricanes = [
     title: "Tevita Mafileo",
     firstname: "Tevita",
     lastname: "Mafileo",
-    team: "Hurricanes",
-    position: "prop",
+    teams: ["hurricanes"],
     positions: ["prop"],
   },
   {
@@ -319,8 +284,7 @@ export const hurricanes = [
     title: "James O'Reilly",
     firstname: "James",
     lastname: "O'Reilly",
-    team: "Hurricanes",
-    position: "hooker",
+    teams: ["hurricanes"],
     positions: ["hooker"],
   },
   {
@@ -328,8 +292,7 @@ export const hurricanes = [
     title: "Pouri Rakete-Stones",
     firstname: "Pouri",
     lastname: "Rakete-Stones",
-    team: "Hurricanes",
-    position: "prop",
+    teams: ["hurricanes"],
     positions: ["prop"],
   },
   {
@@ -337,8 +300,7 @@ export const hurricanes = [
     title: "Pasilio Tosi",
     firstname: "Pasilio",
     lastname: "Tosi",
-    team: "Hurricanes",
-    position: "prop",
+    teams: ["hurricanes"],
     positions: ["prop"],
   }
 ]

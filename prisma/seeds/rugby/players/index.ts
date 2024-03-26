@@ -1,3 +1,4 @@
+import { allBlacksPlayers } from './allBlacks/index'
 import { wallabiesPlayers } from './wallabies/index'
 
 import { blues as bluesPlayers } from './blues/index'
@@ -14,7 +15,6 @@ import { reds as redsPlayers } from './reds/index'
 import { waratahs as waratahsPlayers } from './waratahs/index'
 
 export const players = {
-  wallabies: wallabiesPlayers,
   blues: bluesPlayers,
   brumbies: brumbiesPlayers,
   chiefs: chiefsPlayers,
@@ -27,4 +27,6 @@ export const players = {
   rebels: rebelsPlayers,
   reds: redsPlayers,
   waratahs: waratahsPlayers,
+  allBlacks: allBlacksPlayers,
+  wallabies: wallabiesPlayers,
 }

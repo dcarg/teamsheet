@@ -4,8 +4,7 @@ export const highlanders = [
     title: "Timoci Tavatavanawai",
     firstname: "Timoci",
     lastname: "Tavatavanawai",
-    team: "Highlanders",
-    position: "outsideBack",
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -13,8 +12,7 @@ export const highlanders = [
     title: "Billy Harmon",
     firstname: "Billy",
     lastname: "Harmon",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -22,8 +20,7 @@ export const highlanders = [
     title: "Jona Nareki",
     firstname: "Jona",
     lastname: "Nareki",
-    team: "Highlanders",
-    position: "outsideBack",
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -31,8 +28,7 @@ export const highlanders = [
     title: "Hugh Renton",
     firstname: "Hugh",
     lastname: "Renton",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -40,8 +36,7 @@ export const highlanders = [
     title: "Folau Fakatava",
     firstname: "Folau",
     lastname: "Fakatava",
-    team: "Highlanders",
-    position: "scrumhalf",
+    teams: ["highlanders"],
     positions: ["scrumhalf"],
   },
   {
@@ -49,8 +44,7 @@ export const highlanders = [
     title: "Sam Gilbert",
     firstname: "Sam",
     lastname: "Gilbert",
-    team: "Highlanders",
-    position: "centre",
+    teams: ["highlanders"],
     positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
@@ -58,8 +52,7 @@ export const highlanders = [
     title: "Jacob Ratumaitavuki-Kneepkens",
     firstname: "Jacob",
     lastname: "Ratumaitavuki-Kneepkens",
-    team: "Highlanders",
-    position: "outsideBack",
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -67,8 +60,7 @@ export const highlanders = [
     title: "Tanielu Tele'a",
     firstname: "Tanielu",
     lastname: "Tele'a",
-    team: "Highlanders",
-    position: "centre",
+    teams: ["highlanders"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -76,8 +68,7 @@ export const highlanders = [
     title: "Ethan de Groot",
     firstname: "Ethan",
     lastname: "De Groot",
-    team: "Highlanders",
-    position: "prop",
+    teams: ["highlanders", "allBlacks"],
     positions: ["prop"],
   },
   {
@@ -85,8 +76,7 @@ export const highlanders = [
     title: "Nikora Broughton",
     firstname: "Nikora",
     lastname: "Broughton",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -94,8 +84,7 @@ export const highlanders = [
     title: "Jonah Lowe",
     firstname: "Jonah",
     lastname: "Lowe",
-    team: "Highlanders",
-    position: "outsideBack",
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -103,8 +92,7 @@ export const highlanders = [
     title: "Sean Withy",
     firstname: "Sean",
     lastname: "Withy",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -112,8 +100,7 @@ export const highlanders = [
     title: "Ajay Faleafaga",
     firstname: "Ajay",
     lastname: "Faleafaga",
-    team: "Highlanders",
-    position: "flyhalf",
+    teams: ["highlanders"],
     positions: ["flyhalf"],
   },
   {
@@ -121,8 +108,7 @@ export const highlanders = [
     title: "Connor Garden-Bachop",
     firstname: "Connor",
     lastname: "Garden-Bachop",
-    team: "Highlanders",
-    position: "outsideBack",
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -130,8 +116,7 @@ export const highlanders = [
     title: "Matt Whaanga",
     firstname: "Matt",
     lastname: "Whaanga",
-    team: "Highlanders",
-    position: "centre",
+    teams: ["highlanders"],
     positions: ["centre"],
   },
   {
@@ -139,8 +124,7 @@ export const highlanders = [
     title: "Josh Timu",
     firstname: "Josh",
     lastname: "Timu",
-    team: "Highlanders",
-    position: "centre",
+    teams: ["highlanders"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -148,8 +132,7 @@ export const highlanders = [
     title: "Martin Bogado",
     firstname: "Martin",
     lastname: "Bogado",
-    team: "Highlanders",
-    position: "outsideBack",
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -157,8 +140,7 @@ export const highlanders = [
     title: "Pari Pari Parkinson",
     firstname: "Pari Pari",
     lastname: "Parkinson",
-    team: "Highlanders",
-    position: "lock",
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -166,8 +148,7 @@ export const highlanders = [
     title: "Max Hicks",
     firstname: "Max",
     lastname: "Hicks",
-    team: "Highlanders",
-    position: "lock",
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -175,8 +156,7 @@ export const highlanders = [
     title: "Cameron Millar",
     firstname: "Cameron",
     lastname: "Millar",
-    team: "Highlanders",
-    position: "flyhalf",
+    teams: ["highlanders"],
     positions: ["flyhalf"],
   },
   {
@@ -184,8 +164,7 @@ export const highlanders = [
     title: "James Arscott",
     firstname: "James",
     lastname: "Arscott",
-    team: "Highlanders",
-    position: "scrumhalf",
+    teams: ["highlanders"],
     positions: ["scrumhalf"],
   },
   {
@@ -193,8 +172,7 @@ export const highlanders = [
     title: "Will Tucker",
     firstname: "Will",
     lastname: "Tucker",
-    team: "Highlanders",
-    position: "lock",
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -202,8 +180,7 @@ export const highlanders = [
     title: "Mitchell Dunshea",
     firstname: "Mitchell",
     lastname: "Dunshea",
-    team: "Highlanders",
-    position: "lock",
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -211,8 +188,7 @@ export const highlanders = [
     title: "Fabian Holland",
     firstname: "Fabian",
     lastname: "Holland",
-    team: "Highlanders",
-    position: "lock",
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -220,8 +196,7 @@ export const highlanders = [
     title: "Nathan Hastie",
     firstname: "Nathan",
     lastname: "Hastie",
-    team: "Highlanders",
-    position: "scrumhalf",
+    teams: ["highlanders"],
     positions: ["scrumhalf"],
   },
   {
@@ -229,8 +204,7 @@ export const highlanders = [
     title: "Jake Te Hiwi",
     firstname: "Jake",
     lastname: "Te Hiwi",
-    team: "Highlanders",
-    position: "centre",
+    teams: ["highlanders"],
     positions: ["centre"],
   },
   {
@@ -238,8 +212,7 @@ export const highlanders = [
     title: "Hayden Michaels",
     firstname: "Hayden",
     lastname: "Michaels",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -247,8 +220,7 @@ export const highlanders = [
     title: "Oliver Haig",
     firstname: "Oliver",
     lastname: "Haig",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -256,8 +228,7 @@ export const highlanders = [
     title: "Rhys Patchell",
     firstname: "Rhys",
     lastname: "Patchell",
-    team: "Highlanders",
-    position: "flyhalf",
+    teams: ["highlanders"],
     positions: ["flyhalf"],
   },
   {
@@ -265,8 +236,7 @@ export const highlanders = [
     title: "Tom Sanders",
     firstname: "Tom",
     lastname: "Sanders",
-    team: "Highlanders",
-    position: "backrow",
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -274,8 +244,7 @@ export const highlanders = [
     title: "Jermaine Ainsley",
     firstname: "Jermaine",
     lastname: "Ainsley",
-    team: "Highlanders",
-    position: "prop",
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -283,8 +252,7 @@ export const highlanders = [
     title: "Henry Bell",
     firstname: "Henry",
     lastname: "Bell",
-    team: "Highlanders",
-    position: "hooker",
+    teams: ["highlanders"],
     positions: ["hooker"],
   },
   {
@@ -292,8 +260,7 @@ export const highlanders = [
     title: "Luca Inch",
     firstname: "Luca",
     lastname: "Inch",
-    team: "Highlanders",
-    position: "prop",
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -301,8 +268,7 @@ export const highlanders = [
     title: "Ricky Jackson",
     firstname: "Ricky",
     lastname: "Jackson",
-    team: "Highlanders",
-    position: "hooker",
+    teams: ["highlanders"],
     positions: ["hooker"],
   },
   {
@@ -310,8 +276,7 @@ export const highlanders = [
     title: "Ayden Johnstone",
     firstname: "Ayden",
     lastname: "Johnstone",
-    team: "Highlanders",
-    position: "prop",
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -319,8 +284,7 @@ export const highlanders = [
     title: "Dan Lienert-Brown",
     firstname: "Dan",
     lastname: "Lienert-Brown",
-    team: "Highlanders",
-    position: "prop",
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -328,8 +292,7 @@ export const highlanders = [
     title: "Saula Mau",
     firstname: "Saula",
     lastname: "Mau",
-    team: "Highlanders",
-    position: "prop",
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -337,8 +300,7 @@ export const highlanders = [
     title: "Jack Taylor",
     firstname: "Jack",
     lastname: "Taylor",
-    team: "Highlanders",
-    position: "hooker",
+    teams: ["highlanders"],
     positions: ["hooker"],
   }
 ]

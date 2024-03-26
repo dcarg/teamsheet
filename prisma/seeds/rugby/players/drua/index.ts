@@ -4,8 +4,7 @@ export const drua = [
     title: "Tevita Ikanivere",
     firstname: "Tevita",
     lastname: "Ikanivere",
-    team: "Fijian Drua",
-    position: "hooker",
+    teams: ["drua"],
     positions: ["hooker"],
   },
   {
@@ -13,8 +12,7 @@ export const drua = [
     title: "Iosefo Masi",
     firstname: "Iosefo",
     lastname: "Masi",
-    team: "Fijian Drua",
-    position: "centre",
+    teams: ["drua"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -22,8 +20,7 @@ export const drua = [
     title: "Selestino Ravutaumada",
     firstname: "Selestino",
     lastname: "Ravutaumada",
-    team: "Fijian Drua",
-    position: "outsideBack",
+    teams: ["drua"],
     positions: ["outsideBack"],
   },
   {
@@ -31,8 +28,7 @@ export const drua = [
     title: "Frank Lomani",
     firstname: "Frank",
     lastname: "Lomani",
-    team: "Fijian Drua",
-    position: "scrumhalf",
+    teams: ["drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -40,8 +36,7 @@ export const drua = [
     title: "Apisalome Vota",
     firstname: "Apisalome",
     lastname: "Vota",
-    team: "Fijian Drua",
-    position: "centre",
+    teams: ["drua"],
     positions: ["centre"],
   },
   {
@@ -49,8 +44,7 @@ export const drua = [
     title: "Kitione Salawa",
     firstname: "Kitione",
     lastname: "Salawa",
-    team: "Fijian Drua",
-    position: "backrow",
+    teams: ["drua"],
     positions: ["backrow"],
   },
   {
@@ -58,8 +52,7 @@ export const drua = [
     title: "Vilive Miramira",
     firstname: "Vilive",
     lastname: "Miramira",
-    team: "Fijian Drua",
-    position: "backrow",
+    teams: ["drua"],
     positions: ["backrow"],
   },
   {
@@ -67,8 +60,7 @@ export const drua = [
     title: "Taniela Rakuro",
     firstname: "Taniela",
     lastname: "Rakuro",
-    team: "Fijian Drua",
-    position: "outsideBack",
+    teams: ["drua"],
     positions: ["outsideBack"],
   },
   {
@@ -76,8 +68,7 @@ export const drua = [
     title: "Haereiti Hetet",
     firstname: "Haereiti",
     lastname: "Hetet",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   },
   {
@@ -85,8 +76,7 @@ export const drua = [
     title: "Ilaisa Droasese",
     firstname: "Ilaisa",
     lastname: "Droasese",
-    team: "Fijian Drua",
-    position: "outsideBack",
+    teams: ["drua"],
     positions: ["outsideBack"],
   },
   {
@@ -94,8 +84,7 @@ export const drua = [
     title: "Elia Canakaivata",
     firstname: "Elia",
     lastname: "Canakaivata",
-    team: "Fijian Drua",
-    position: "backrow",
+    teams: ["drua"],
     positions: ["backrow"],
   },
   {
@@ -103,8 +92,7 @@ export const drua = [
     title: "Meli Derenalagi",
     firstname: "Meli",
     lastname: "Derenalagi",
-    team: "Fijian Drua",
-    position: "backrow",
+    teams: ["drua"],
     positions: ["backrow"],
   },
   {
@@ -112,8 +100,7 @@ export const drua = [
     title: "Peni Matawalu",
     firstname: "Peni",
     lastname: "Matawalu",
-    team: "Fijian Drua",
-    position: "scrumhalf",
+    teams: ["drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -121,8 +108,7 @@ export const drua = [
     title: "Isoa Nasilasila",
     firstname: "Isoa",
     lastname: "Nasilasila",
-    team: "Fijian Drua",
-    position: "lock",
+    teams: ["drua"],
     positions: ["lock"],
   },
   {
@@ -130,8 +116,7 @@ export const drua = [
     title: "Caleb Muntz",
     firstname: "Caleb",
     lastname: "Muntz",
-    team: "Fijian Drua",
-    position: "flyhalf",
+    teams: ["drua"],
     positions: ["flyhalf"],
   },
   {
@@ -139,8 +124,7 @@ export const drua = [
     title: "Kemu Valetini",
     firstname: "Kemu",
     lastname: "Valetini",
-    team: "Fijian Drua",
-    position: "flyhalf",
+    teams: ["drua"],
     positions: ["flyhalf"],
   },
   {
@@ -148,8 +132,7 @@ export const drua = [
     title: "Te Ahiwaru Cirikidaveta",
     firstname: "Te Ahiwaru",
     lastname: "Cirikidaveta",
-    team: "Fijian Drua",
-    position: "lock",
+    teams: ["drua"],
     positions: ["lock", "backrow"],
   },
   {
@@ -157,8 +140,7 @@ export const drua = [
     title: "Michael Naitokani",
     firstname: "Michael",
     lastname: "Naitokani",
-    team: "Fijian Drua",
-    position: "centre",
+    teams: ["drua"],
     positions: ["centre"],
   },
   {
@@ -166,8 +148,7 @@ export const drua = [
     title: "Ratu Rotuisolia",
     firstname: "Ratu",
     lastname: "Rotuisolia",
-    team: "Fijian Drua",
-    position: "lock",
+    teams: ["drua"],
     positions: ["lock"],
   },
   {
@@ -175,8 +156,7 @@ export const drua = [
     title: "Tuidraki Samusamuvodre",
     firstname: "Tuidraki",
     lastname: "Samusamuvodre",
-    team: "Fijian Drua",
-    position: "outsideBack",
+    teams: ["drua"],
     positions: ["outsideBack"],
   },
   {
@@ -184,8 +164,7 @@ export const drua = [
     title: "Philip Baselala",
     firstname: "Philip",
     lastname: "Baselala",
-    team: "Fijian Drua",
-    position: "scrumhalf",
+    teams: ["drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -193,8 +172,7 @@ export const drua = [
     title: "Epeli Momo",
     firstname: "Epeli",
     lastname: "Momo",
-    team: "Fijian Drua",
-    position: "outsideBack",
+    teams: ["drua"],
     positions: ["outsideBack"],
   },
   {
@@ -202,8 +180,7 @@ export const drua = [
     title: "Epeli Waqaicece",
     firstname: "Epeli",
     lastname: "Waqaicece",
-    team: "Fijian Drua",
-    position: "centre",
+    teams: ["drua"],
     positions: ["centre"],
   },
   {
@@ -211,8 +188,7 @@ export const drua = [
     title: "Etonia Waqa",
     firstname: "Etonia",
     lastname: "Waqa",
-    team: "Fijian Drua",
-    position: "lock",
+    teams: ["drua"],
     positions: ["lock", "backrow"],
   },
   {
@@ -220,8 +196,7 @@ export const drua = [
     title: "Isaiah Ravula",
     firstname: "Isaiah",
     lastname: "Ravula",
-    team: "Fijian Drua",
-    position: "flyhalf",
+    teams: ["drua"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -229,8 +204,7 @@ export const drua = [
     title: "Isikeli Rabitu",
     firstname: "Isikeli",
     lastname: "Rabitu",
-    team: "Fijian Drua",
-    position: "flyhalf",
+    teams: ["drua"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -238,8 +212,7 @@ export const drua = [
     title: "Motikiai Murray",
     firstname: "Motikiai",
     lastname: "Murray",
-    team: "Fijian Drua",
-    position: "backrow",
+    teams: ["drua"],
     positions: ["backrow"],
   },
   {
@@ -247,8 +220,7 @@ export const drua = [
     title: "Sailosi Vukalokalo",
     firstname: "Sailosi",
     lastname: "Vukalokalo",
-    team: "Fijian Drua",
-    position: "lock",
+    teams: ["drua"],
     positions: ["lock"],
   },
   {
@@ -256,8 +228,7 @@ export const drua = [
     title: "Simione Kuruvoli",
     firstname: "Simione",
     lastname: "Kuruvoli",
-    team: "Fijian Drua",
-    position: "scrumhalf",
+    teams: ["drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -265,8 +236,7 @@ export const drua = [
     title: "Mesake Doge",
     firstname: "Mesake",
     lastname: "Doge",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   },
   {
@@ -274,8 +244,7 @@ export const drua = [
     title: "Mesulame Dolokoto",
     firstname: "Mesulame",
     lastname: "Dolokoto",
-    team: "Fijian Drua",
-    position: "hooker",
+    teams: ["drua"],
     positions: ["hooker"],
   },
   {
@@ -283,8 +252,7 @@ export const drua = [
     title: "Jone Koroiduadua",
     firstname: "Jone",
     lastname: "Koroiduadua",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   },
   {
@@ -292,8 +260,7 @@ export const drua = [
     title: "Livai Natave",
     firstname: "Livai",
     lastname: "Natave",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   },
   {
@@ -301,8 +268,7 @@ export const drua = [
     title: "Samuela Tawake",
     firstname: "Samuela",
     lastname: "Tawake",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   },
   {
@@ -310,8 +276,7 @@ export const drua = [
     title: "Zuriel Togiatama",
     firstname: "Zuriel",
     lastname: "Togiatama",
-    team: "Fijian Drua",
-    position: "hooker",
+    teams: ["drua"],
     positions: ["hooker"],
   },
   {
@@ -319,8 +284,7 @@ export const drua = [
     title: "Meli Tuni",
     firstname: "Meli",
     lastname: "Tuni",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   },
   {
@@ -328,8 +292,7 @@ export const drua = [
     title: "Emosi Tuqiri",
     firstname: "Emosi",
     lastname: "Tuqiri",
-    team: "Fijian Drua",
-    position: "prop",
+    teams: ["drua"],
     positions: ["prop"],
   }
 ]
