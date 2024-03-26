@@ -8,9 +8,9 @@ export const waratahs = [
     positions: ["prop"],
   },
   {
-    key: "davePorecki",
-    title: "Dave Porecki",
-    firstname: "Dave",
+    key: "davidPorecki",
+    title: "David Porecki",
+    firstname: "David",
     lastname: "Porecki",
     teams: ["waratahs", "wallabies"],
     positions: ["hooker"],
