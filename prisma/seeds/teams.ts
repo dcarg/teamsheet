@@ -1,4 +1,4 @@
-import { competitionTeams } from './teams/rugby'
+import { competitionTeams } from './rugby/teams'
 
 import type { Competition, PrismaClient } from '@prisma/client'
 
