@@ -20,6 +20,7 @@ type Router = ReturnType<typeof useRouter>
 
 type HandlePlayerSelectParams = {
   callbacks: { closeModal: () => void },
+  competitionId: number,
   player: PlayerWithPositions,
   router: Router,
   teamId: number,
@@ -30,6 +31,7 @@ type HandlePlayerSelectParams = {
 const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   const {
     callbacks: { closeModal },
+    competitionId,
     player,
     router,
     teamId,
@@ -38,6 +40,7 @@ const handlePlayerSelect = async (params: HandlePlayerSelectParams) => {
   } = params
 
   const payload = {
+    competitionId,
     data: { [teamSheetLayoutId]: player },
     teamId,
   }
@@ -69,6 +72,7 @@ const SelectPlayerModal = () => {
   const teamContextValue = useContext(TeamContext)
   const {
     callbacks,
+    competition,
     filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,
@@ -92,6 +96,7 @@ const SelectPlayerModal = () => {
             disabled={isAlreadyAssigned}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal: closeModal! },
+              competitionId: competition.id,
               player,
               router,
               teamId: team!.id,
