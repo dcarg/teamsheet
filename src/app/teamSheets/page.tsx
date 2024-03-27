@@ -10,8 +10,6 @@ import { findOrCreateUser } from '@functions/user'
 
 import PageHeader from '@components/PageHeader'
 
-import type { TeamSheetWithRelations } from '@types'
-
 import TeamSheetListItem from './_TeamSheetListItem'
 
 const Page = async () => {
@@ -19,31 +17,22 @@ const Page = async () => {
   const kindeCurrentUser = await getUser()
 
   const currentUser = await findOrCreateUser(kindeCurrentUser)
-  if (!currentUser?.id) redirect('/#')
+  if (!currentUser?.id) redirect('/')
 
-  const userTeamSheets = await prisma.teamSheet.findMany({
+  const teamSheets = await prisma.teamSheet.findMany({
     where: {
       userId: currentUser?.id,
     },
     include: {
-      team: {
-        include: {
-          competitionTeams: {
-            include: {
-              competition: {
-                include: {
-                  sport: true,
-                },
-              },
-            },
-          },
-        },
+      competition: {
+        include: { sport: true },
       },
+      team: true,
     },
     orderBy: { updatedAt: 'desc' },
   })
 
-  const hasTeamSheets = !!userTeamSheets?.length
+  const hasTeamSheets = !!teamSheets?.length
 
   return (
     <div className="flex flex-col max-w-column p-3">
@@ -51,14 +40,10 @@ const Page = async () => {
         icon={faUsersRectangle}
         title="My Team Sheets"
       />
-      
-      {hasTeamSheets && (
-        <div>
-          {userTeamSheets.map((teamSheet: TeamSheetWithRelations) => (
-            <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
-          ))}
-        </div>
-      )}
+
+      {hasTeamSheets && teamSheets.map(teamSheet => (
+        <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
+      ))}
     </div>
   )
 }

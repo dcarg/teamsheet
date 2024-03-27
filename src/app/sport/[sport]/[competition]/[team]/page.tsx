@@ -16,15 +16,28 @@ import type { PlayerWithPositions } from '@types'
 import TeamContent from './TeamContent'
 
 type PageProps = {
-  params: { team: string },
+  params: {
+    competition: string,
+    team: string,
+  },
   searchParams: { teamSheetId?: string },
 }
 
 const Page = async (props: PageProps) => {
   const {
-    params: { team: teamkey },
+    params: {
+      competition: competitionKey,
+      team: teamkey,
+    },
     searchParams: { teamSheetId },
   } = props
+
+  const competition = await prisma.competition.findUnique({
+    where: {
+      key: competitionKey,
+    },
+  })
+  if (!competition) return notFound()
 
   const team = await prisma.team.findUnique({
     where: {
@@ -66,7 +79,7 @@ const Page = async (props: PageProps) => {
   const isTeamSheetComplete = !!data && Object.keys(data).length === teamSize
 
   return (
-    <TeamContent players={players} team={team} teamSheet={teamSheet}>
+    <TeamContent competition={competition} players={players} team={team} teamSheet={teamSheet}>
       <TopBar />
       
       {hasTeamSheet && isTeamSheetComplete && <NameForm teamSheet={teamSheet} />}

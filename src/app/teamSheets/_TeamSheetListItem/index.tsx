@@ -3,27 +3,31 @@ import { faEdit, faShareFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 import Link from 'next/link'
 
-import type { TeamSheetWithRelations } from '@types'
+import type { TeamSheetWithCompetitionSportAndTeam } from '@types'
 
 interface TeamSheetListItemProps {
-  teamSheet: TeamSheetWithRelations,
+  teamSheet: TeamSheetWithCompetitionSportAndTeam,
 }
 
 const TeamSheetListItem = (props: TeamSheetListItemProps) => {
-  const { teamSheet } = props || {}
-  const { editId, shareId, team, title: teamSheetTitle } = teamSheet
-  const { competitionTeams, key: teamKey, title: teamTitle } = team
-
-  const hasMultipleCompetitionTeams = competitionTeams.length > 1
-  const firstCompetitionTeam = competitionTeams[0]
-  const { 
-    competition: {
-      title: competitionTitle,
-      sport: {
-        key: sportKey,
+  const {
+    teamSheet: {
+      competition: {
+        key: competitionKey,
+        sport: {
+          key: sportKey,
+        },
+        title: competitionTitle,
       },
-    },
-  } = firstCompetitionTeam
+      editId,
+      shareId,
+      team: {
+        key: teamKey,
+        title: teamTitle,
+      },
+      title: teamSheetTitle,
+    }
+  } = props
 
   return (
     <div className="flex border rounded mb-3 p-4 w-full justify-between">
@@ -33,23 +37,19 @@ const TeamSheetListItem = (props: TeamSheetListItemProps) => {
         </div>
         
         <div className="flex text-sm text-slate-400">
-          <div>{teamTitle}</div>
-
-          {!hasMultipleCompetitionTeams && (
-            <div>, {competitionTitle}</div>
-          )}
+          {teamTitle}, {competitionTitle}
         </div>
       </div>
 
       <div className="flex items-center">
-        <Link href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/${sportKey}/${teamKey}/share?teamSheetId=${shareId}`}>
+        <Link href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/sport/${sportKey}/${competitionKey}/${teamKey}/share?teamSheetId=${shareId}`}>
           <FontAwesomeIcon
             className="cursor-pointer ml-3 hover:text-cyan-400"
             icon={faShareFromSquare}
           />
         </Link>
 
-        <Link href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/${sportKey}/${teamKey}?teamSheetId=${editId}`}>
+        <Link href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/sport/${sportKey}/${competitionKey}/${teamKey}?teamSheetId=${editId}`}>
           <FontAwesomeIcon
             className="cursor-pointer ml-3 hover:text-cyan-400"   
             icon={faEdit}

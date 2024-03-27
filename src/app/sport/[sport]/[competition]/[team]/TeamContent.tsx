@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Team, TeamSheet } from '@prisma/client'
+import { Competition, Team, TeamSheet } from '@prisma/client'
 
 import TeamContext from '@contexts/teamContext'
 
@@ -12,13 +12,14 @@ import type { PlayerWithPositions } from '@types'
 
 interface TeamContentProps {
   children: React.ReactNode,
+  competition: Competition,
   players: PlayerWithPositions[],
   team: Team,
   teamSheet: TeamSheet | null,
 }
 
 const TeamContent = (props: TeamContentProps) => {
-  const { children, players, team, teamSheet } = props
+  const { children, competition, players, team, teamSheet } = props
 
   const [selectedPositions, setSelectedPositions] = useState<string[]>([])
   const [selectedTeamSheetLayoutId, setSelectedTeamSheetLayoutId] = useState<string>()
@@ -33,6 +34,7 @@ const TeamContent = (props: TeamContentProps) => {
       setSelectedPositions,
       setSelectedTeamSheetLayoutId,
     },
+    competition,
     filteredPlayers,
     selectedTeamSheetLayoutId,
     showModal,

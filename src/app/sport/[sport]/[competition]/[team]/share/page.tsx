@@ -10,13 +10,21 @@ import ShareBar from '@components/ShareBar'
 import ShareContent from './ShareContent'
 
 type PageProps = {
-  params: { team: string },
+  params: {
+    competition: string,
+    sport: string,
+    team: string,
+  },
   searchParams: { teamSheetId?: string },
 }
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const {
-    params: { team },
+    params: {
+      competition: competitionKey,
+      sport: sportKey,
+      team: teamkey,
+    },
     searchParams: { teamSheetId },
   } = props
 
@@ -46,7 +54,7 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
       siteName: 'Teamsheet',
       title: teamSheet?.title || `My ${teamSheet?.team?.title}`,
       type: 'website',
-      url: `/rugby/${team}/share?teamSheetId=${teamSheetId}`
+      url: `/sport/${sportKey}/${competitionKey}/${teamkey}/share?teamSheetId=${teamSheetId}`
     },
     twitter: {
       card: 'summary_large_image',

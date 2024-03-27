@@ -31,3 +31,14 @@ export type TeamSheetWithRelations = Prisma.TeamSheetGetPayload<
     },
   }
 >
+
+export type TeamSheetWithCompetitionSportAndTeam = Prisma.TeamSheetGetPayload<
+  {
+    include: {
+      competition: {
+        include: { sport: true },
+      },
+      team: true,
+    },
+  }
+>
