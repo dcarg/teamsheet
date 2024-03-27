@@ -56,7 +56,7 @@ export const wallabiesPlayers = [
     teams: ["reds", "wallabies"],
   },
   {
-    key: 'issakFinesLeleiwasa',
+    key: 'issakFines-Leleiwasa',
     title: 'Issak Fines-Leleiwasa',
     firstname: 'Issak',
     lastname: 'Fines-Leleiwasa',
