@@ -46,7 +46,7 @@ export default async function Home() {
         </Link>
       </div>
 
-      <div className="h-[900px] w-screen mt-[250px] bg-cover bg-[url('/landing-page-background.svg')]">
+      <div className="absolute start-0 h-[900px] w-screen mt-[250px] bg-cover bg-[url('/landing-page-background.svg')]">
         <div className="mt-[50px] pt-[250px] text-2xl text-white font-bold flex justify-center">
           TEAMSHEET IS SIMPLE
         </div>
