@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <div className="flex-col items-center justify-center">
       <div className="mt-[50px] text-2xl font-bold flex justify-center">
-        WE'VE ALL GOT A TEAM
+        WE&apos;VE ALL GOT A TEAM
       </div>
 
       <div className="mt-[50px] text-2xl font-bold flex justify-center">
@@ -76,7 +76,7 @@ export default async function Home() {
         </div>
 
         <div className="mt-[50px] text-xl text-white font-bold flex justify-center">
-          AND WE'RE ONLY JUST WARMING UP
+          AND WE&apos;RE ONLY JUST WARMING UP
         </div>
 
         <div className="mt-[10px] text-xl text-white font-bold flex justify-center">
