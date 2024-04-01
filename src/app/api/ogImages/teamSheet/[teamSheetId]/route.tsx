@@ -55,16 +55,18 @@ export const GET = async (request: NextRequest, requestParams: RequestParams) =>
           <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '32px' }}>
             <div
               style={{
+                display: '-webkit-box',
                 fontFamily: 'Futura Bold',
-                fontWeight: 'bold',
                 fontSize: '24px',
+                fontWeight: 'bold',
                 lineHeight: 1.2,
                 margin: 'auto',
                 maxHeight: '60px',
                 maxWidth: '390px',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
+                '-webkit-box-orient': 'vertical',
+                '-webkit-line-clamp': 2,
               }}
             >
               {title}
