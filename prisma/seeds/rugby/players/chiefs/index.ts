@@ -4,7 +4,7 @@ export const chiefs = [
     title: "Samisoni Taukei'aho",
     firstname: "Samisoni",
     lastname: "Taukei'aho",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["hooker"],
   },
   {
@@ -12,7 +12,7 @@ export const chiefs = [
     title: "Emoni Narawa",
     firstname: "Emoni",
     lastname: "Narawa",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["outsideBack"],
   },
   {
@@ -20,7 +20,7 @@ export const chiefs = [
     title: "Damian McKenzie",
     firstname: "Damian",
     lastname: "McKenzie",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -28,7 +28,7 @@ export const chiefs = [
     title: "Shaun Stevenson",
     firstname: "Shaun",
     lastname: "Stevenson",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["outsideBack"],
   },
   {
@@ -36,7 +36,7 @@ export const chiefs = [
     title: "Etene Nanai-Seturo",
     firstname: "Etene",
     lastname: "Nanai-Seturo",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["outsideBack"],
   },
   {
@@ -44,7 +44,7 @@ export const chiefs = [
     title: "Cortez Ratima",
     firstname: "Cortez",
     lastname: "Ratima",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["scrumhalf"],
   },
   {
@@ -52,7 +52,7 @@ export const chiefs = [
     title: "Tupou Vaa'i",
     firstname: "Tupou",
     lastname: "Vaa'i",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["lock", "backrow"],
   },
   {
@@ -60,7 +60,7 @@ export const chiefs = [
     title: "Quinn Tupaea",
     firstname: "Quinn",
     lastname: "Tupaea",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -68,7 +68,7 @@ export const chiefs = [
     title: "Anton Lienert-Brown",
     firstname: "Anton",
     lastname: "Lienert-Brown",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["centre"],
   },
   {
@@ -76,7 +76,7 @@ export const chiefs = [
     title: "Samipeni Finau",
     firstname: "Samipeni",
     lastname: "Finau",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["backrow"],
   },
   {
@@ -84,7 +84,7 @@ export const chiefs = [
     title: "Xavier Roe",
     firstname: "Xavier",
     lastname: "Roe",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["scrumhalf"],
   },
   {
@@ -92,7 +92,7 @@ export const chiefs = [
     title: "Luke Jacobson",
     firstname: "Luke",
     lastname: "Jacobson",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["backrow"],
   },
   {
@@ -100,7 +100,7 @@ export const chiefs = [
     title: "Daniel Rona",
     firstname: "Daniel",
     lastname: "Rona",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -108,7 +108,7 @@ export const chiefs = [
     title: "Josh Ioane",
     firstname: "Josh",
     lastname: "Ioane",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -116,7 +116,7 @@ export const chiefs = [
     title: "Simon Parker",
     firstname: "Simon",
     lastname: "Parker",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["backrow"],
   },
   {
@@ -124,7 +124,7 @@ export const chiefs = [
     title: "Rameka Poihipi",
     firstname: "Rameka",
     lastname: "Poihipi",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["centre"],
   },
   {
@@ -132,7 +132,7 @@ export const chiefs = [
     title: "Naitoa Ah Kuoi",
     firstname: "Naitoa",
     lastname: "Ah Kuoi",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["lock", "backrow"],
   },
   {
@@ -140,7 +140,7 @@ export const chiefs = [
     title: "Liam Coombes-Fabling",
     firstname: "Liam",
     lastname: "Coombes-Fabling",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["outsideBack"],
   },
   {
@@ -148,7 +148,7 @@ export const chiefs = [
     title: "Kaylum Boshier",
     firstname: "Kaylum",
     lastname: "Boshier",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["backrow"],
   },
   {
@@ -156,7 +156,7 @@ export const chiefs = [
     title: "Gideon Wrampling",
     firstname: "Gideon",
     lastname: "Wrampling",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["centre"],
   },
   {
@@ -164,7 +164,7 @@ export const chiefs = [
     title: "Manaaki Selby-Rickit",
     firstname: "Manaaki",
     lastname: "Selby-Rickit",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["lock"],
   },
   {
@@ -172,7 +172,7 @@ export const chiefs = [
     title: "Te Toiroa Tahuriorangi",
     firstname: "Te Toiroa",
     lastname: "Tahuriorangi",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["scrumhalf"],
   },
   {
@@ -180,7 +180,7 @@ export const chiefs = [
     title: "Peniasi Malimali",
     firstname: "Peniasi",
     lastname: "Malimali",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["outsideBack"],
   },
   {
@@ -188,7 +188,7 @@ export const chiefs = [
     title: "Josh Lord",
     firstname: "Josh",
     lastname: "Lord",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["lock"],
   },
   {
@@ -196,7 +196,7 @@ export const chiefs = [
     title: "Jimmy Tupou",
     firstname: "Jimmy",
     lastname: "Tupou",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["lock"],
   },
   {
@@ -204,7 +204,7 @@ export const chiefs = [
     title: "Kaleb Trask",
     firstname: "Kaleb",
     lastname: "Trask",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -212,7 +212,7 @@ export const chiefs = [
     title: "Malachi Wrampling-Alec",
     firstname: "Malachi",
     lastname: "Wrampling-Alec",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["backrow"],
   },
   {
@@ -220,7 +220,7 @@ export const chiefs = [
     title: "Tom Florence",
     firstname: "Tom",
     lastname: "Florence",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["backrow"],
   },
   {
@@ -228,7 +228,7 @@ export const chiefs = [
     title: "Wallace Sititi",
     firstname: "Wallace",
     lastname: "Sititi",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["backrow"],
   },
   {
@@ -236,7 +236,7 @@ export const chiefs = [
     title: "Sione Ahio",
     firstname: "Sione",
     lastname: "Ahio",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["prop"],
   },
   {
@@ -244,7 +244,7 @@ export const chiefs = [
     title: "George Dyer",
     firstname: "George",
     lastname: "Dyer",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["prop"],
   },
   {
@@ -252,7 +252,7 @@ export const chiefs = [
     title: "Kauvaka Kaivelata",
     firstname: "Kauvaka",
     lastname: "Kaivelata",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["prop"],
   },
   {
@@ -260,7 +260,7 @@ export const chiefs = [
     title: "Ollie Norris",
     firstname: "Ollie",
     lastname: "Norris",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["prop"],
   },
   {
@@ -268,7 +268,7 @@ export const chiefs = [
     title: "Reuben O'Neill",
     firstname: "Reuben",
     lastname: "O'Neill",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["prop"],
   },
   {
@@ -276,7 +276,7 @@ export const chiefs = [
     title: "Jared Proffit",
     firstname: "Jared",
     lastname: "Proffit",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["prop"],
   },
   {
@@ -284,7 +284,7 @@ export const chiefs = [
     title: "Aidan Ross",
     firstname: "Aidan",
     lastname: "Ross",
-    teams: ["chiefs", "allBlacks"],
+    teams: ["superRugby", "chiefs", "allBlacks"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const chiefs = [
     title: "Bradley Slater",
     firstname: "Bradley",
     lastname: "Slater",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["hooker"],
   },
   {
@@ -300,7 +300,7 @@ export const chiefs = [
     title: "Tyrone Thompson",
     firstname: "Tyrone",
     lastname: "Thompson",
-    teams: ["chiefs"],
+    teams: ["superRugby", "chiefs"],
     positions: ["hooker"],
   }
 ]

@@ -4,7 +4,7 @@ export const force = [
     title: "Carlo Tizzano",
     firstname: "Carlo",
     lastname: "Tizzano",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["backrow"],
   },
   {
@@ -12,7 +12,7 @@ export const force = [
     title: "Will Harris",
     firstname: "Will",
     lastname: "Harris",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["backrow"],
   },
   {
@@ -20,7 +20,7 @@ export const force = [
     title: "Sam Spink",
     firstname: "Sam",
     lastname: "Spink",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["centre"],
   },
   {
@@ -28,7 +28,7 @@ export const force = [
     title: "Jeremy Williams",
     firstname: "Jeremy",
     lastname: "Williams",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["lock"],
   },
   {
@@ -36,7 +36,7 @@ export const force = [
     title: "Harry Potter",
     firstname: "Harry",
     lastname: "Potter",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["outsideBack"],
   },
   {
@@ -44,7 +44,7 @@ export const force = [
     title: "Santiago Medrano",
     firstname: "Santiago",
     lastname: "Medrano",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   },
   {
@@ -52,7 +52,7 @@ export const force = [
     title: "Issak Fines-Leleiwasa",
     firstname: "Issak",
     lastname: "Fines-Leleiwasa",
-    teams: ["force", "wallabies"],
+    teams: ["superRugby", "force", "wallabies"],
     positions: ["scrumhalf"],
   },
   {
@@ -60,7 +60,7 @@ export const force = [
     title: "Ben Donaldson",
     firstname: "Ben",
     lastname: "Donaldson",
-    teams: ["force", "wallabies"],
+    teams: ["superRugby", "force", "wallabies"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -68,7 +68,7 @@ export const force = [
     title: "Chase Tiatia",
     firstname: "Chase",
     lastname: "Tiatia",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["outsideBack"],
   },
   {
@@ -76,7 +76,7 @@ export const force = [
     title: "Hamish Stewart",
     firstname: "Hamish",
     lastname: "Stewart",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["centre", "flyhalf"],
   },
   {
@@ -84,7 +84,7 @@ export const force = [
     title: "Tim Anstee",
     firstname: "Tim",
     lastname: "Anstee",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["backrow"],
   },
   {
@@ -92,7 +92,7 @@ export const force = [
     title: "Felix Kalapu",
     firstname: "Felix",
     lastname: "Kalapu",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["lock"],
   },
   {
@@ -100,7 +100,7 @@ export const force = [
     title: "Bayley Kuenzle",
     firstname: "Bayley",
     lastname: "Kuenzle",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
@@ -108,7 +108,7 @@ export const force = [
     title: "Michael Wells",
     firstname: "Michael",
     lastname: "Wells",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["backrow"],
   },
   {
@@ -116,7 +116,7 @@ export const force = [
     title: "Max Burey",
     firstname: "Max",
     lastname: "Burey",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -124,7 +124,7 @@ export const force = [
     title: "Nic White",
     firstname: "Nic",
     lastname: "White",
-    teams: ["force", "wallabies"],
+    teams: ["superRugby", "force", "wallabies"],
     positions: ["scrumhalf"],
   },
   {
@@ -132,7 +132,7 @@ export const force = [
     title: "Ollie Callan",
     firstname: "Ollie",
     lastname: "Callan",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["backrow"],
   },
   {
@@ -140,7 +140,7 @@ export const force = [
     title: "George Poolman",
     firstname: "George",
     lastname: "Poolman",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["outsideBack"],
   },
   {
@@ -148,7 +148,7 @@ export const force = [
     title: "Ian Prior",
     firstname: "Ian",
     lastname: "Prior",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["scrumhalf"],
   },
   {
@@ -156,7 +156,7 @@ export const force = [
     title: "Jackson Pugh",
     firstname: "Jackson",
     lastname: "Pugh",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["lock", "backrow"],
   },
   {
@@ -164,7 +164,7 @@ export const force = [
     title: "Lopeti Faifua",
     firstname: "Lopeti",
     lastname: "Faifua",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["lock"],
   },
   {
@@ -172,7 +172,7 @@ export const force = [
     title: "Izack Rodda",
     firstname: "Izack",
     lastname: "Rodda",
-    teams: ["force", "wallabies"],
+    teams: ["superRugby", "force", "wallabies"],
     positions: ["lock"],
   },
   {
@@ -180,7 +180,7 @@ export const force = [
     title: "Nikolai Foliaki",
     firstname: "Nikolai",
     lastname: "Foliaki",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["centre"],
   },
   {
@@ -188,7 +188,7 @@ export const force = [
     title: "Campbell Parata",
     firstname: "Campbell",
     lastname: "Parata",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["flyhalf"],
   },
   {
@@ -196,7 +196,7 @@ export const force = [
     title: "Henry O'Donnell",
     firstname: "Henry",
     lastname: "O'Donnell",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["centre"],
   },
   {
@@ -204,7 +204,7 @@ export const force = [
     title: "Henry Robertson",
     firstname: "Henry",
     lastname: "Robertson",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["scrumhalf"],
   },
   {
@@ -212,7 +212,7 @@ export const force = [
     title: "Ollie Cummins",
     firstname: "Ollie",
     lastname: "Cummins",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["centre"],
   },
   {
@@ -220,7 +220,7 @@ export const force = [
     title: "Papillon Sevele",
     firstname: "Papillon",
     lastname: "Sevele",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["backrow"],
   },
   {
@@ -228,7 +228,7 @@ export const force = [
     title: "Reesjan Pasitoa",
     firstname: "Reesjan",
     lastname: "Pasitoa",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["flyhalf", "centre", "outsideBack"],
   },
   {
@@ -236,7 +236,7 @@ export const force = [
     title: "Siosifa Amone",
     firstname: "Siosifa",
     lastname: "Amone",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   },
   {
@@ -244,7 +244,7 @@ export const force = [
     title: "Charlie Hancock",
     firstname: "Charlie",
     lastname: "Hancock",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   },
   {
@@ -252,7 +252,7 @@ export const force = [
     title: "Harry Hoopert",
     firstname: "Harry",
     lastname: "Hoopert",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   },
   {
@@ -260,7 +260,7 @@ export const force = [
     title: "Tom Horton",
     firstname: "Tom",
     lastname: "Horton",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["hooker"],
   },
   {
@@ -268,7 +268,7 @@ export const force = [
     title: "Feleti Kaitu'u",
     firstname: "Feleti",
     lastname: "Kaitu'u",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["hooker"],
   },
   {
@@ -276,7 +276,7 @@ export const force = [
     title: "Atu Moli",
     firstname: "Atu",
     lastname: "Moli",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   },
   {
@@ -284,7 +284,7 @@ export const force = [
     title: "Marley Pearce",
     firstname: "Marley",
     lastname: "Pearce",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const force = [
     title: "Angus Wagner",
     firstname: "Angus",
     lastname: "Wagner",
-    teams: ["force"],
+    teams: ["superRugby", "force"],
     positions: ["prop"],
   }
 ]

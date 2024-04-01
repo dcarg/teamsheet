@@ -4,7 +4,7 @@ export const drua = [
     title: "Tevita Ikanivere",
     firstname: "Tevita",
     lastname: "Ikanivere",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["hooker"],
   },
   {
@@ -12,7 +12,7 @@ export const drua = [
     title: "Iosefo Masi",
     firstname: "Iosefo",
     lastname: "Masi",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -20,7 +20,7 @@ export const drua = [
     title: "Selestino Ravutaumada",
     firstname: "Selestino",
     lastname: "Ravutaumada",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["outsideBack"],
   },
   {
@@ -28,7 +28,7 @@ export const drua = [
     title: "Frank Lomani",
     firstname: "Frank",
     lastname: "Lomani",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -36,7 +36,7 @@ export const drua = [
     title: "Apisalome Vota",
     firstname: "Apisalome",
     lastname: "Vota",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["centre"],
   },
   {
@@ -44,7 +44,7 @@ export const drua = [
     title: "Kitione Salawa",
     firstname: "Kitione",
     lastname: "Salawa",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["backrow"],
   },
   {
@@ -52,7 +52,7 @@ export const drua = [
     title: "Vilive Miramira",
     firstname: "Vilive",
     lastname: "Miramira",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["backrow"],
   },
   {
@@ -60,7 +60,7 @@ export const drua = [
     title: "Taniela Rakuro",
     firstname: "Taniela",
     lastname: "Rakuro",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["outsideBack"],
   },
   {
@@ -68,7 +68,7 @@ export const drua = [
     title: "Haereiti Hetet",
     firstname: "Haereiti",
     lastname: "Hetet",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   },
   {
@@ -76,7 +76,7 @@ export const drua = [
     title: "Ilaisa Droasese",
     firstname: "Ilaisa",
     lastname: "Droasese",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["outsideBack"],
   },
   {
@@ -84,7 +84,7 @@ export const drua = [
     title: "Elia Canakaivata",
     firstname: "Elia",
     lastname: "Canakaivata",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["backrow"],
   },
   {
@@ -92,7 +92,7 @@ export const drua = [
     title: "Meli Derenalagi",
     firstname: "Meli",
     lastname: "Derenalagi",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["backrow"],
   },
   {
@@ -100,7 +100,7 @@ export const drua = [
     title: "Peni Matawalu",
     firstname: "Peni",
     lastname: "Matawalu",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -108,7 +108,7 @@ export const drua = [
     title: "Isoa Nasilasila",
     firstname: "Isoa",
     lastname: "Nasilasila",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["lock"],
   },
   {
@@ -116,7 +116,7 @@ export const drua = [
     title: "Caleb Muntz",
     firstname: "Caleb",
     lastname: "Muntz",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["flyhalf"],
   },
   {
@@ -124,7 +124,7 @@ export const drua = [
     title: "Kemu Valetini",
     firstname: "Kemu",
     lastname: "Valetini",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["flyhalf"],
   },
   {
@@ -132,7 +132,7 @@ export const drua = [
     title: "Te Ahiwaru Cirikidaveta",
     firstname: "Te Ahiwaru",
     lastname: "Cirikidaveta",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["lock", "backrow"],
   },
   {
@@ -140,7 +140,7 @@ export const drua = [
     title: "Michael Naitokani",
     firstname: "Michael",
     lastname: "Naitokani",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["centre"],
   },
   {
@@ -148,7 +148,7 @@ export const drua = [
     title: "Ratu Rotuisolia",
     firstname: "Ratu",
     lastname: "Rotuisolia",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["lock"],
   },
   {
@@ -156,7 +156,7 @@ export const drua = [
     title: "Tuidraki Samusamuvodre",
     firstname: "Tuidraki",
     lastname: "Samusamuvodre",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["outsideBack"],
   },
   {
@@ -164,7 +164,7 @@ export const drua = [
     title: "Philip Baselala",
     firstname: "Philip",
     lastname: "Baselala",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -172,7 +172,7 @@ export const drua = [
     title: "Epeli Momo",
     firstname: "Epeli",
     lastname: "Momo",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["outsideBack"],
   },
   {
@@ -180,7 +180,7 @@ export const drua = [
     title: "Epeli Waqaicece",
     firstname: "Epeli",
     lastname: "Waqaicece",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["centre"],
   },
   {
@@ -188,7 +188,7 @@ export const drua = [
     title: "Etonia Waqa",
     firstname: "Etonia",
     lastname: "Waqa",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["lock", "backrow"],
   },
   {
@@ -196,7 +196,7 @@ export const drua = [
     title: "Isaiah Ravula",
     firstname: "Isaiah",
     lastname: "Ravula",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -204,7 +204,7 @@ export const drua = [
     title: "Isikeli Rabitu",
     firstname: "Isikeli",
     lastname: "Rabitu",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -212,7 +212,7 @@ export const drua = [
     title: "Motikiai Murray",
     firstname: "Motikiai",
     lastname: "Murray",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["backrow"],
   },
   {
@@ -220,7 +220,7 @@ export const drua = [
     title: "Sailosi Vukalokalo",
     firstname: "Sailosi",
     lastname: "Vukalokalo",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["lock"],
   },
   {
@@ -228,7 +228,7 @@ export const drua = [
     title: "Simione Kuruvoli",
     firstname: "Simione",
     lastname: "Kuruvoli",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["scrumhalf"],
   },
   {
@@ -236,7 +236,7 @@ export const drua = [
     title: "Mesake Doge",
     firstname: "Mesake",
     lastname: "Doge",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   },
   {
@@ -244,7 +244,7 @@ export const drua = [
     title: "Mesulame Dolokoto",
     firstname: "Mesulame",
     lastname: "Dolokoto",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["hooker"],
   },
   {
@@ -252,7 +252,7 @@ export const drua = [
     title: "Jone Koroiduadua",
     firstname: "Jone",
     lastname: "Koroiduadua",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   },
   {
@@ -260,7 +260,7 @@ export const drua = [
     title: "Livai Natave",
     firstname: "Livai",
     lastname: "Natave",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   },
   {
@@ -268,7 +268,7 @@ export const drua = [
     title: "Samuela Tawake",
     firstname: "Samuela",
     lastname: "Tawake",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   },
   {
@@ -276,7 +276,7 @@ export const drua = [
     title: "Zuriel Togiatama",
     firstname: "Zuriel",
     lastname: "Togiatama",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["hooker"],
   },
   {
@@ -284,7 +284,7 @@ export const drua = [
     title: "Meli Tuni",
     firstname: "Meli",
     lastname: "Tuni",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const drua = [
     title: "Emosi Tuqiri",
     firstname: "Emosi",
     lastname: "Tuqiri",
-    teams: ["drua"],
+    teams: ["superRugby", "drua"],
     positions: ["prop"],
   }
 ]

@@ -4,7 +4,7 @@ export const brumbies = [
     title: "Tom Wright",
     firstname: "Tom",
     lastname: "Wright",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["outsideBack"],
   },
   {
@@ -12,7 +12,7 @@ export const brumbies = [
     title: "Lachlan Lonergan",
     firstname: "Lachlan",
     lastname: "Lonergan",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["hooker"],
   },
   {
@@ -20,7 +20,7 @@ export const brumbies = [
     title: "Rob Valetini",
     firstname: "Rob",
     lastname: "Valetini",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -28,7 +28,7 @@ export const brumbies = [
     title: "Corey Toole",
     firstname: "Corey",
     lastname: "Toole",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["outsideBack"],
   },
   {
@@ -36,7 +36,7 @@ export const brumbies = [
     title: "Ryan Lonergan",
     firstname: "Ryan",
     lastname: "Lonergan",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["scrumhalf"],
   },
   {
@@ -44,7 +44,7 @@ export const brumbies = [
     title: "Andy Muirhead",
     firstname: "Andy",
     lastname: "Muirhead",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["outsideBack"],
   },
   {
@@ -52,7 +52,7 @@ export const brumbies = [
     title: "James Slipper",
     firstname: "James",
     lastname: "Slipper",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -60,7 +60,7 @@ export const brumbies = [
     title: "Len Ikitau",
     firstname: "Len",
     lastname: "Ikitau",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["centre"],
   },
   {
@@ -68,7 +68,7 @@ export const brumbies = [
     title: "Tom Hooper",
     firstname: "Tom",
     lastname: "Hooper",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["backrow", "lock"],
   },
   {
@@ -76,7 +76,7 @@ export const brumbies = [
     title: "Connal McInerney",
     firstname: "Connal",
     lastname: "McInerney",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["hooker"],
   },
   {
@@ -84,7 +84,7 @@ export const brumbies = [
     title: "Nick Frost",
     firstname: "Nick",
     lastname: "Frost",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["lock"],
   },
   {
@@ -92,7 +92,7 @@ export const brumbies = [
     title: "Noah Lolesio",
     firstname: "Noah",
     lastname: "Lolesio",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["flyhalf"],
   },
   {
@@ -100,7 +100,7 @@ export const brumbies = [
     title: "Tamati Tua",
     firstname: "Tamati",
     lastname: "Tua",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["centre"],
   },
   {
@@ -108,7 +108,7 @@ export const brumbies = [
     title: "Ollie Sapsford",
     firstname: "Ollie",
     lastname: "Sapsford",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["centre"],
   },
   {
@@ -116,7 +116,7 @@ export const brumbies = [
     title: "Ben O'Donnell",
     firstname: "Ben",
     lastname: "O'Donnell",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["outsideBack"],
   },
   {
@@ -124,7 +124,7 @@ export const brumbies = [
     title: "Luke Reimer",
     firstname: "Luke",
     lastname: "Reimer",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["backrow"],
   },
   {
@@ -132,7 +132,7 @@ export const brumbies = [
     title: "Jack Debreczeni",
     firstname: "Jack",
     lastname: "Debreczeni",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -140,7 +140,7 @@ export const brumbies = [
     title: "Rory Scott",
     firstname: "Rory",
     lastname: "Scott",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["backrow"],
   },
   {
@@ -148,7 +148,7 @@ export const brumbies = [
     title: "Cadeyrn Neville",
     firstname: "Cadeyrn",
     lastname: "Neville",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["lock"],
   },
   {
@@ -156,7 +156,7 @@ export const brumbies = [
     title: "Jahrome Brown",
     firstname: "Jahrome",
     lastname: "Brown",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["backrow"],
   },
   {
@@ -164,7 +164,7 @@ export const brumbies = [
     title: "Charlie Cale",
     firstname: "Charlie",
     lastname: "Cale",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["lock", "backrow"],
   },
   {
@@ -172,7 +172,7 @@ export const brumbies = [
     title: "Darcy Swain",
     firstname: "Darcy",
     lastname: "Swain",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["lock"],
   },
   {
@@ -180,7 +180,7 @@ export const brumbies = [
     title: "Harrison Goddard",
     firstname: "Harrison",
     lastname: "Goddard",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["scrumhalf"],
   },
   {
@@ -188,7 +188,7 @@ export const brumbies = [
     title: "Hudson Creighton",
     firstname: "Hudson",
     lastname: "Creighton",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["centre"],
   },
   {
@@ -196,7 +196,7 @@ export const brumbies = [
     title: "Austin Anderson",
     firstname: "Austin",
     lastname: "Anderson",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["centre"],
   },
   {
@@ -204,7 +204,7 @@ export const brumbies = [
     title: "Declan Meredith",
     firstname: "Declan",
     lastname: "Meredith",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["outsideBack"],
   },
   {
@@ -212,7 +212,7 @@ export const brumbies = [
     title: "Ed Kennedy",
     firstname: "Ed",
     lastname: "Kennedy",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["backrow"],
   },
   {
@@ -220,7 +220,7 @@ export const brumbies = [
     title: "Klayton Thorn",
     firstname: "Klayton",
     lastname: "Thorn",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["scrumhalf"],
   },
   {
@@ -228,7 +228,7 @@ export const brumbies = [
     title: "Lachlan Shaw",
     firstname: "Lachlan",
     lastname: "Shaw",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["lock"],
   },
   {
@@ -236,7 +236,7 @@ export const brumbies = [
     title: "Allan Alaalatoa",
     firstname: "Allan",
     lastname: "Alaalatoa",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -244,7 +244,7 @@ export const brumbies = [
     title: "Fred Kaihea",
     firstname: "Fred",
     lastname: "Kaihea",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["prop"],
   },
   {
@@ -252,7 +252,7 @@ export const brumbies = [
     title: "Sefo Kautai",
     firstname: "Sefo",
     lastname: "Kautai",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["prop"],
   },
   {
@@ -260,7 +260,7 @@ export const brumbies = [
     title: "Billy Pollard",
     firstname: "Billy",
     lastname: "Pollard",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["hooker"],
   },
   {
@@ -268,7 +268,7 @@ export const brumbies = [
     title: "Blake Schoupp",
     firstname: "Blake",
     lastname: "Schoupp",
-    teams: ["brumbies", "wallabies"],
+    teams: ["superRugby", "brumbies", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -276,7 +276,7 @@ export const brumbies = [
     title: "Rhys Van Nek",
     firstname: "Rhys",
     lastname: "Van Nek",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["prop"],
   },
   {
@@ -284,7 +284,7 @@ export const brumbies = [
     title: "Harry Vella",
     firstname: "Harry",
     lastname: "Vella",
-    teams: ["brumbies"],
+    teams: ["superRugby", "brumbies"],
     positions: ["prop"],
   }
 ]

@@ -4,7 +4,7 @@ export const crusaders = [
     title: "Will Jordan",
     firstname: "Will",
     lastname: "Jordan",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["outsideBack"],
   },
   {
@@ -12,7 +12,7 @@ export const crusaders = [
     title: "Levi Aumua",
     firstname: "Levi",
     lastname: "Aumua",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["centre"],
   },
   {
@@ -20,7 +20,7 @@ export const crusaders = [
     title: "David Havili",
     firstname: "David",
     lastname: "Havili",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
@@ -28,7 +28,7 @@ export const crusaders = [
     title: "Macca Springer",
     firstname: "Macca",
     lastname: "Springer",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["outsideBack"],
   },
   {
@@ -36,7 +36,7 @@ export const crusaders = [
     title: "Sevu Reece",
     firstname: "Sevu",
     lastname: "Reece",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["outsideBack"],
   },
   {
@@ -44,7 +44,7 @@ export const crusaders = [
     title: "Ethan Blackadder",
     firstname: "Ethan",
     lastname: "Blackadder",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["backrow"],
   },
   {
@@ -52,7 +52,7 @@ export const crusaders = [
     title: "Rivez Reihana",
     firstname: "Rivez",
     lastname: "Reihana",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -60,7 +60,7 @@ export const crusaders = [
     title: "George Bell",
     firstname: "George",
     lastname: "Bell",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["hooker"],
   },
   {
@@ -68,7 +68,7 @@ export const crusaders = [
     title: "Brodie McAlister",
     firstname: "Brodie",
     lastname: "McAlister",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["hooker"],
   },
   {
@@ -76,7 +76,7 @@ export const crusaders = [
     title: "Scott Barrett",
     firstname: "Scott",
     lastname: "Barrett",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["lock", "backrow"],
   },
   {
@@ -84,7 +84,7 @@ export const crusaders = [
     title: "Noah Hotham",
     firstname: "Noah",
     lastname: "Hotham",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["scrumhalf"],
   },
   {
@@ -92,7 +92,7 @@ export const crusaders = [
     title: "Dallas McLeod",
     firstname: "Dallas",
     lastname: "McLeod",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -100,7 +100,7 @@ export const crusaders = [
     title: "Codie Taylor",
     firstname: "Codie",
     lastname: "Taylor",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["hooker"],
   },
   {
@@ -108,7 +108,7 @@ export const crusaders = [
     title: "Manasa Mataele",
     firstname: "Manasa",
     lastname: "Mataele",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["outsideBack"],
   },
   {
@@ -116,7 +116,7 @@ export const crusaders = [
     title: "Heremaia Murray",
     firstname: "Heremaia",
     lastname: "Murray",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["outsideBack"],
   },
   {
@@ -124,7 +124,7 @@ export const crusaders = [
     title: "Christian Lio-Willie",
     firstname: "Christian",
     lastname: "Lio-Willie",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["backrow"],
   },
   {
@@ -132,7 +132,7 @@ export const crusaders = [
     title: "Taha Kemara",
     firstname: "Taha",
     lastname: "Kemara",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["flyhalf"],
   },
   {
@@ -140,7 +140,7 @@ export const crusaders = [
     title: "Tom Christie",
     firstname: "Tom",
     lastname: "Christie",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["backrow"],
   },
   {
@@ -148,7 +148,7 @@ export const crusaders = [
     title: "Jamie Hannah",
     firstname: "Jamie",
     lastname: "Hannah",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["lock"],
   },
   {
@@ -156,7 +156,7 @@ export const crusaders = [
     title: "Chay Fihaki",
     firstname: "Chay",
     lastname: "Fihaki",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["outsideBack"],
   },
   {
@@ -164,7 +164,7 @@ export const crusaders = [
     title: "Willi Heinz",
     firstname: "Willi",
     lastname: "Heinz",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["scrumhalf"],
   },
   {
@@ -172,7 +172,7 @@ export const crusaders = [
     title: "Dom Gardiner",
     firstname: "Dom",
     lastname: "Gardiner",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["backrow"],
   },
   {
@@ -180,7 +180,7 @@ export const crusaders = [
     title: "Mitchell Drummond",
     firstname: "Mitchell",
     lastname: "Drummond",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["scrumhalf"],
   },
   {
@@ -188,7 +188,7 @@ export const crusaders = [
     title: "Cullen Grace",
     firstname: "Cullen",
     lastname: "Grace",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["backrow"],
   },
   {
@@ -196,7 +196,7 @@ export const crusaders = [
     title: "Zach Gallagher",
     firstname: "Zach",
     lastname: "Gallagher",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["lock"],
   },
   {
@@ -204,7 +204,7 @@ export const crusaders = [
     title: "Quinten Strange",
     firstname: "Quinten",
     lastname: "Strange",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["lock"],
   },
   {
@@ -212,7 +212,7 @@ export const crusaders = [
     title: "Fergus Burke",
     firstname: "Fergus",
     lastname: "Burke",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -220,7 +220,7 @@ export const crusaders = [
     title: "Andrew Turner",
     firstname: "Andrew",
     lastname: "Turner",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["lock"],
   },
   {
@@ -228,7 +228,7 @@ export const crusaders = [
     title: "Jone Rova",
     firstname: "Jone",
     lastname: "Rova",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["centre"],
   },
   {
@@ -236,7 +236,7 @@ export const crusaders = [
     title: "Leigh Halfpenny",
     firstname: "Leigh",
     lastname: "Halfpenny",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["outsideBack"],
   },
   {
@@ -244,7 +244,7 @@ export const crusaders = [
     title: "Ryan Crotty",
     firstname: "Ryan",
     lastname: "Crotty",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["centre"],
   },
   {
@@ -252,7 +252,7 @@ export const crusaders = [
     title: "Tahlor Cahill",
     firstname: "Tahlor",
     lastname: "Cahill",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["lock"],
   },
   {
@@ -260,7 +260,7 @@ export const crusaders = [
     title: "Corey Kellow",
     firstname: "Corey",
     lastname: "Kellow",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["backrow"],
   },
   {
@@ -268,7 +268,7 @@ export const crusaders = [
     title: "George Bower",
     firstname: "George",
     lastname: "Bower",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["prop"],
   },
   {
@@ -276,7 +276,7 @@ export const crusaders = [
     title: "Finlay Brewis",
     firstname: "Finlay",
     lastname: "Brewis",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["prop"],
   },
   {
@@ -284,7 +284,7 @@ export const crusaders = [
     title: "Owen Franks",
     firstname: "Owen",
     lastname: "Franks",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const crusaders = [
     title: "Ioane Moananu",
     firstname: "Ioane",
     lastname: "Moananu",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["hooker"],
   },
   {
@@ -300,7 +300,7 @@ export const crusaders = [
     title: "Joe Moody",
     firstname: "Joe",
     lastname: "Moody",
-    teams: ["crusaders"],
+    teams: ["superRugby", "crusaders"],
     positions: ["prop"],
   },
   {
@@ -308,7 +308,7 @@ export const crusaders = [
     title: "Fletcher Newell",
     firstname: "Fletcher",
     lastname: "Newell",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["prop"],
   },
   {
@@ -316,7 +316,7 @@ export const crusaders = [
     title: "Tamaiti Williams",
     firstname: "Tamaiti",
     lastname: "Williams",
-    teams: ["crusaders", "allBlacks"],
+    teams: ["superRugby", "crusaders", "allBlacks"],
     positions: ["prop"],
   }
 ]

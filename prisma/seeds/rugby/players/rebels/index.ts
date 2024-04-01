@@ -4,7 +4,7 @@ export const rebels = [
     title: "Carter Gordon",
     firstname: "Carter",
     lastname: "Gordon",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["flyhalf"],
   },
   {
@@ -12,7 +12,7 @@ export const rebels = [
     title: "Andrew Kellaway",
     firstname: "Andrew",
     lastname: "Kellaway",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -20,7 +20,7 @@ export const rebels = [
     title: "Matt Proctor",
     firstname: "Matt",
     lastname: "Proctor",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["centre"],
   },
   {
@@ -28,7 +28,7 @@ export const rebels = [
     title: "Josh Kemeny",
     firstname: "Josh",
     lastname: "Kemeny",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -36,7 +36,7 @@ export const rebels = [
     title: "Ryan Louwrens",
     firstname: "Ryan",
     lastname: "Louwrens",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["scrumhalf"],
   },
   {
@@ -44,7 +44,7 @@ export const rebels = [
     title: "Alex Mafi",
     firstname: "Alex",
     lastname: "Mafi",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["hooker"],
   },
   {
@@ -52,7 +52,7 @@ export const rebels = [
     title: "Filipo Daugunu",
     firstname: "Filipo",
     lastname: "Daugunu",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -60,7 +60,7 @@ export const rebels = [
     title: "Josh Canham",
     firstname: "Josh",
     lastname: "Canham",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["lock"],
   },
   {
@@ -68,7 +68,7 @@ export const rebels = [
     title: "Lachie Anderson",
     firstname: "Lachie",
     lastname: "Anderson",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["outsideBack"],
   },
   {
@@ -76,7 +76,7 @@ export const rebels = [
     title: "Brad Wilkin",
     firstname: "Brad",
     lastname: "Wilkin",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -84,7 +84,7 @@ export const rebels = [
     title: "Matt Gibbon",
     firstname: "Matt",
     lastname: "Gibbon",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -92,7 +92,7 @@ export const rebels = [
     title: "Vaiolini Ekuasi",
     firstname: "Vaiolini",
     lastname: "Ekuasi",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["backrow"],
   },
   {
@@ -100,7 +100,7 @@ export const rebels = [
     title: "Joe Pincus",
     firstname: "Joe",
     lastname: "Pincus",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["outsideBack"],
   },
   {
@@ -108,7 +108,7 @@ export const rebels = [
     title: "David Feliuai",
     firstname: "David",
     lastname: "Feliuai",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["centre"],
   },
   {
@@ -116,7 +116,7 @@ export const rebels = [
     title: "Nick Jooste",
     firstname: "Nick",
     lastname: "Jooste",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -124,7 +124,7 @@ export const rebels = [
     title: "Jake Strachan",
     firstname: "Jake",
     lastname: "Strachan",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -132,7 +132,7 @@ export const rebels = [
     title: "Lukas Ripley",
     firstname: "Lukas",
     lastname: "Ripley",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -140,7 +140,7 @@ export const rebels = [
     title: "Angelo Smith",
     firstname: "Angelo",
     lastname: "Smith",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["lock"],
   },
   {
@@ -148,7 +148,7 @@ export const rebels = [
     title: "Tuaina Taii Tualima",
     firstname: "Tuaina",
     lastname: "Taii Tualima",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["lock", "backrow"],
   },
   {
@@ -156,7 +156,7 @@ export const rebels = [
     title: "James Tuttle",
     firstname: "James",
     lastname: "Tuttle",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["scrumhalf"],
   },
   {
@@ -164,7 +164,7 @@ export const rebels = [
     title: "Daniel Maiava",
     firstname: "Daniel",
     lastname: "Maiava",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["backrow"],
   },
   {
@@ -172,7 +172,7 @@ export const rebels = [
     title: "Darby Lancaster",
     firstname: "Darby",
     lastname: "Lancaster",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["outsideBack"],
   },
   {
@@ -180,7 +180,7 @@ export const rebels = [
     title: "David Vaihu",
     firstname: "David",
     lastname: "Vaihu",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -188,7 +188,7 @@ export const rebels = [
     title: "Divad Palu",
     firstname: "Divad",
     lastname: "Palu",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["centre"],
   },
   {
@@ -196,7 +196,7 @@ export const rebels = [
     title: "Glen Vaihu",
     firstname: "Glen",
     lastname: "Vaihu",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["outsideBack"],
   },
   {
@@ -204,7 +204,7 @@ export const rebels = [
     title: "Jack Maunder",
     firstname: "Jack",
     lastname: "Maunder",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["scrumhalf"],
   },
   {
@@ -212,7 +212,7 @@ export const rebels = [
     title: "Lebron Naea",
     firstname: "Lebron",
     lastname: "Naea",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["centre"],
   },
   {
@@ -220,7 +220,7 @@ export const rebels = [
     title: "Lukhan Salakaia-Loto",
     firstname: "Lukhan",
     lastname: "Salakaia-Loto",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["lock"],
   },
   {
@@ -228,7 +228,7 @@ export const rebels = [
     title: "Mason Gordon",
     firstname: "Mason",
     lastname: "Gordon",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["flyhalf"],
   },
   {
@@ -236,7 +236,7 @@ export const rebels = [
     title: "Rob Leota",
     firstname: "Rob",
     lastname: "Leota",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -244,7 +244,7 @@ export const rebels = [
     title: "Zac Hough",
     firstname: "Zac",
     lastname: "Hough",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["backrow"],
   },
   {
@@ -252,7 +252,7 @@ export const rebels = [
     title: "Isaac Aedo Kailea",
     firstname: "Isaac",
     lastname: "Aedo Kailea",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["prop"],
   },
   {
@@ -260,7 +260,7 @@ export const rebels = [
     title: "Ethan Dobbins",
     firstname: "Ethan",
     lastname: "Dobbins",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["hooker"],
   },
   {
@@ -268,7 +268,7 @@ export const rebels = [
     title: "Cabous Eloff",
     firstname: "Cabous",
     lastname: "Eloff",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["prop"],
   },
   {
@@ -276,7 +276,7 @@ export const rebels = [
     title: "Pone Fa'amausili",
     firstname: "Pone",
     lastname: "Fa'amausili",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -284,7 +284,7 @@ export const rebels = [
     title: "Sam Talakai",
     firstname: "Sam",
     lastname: "Talakai",
-    teams: ["rebels"],
+    teams: ["superRugby", "rebels"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const rebels = [
     title: "Taniela Tupou",
     firstname: "Taniela",
     lastname: "Tupou",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -300,7 +300,7 @@ export const rebels = [
     title: "Jordan Uelese",
     firstname: "Jordan",
     lastname: "Uelese",
-    teams: ["rebels", "wallabies"],
+    teams: ["superRugby", "rebels", "wallabies"],
     positions: ["hooker"],
   }
 ]

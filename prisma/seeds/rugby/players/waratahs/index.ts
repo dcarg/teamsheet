@@ -4,7 +4,7 @@ export const waratahs = [
     title: "Angus Bell",
     firstname: "Angus",
     lastname: "Bell",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -12,7 +12,7 @@ export const waratahs = [
     title: "David Porecki",
     firstname: "David",
     lastname: "Porecki",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["hooker"],
   },
   {
@@ -20,7 +20,7 @@ export const waratahs = [
     title: "Mark Nawaqanitawase",
     firstname: "Mark",
     lastname: "Nawaqanitawase",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["outsideBack"],
   },
   {
@@ -28,7 +28,7 @@ export const waratahs = [
     title: "Harry Johnson-Holmes",
     firstname: "Harry",
     lastname: "Johnson-Holmes",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -36,7 +36,7 @@ export const waratahs = [
     title: "Langi Gleeson",
     firstname: "Langi",
     lastname: "Gleeson",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -44,7 +44,7 @@ export const waratahs = [
     title: "Dylan Pietsch",
     firstname: "Dylan",
     lastname: "Pietsch",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["outsideBack"],
   },
   {
@@ -52,7 +52,7 @@ export const waratahs = [
     title: "Max Jorgensen",
     firstname: "Max",
     lastname: "Jorgensen",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["outsideBack"],
   },
   {
@@ -60,7 +60,7 @@ export const waratahs = [
     title: "Jed Holloway",
     firstname: "Jed",
     lastname: "Holloway",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["lock", "backrow"],
   },
   {
@@ -68,7 +68,7 @@ export const waratahs = [
     title: "Izaia Perese",
     firstname: "Izaia",
     lastname: "Perese",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -76,7 +76,7 @@ export const waratahs = [
     title: "Jake Gordon",
     firstname: "Jake",
     lastname: "Gordon",
-    teams: ["waratahs", "wallabies"],
+    teams: ["superRugby", "waratahs", "wallabies"],
     positions: ["scrumhalf"],
   },
   {
@@ -84,7 +84,7 @@ export const waratahs = [
     title: "Miles Amatosero",
     firstname: "Miles",
     lastname: "Amatosero",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["lock"],
   },
   {
@@ -92,7 +92,7 @@ export const waratahs = [
     title: "Lalakai Foketi",
     firstname: "Lalakai",
     lastname: "Foketi",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["centre"],
   },
   {
@@ -100,7 +100,7 @@ export const waratahs = [
     title: "Tane Edmed",
     firstname: "Tane",
     lastname: "Edmed",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["flyhalf", "centre"],
   },
   {
@@ -108,7 +108,7 @@ export const waratahs = [
     title: "Charlie Gamble",
     firstname: "Charlie",
     lastname: "Gamble",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["backrow"],
   },
   {
@@ -116,7 +116,7 @@ export const waratahs = [
     title: "Hugh Sinclair",
     firstname: "Hugh",
     lastname: "Sinclair",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["backrow", "lock"],
   },
   {
@@ -124,7 +124,7 @@ export const waratahs = [
     title: "Ned Hanigan",
     firstname: "Ned",
     lastname: "Hanigan",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["lock", "backrow"],
   },
   {
@@ -132,7 +132,7 @@ export const waratahs = [
     title: "Joey Walton",
     firstname: "Joey",
     lastname: "Walton",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -140,7 +140,7 @@ export const waratahs = [
     title: "Mosese Tuipulotu",
     firstname: "Mosese",
     lastname: "Tuipulotu",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["centre"],
   },
   {
@@ -148,7 +148,7 @@ export const waratahs = [
     title: "Lachlan Swinton",
     firstname: "Lachlan",
     lastname: "Swinton",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["backrow"],
   },
   {
@@ -156,7 +156,7 @@ export const waratahs = [
     title: "Teddy Wilson",
     firstname: "Teddy",
     lastname: "Wilson",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["scrumhalf"],
   },
   {
@@ -164,7 +164,7 @@ export const waratahs = [
     title: "Jack Bowen",
     firstname: "Jack",
     lastname: "Bowen",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -172,7 +172,7 @@ export const waratahs = [
     title: "Fergus Lee-Warner",
     firstname: "Fergus",
     lastname: "Lee-Warner",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["backrow", "lock"],
   },
   {
@@ -180,7 +180,7 @@ export const waratahs = [
     title: "Jack Grant",
     firstname: "Jack",
     lastname: "Grant",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["scrumhalf"],
   },
   {
@@ -188,7 +188,7 @@ export const waratahs = [
     title: "Harry Wilson",
     firstname: "Harry",
     lastname: "Wilson",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -196,7 +196,7 @@ export const waratahs = [
     title: "Mesu Kunavula",
     firstname: "Mesu",
     lastname: "Kunavula",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["backrow"],
   },
   {
@@ -204,7 +204,7 @@ export const waratahs = [
     title: "Ned Slack-Smith",
     firstname: "Ned",
     lastname: "Slack-Smith",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["backrow"],
   },
   {
@@ -212,7 +212,7 @@ export const waratahs = [
     title: "Vuate Karawalevu",
     firstname: "Vuate",
     lastname: "Karawalevu",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["outsideBack"],
   },
   {
@@ -220,7 +220,7 @@ export const waratahs = [
     title: "Will Harrison",
     firstname: "Will",
     lastname: "Harrison",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["flyhalf", "outsideBack"],
   },
   {
@@ -228,7 +228,7 @@ export const waratahs = [
     title: "Daniel Botha",
     firstname: "Daniel",
     lastname: "Botha",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["prop"],
   },
   {
@@ -236,7 +236,7 @@ export const waratahs = [
     title: "Theo Fourie",
     firstname: "Theo",
     lastname: "Fourie",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["hooker"],
   },
   {
@@ -244,7 +244,7 @@ export const waratahs = [
     title: "Archer Holz",
     firstname: "Archer",
     lastname: "Holz",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["prop"],
   },
   {
@@ -252,7 +252,7 @@ export const waratahs = [
     title: "Tom Lambert",
     firstname: "Tom",
     lastname: "Lambert",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["prop"],
   },
   {
@@ -260,7 +260,7 @@ export const waratahs = [
     title: "Tom Ross",
     firstname: "Tom",
     lastname: "Ross",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["prop"],
   },
   {
@@ -268,7 +268,7 @@ export const waratahs = [
     title: "Hayden Thompson-Stringer",
     firstname: "Hayden",
     lastname: "Thompson-Stringer",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["prop"],
   },
   {
@@ -276,7 +276,7 @@ export const waratahs = [
     title: "Mahe Vailanu",
     firstname: "Mahe",
     lastname: "Vailanu",
-    teams: ["waratahs"],
+    teams: ["superRugby", "waratahs"],
     positions: ["hooker"],
   }
 ]
