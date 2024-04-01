@@ -11,6 +11,7 @@ import { findOrCreateUser } from '@functions/user'
 import PageHeader from '@components/PageHeader'
 
 import TeamSheetListItem from './_TeamSheetListItem'
+import TeamSheetsBlankState from './_TeamSheetsBlankState'
 
 const Page = async () => {
   const { getUser } = getKindeServerSession()
@@ -40,6 +41,10 @@ const Page = async () => {
         icon={faUsersRectangle}
         title="My Team Sheets"
       />
+
+      {!hasTeamSheets && (
+        <TeamSheetsBlankState />
+      )}
 
       {hasTeamSheets && teamSheets.map(teamSheet => (
         <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
