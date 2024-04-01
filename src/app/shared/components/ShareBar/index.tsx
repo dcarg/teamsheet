@@ -52,6 +52,9 @@ const ShareBar = (props: ShareBarProps) => {
 
   const router = useRouter()
 
+  // WIP
+  // Can't use just editId & userId here as need to ensure its the current users team sheet to allow them to edit it!
+
   return (
     <div className="flex p-3">
       <Link
