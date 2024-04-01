@@ -67,7 +67,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
     })
   })
 
-  const records = playerRecords.map(async player => (
+  const records = playerRecords?.map(async player => (
     await prisma.player.upsert({
       where: { key: player.key },
       create: player,
