@@ -83,11 +83,4 @@ export const superRugbyTeams = [
     secondaryColor: '#FFFFFF',
     tertiaryColor: '#A92A38',
   },
-  {
-    key: 'superRugby',
-    title: 'Super Rugby',
-    primaryColor: '#FFFFFF',
-    secondaryColor: '#1A1FD7',
-    tertiaryColor: '#FFFFFF',
-  },
 ]

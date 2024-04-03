@@ -5,7 +5,7 @@ export const wallabiesPlayers = [
     firstname: 'Andrew',
     lastname: 'Kellaway',
     positions: ["outsideBack"],
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
   },
   {
     key: 'angusBell',
@@ -13,7 +13,7 @@ export const wallabiesPlayers = [
     firstname: 'Angus',
     lastname: 'Bell',
     positions: ["prop"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'benDonaldson',
@@ -21,7 +21,7 @@ export const wallabiesPlayers = [
     firstname: 'Ben',
     lastname: 'Donaldson',
     positions: ["flyhalf", "outsideBack"],
-    teams: ["superRugby", "force", "wallabies"],
+    teams: ["force", "wallabies"],
   },
   {
     key: 'blakeSchoupp',
@@ -29,7 +29,7 @@ export const wallabiesPlayers = [
     firstname: 'Blake',
     lastname: 'Schoupp',
     positions: ["prop"],
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
   },
   {
     key: 'carterGordon',
@@ -37,7 +37,7 @@ export const wallabiesPlayers = [
     firstname: 'Carter',
     lastname: 'Gordon',
     positions: ["flyhalf"],
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
   },
   {
     key: 'davidPorecki',
@@ -45,7 +45,7 @@ export const wallabiesPlayers = [
     firstname: 'David',
     lastname: 'Porecki',
     positions: ["hooker"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'fraserMcreight',
@@ -53,7 +53,7 @@ export const wallabiesPlayers = [
     firstname: 'Fraser',
     lastname: 'McReight',
     positions: ["backrow"],
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
   },
   {
     key: 'issakFines-Leleiwasa',
@@ -61,7 +61,7 @@ export const wallabiesPlayers = [
     firstname: 'Issak',
     lastname: 'Fines-Leleiwasa',
     positions: ["scrumhalf"],
-    teams: ["superRugby", "force", "wallabies"],
+    teams: ["force", "wallabies"],
   },
   {
     key: 'izaiaPerese',
@@ -69,7 +69,7 @@ export const wallabiesPlayers = [
     firstname: 'Izaia',
     lastname: 'Perese',
     positions: ["centre", "outsideBack"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'jamesSlipper',
@@ -77,7 +77,7 @@ export const wallabiesPlayers = [
     firstname: 'James',
     lastname: 'Slipper',
     positions: ["prop"],
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
   },
   {
     key: 'jordanPetaia',
@@ -85,7 +85,7 @@ export const wallabiesPlayers = [
     firstname: 'Jordan',
     lastname: 'Petaia',
     positions: ["outsideBack", "centre"],
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
   },
   {
     key: 'jordanUelese',
@@ -93,7 +93,7 @@ export const wallabiesPlayers = [
     firstname: 'Jordan',
     lastname: 'Uelese',
     positions: ["hooker"],
-    teams: ["superRugby", "wallabies"],
+    teams: ["wallabies"],
   },
   {
     key: 'joshKemeny',
@@ -101,7 +101,7 @@ export const wallabiesPlayers = [
     firstname: 'Josh',
     lastname: 'Kemeny',
     positions: ["backrow"],
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
   },
   {
     key: 'lalakaiFoketi',
@@ -109,7 +109,7 @@ export const wallabiesPlayers = [
     firstname: 'Lalakai',
     lastname: 'Foketi',
     positions: ["centre"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'langiGleeson',
@@ -117,7 +117,7 @@ export const wallabiesPlayers = [
     firstname: 'Langi',
     lastname: 'Gleeson',
     positions: ["backrow"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'marikaKoroibete',
@@ -125,7 +125,7 @@ export const wallabiesPlayers = [
     firstname: 'Marika',
     lastname: 'Koroibete',
     positions: ["outsideBack"],
-    teams: ["superRugby", "wallabies"],
+    teams: ["wallabies"],
   },
   {
     key: 'markNawaqanitawase',
@@ -133,7 +133,7 @@ export const wallabiesPlayers = [
     firstname: 'Mark',
     lastname: 'Nawaqanitawase',
     positions: ["outsideBack"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'mattFaessler',
@@ -141,7 +141,7 @@ export const wallabiesPlayers = [
     firstname: 'Matt',
     lastname: 'Faessler',
     positions: ["hooker"],
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
   },
   {
     key: 'mattPhilip',
@@ -149,7 +149,7 @@ export const wallabiesPlayers = [
     firstname: 'Matt',
     lastname: 'Philip',
     positions: ["lock"],
-    teams: ["superRugby", "wallabies"],
+    teams: ["wallabies"],
   },
   {
     key: 'maxJorgensen',
@@ -157,7 +157,7 @@ export const wallabiesPlayers = [
     firstname: 'Max',
     lastname: 'Jorgensen',
     positions: ["outsideBack"],
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
   },
   {
     key: 'nicWhite',
@@ -165,7 +165,7 @@ export const wallabiesPlayers = [
     firstname: 'Nic',
     lastname: 'White',
     positions: ["outsideBack"],
-    teams: ["superRugby", "force", "wallabies"],
+    teams: ["force", "wallabies"],
   },
   {
     key: 'nickFrost',
@@ -173,7 +173,7 @@ export const wallabiesPlayers = [
     firstname: 'Nick',
     lastname: 'Frost',
     positions: ["lock"],
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
   },
   {
     key: 'poneFaamausili',
@@ -181,7 +181,7 @@ export const wallabiesPlayers = [
     firstname: 'Pone',
     lastname: "Fa'amausili",
     positions: ["prop"],
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
   },
   {
     key: 'richieArnold',
@@ -197,7 +197,7 @@ export const wallabiesPlayers = [
     firstname: 'Rob',
     lastname: 'Leota',
     positions: ["backrow", "lock"],
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
   },
   {
     key: 'robValetini',
@@ -205,7 +205,7 @@ export const wallabiesPlayers = [
     firstname: 'Rob',
     lastname: 'Valetini',
     positions: ["backrow"],
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
   },
   {
     key: 'samuKerevi',
@@ -221,7 +221,7 @@ export const wallabiesPlayers = [
     firstname: 'Suliasi',
     lastname: 'Vunivalu',
     positions: ["outsideBack"],
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
   },
   {
     key: 'tanielaTupou',
@@ -229,7 +229,7 @@ export const wallabiesPlayers = [
     firstname: 'Taniela',
     lastname: 'Tupou',
     positions: ["outsideBack"],
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
   },
   {
     key: 'tateMcdermott',
@@ -237,7 +237,7 @@ export const wallabiesPlayers = [
     firstname: 'Tate',
     lastname: 'McDermott',
     positions: ["scrumhalf"],
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
   },
   {
     key: 'tomHooper',
@@ -245,7 +245,7 @@ export const wallabiesPlayers = [
     firstname: 'Tom',
     lastname: 'Hooper',
     positions: ["backrow", "lock"],
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
   },
   {
     key: 'willSkelton',
@@ -261,7 +261,7 @@ export const wallabiesPlayers = [
     firstname: 'Zane',
     lastname: 'Nonggorr',
     positions: ["prop"],
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
   },
   {
     key: 'michaelHooper',
@@ -276,7 +276,7 @@ export const wallabiesPlayers = [
     title: "Lachlan Lonergan",
     firstname: "Lachlan",
     lastname: "Lonergan",
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
     positions: ["hooker"],
   },
   {
@@ -284,7 +284,7 @@ export const wallabiesPlayers = [
     title: "James Slipper",
     firstname: "James",
     lastname: "Slipper",
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const wallabiesPlayers = [
     title: "Noah Lolesio",
     firstname: "Noah",
     lastname: "Lolesio",
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
     positions: ["flyhalf"],
   },
   {
@@ -300,7 +300,7 @@ export const wallabiesPlayers = [
     title: "Allan Alaalatoa",
     firstname: "Allan",
     lastname: "Alaalatoa",
-    teams: ["superRugby", "brumbies", "wallabies"],
+    teams: ["brumbies", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -308,7 +308,7 @@ export const wallabiesPlayers = [
     title: "Izack Rodda",
     firstname: "Izack",
     lastname: "Rodda",
-    teams: ["superRugby", "force", "wallabies"],
+    teams: ["force", "wallabies"],
     positions: ["lock"],
   },
   {
@@ -316,7 +316,7 @@ export const wallabiesPlayers = [
     title: "Filipo Daugunu",
     firstname: "Filipo",
     lastname: "Daugunu",
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
     positions: ["outsideBack", "centre"],
   },
   {
@@ -324,7 +324,7 @@ export const wallabiesPlayers = [
     title: "Brad Wilkin",
     firstname: "Brad",
     lastname: "Wilkin",
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -332,7 +332,7 @@ export const wallabiesPlayers = [
     title: "Matt Gibbon",
     firstname: "Matt",
     lastname: "Gibbon",
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -340,7 +340,7 @@ export const wallabiesPlayers = [
     title: "Lukhan Salakaia-Loto",
     firstname: "Lukhan",
     lastname: "Salakaia-Loto",
-    teams: ["superRugby", "rebels", "wallabies"],
+    teams: ["rebels", "wallabies"],
     positions: ["lock"],
   },
   {
@@ -348,7 +348,7 @@ export const wallabiesPlayers = [
     title: "Harry Wilson",
     firstname: "Harry",
     lastname: "Wilson",
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
     positions: ["backrow"],
   },
   {
@@ -356,7 +356,7 @@ export const wallabiesPlayers = [
     title: "James O'Connor",
     firstname: "James",
     lastname: "O'Connor",
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
     positions: ["flyhalf", "centre"],
   },
   {
@@ -364,7 +364,7 @@ export const wallabiesPlayers = [
     title: "Hunter Paisami",
     firstname: "Hunter",
     lastname: "Paisami",
-    teams: ["superRugby", "reds", "wallabies"],
+    teams: ["reds", "wallabies"],
     positions: ["centre"],
   },
   {
@@ -372,7 +372,7 @@ export const wallabiesPlayers = [
     title: "Harry Johnson-Holmes",
     firstname: "Harry",
     lastname: "Johnson-Holmes",
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
     positions: ["prop"],
   },
   {
@@ -380,7 +380,7 @@ export const wallabiesPlayers = [
     title: "Jed Holloway",
     firstname: "Jed",
     lastname: "Holloway",
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
     positions: ["lock", "backrow"],
   },
   {
@@ -388,7 +388,7 @@ export const wallabiesPlayers = [
     title: "Jake Gordon",
     firstname: "Jake",
     lastname: "Gordon",
-    teams: ["superRugby", "waratahs", "wallabies"],
+    teams: ["waratahs", "wallabies"],
     positions: ["scrumhalf"],
   }
 ]

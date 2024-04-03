@@ -4,7 +4,7 @@ export const highlanders = [
     title: "Timoci Tavatavanawai",
     firstname: "Timoci",
     lastname: "Tavatavanawai",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -12,7 +12,7 @@ export const highlanders = [
     title: "Billy Harmon",
     firstname: "Billy",
     lastname: "Harmon",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -20,7 +20,7 @@ export const highlanders = [
     title: "Jona Nareki",
     firstname: "Jona",
     lastname: "Nareki",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -28,7 +28,7 @@ export const highlanders = [
     title: "Hugh Renton",
     firstname: "Hugh",
     lastname: "Renton",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -36,7 +36,7 @@ export const highlanders = [
     title: "Folau Fakatava",
     firstname: "Folau",
     lastname: "Fakatava",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["scrumhalf"],
   },
   {
@@ -44,7 +44,7 @@ export const highlanders = [
     title: "Sam Gilbert",
     firstname: "Sam",
     lastname: "Gilbert",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["centre", "flyhalf", "outsideBack"],
   },
   {
@@ -52,7 +52,7 @@ export const highlanders = [
     title: "Jacob Ratumaitavuki-Kneepkens",
     firstname: "Jacob",
     lastname: "Ratumaitavuki-Kneepkens",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -60,7 +60,7 @@ export const highlanders = [
     title: "Tanielu Tele'a",
     firstname: "Tanielu",
     lastname: "Tele'a",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -68,7 +68,7 @@ export const highlanders = [
     title: "Ethan de Groot",
     firstname: "Ethan",
     lastname: "De Groot",
-    teams: ["superRugby", "highlanders", "allBlacks"],
+    teams: ["highlanders", "allBlacks"],
     positions: ["prop"],
   },
   {
@@ -76,7 +76,7 @@ export const highlanders = [
     title: "Nikora Broughton",
     firstname: "Nikora",
     lastname: "Broughton",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -84,7 +84,7 @@ export const highlanders = [
     title: "Jonah Lowe",
     firstname: "Jonah",
     lastname: "Lowe",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -92,7 +92,7 @@ export const highlanders = [
     title: "Sean Withy",
     firstname: "Sean",
     lastname: "Withy",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -100,7 +100,7 @@ export const highlanders = [
     title: "Ajay Faleafaga",
     firstname: "Ajay",
     lastname: "Faleafaga",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["flyhalf"],
   },
   {
@@ -108,7 +108,7 @@ export const highlanders = [
     title: "Connor Garden-Bachop",
     firstname: "Connor",
     lastname: "Garden-Bachop",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -116,7 +116,7 @@ export const highlanders = [
     title: "Matt Whaanga",
     firstname: "Matt",
     lastname: "Whaanga",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["centre"],
   },
   {
@@ -124,7 +124,7 @@ export const highlanders = [
     title: "Josh Timu",
     firstname: "Josh",
     lastname: "Timu",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["centre", "outsideBack"],
   },
   {
@@ -132,7 +132,7 @@ export const highlanders = [
     title: "Martin Bogado",
     firstname: "Martin",
     lastname: "Bogado",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["outsideBack"],
   },
   {
@@ -140,7 +140,7 @@ export const highlanders = [
     title: "Pari Pari Parkinson",
     firstname: "Pari Pari",
     lastname: "Parkinson",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -148,7 +148,7 @@ export const highlanders = [
     title: "Max Hicks",
     firstname: "Max",
     lastname: "Hicks",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -156,7 +156,7 @@ export const highlanders = [
     title: "Cameron Millar",
     firstname: "Cameron",
     lastname: "Millar",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["flyhalf"],
   },
   {
@@ -164,7 +164,7 @@ export const highlanders = [
     title: "James Arscott",
     firstname: "James",
     lastname: "Arscott",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["scrumhalf"],
   },
   {
@@ -172,7 +172,7 @@ export const highlanders = [
     title: "Will Tucker",
     firstname: "Will",
     lastname: "Tucker",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -180,7 +180,7 @@ export const highlanders = [
     title: "Mitchell Dunshea",
     firstname: "Mitchell",
     lastname: "Dunshea",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -188,7 +188,7 @@ export const highlanders = [
     title: "Fabian Holland",
     firstname: "Fabian",
     lastname: "Holland",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["lock"],
   },
   {
@@ -196,7 +196,7 @@ export const highlanders = [
     title: "Nathan Hastie",
     firstname: "Nathan",
     lastname: "Hastie",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["scrumhalf"],
   },
   {
@@ -204,7 +204,7 @@ export const highlanders = [
     title: "Jake Te Hiwi",
     firstname: "Jake",
     lastname: "Te Hiwi",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["centre"],
   },
   {
@@ -212,7 +212,7 @@ export const highlanders = [
     title: "Hayden Michaels",
     firstname: "Hayden",
     lastname: "Michaels",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -220,7 +220,7 @@ export const highlanders = [
     title: "Oliver Haig",
     firstname: "Oliver",
     lastname: "Haig",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -228,7 +228,7 @@ export const highlanders = [
     title: "Rhys Patchell",
     firstname: "Rhys",
     lastname: "Patchell",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["flyhalf"],
   },
   {
@@ -236,7 +236,7 @@ export const highlanders = [
     title: "Tom Sanders",
     firstname: "Tom",
     lastname: "Sanders",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["backrow"],
   },
   {
@@ -244,7 +244,7 @@ export const highlanders = [
     title: "Jermaine Ainsley",
     firstname: "Jermaine",
     lastname: "Ainsley",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -252,7 +252,7 @@ export const highlanders = [
     title: "Henry Bell",
     firstname: "Henry",
     lastname: "Bell",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["hooker"],
   },
   {
@@ -260,7 +260,7 @@ export const highlanders = [
     title: "Luca Inch",
     firstname: "Luca",
     lastname: "Inch",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -268,7 +268,7 @@ export const highlanders = [
     title: "Ricky Jackson",
     firstname: "Ricky",
     lastname: "Jackson",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["hooker"],
   },
   {
@@ -276,7 +276,7 @@ export const highlanders = [
     title: "Ayden Johnstone",
     firstname: "Ayden",
     lastname: "Johnstone",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -284,7 +284,7 @@ export const highlanders = [
     title: "Dan Lienert-Brown",
     firstname: "Dan",
     lastname: "Lienert-Brown",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -292,7 +292,7 @@ export const highlanders = [
     title: "Saula Mau",
     firstname: "Saula",
     lastname: "Mau",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["prop"],
   },
   {
@@ -300,7 +300,7 @@ export const highlanders = [
     title: "Jack Taylor",
     firstname: "Jack",
     lastname: "Taylor",
-    teams: ["superRugby", "highlanders"],
+    teams: ["highlanders"],
     positions: ["hooker"],
   }
 ]
