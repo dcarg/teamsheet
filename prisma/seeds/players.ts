@@ -1,6 +1,6 @@
-import getPlayers, { players } from './rugby/players'
-
 import type { PrismaClient, Position, Team } from '@prisma/client'
+
+import getPlayers from './rugby/players'
 
 // const getTeamPlayers = (teamKey: keyof typeof players) => {
 //   return players[teamKey] || []
@@ -66,17 +66,7 @@ const seedPlayers = (prisma: PrismaClient, positions: Position[], teams: Team[])
   //     }
   //   })
   // })
-  const teamIds = teams.reduce((acc, team) => {
-    acc[team.key] = team.id
-    return acc
-  }, {} as { [key: string]: number })
-
-  const positionIds = positions.reduce((acc, position) => {
-    acc[position.key] = position.id
-    return acc
-  }, {} as { [key: string]: number })
-
-  const players = getPlayers(positionIds, teamIds)
+  const players = getPlayers(positions, teams)
 
   const records = players.map(async player => (
     await prisma.player.upsert({
