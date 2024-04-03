@@ -33,34 +33,34 @@ export const players = {
   wallabies: wallabiesPlayers,
 }
 
-const getPlayers = (positions: Position[], teams: Team[]) => {
-  // Super Rugby Teams
-  const bluesId = teams.find(team => team.key === 'blues')!.id
-  const brumbiesId = teams.find(team => team.key === 'brumbies')!.id
-  const chiefsId = teams.find(team => team.key === 'chiefs')!.id
-  const crusadersId = teams.find(team => team.key === 'crusaders')!.id
-  const druaId = teams.find(team => team.key === 'drua')!.id
-  const forceId = teams.find(team => team.key === 'force')!.id
-  const highlandersId = teams.find(team => team.key === 'highlanders')!.id
-  const hurricanesId = teams.find(team => team.key === 'hurricanes')!.id
-  const moanaId = teams.find(team => team.key === 'moana')!.id
-  const rebelsId = teams.find(team => team.key === 'rebels')!.id
-  const redsId = teams.find(team => team.key === 'reds')!.id
-  const waratahsId = teams.find(team => team.key === 'waratahs')!.id
+const getPlayers = (positionIds: { [key: string]: number }, teamIds: { [key: string]: number }) => {
+  const {
+    allBlacks: allBlacksId,
+    blues: bluesId,
+    brumbies: brumbiesId,
+    chiefs: chiefsId,
+    crusaders: crusadersId,
+    drua: druaId,
+    force: forceId,
+    highlanders: highlandersId,
+    hurricanes: hurricanesId,
+    moana: moanaId,
+    rebels: rebelsId,
+    reds: redsId,
+    wallabies: wallabiesId,
+    waratahs: waratahsId,
+  } = teamIds
 
-  // International Teams
-  const allBlacksId = teams.find(team => team.key === 'allBlacks')!.id
-  const wallabiesId = teams.find(team => team.key === 'wallabies')!.id
-
-  // Positions
-  const propId = positions.find(position => position.key === 'prop')!.id
-  const hookerId = positions.find(position => position.key === 'hooker')!.id
-  const lockId = positions.find(position => position.key === 'lock')!.id
-  const backrowId = positions.find(position => position.key === 'backrow')!.id
-  const scrumhalfId = positions.find(position => position.key === 'scrumhalf')!.id
-  const flyhalfId = positions.find(position => position.key === 'flyhalf')!.id
-  const centreId = positions.find(position => position.key === 'centre')!.id
-  const outsideBackId = positions.find(position => position.key === 'outsideBack')!.id
+  const {
+    backrow: backrowId,
+    centre: centreId,
+    flyhalf: flyhalfId,
+    hooker: hookerId,
+    lock: lockId,
+    outsideBack: outsideBackId,
+    prop: propId,
+    scrumhalf: scrumhalfId,
+  } = positionIds
 
   const players = [
     {
