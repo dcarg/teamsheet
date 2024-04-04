@@ -4,8 +4,8 @@ import type { Position, Team } from '@prisma/client'
 // import { wallabiesPlayers } from './wallabies/index'
 
 import getBluesPlayers from './blues/index'
+import getBrumbiesPlayers from './brumbies/index'
 
-// import { brumbies as brumbiesPlayers } from './brumbies/index'
 // import { chiefs as chiefsPlayers } from './chiefs/index'
 // import { crusaders as crusadersPlayers } from './crusaders/index'
 // import { drua as druaPlayers } from './drua/index'
@@ -49,6 +49,7 @@ const getPlayers = (positions: Position[], teams: Team[]) => {
 
   const players = [
     ...getBluesPlayers(positionIds, teamIds),
+    ...getBrumbiesPlayers(positionIds, teamIds),
   ]
 
   // const players = [

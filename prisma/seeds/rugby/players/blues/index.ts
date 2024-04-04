@@ -17,7 +17,7 @@ const getBluesPlayers = (positionIds: IdsObject, teamIds: IdsObject) => {
     scrumhalf: scrumhalfId,
   } = positionIds
 
-  const players =  [
+  const players = [
     {
       key: "markTelea",
       title: "Mark Telea",
