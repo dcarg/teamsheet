@@ -6,8 +6,8 @@ import type { Position, Team } from '@prisma/client'
 import getBluesPlayers from './blues'
 import getBrumbiesPlayers from './brumbies'
 import getChiefsPlayers from './chiefs'
+import getCrusadersPlayers from './crusaders'
 
-// import { crusaders as crusadersPlayers } from './crusaders/index'
 // import { drua as druaPlayers } from './drua/index'
 // import { force as forcePlayers } from './force/index'
 // import { highlanders as highlandersPlayers } from './highlanders/index'
@@ -51,6 +51,7 @@ const getPlayers = (positions: Position[], teams: Team[]) => {
     ...getBluesPlayers(positionIds, teamIds),
     ...getBrumbiesPlayers(positionIds, teamIds),
     ...getChiefsPlayers(positionIds, teamIds),
+    ...getCrusadersPlayers(positionIds, teamIds),
   ]
 
   return players
