@@ -1,306 +1,649 @@
-export const chiefs = [
-  {
-    key: "samisoniTaukei'aho",
-    title: "Samisoni Taukei'aho",
-    firstname: "Samisoni",
-    lastname: "Taukei'aho",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["hooker"],
-  },
-  {
-    key: "emoniNarawa",
-    title: "Emoni Narawa",
-    firstname: "Emoni",
-    lastname: "Narawa",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "damianMcKenzie",
-    title: "Damian McKenzie",
-    firstname: "Damian",
-    lastname: "McKenzie",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "shaunStevenson",
-    title: "Shaun Stevenson",
-    firstname: "Shaun",
-    lastname: "Stevenson",
-    teams: ["chiefs"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "eteneNanai-Seturo",
-    title: "Etene Nanai-Seturo",
-    firstname: "Etene",
-    lastname: "Nanai-Seturo",
-    teams: ["chiefs"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "cortezRatima",
-    title: "Cortez Ratima",
-    firstname: "Cortez",
-    lastname: "Ratima",
-    teams: ["chiefs"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "tupouVaa'i",
-    title: "Tupou Vaa'i",
-    firstname: "Tupou",
-    lastname: "Vaa'i",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["lock", "backrow"],
-  },
-  {
-    key: "quinnTupaea",
-    title: "Quinn Tupaea",
-    firstname: "Quinn",
-    lastname: "Tupaea",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "antonLienert-Brown",
-    title: "Anton Lienert-Brown",
-    firstname: "Anton",
-    lastname: "Lienert-Brown",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["centre"],
-  },
-  {
-    key: "samipeniFinau",
-    title: "Samipeni Finau",
-    firstname: "Samipeni",
-    lastname: "Finau",
-    teams: ["chiefs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "xavierRoe",
-    title: "Xavier Roe",
-    firstname: "Xavier",
-    lastname: "Roe",
-    teams: ["chiefs"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "lukeJacobson",
-    title: "Luke Jacobson",
-    firstname: "Luke",
-    lastname: "Jacobson",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "danielRona",
-    title: "Daniel Rona",
-    firstname: "Daniel",
-    lastname: "Rona",
-    teams: ["chiefs"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "joshIoane",
-    title: "Josh Ioane",
-    firstname: "Josh",
-    lastname: "Ioane",
-    teams: ["chiefs"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "simonParker",
-    title: "Simon Parker",
-    firstname: "Simon",
-    lastname: "Parker",
-    teams: ["chiefs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "ramekaPoihipi",
-    title: "Rameka Poihipi",
-    firstname: "Rameka",
-    lastname: "Poihipi",
-    teams: ["chiefs"],
-    positions: ["centre"],
-  },
-  {
-    key: "naitoaAh Kuoi",
-    title: "Naitoa Ah Kuoi",
-    firstname: "Naitoa",
-    lastname: "Ah Kuoi",
-    teams: ["chiefs"],
-    positions: ["lock", "backrow"],
-  },
-  {
-    key: "liamCoombes-Fabling",
-    title: "Liam Coombes-Fabling",
-    firstname: "Liam",
-    lastname: "Coombes-Fabling",
-    teams: ["chiefs"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "kaylumBoshier",
-    title: "Kaylum Boshier",
-    firstname: "Kaylum",
-    lastname: "Boshier",
-    teams: ["chiefs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "gideonWrampling",
-    title: "Gideon Wrampling",
-    firstname: "Gideon",
-    lastname: "Wrampling",
-    teams: ["chiefs"],
-    positions: ["centre"],
-  },
-  {
-    key: "manaakiSelby-Rickit",
-    title: "Manaaki Selby-Rickit",
-    firstname: "Manaaki",
-    lastname: "Selby-Rickit",
-    teams: ["chiefs"],
-    positions: ["lock"],
-  },
-  {
-    key: "te toiroaTahuriorangi",
-    title: "Te Toiroa Tahuriorangi",
-    firstname: "Te Toiroa",
-    lastname: "Tahuriorangi",
-    teams: ["chiefs"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "peniasiMalimali",
-    title: "Peniasi Malimali",
-    firstname: "Peniasi",
-    lastname: "Malimali",
-    teams: ["chiefs"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "joshLord",
-    title: "Josh Lord",
-    firstname: "Josh",
-    lastname: "Lord",
-    teams: ["chiefs"],
-    positions: ["lock"],
-  },
-  {
-    key: "jimmyTupou",
-    title: "Jimmy Tupou",
-    firstname: "Jimmy",
-    lastname: "Tupou",
-    teams: ["chiefs"],
-    positions: ["lock"],
-  },
-  {
-    key: "kalebTrask",
-    title: "Kaleb Trask",
-    firstname: "Kaleb",
-    lastname: "Trask",
-    teams: ["chiefs"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "malachiWrampling-Alec",
-    title: "Malachi Wrampling-Alec",
-    firstname: "Malachi",
-    lastname: "Wrampling-Alec",
-    teams: ["chiefs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "tomFlorence",
-    title: "Tom Florence",
-    firstname: "Tom",
-    lastname: "Florence",
-    teams: ["chiefs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "wallaceSititi",
-    title: "Wallace Sititi",
-    firstname: "Wallace",
-    lastname: "Sititi",
-    teams: ["chiefs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "sioneAhio",
-    title: "Sione Ahio",
-    firstname: "Sione",
-    lastname: "Ahio",
-    teams: ["chiefs"],
-    positions: ["prop"],
-  },
-  {
-    key: "georgeDyer",
-    title: "George Dyer",
-    firstname: "George",
-    lastname: "Dyer",
-    teams: ["chiefs"],
-    positions: ["prop"],
-  },
-  {
-    key: "kauvakaKaivelata",
-    title: "Kauvaka Kaivelata",
-    firstname: "Kauvaka",
-    lastname: "Kaivelata",
-    teams: ["chiefs"],
-    positions: ["prop"],
-  },
-  {
-    key: "ollieNorris",
-    title: "Ollie Norris",
-    firstname: "Ollie",
-    lastname: "Norris",
-    teams: ["chiefs"],
-    positions: ["prop"],
-  },
-  {
-    key: "reubenO'Neill",
-    title: "Reuben O'Neill",
-    firstname: "Reuben",
-    lastname: "O'Neill",
-    teams: ["chiefs"],
-    positions: ["prop"],
-  },
-  {
-    key: "jaredProffit",
-    title: "Jared Proffit",
-    firstname: "Jared",
-    lastname: "Proffit",
-    teams: ["chiefs"],
-    positions: ["prop"],
-  },
-  {
-    key: "aidanRoss",
-    title: "Aidan Ross",
-    firstname: "Aidan",
-    lastname: "Ross",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "bradleySlater",
-    title: "Bradley Slater",
-    firstname: "Bradley",
-    lastname: "Slater",
-    teams: ["chiefs"],
-    positions: ["hooker"],
-  },
-  {
-    key: "tyroneThompson",
-    title: "Tyrone Thompson",
-    firstname: "Tyrone",
-    lastname: "Thompson",
-    teams: ["chiefs"],
-    positions: ["hooker"],
-  }
-]
+import type { IdsObject } from '../../players'
+
+const getChiefsPlayers = (positionIds: IdsObject, teamIds: IdsObject) => {
+  const {
+    allBlacks: allBlacksId,
+    chiefs: chiefsId,
+  } = teamIds
+
+  const {
+    backrow: backrowId,
+    centre: centreId,
+    flyhalf: flyhalfId,
+    hooker: hookerId,
+    lock: lockId,
+    outsideBack: outsideBackId,
+    prop: propId,
+    scrumhalf: scrumhalfId,
+  } = positionIds
+
+  const players = [
+    {
+      key: "samisoniTaukei'aho",
+      title: "Samisoni Taukei'aho",
+      firstname: "Samisoni",
+      lastname: "Taukei'aho",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "emoniNarawa",
+      title: "Emoni Narawa",
+      firstname: "Emoni",
+      lastname: "Narawa",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "damianMcKenzie",
+      title: "Damian McKenzie",
+      firstname: "Damian",
+      lastname: "McKenzie",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "shaunStevenson",
+      title: "Shaun Stevenson",
+      firstname: "Shaun",
+      lastname: "Stevenson",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "eteneNanai-Seturo",
+      title: "Etene Nanai-Seturo",
+      firstname: "Etene",
+      lastname: "Nanai-Seturo",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "cortezRatima",
+      title: "Cortez Ratima",
+      firstname: "Cortez",
+      lastname: "Ratima",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "tupouVaa'i",
+      title: "Tupou Vaa'i",
+      firstname: "Tupou",
+      lastname: "Vaa'i",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "quinnTupaea",
+      title: "Quinn Tupaea",
+      firstname: "Quinn",
+      lastname: "Tupaea",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "antonLienert-Brown",
+      title: "Anton Lienert-Brown",
+      firstname: "Anton",
+      lastname: "Lienert-Brown",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+        ],
+      },
+    },
+    {
+      key: "samipeniFinau",
+      title: "Samipeni Finau",
+      firstname: "Samipeni",
+      lastname: "Finau",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "xavierRoe",
+      title: "Xavier Roe",
+      firstname: "Xavier",
+      lastname: "Roe",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "lukeJacobson",
+      title: "Luke Jacobson",
+      firstname: "Luke",
+      lastname: "Jacobson",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "danielRona",
+      title: "Daniel Rona",
+      firstname: "Daniel",
+      lastname: "Rona",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "joshIoane",
+      title: "Josh Ioane",
+      firstname: "Josh",
+      lastname: "Ioane",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "simonParker",
+      title: "Simon Parker",
+      firstname: "Simon",
+      lastname: "Parker",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "ramekaPoihipi",
+      title: "Rameka Poihipi",
+      firstname: "Rameka",
+      lastname: "Poihipi",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+        ],
+      },
+    },
+    {
+      key: "naitoaAh Kuoi",
+      title: "Naitoa Ah Kuoi",
+      firstname: "Naitoa",
+      lastname: "Ah Kuoi",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "liamCoombes-Fabling",
+      title: "Liam Coombes-Fabling",
+      firstname: "Liam",
+      lastname: "Coombes-Fabling",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "kaylumBoshier",
+      title: "Kaylum Boshier",
+      firstname: "Kaylum",
+      lastname: "Boshier",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "gideonWrampling",
+      title: "Gideon Wrampling",
+      firstname: "Gideon",
+      lastname: "Wrampling",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+        ],
+      },
+    },
+    {
+      key: "manaakiSelby-Rickit",
+      title: "Manaaki Selby-Rickit",
+      firstname: "Manaaki",
+      lastname: "Selby-Rickit",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "te toiroaTahuriorangi",
+      title: "Te Toiroa Tahuriorangi",
+      firstname: "Te Toiroa",
+      lastname: "Tahuriorangi",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "peniasiMalimali",
+      title: "Peniasi Malimali",
+      firstname: "Peniasi",
+      lastname: "Malimali",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "joshLord",
+      title: "Josh Lord",
+      firstname: "Josh",
+      lastname: "Lord",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "jimmyTupou",
+      title: "Jimmy Tupou",
+      firstname: "Jimmy",
+      lastname: "Tupou",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "kalebTrask",
+      title: "Kaleb Trask",
+      firstname: "Kaleb",
+      lastname: "Trask",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "malachiWrampling-Alec",
+      title: "Malachi Wrampling-Alec",
+      firstname: "Malachi",
+      lastname: "Wrampling-Alec",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "tomFlorence",
+      title: "Tom Florence",
+      firstname: "Tom",
+      lastname: "Florence",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "wallaceSititi",
+      title: "Wallace Sititi",
+      firstname: "Wallace",
+      lastname: "Sititi",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "sioneAhio",
+      title: "Sione Ahio",
+      firstname: "Sione",
+      lastname: "Ahio",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "georgeDyer",
+      title: "George Dyer",
+      firstname: "George",
+      lastname: "Dyer",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "kauvakaKaivelata",
+      title: "Kauvaka Kaivelata",
+      firstname: "Kauvaka",
+      lastname: "Kaivelata",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "ollieNorris",
+      title: "Ollie Norris",
+      firstname: "Ollie",
+      lastname: "Norris",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "reubenO'Neill",
+      title: "Reuben O'Neill",
+      firstname: "Reuben",
+      lastname: "O'Neill",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "jaredProffit",
+      title: "Jared Proffit",
+      firstname: "Jared",
+      lastname: "Proffit",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "aidanRoss",
+      title: "Aidan Ross",
+      firstname: "Aidan",
+      lastname: "Ross",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "bradleySlater",
+      title: "Bradley Slater",
+      firstname: "Bradley",
+      lastname: "Slater",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "tyroneThompson",
+      title: "Tyrone Thompson",
+      firstname: "Tyrone",
+      lastname: "Thompson",
+      teamMembers: {
+        create: [
+          { teamId: chiefsId },
+        ]
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    }
+  ]
+
+  return players
+}
+
+export default getChiefsPlayers
