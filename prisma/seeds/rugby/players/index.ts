@@ -7,8 +7,8 @@ import getBluesPlayers from './blues'
 import getBrumbiesPlayers from './brumbies'
 import getChiefsPlayers from './chiefs'
 import getCrusadersPlayers from './crusaders'
+import getDruaPlayers from './drua'
 
-// import { drua as druaPlayers } from './drua/index'
 // import { force as forcePlayers } from './force/index'
 // import { highlanders as highlandersPlayers } from './highlanders/index'
 // import { hurricanes as hurricanesPlayers } from './hurricanes/index'
@@ -16,23 +16,6 @@ import getCrusadersPlayers from './crusaders'
 // import { rebels as rebelsPlayers } from './rebels/index'
 // import { reds as redsPlayers } from './reds/index'
 // import { waratahs as waratahsPlayers } from './waratahs/index'
-
-// export const players = {
-//   blues: bluesPlayers,
-//   brumbies: brumbiesPlayers,
-//   chiefs: chiefsPlayers,
-//   crusaders: crusadersPlayers,
-//   drua: druaPlayers,
-//   force: forcePlayers,
-//   highlanders: highlandersPlayers,
-//   hurricanes: hurricanesPlayers,
-//   moana: moanaPlayers,
-//   rebels: rebelsPlayers,
-//   reds: redsPlayers,
-//   waratahs: waratahsPlayers,
-//   allBlacks: allBlacksPlayers,
-//   wallabies: wallabiesPlayers,
-// }
 
 export type IdsObject = { [key: string]: number }
 
@@ -52,6 +35,7 @@ const getPlayers = (positions: Position[], teams: Team[]) => {
     ...getBrumbiesPlayers(positionIds, teamIds),
     ...getChiefsPlayers(positionIds, teamIds),
     ...getCrusadersPlayers(positionIds, teamIds),
+    ...getDruaPlayers(positionIds, teamIds),
   ]
 
   return players
