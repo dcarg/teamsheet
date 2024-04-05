@@ -106,9 +106,9 @@ model Player {
 
 model TeamMember {
   id Int @id @default(autoincrement())
-  team Team @relation(fields: [teamId], references: [id])
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
   teamId Int
-  player Player @relation(fields: [playerId], references: [id])
+  player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
   playerId Int
 
   createdAt DateTime @default(now())
@@ -136,9 +136,9 @@ model Position {
 
 model PlayerPosition {
   id Int @id @default(autoincrement())
-  player Player @relation(fields: [playerId], references: [id])
+  player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
   playerId Int
-  position Position @relation(fields: [positionId], references: [id])
+  position Position @relation(fields: [positionId], references: [id], onDelete: Cascade)
   positionId Int
 
   createdAt DateTime @default(now())
