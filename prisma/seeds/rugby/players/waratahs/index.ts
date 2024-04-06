@@ -1,282 +1,605 @@
-export const waratahs = [
-  {
-    key: "angusBell",
-    title: "Angus Bell",
-    firstname: "Angus",
-    lastname: "Bell",
-    teams: ["waratahs", "wallabies"],
-    positions: ["prop"],
-  },
-  {
-    key: "davidPorecki",
-    title: "David Porecki",
-    firstname: "David",
-    lastname: "Porecki",
-    teams: ["waratahs", "wallabies"],
-    positions: ["hooker"],
-  },
-  {
-    key: "markNawaqanitawase",
-    title: "Mark Nawaqanitawase",
-    firstname: "Mark",
-    lastname: "Nawaqanitawase",
-    teams: ["waratahs", "wallabies"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "harryJohnson-Holmes",
-    title: "Harry Johnson-Holmes",
-    firstname: "Harry",
-    lastname: "Johnson-Holmes",
-    teams: ["waratahs", "wallabies"],
-    positions: ["prop"],
-  },
-  {
-    key: "langiGleeson",
-    title: "Langi Gleeson",
-    firstname: "Langi",
-    lastname: "Gleeson",
-    teams: ["waratahs", "wallabies"],
-    positions: ["backrow"],
-  },
-  {
-    key: "dylanPietsch",
-    title: "Dylan Pietsch",
-    firstname: "Dylan",
-    lastname: "Pietsch",
-    teams: ["waratahs"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "maxJorgensen",
-    title: "Max Jorgensen",
-    firstname: "Max",
-    lastname: "Jorgensen",
-    teams: ["waratahs", "wallabies"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "jedHolloway",
-    title: "Jed Holloway",
-    firstname: "Jed",
-    lastname: "Holloway",
-    teams: ["waratahs", "wallabies"],
-    positions: ["lock", "backrow"],
-  },
-  {
-    key: "izaiaPerese",
-    title: "Izaia Perese",
-    firstname: "Izaia",
-    lastname: "Perese",
-    teams: ["waratahs", "wallabies"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "jakeGordon",
-    title: "Jake Gordon",
-    firstname: "Jake",
-    lastname: "Gordon",
-    teams: ["waratahs", "wallabies"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "milesAmatosero",
-    title: "Miles Amatosero",
-    firstname: "Miles",
-    lastname: "Amatosero",
-    teams: ["waratahs"],
-    positions: ["lock"],
-  },
-  {
-    key: "lalakaiFoketi",
-    title: "Lalakai Foketi",
-    firstname: "Lalakai",
-    lastname: "Foketi",
-    teams: ["waratahs"],
-    positions: ["centre"],
-  },
-  {
-    key: "taneEdmed",
-    title: "Tane Edmed",
-    firstname: "Tane",
-    lastname: "Edmed",
-    teams: ["waratahs"],
-    positions: ["flyhalf", "centre"],
-  },
-  {
-    key: "charlieGamble",
-    title: "Charlie Gamble",
-    firstname: "Charlie",
-    lastname: "Gamble",
-    teams: ["waratahs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "hughSinclair",
-    title: "Hugh Sinclair",
-    firstname: "Hugh",
-    lastname: "Sinclair",
-    teams: ["waratahs"],
-    positions: ["backrow", "lock"],
-  },
-  {
-    key: "nedHanigan",
-    title: "Ned Hanigan",
-    firstname: "Ned",
-    lastname: "Hanigan",
-    teams: ["waratahs"],
-    positions: ["lock", "backrow"],
-  },
-  {
-    key: "joeyWalton",
-    title: "Joey Walton",
-    firstname: "Joey",
-    lastname: "Walton",
-    teams: ["waratahs"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "moseseTuipulotu",
-    title: "Mosese Tuipulotu",
-    firstname: "Mosese",
-    lastname: "Tuipulotu",
-    teams: ["waratahs"],
-    positions: ["centre"],
-  },
-  {
-    key: "lachlanSwinton",
-    title: "Lachlan Swinton",
-    firstname: "Lachlan",
-    lastname: "Swinton",
-    teams: ["waratahs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "teddyWilson",
-    title: "Teddy Wilson",
-    firstname: "Teddy",
-    lastname: "Wilson",
-    teams: ["waratahs"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "jackBowen",
-    title: "Jack Bowen",
-    firstname: "Jack",
-    lastname: "Bowen",
-    teams: ["waratahs"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "fergusLee-Warner",
-    title: "Fergus Lee-Warner",
-    firstname: "Fergus",
-    lastname: "Lee-Warner",
-    teams: ["waratahs"],
-    positions: ["backrow", "lock"],
-  },
-  {
-    key: "jackGrant",
-    title: "Jack Grant",
-    firstname: "Jack",
-    lastname: "Grant",
-    teams: ["waratahs"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "harryWilson",
-    title: "Harry Wilson",
-    firstname: "Harry",
-    lastname: "Wilson",
-    teams: ["waratahs"],
-    positions: ["outsideBack", "centre"],
-  },
-  {
-    key: "mesuKunavula",
-    title: "Mesu Kunavula",
-    firstname: "Mesu",
-    lastname: "Kunavula",
-    teams: ["waratahs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "nedSlack-Smith",
-    title: "Ned Slack-Smith",
-    firstname: "Ned",
-    lastname: "Slack-Smith",
-    teams: ["waratahs"],
-    positions: ["backrow"],
-  },
-  {
-    key: "vuateKarawalevu",
-    title: "Vuate Karawalevu",
-    firstname: "Vuate",
-    lastname: "Karawalevu",
-    teams: ["waratahs"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "willHarrison",
-    title: "Will Harrison",
-    firstname: "Will",
-    lastname: "Harrison",
-    teams: ["waratahs"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "danielBotha",
-    title: "Daniel Botha",
-    firstname: "Daniel",
-    lastname: "Botha",
-    teams: ["waratahs"],
-    positions: ["prop"],
-  },
-  {
-    key: "theoFourie",
-    title: "Theo Fourie",
-    firstname: "Theo",
-    lastname: "Fourie",
-    teams: ["waratahs"],
-    positions: ["hooker"],
-  },
-  {
-    key: "archerHolz",
-    title: "Archer Holz",
-    firstname: "Archer",
-    lastname: "Holz",
-    teams: ["waratahs"],
-    positions: ["prop"],
-  },
-  {
-    key: "tomLambert",
-    title: "Tom Lambert",
-    firstname: "Tom",
-    lastname: "Lambert",
-    teams: ["waratahs"],
-    positions: ["prop"],
-  },
-  {
-    key: "tomRoss",
-    title: "Tom Ross",
-    firstname: "Tom",
-    lastname: "Ross",
-    teams: ["waratahs"],
-    positions: ["prop"],
-  },
-  {
-    key: "haydenThompson-Stringer",
-    title: "Hayden Thompson-Stringer",
-    firstname: "Hayden",
-    lastname: "Thompson-Stringer",
-    teams: ["waratahs"],
-    positions: ["prop"],
-  },
-  {
-    key: "maheVailanu",
-    title: "Mahe Vailanu",
-    firstname: "Mahe",
-    lastname: "Vailanu",
-    teams: ["waratahs"],
-    positions: ["hooker"],
-  }
-]
+import type { IdsObject } from '../../players'
+
+const getWaratahsPlayers = (positionIds: IdsObject, teamIds: IdsObject) => {
+  const {
+    wallabies: wallabiesId,
+    waratahs: waratahsId,
+  } = teamIds
+
+  const {
+    backrow: backrowId,
+    centre: centreId,
+    flyhalf: flyhalfId,
+    hooker: hookerId,
+    lock: lockId,
+    outsideBack: outsideBackId,
+    prop: propId,
+    scrumhalf: scrumhalfId,
+  } = positionIds
+
+  const players = [
+    {
+      key: "angusBell",
+      title: "Angus Bell",
+      firstname: "Angus",
+      lastname: "Bell",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "davidPorecki",
+      title: "David Porecki",
+      firstname: "David",
+      lastname: "Porecki",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "markNawaqanitawase",
+      title: "Mark Nawaqanitawase",
+      firstname: "Mark",
+      lastname: "Nawaqanitawase",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "harryJohnson-Holmes",
+      title: "Harry Johnson-Holmes",
+      firstname: "Harry",
+      lastname: "Johnson-Holmes",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "langiGleeson",
+      title: "Langi Gleeson",
+      firstname: "Langi",
+      lastname: "Gleeson",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "dylanPietsch",
+      title: "Dylan Pietsch",
+      firstname: "Dylan",
+      lastname: "Pietsch",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "maxJorgensen",
+      title: "Max Jorgensen",
+      firstname: "Max",
+      lastname: "Jorgensen",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "jedHolloway",
+      title: "Jed Holloway",
+      firstname: "Jed",
+      lastname: "Holloway",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "izaiaPerese",
+      title: "Izaia Perese",
+      firstname: "Izaia",
+      lastname: "Perese",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "jakeGordon",
+      title: "Jake Gordon",
+      firstname: "Jake",
+      lastname: "Gordon",
+      teamMembers: {
+        create: [
+          { teamId: wallabiesId },
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "milesAmatosero",
+      title: "Miles Amatosero",
+      firstname: "Miles",
+      lastname: "Amatosero",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "lalakaiFoketi",
+      title: "Lalakai Foketi",
+      firstname: "Lalakai",
+      lastname: "Foketi",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+        ],
+      },
+    },
+    {
+      key: "taneEdmed",
+      title: "Tane Edmed",
+      firstname: "Tane",
+      lastname: "Edmed",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: flyhalfId },
+        ],
+      },
+    },
+    {
+      key: "charlieGamble",
+      title: "Charlie Gamble",
+      firstname: "Charlie",
+      lastname: "Gamble",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "hughSinclair",
+      title: "Hugh Sinclair",
+      firstname: "Hugh",
+      lastname: "Sinclair",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "nedHanigan",
+      title: "Ned Hanigan",
+      firstname: "Ned",
+      lastname: "Hanigan",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "joeyWalton",
+      title: "Joey Walton",
+      firstname: "Joey",
+      lastname: "Walton",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "moseseTuipulotu",
+      title: "Mosese Tuipulotu",
+      firstname: "Mosese",
+      lastname: "Tuipulotu",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+        ],
+      },
+    },
+    {
+      key: "lachlanSwinton",
+      title: "Lachlan Swinton",
+      firstname: "Lachlan",
+      lastname: "Swinton",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "teddyWilson",
+      title: "Teddy Wilson",
+      firstname: "Teddy",
+      lastname: "Wilson",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "jackBowen",
+      title: "Jack Bowen",
+      firstname: "Jack",
+      lastname: "Bowen",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "fergusLee-Warner",
+      title: "Fergus Lee-Warner",
+      firstname: "Fergus",
+      lastname: "Lee-Warner",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "jackGrant",
+      title: "Jack Grant",
+      firstname: "Jack",
+      lastname: "Grant",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "harryWilson",
+      title: "Harry Wilson",
+      firstname: "Harry",
+      lastname: "Wilson",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "mesuKunavula",
+      title: "Mesu Kunavula",
+      firstname: "Mesu",
+      lastname: "Kunavula",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "nedSlack-Smith",
+      title: "Ned Slack-Smith",
+      firstname: "Ned",
+      lastname: "Slack-Smith",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "vuateKarawalevu",
+      title: "Vuate Karawalevu",
+      firstname: "Vuate",
+      lastname: "Karawalevu",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "willHarrison",
+      title: "Will Harrison",
+      firstname: "Will",
+      lastname: "Harrison",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "danielBotha",
+      title: "Daniel Botha",
+      firstname: "Daniel",
+      lastname: "Botha",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "theoFourie",
+      title: "Theo Fourie",
+      firstname: "Theo",
+      lastname: "Fourie",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "archerHolz",
+      title: "Archer Holz",
+      firstname: "Archer",
+      lastname: "Holz",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "tomLambert",
+      title: "Tom Lambert",
+      firstname: "Tom",
+      lastname: "Lambert",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "tomRoss",
+      title: "Tom Ross",
+      firstname: "Tom",
+      lastname: "Ross",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "haydenThompson-Stringer",
+      title: "Hayden Thompson-Stringer",
+      firstname: "Hayden",
+      lastname: "Thompson-Stringer",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "maheVailanu",
+      title: "Mahe Vailanu",
+      firstname: "Mahe",
+      lastname: "Vailanu",
+      teamMembers: {
+        create: [
+          { teamId: waratahsId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+  ]
+
+  return players
+}
+
+export default getWaratahsPlayers

@@ -14,8 +14,7 @@ import getHurricanesPlayers from './hurricanes'
 import getMoanaPlayers from './moana'
 import getRebelsPlayers from './rebels'
 import getRedsPlayers from './reds'
-
-// import { waratahs as waratahsPlayers } from './waratahs/index'
+import getWaratahsPlayers from './waratahs/index'
 
 export type IdsObject = { [key: string]: number }
 
@@ -42,6 +41,7 @@ const getPlayers = (positions: Position[], teams: Team[]) => {
     ...getMoanaPlayers(positionIds, teamIds),
     ...getRebelsPlayers(positionIds, teamIds),
     ...getRedsPlayers(positionIds, teamIds),
+    ...getWaratahsPlayers(positionIds, teamIds),
   ]
 
   return players
