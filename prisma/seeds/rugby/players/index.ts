@@ -1,7 +1,5 @@
 import type { Position, Team } from '@prisma/client'
 
-// import { wallabiesPlayers } from './wallabies/index'
-
 import getAllBlacksPlayers from './allBlacks'
 import getBluesPlayers from './blues'
 import getBrumbiesPlayers from './brumbies'
@@ -14,6 +12,7 @@ import getHurricanesPlayers from './hurricanes'
 import getMoanaPlayers from './moana'
 import getRebelsPlayers from './rebels'
 import getRedsPlayers from './reds'
+import getWallabiesPlayers from './wallabies'
 import getWaratahsPlayers from './waratahs'
 
 export type IdsObject = { [key: string]: number }
@@ -42,6 +41,7 @@ const getPlayers = (positions: Position[], teams: Team[]) => {
     ...getMoanaPlayers(positionIds, teamIds),
     ...getRebelsPlayers(positionIds, teamIds),
     ...getRedsPlayers(positionIds, teamIds),
+    ...getWallabiesPlayers(positionIds, teamIds),
     ...getWaratahsPlayers(positionIds, teamIds),
   ]
 
