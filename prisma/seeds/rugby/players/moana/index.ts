@@ -1,306 +1,643 @@
-export const moana = [
-  {
-    key: "solomoneFunaki",
-    title: "Solomone Funaki",
-    firstname: "Solomone",
-    lastname: "Funaki",
-    teams: ["moana"],
-    positions: ["backrow"],
-  },
-  {
-    key: "lotuInisi",
-    title: "Lotu Inisi",
-    firstname: "Lotu",
-    lastname: "Inisi",
-    teams: ["moana"],
-    positions: ["backrow"],
-  },
-  {
-    key: "neriaFomai",
-    title: "Neria Fomai",
-    firstname: "Neria",
-    lastname: "Fomai",
-    teams: ["moana"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "dannyToala",
-    title: "Danny Toala",
-    firstname: "Danny",
-    lastname: "Toala",
-    teams: ["moana"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "williamHavili",
-    title: "William Havili",
-    firstname: "William",
-    lastname: "Havili",
-    teams: ["moana"],
-    positions: ["outsideBack", "flyhalf"],
-  },
-  {
-    key: "miracleFaiilagi",
-    title: "Miracle Faiilagi",
-    firstname: "Miracle",
-    lastname: "Faiilagi",
-    teams: ["moana"],
-    positions: ["backrow", "lock"],
-  },
-  {
-    key: "christianLeali'ifano",
-    title: "Christian Leali'ifano",
-    firstname: "Christian",
-    lastname: "Leali'ifano",
-    teams: ["moana"],
-    positions: ["flyhalf"],
-  },
-  {
-    key: "samiuelaMoli",
-    title: "Samiuela Moli",
-    firstname: "Samiuela",
-    lastname: "Moli",
-    teams: ["moana"],
-    positions: ["hooker"],
-  },
-  {
-    key: "fineInisi",
-    title: "Fine Inisi",
-    firstname: "Fine",
-    lastname: "Inisi",
-    teams: ["moana"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "julianSavea",
-    title: "Julian Savea",
-    firstname: "Julian",
-    lastname: "Savea",
-    teams: ["moana"],
-    positions: ["outsideBack", "centre"],
-  },
-  {
-    key: "ereEnari",
-    title: "Ere Enari",
-    firstname: "Ere",
-    lastname: "Enari",
-    teams: ["moana"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "alamandaMotuga",
-    title: "Alamanda Motuga",
-    firstname: "Alamanda",
-    lastname: "Motuga",
-    teams: ["moana"],
-    positions: ["backrow"],
-  },
-  {
-    key: "sioneHavili",
-    title: "Sione Havili",
-    firstname: "Sione",
-    lastname: "Havili",
-    teams: ["moana"],
-    positions: ["backrow"],
-  },
-  {
-    key: "anzeloTuitavuki",
-    title: "Anzelo Tuitavuki",
-    firstname: "Anzelo",
-    lastname: "Tuitavuki",
-    teams: ["moana"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "henryTaefu",
-    title: "Henry Taefu",
-    firstname: "Henry",
-    lastname: "Taefu",
-    teams: ["moana"],
-    positions: ["centre"],
-  },
-  {
-    key: "d'angeloLeuila",
-    title: "D'Angelo Leuila",
-    firstname: "D'Angelo",
-    lastname: "Leuila",
-    teams: ["moana"],
-    positions: ["centre", "flyhalf", "outsideBack"],
-  },
-  {
-    key: "jonathanTaumateine",
-    title: "Jonathan Taumateine",
-    firstname: "Jonathan",
-    lastname: "Taumateine",
-    teams: ["moana"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "pepesanaPatafilo",
-    title: "Pepesana Patafilo",
-    firstname: "Pepesana",
-    lastname: "Patafilo",
-    teams: ["moana"],
-    positions: ["outsideBack", "centre"],
-  },
-  {
-    key: "lalomiloLalomilo",
-    title: "Lalomilo Lalomilo",
-    firstname: "Lalomilo",
-    lastname: "Lalomilo",
-    teams: ["moana"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "samuelSlade",
-    title: "Samuel Slade",
-    firstname: "Samuel",
-    lastname: "Slade",
-    teams: ["moana"],
-    positions: ["lock"],
-  },
-  {
-    key: "iriePapuni",
-    title: "Irie Papuni",
-    firstname: "Irie",
-    lastname: "Papuni",
-    teams: ["moana"],
-    positions: ["lock"],
-  },
-  {
-    key: "nigelAh Wong",
-    title: "Nigel Ah Wong",
-    firstname: "Nigel",
-    lastname: "Ah Wong",
-    teams: ["moana"],
-    positions: ["outsideBack", "centre"],
-  },
-  {
-    key: "ofaTauatevalu",
-    title: "Ofa Tauatevalu",
-    firstname: "Ofa",
-    lastname: "Tauatevalu",
-    teams: ["moana"],
-    positions: ["lock"],
-  },
-  {
-    key: "olaTauelangi",
-    title: "Ola Tauelangi",
-    firstname: "Ola",
-    lastname: "Tauelangi",
-    teams: ["moana"],
-    positions: ["backrow"],
-  },
-  {
-    key: "otumakaMausia",
-    title: "Otumaka Mausia",
-    firstname: "Otumaka",
-    lastname: "Mausia",
-    teams: ["moana"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "semisiPaea",
-    title: "Semisi Paea",
-    firstname: "Semisi",
-    lastname: "Paea",
-    teams: ["moana"],
-    positions: ["backrow"],
-  },
-  {
-    key: "tomSavage",
-    title: "Tom Savage",
-    firstname: "Tom",
-    lastname: "Savage",
-    teams: ["moana"],
-    positions: ["lock"],
-  },
-  {
-    key: "viliamiFine",
-    title: "Viliami Fine",
-    firstname: "Viliami",
-    lastname: "Fine",
-    teams: ["moana"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "suetenaAsomua",
-    title: "Suetena Asomua",
-    firstname: "Suetena",
-    lastname: "Asomua",
-    teams: ["moana"],
-    positions: ["prop"],
-  },
-  {
-    key: "donaldBrighouse",
-    title: "Donald Brighouse",
-    firstname: "Donald",
-    lastname: "Brighouse",
-    teams: ["moana"],
-    positions: ["prop"],
-  },
-  {
-    key: "aiseaHalo",
-    title: "Aisea Halo",
-    firstname: "Aisea",
-    lastname: "Halo",
-    teams: ["moana"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "sekopeKepu",
-    title: "Sekope Kepu",
-    firstname: "Sekope",
-    lastname: "Kepu",
-    teams: ["moana"],
-    positions: ["prop"],
-  },
-  {
-    key: "satekiLatu",
-    title: "Sateki Latu",
-    firstname: "Sateki",
-    lastname: "Latu",
-    teams: ["moana"],
-    positions: ["prop"],
-  },
-  {
-    key: "jamesLay",
-    title: "James Lay",
-    firstname: "James",
-    lastname: "Lay",
-    teams: ["moana"],
-    positions: ["prop"],
-  },
-  {
-    key: "tomasiMaka",
-    title: "Tomasi Maka",
-    firstname: "Tomasi",
-    lastname: "Maka",
-    teams: ["moana"],
-    positions: ["hooker"],
-  },
-  {
-    key: "samaMalolo",
-    title: "Sama Malolo",
-    firstname: "Sama",
-    lastname: "Malolo",
-    teams: ["moana"],
-    positions: ["hooker"],
-  },
-  {
-    key: "viliamiNapa'a",
-    title: "Viliami Napa'a",
-    firstname: "Viliami",
-    lastname: "Napa'a",
-    teams: ["moana"],
-    positions: ["lock"],
-  },
-  {
-    key: "abrahamPole",
-    title: "Abraham Pole",
-    firstname: "Abraham",
-    lastname: "Pole",
-    teams: ["moana"],
-    positions: ["prop"],
-  }
-]
+import type { IdsObject } from '../../players'
+
+const getMoanaPlayers = (positionIds: IdsObject, teamIds: IdsObject) => {
+  const {
+    moana: moanaId,
+  } = teamIds
+
+  const {
+    backrow: backrowId,
+    centre: centreId,
+    flyhalf: flyhalfId,
+    hooker: hookerId,
+    lock: lockId,
+    outsideBack: outsideBackId,
+    prop: propId,
+    scrumhalf: scrumhalfId,
+  } = positionIds
+
+  const players = [
+    {
+      key: "solomoneFunaki",
+      title: "Solomone Funaki",
+      firstname: "Solomone",
+      lastname: "Funaki",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "lotuInisi",
+      title: "Lotu Inisi",
+      firstname: "Lotu",
+      lastname: "Inisi",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "neriaFomai",
+      title: "Neria Fomai",
+      firstname: "Neria",
+      lastname: "Fomai",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "dannyToala",
+      title: "Danny Toala",
+      firstname: "Danny",
+      lastname: "Toala",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "williamHavili",
+      title: "William Havili",
+      firstname: "William",
+      lastname: "Havili",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "miracleFaiilagi",
+      title: "Miracle Faiilagi",
+      firstname: "Miracle",
+      lastname: "Faiilagi",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "christianLeali'ifano",
+      title: "Christian Leali'ifano",
+      firstname: "Christian",
+      lastname: "Leali'ifano",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+        ],
+      },
+    },
+    {
+      key: "samiuelaMoli",
+      title: "Samiuela Moli",
+      firstname: "Samiuela",
+      lastname: "Moli",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "fineInisi",
+      title: "Fine Inisi",
+      firstname: "Fine",
+      lastname: "Inisi",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "julianSavea",
+      title: "Julian Savea",
+      firstname: "Julian",
+      lastname: "Savea",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "ereEnari",
+      title: "Ere Enari",
+      firstname: "Ere",
+      lastname: "Enari",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "alamandaMotuga",
+      title: "Alamanda Motuga",
+      firstname: "Alamanda",
+      lastname: "Motuga",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "sioneHavili",
+      title: "Sione Havili",
+      firstname: "Sione",
+      lastname: "Havili",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "anzeloTuitavuki",
+      title: "Anzelo Tuitavuki",
+      firstname: "Anzelo",
+      lastname: "Tuitavuki",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "henryTaefu",
+      title: "Henry Taefu",
+      firstname: "Henry",
+      lastname: "Taefu",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+        ],
+      },
+    },
+    {
+      key: "d'angeloLeuila",
+      title: "D'Angelo Leuila",
+      firstname: "D'Angelo",
+      lastname: "Leuila",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "jonathanTaumateine",
+      title: "Jonathan Taumateine",
+      firstname: "Jonathan",
+      lastname: "Taumateine",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "pepesanaPatafilo",
+      title: "Pepesana Patafilo",
+      firstname: "Pepesana",
+      lastname: "Patafilo",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "lalomiloLalomilo",
+      title: "Lalomilo Lalomilo",
+      firstname: "Lalomilo",
+      lastname: "Lalomilo",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "samuelSlade",
+      title: "Samuel Slade",
+      firstname: "Samuel",
+      lastname: "Slade",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "iriePapuni",
+      title: "Irie Papuni",
+      firstname: "Irie",
+      lastname: "Papuni",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "nigelAh Wong",
+      title: "Nigel Ah Wong",
+      firstname: "Nigel",
+      lastname: "Ah Wong",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: centreId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "ofaTauatevalu",
+      title: "Ofa Tauatevalu",
+      firstname: "Ofa",
+      lastname: "Tauatevalu",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "olaTauelangi",
+      title: "Ola Tauelangi",
+      firstname: "Ola",
+      lastname: "Tauelangi",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "otumakaMausia",
+      title: "Otumaka Mausia",
+      firstname: "Otumaka",
+      lastname: "Mausia",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "semisiPaea",
+      title: "Semisi Paea",
+      firstname: "Semisi",
+      lastname: "Paea",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "tomSavage",
+      title: "Tom Savage",
+      firstname: "Tom",
+      lastname: "Savage",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "viliamiFine",
+      title: "Viliami Fine",
+      firstname: "Viliami",
+      lastname: "Fine",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "suetenaAsomua",
+      title: "Suetena Asomua",
+      firstname: "Suetena",
+      lastname: "Asomua",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "donaldBrighouse",
+      title: "Donald Brighouse",
+      firstname: "Donald",
+      lastname: "Brighouse",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "aiseaHalo",
+      title: "Aisea Halo",
+      firstname: "Aisea",
+      lastname: "Halo",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "sekopeKepu",
+      title: "Sekope Kepu",
+      firstname: "Sekope",
+      lastname: "Kepu",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "satekiLatu",
+      title: "Sateki Latu",
+      firstname: "Sateki",
+      lastname: "Latu",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "jamesLay",
+      title: "James Lay",
+      firstname: "James",
+      lastname: "Lay",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+    {
+      key: "tomasiMaka",
+      title: "Tomasi Maka",
+      firstname: "Tomasi",
+      lastname: "Maka",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "samaMalolo",
+      title: "Sama Malolo",
+      firstname: "Sama",
+      lastname: "Malolo",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: hookerId },
+        ],
+      },
+    },
+    {
+      key: "viliamiNapa'a",
+      title: "Viliami Napa'a",
+      firstname: "Viliami",
+      lastname: "Napa'a",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "abrahamPole",
+      title: "Abraham Pole",
+      firstname: "Abraham",
+      lastname: "Pole",
+      teamMembers: {
+        create: [
+          { teamId: moanaId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: propId },
+        ],
+      },
+    },
+  ]
+
+  return players
+}
+
+export default getMoanaPlayers

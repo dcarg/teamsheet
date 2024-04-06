@@ -11,8 +11,8 @@ import getDruaPlayers from './drua'
 import getForcePlayers from './force'
 import getHighlandersPlayers from './highlanders'
 import getHurricanesPlayers from './hurricanes'
+import getMoanaPlayers from './moana'
 
-// import { moana as moanaPlayers } from './moana/index'
 // import { rebels as rebelsPlayers } from './rebels/index'
 // import { reds as redsPlayers } from './reds/index'
 // import { waratahs as waratahsPlayers } from './waratahs/index'
@@ -39,6 +39,7 @@ const getPlayers = (positions: Position[], teams: Team[]) => {
     ...getForcePlayers(positionIds, teamIds),
     ...getHighlandersPlayers(positionIds, teamIds),
     ...getHurricanesPlayers(positionIds, teamIds),
+    ...getMoanaPlayers(positionIds, teamIds),
   ]
 
   return players
