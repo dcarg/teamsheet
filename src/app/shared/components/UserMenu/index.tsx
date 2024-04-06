@@ -29,7 +29,7 @@ const UserMenu = (props: UserMenuProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const isMounted = useIsMounted()
-  const shouldDisplayName = isMounted && window.innerWidth < 500 && given_name
+  const shouldDisplayName = isMounted && window.innerWidth > 500 && given_name
 
   useOutsideClick({
     callbacks: {
