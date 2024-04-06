@@ -12,7 +12,7 @@ const getWallabiesPlayers = (positionIds: IdsObject, teamIds: IdsObject) => {
     outsideBack: outsideBackId,
   } = positionIds
 
-    // Only seed players who are in the Wallabies but no other team
+  // Only seed players who are in the Wallabies but no other team
   const players = [
     {
       key: 'marikaKoroibete',
