@@ -12,8 +12,6 @@ interface PageHeaderProps {
 const PageHeader = (props: PageHeaderProps) => {
   const { actionContent, icon, title } = props
 
-
-
   // Height 65px (same as Navbar)
   return (
     <div className="flex flex-col h-[65px] justify-center text-slate-700">
@@ -28,9 +26,8 @@ const PageHeader = (props: PageHeaderProps) => {
           </div>
         </div>
         
-        {/* actionContent */}
         <div className="ml-auto items-center justify-end w-auto">
-            {actionContent}
+          {actionContent}
         </div>
       </div>
 
