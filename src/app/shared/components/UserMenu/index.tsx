@@ -11,6 +11,7 @@ import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 import Button from '@components/Button'
 
+import useIsMounted from '@hooks/useIsMounted'
 import useOutsideClick from '@hooks/useOutsideClick'
 
 import UserMenuItem from './UserMenuItem'
@@ -27,7 +28,8 @@ const UserMenu = (props: UserMenuProps) => {
 
   const ref = useRef<HTMLDivElement>(null)
 
-  const shouldDisplayName = given_name && window.innerWidth > 500
+  const isMounted = useIsMounted()
+  const shouldDisplayName = isMounted && given_name && window.innerWidth > 500
 
   useOutsideClick({
     callbacks: {
