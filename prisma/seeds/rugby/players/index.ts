@@ -1,32 +1,51 @@
-import { allBlacksPlayers } from './allBlacks/index'
-import { wallabiesPlayers } from './wallabies/index'
+import type { Position, Team } from '@prisma/client'
 
-import { blues as bluesPlayers } from './blues/index'
-import { brumbies as brumbiesPlayers } from './brumbies/index'
-import { chiefs as chiefsPlayers } from './chiefs/index'
-import { crusaders as crusadersPlayers } from './crusaders/index'
-import { drua as druaPlayers } from './drua/index'
-import { force as forcePlayers } from './force/index'
-import { highlanders as highlandersPlayers } from './highlanders/index'
-import { hurricanes as hurricanesPlayers } from './hurricanes/index'
-import { moana as moanaPlayers } from './moana/index'
-import { rebels as rebelsPlayers } from './rebels/index'
-import { reds as redsPlayers } from './reds/index'
-import { waratahs as waratahsPlayers } from './waratahs/index'
+import getAllBlacksPlayers from './allBlacks'
+import getBluesPlayers from './blues'
+import getBrumbiesPlayers from './brumbies'
+import getChiefsPlayers from './chiefs'
+import getCrusadersPlayers from './crusaders'
+import getDruaPlayers from './drua'
+import getForcePlayers from './force'
+import getHighlandersPlayers from './highlanders'
+import getHurricanesPlayers from './hurricanes'
+import getMoanaPlayers from './moana'
+import getRebelsPlayers from './rebels'
+import getRedsPlayers from './reds'
+import getWallabiesPlayers from './wallabies'
+import getWaratahsPlayers from './waratahs'
 
-export const players = {
-  blues: bluesPlayers,
-  brumbies: brumbiesPlayers,
-  chiefs: chiefsPlayers,
-  crusaders: crusadersPlayers,
-  drua: druaPlayers,
-  force: forcePlayers,
-  highlanders: highlandersPlayers,
-  hurricanes: hurricanesPlayers,
-  moana: moanaPlayers,
-  rebels: rebelsPlayers,
-  reds: redsPlayers,
-  waratahs: waratahsPlayers,
-  allBlacks: allBlacksPlayers,
-  wallabies: wallabiesPlayers,
+export type IdsObject = { [key: string]: number }
+
+const getPlayers = (positions: Position[], teams: Team[]) => {
+  const positionIds = positions.reduce<IdsObject>((acc, position) => {
+    acc[position.key] = position.id
+    return acc
+  }, {})
+
+  const teamIds = teams.reduce<IdsObject>((acc, team) => {
+    acc[team.key] = team.id
+    return acc
+  }, {})
+
+  const players = [
+    ...getAllBlacksPlayers(positionIds, teamIds),
+    ...getBluesPlayers(positionIds, teamIds),
+    ...getBrumbiesPlayers(positionIds, teamIds),
+    ...getChiefsPlayers(positionIds, teamIds),
+    ...getCrusadersPlayers(positionIds, teamIds),
+    ...getDruaPlayers(positionIds, teamIds),
+    ...getForcePlayers(positionIds, teamIds),
+    ...getHighlandersPlayers(positionIds, teamIds),
+    ...getHurricanesPlayers(positionIds, teamIds),
+    ...getMoanaPlayers(positionIds, teamIds),
+    ...getRebelsPlayers(positionIds, teamIds),
+    ...getRedsPlayers(positionIds, teamIds),
+    ...getWallabiesPlayers(positionIds, teamIds),
+    ...getWaratahsPlayers(positionIds, teamIds),
+  ]
+
+  return players
 }
+
+export default getPlayers

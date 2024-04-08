@@ -28,4 +28,3 @@ const seed = async () => {
 
 console.log('Seeding...')
 seed()
-console.log('Seeding Complete.')
