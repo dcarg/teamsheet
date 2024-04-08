@@ -10,7 +10,9 @@ import { findOrCreateUser } from '@functions/user'
 
 import PageHeader from '@components/PageHeader'
 
+import TeamSheetCreateButton from './_TeamSheetCreateButton'
 import TeamSheetListItem from './_TeamSheetListItem'
+import TeamSheetsBlankState from './_TeamSheetsBlankState'
 
 const Page = async () => {
   const { getUser } = getKindeServerSession()
@@ -37,9 +39,14 @@ const Page = async () => {
   return (
     <div className="flex flex-col max-w-column p-3">
       <PageHeader
+        actionContent={<TeamSheetCreateButton />}
         icon={faUsersRectangle}
         title="My Team Sheets"
       />
+
+      {!hasTeamSheets && (
+        <TeamSheetsBlankState />
+      )}
 
       {hasTeamSheets && teamSheets.map(teamSheet => (
         <TeamSheetListItem key={teamSheet.id} teamSheet={teamSheet} />
