@@ -1,330 +1,152 @@
-export const allBlacksPlayers = [
-  {
-    key: "markTelea",
-    title: "Mark Telea",
-    firstname: "Mark",
-    lastname: "Telea",
-    teams: ["blues", "allBlacks"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "hoskinsSotutu",
-    title: "Hoskins Sotutu",
-    firstname: "Hoskins",
-    lastname: "Sotutu",
-    teams: ["blues", "allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "calebClarke",
-    title: "Caleb Clarke",
-    firstname: "Caleb",
-    lastname: "Clarke",
-    teams: ["blues", "allBlacks"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "riekoIoane",
-    title: "Rieko Ioane",
-    firstname: "Rieko",
-    lastname: "Ioane",
-    teams: ["blues", "allBlacks"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "daltonPapali'i",
-    title: "Dalton Papali'i",
-    firstname: "Dalton",
-    lastname: "Papali'i",
-    teams: ["blues", "allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "finlayChristie",
-    title: "Finlay Christie",
-    firstname: "Finlay",
-    lastname: "Christie",
-    teams: ["blues", "allBlacks"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "akiraIoane",
-    title: "Akira Ioane",
-    firstname: "Akira",
-    lastname: "Ioane",
-    teams: ["blues", "allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "angusTa'avao",
-    title: "Angus Ta'avao",
-    firstname: "Angus",
-    lastname: "Ta'avao",
-    teams: ["blues", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "ofaTu'ungafasi",
-    title: "Ofa Tu'ungafasi",
-    firstname: "Ofa",
-    lastname: "Tu'ungafasi",
-    teams: ["blues", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "patrickTuipulotu",
-    title: "Patrick Tuipulotu",
-    firstname: "Patrick",
-    lastname: "Tuipulotu",
-    teams: ["blues", "allBlacks"],
-    positions: ["lock"],
-  },
-  {
-    key: "samisoniTaukei'aho",
-    title: "Samisoni Taukei'aho",
-    firstname: "Samisoni",
-    lastname: "Taukei'aho",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["hooker"],
-  },
-  {
-    key: "emoniNarawa",
-    title: "Emoni Narawa",
-    firstname: "Emoni",
-    lastname: "Narawa",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "damianMcKenzie",
-    title: "Damian McKenzie",
-    firstname: "Damian",
-    lastname: "McKenzie",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "tupouVaa'i",
-    title: "Tupou Vaa'i",
-    firstname: "Tupou",
-    lastname: "Vaa'i",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["lock", "backrow"],
-  },
-  {
-    key: "quinnTupaea",
-    title: "Quinn Tupaea",
-    firstname: "Quinn",
-    lastname: "Tupaea",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "antonLienert-Brown",
-    title: "Anton Lienert-Brown",
-    firstname: "Anton",
-    lastname: "Lienert-Brown",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["centre"],
-  },
-  {
-    key: "lukeJacobson",
-    title: "Luke Jacobson",
-    firstname: "Luke",
-    lastname: "Jacobson",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "aidanRoss",
-    title: "Aidan Ross",
-    firstname: "Aidan",
-    lastname: "Ross",
-    teams: ["chiefs", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "fletcherNewell",
-    title: "Fletcher Newell",
-    firstname: "Fletcher",
-    lastname: "Newell",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "tamaitiWilliams",
-    title: "Tamaiti Williams",
-    firstname: "Tamaiti",
-    lastname: "Williams",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "codieTaylor",
-    title: "Codie Taylor",
-    firstname: "Codie",
-    lastname: "Taylor",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["hooker"],
-  },
-  {
-    key: "scottBarrett",
-    title: "Scott Barrett",
-    firstname: "Scott",
-    lastname: "Barrett",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["lock", "backrow"],
-  },
-  {
-    key: "sevuReece",
-    title: "Sevu Reece",
-    firstname: "Sevu",
-    lastname: "Reece",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "ethanBlackadder",
-    title: "Ethan Blackadder",
-    firstname: "Ethan",
-    lastname: "Blackadder",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "davidHavili",
-    title: "David Havili",
-    firstname: "David",
-    lastname: "Havili",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["centre", "flyhalf", "outsideBack"],
-  },
-  {
-    key: "willJordan",
-    title: "Will Jordan",
-    firstname: "Will",
-    lastname: "Jordan",
-    teams: ["crusaders", "allBlacks"],
-    positions: ["outsideBack"],
-  },
-  {
-    key: "ethanDe Groot",
-    title: "Ethan de Groot",
-    firstname: "Ethan",
-    lastname: "De Groot",
-    teams: ["highlanders", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "jordieBarrett",
-    title: "Jordie Barrett",
-    firstname: "Jordie",
-    lastname: "Barrett",
-    teams: ["hurricanes", "allBlacks"],
-    positions: ["centre", "outsideBack"],
-  },
-  {
-    key: "asafoAumua",
-    title: "Asafo Aumua",
-    firstname: "Asafo",
-    lastname: "Aumua",
-    teams: ["hurricanes", "allBlacks"],
-    positions: ["hooker"],
-  },
-  {
-    key: "camRoigard",
-    title: "Cam Roigard",
-    firstname: "Cam",
-    lastname: "Roigard",
-    teams: ["hurricanes", "allBlacks"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "beaudenBarrett",
-    title: "Beauden Barrett",
-    firstname: "Beauden",
-    lastname: "Barrett",
-    teams: ["allBlacks"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "richieMounga",
-    title: "Richie Mounga",
-    firstname: "Richie",
-    lastname: "Mounga",
-    teams: ["allBlacks"],
-    positions: ["flyhalf"],
-  },
-  {
-    key: "stephenPerofeta",
-    title: "Stephen Perofeta",
-    firstname: "Stephen",
-    lastname: "Perofeta",
-    teams: ["blues", "allBlacks"],
-    positions: ["flyhalf", "outsideBack"],
-  },
-  {
-    key: "aaronSmith",
-    title: "Aaron Smith",
-    firstname: "Aaron",
-    lastname: "Smith",
-    teams: ["allBlacks"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "tjPerenara",
-    title: "TJ Perenara",
-    firstname: "TJ",
-    lastname: "Perenara",
-    teams: ["hurricanes", "allBlacks"],
-    positions: ["scrumhalf"],
-  },
-  {
-    key: "tyrelLomax",
-    title: "Tyrel Lomax",
-    firstname: "Tyrel",
-    lastname: "Lomax",
-    teams: ["hurricanes", "allBlacks"],
-    positions: ["prop"],
-  },
-  {
-    key: "ardieSavea",
-    title: "Ardie Savea",
-    firstname: "Ardie",
-    lastname: "Savea",
-    teams: ["allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "shannonFrizell",
-    title: "Shannon Frizell",
-    firstname: "Shannon",
-    lastname: "Frizell",
-    teams: ["allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "samCane",
-    title: "Sam Cane",
-    firstname: "Sam",
-    lastname: "Cane",
-    teams: ["allBlacks"],
-    positions: ["backrow"],
-  },
-  {
-    key: "brodieRetallick",
-    title: "Brodie Retallick",
-    firstname: "Brodie",
-    lastname: "Retallick",
-    teams: ["allBlacks"],
-    positions: ["lock"],
-  },
-  {
-    key: "leicesterFaingaanuku",
-    title: "Leicester Fainga’anuku",
-    firstname: "Leicester",
-    lastname: "Fainga’anuku",
-    teams: ["allBlacks"],
-    positions: ["outsideBack"],
-  }
-]
+import type { IdsObject } from '../../players'
+
+const getAllBlacksPlayers = (positionIds: IdsObject, teamIds: IdsObject) => {
+  const {
+    allBlacks: allBlacksId,
+  } = teamIds
+
+  const {
+    backrow: backrowId,
+    flyhalf: flyhalfId,
+    lock: lockId,
+    outsideBack: outsideBackId,
+    scrumhalf: scrumhalfId,
+  } = positionIds
+
+  // Only seed players who are in the All Blacks but no other team
+  const players = [
+    {
+      key: "beaudenBarrett",
+      title: "Beauden Barrett",
+      firstname: "Beauden",
+      lastname: "Barrett",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+    {
+      key: "richieMounga",
+      title: "Richie Mounga",
+      firstname: "Richie",
+      lastname: "Mounga",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: flyhalfId },
+        ],
+      },
+    },
+    {
+      key: "aaronSmith",
+      title: "Aaron Smith",
+      firstname: "Aaron",
+      lastname: "Smith",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: scrumhalfId },
+        ],
+      },
+    },
+    {
+      key: "ardieSavea",
+      title: "Ardie Savea",
+      firstname: "Ardie",
+      lastname: "Savea",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "shannonFrizell",
+      title: "Shannon Frizell",
+      firstname: "Shannon",
+      lastname: "Frizell",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "samCane",
+      title: "Sam Cane",
+      firstname: "Sam",
+      lastname: "Cane",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: backrowId },
+        ],
+      },
+    },
+    {
+      key: "brodieRetallick",
+      title: "Brodie Retallick",
+      firstname: "Brodie",
+      lastname: "Retallick",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: lockId },
+        ],
+      },
+    },
+    {
+      key: "leicesterFaingaanuku",
+      title: "Leicester Fainga'anuku",
+      firstname: "Leicester",
+      lastname: "Fainga'anuku",
+      teamMembers: {
+        create: [
+          { teamId: allBlacksId },
+        ],
+      },
+      playerPositions: {
+        create: [
+          { positionId: outsideBackId },
+        ],
+      },
+    },
+  ]
+
+  return players
+}
+
+export default getAllBlacksPlayers
