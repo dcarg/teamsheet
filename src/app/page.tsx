@@ -14,27 +14,27 @@ export default async function Home() {
   return (
     <div className="relative flex flex-col items-center">
       <div className="w-[320px]">
-        <div className="mt-[50px] text-2xl font-bold">
+        <div className="mt-[50px] text-2xl font-bold text-center">
           WE&apos;VE ALL GOT A TEAM
         </div>
 
-        <div className="mt-[50px] text-2xl font-bold">
+        <div className="mt-[50px] text-2xl font-bold text-center">
           AND WE ALL KNOW BETTER
         </div>
 
-        <div className="text-2xl font-bold">
+        <div className="text-2xl font-bold text-center">
           THAN THE COACHES...
         </div>
 
-        <div className="mt-[50px] text-2xl font-bold">
+        <div className="mt-[50px] text-2xl font-bold text-center">
           WHO WOULD YOU PICK?
         </div>
 
-        <div className="mt-[50px] text-2xl font-bold">
+        <div className="mt-[50px] text-2xl font-bold text-center">
           BUILD YOUR TEAMSHEET
         </div>
 
-        <div className="text-2xl font-bold">
+        <div className="mt-[10px] text-2xl font-bold text-center">
           GO ON
         </div>
       </div>
