@@ -151,6 +151,7 @@ model User {
   id Int @id @default(autoincrement())
   email String?
   firstname String?
+  isAdmin Boolean @default(false)
   lastname String?
   username String?
 
