@@ -1,6 +1,6 @@
-import Link from 'next/link'
-
 import prisma from '@db/prismaSingleton'
+
+import TeamListItem from './_TeamListItem'
 
 const Page = async () => {
   const teams = await prisma.team.findMany({
@@ -11,15 +11,10 @@ const Page = async () => {
     <div className="flex flex-col">
       <div className="font-bold mt-4 mx-4 text-center text-xl">Teams</div>
 
-    {teams.map(team => (
-      <Link
-        className="p-3 m-3 border rounded-lg hover:bg-gray-50"
-        href={`/admin/teams/${team.id}`}
-      >
-        {team.title}
-      </Link>
-    ))}
-  </div>
+      {teams.map(team => (
+        <TeamListItem key={team.id} team={team} />
+      ))}
+    </div>
   )
 }
 
