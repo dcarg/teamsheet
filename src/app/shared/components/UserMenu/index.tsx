@@ -56,7 +56,7 @@ const UserMenu = (props: UserMenuProps) => {
       />
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg">
+        <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-10">
           <div className="py-2">
             {/* TODO: Add Profile Page form functionality then show this UserMenuItem */}
             {/* <UserMenuItem 
