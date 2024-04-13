@@ -1,5 +1,3 @@
-import { redirect } from 'next/navigation'
-
 import prisma from '@db/prismaSingleton'
 
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
