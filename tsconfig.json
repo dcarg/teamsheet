@@ -28,7 +28,8 @@
       "@hooks/*": ["./src/app/shared/hooks/*"],
       "@logos/*": ["./public/logos/*"],
       "@modals/*": ["./src/app/shared/modals/*"],
-      "@types": ["./src/app/shared/types"]
+      "@types": ["./src/app/shared/types"],
+      "@utils": ["./src/app/shared/utils"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
