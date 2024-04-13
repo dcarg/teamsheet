@@ -14,20 +14,21 @@ const Layout = async (params: LayoutParams) => {
   const { getUser } = getKindeServerSession()
   const kindeUser = await getUser()
 
-  if (!kindeUser) redirect('/')
+  if (!kindeUser) return <div>Unauthenticated</div>
 
   const user = await prisma.user.findFirst({
     where: {
       userAccounts: {
         some: {
           provider: 'Kinde',
-          providerId: kindeUser?.id,
+          providerId: kindeUser.id,
         },
       },
     },
   })
 
-  if (!user?.isAdmin) redirect('/')
+  if (!user) return <div>Unauthenticated</div>
+  if (!user.isAdmin) return <div>Unauthorised</div>
 
   return (
     <div>
