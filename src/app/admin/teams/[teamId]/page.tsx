@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 import prisma from '@db/prismaSingleton'
+
+import { generateUrls } from '@functions/team'
 
 interface PageProps {
   params: { teamId: string },
@@ -15,6 +18,8 @@ const Page = async (props: PageProps) => {
     where: { id: +teamId },
   })
 
+  if (!team) return notFound() 
+
   const {
     id,
     key,
@@ -22,6 +27,8 @@ const Page = async (props: PageProps) => {
     secondaryColor,
     title,
   } = team
+
+  const { teamDetailsUrl, teamPlayersUrl } = generateUrls(team)
 
   return (
     <>
@@ -31,11 +38,11 @@ const Page = async (props: PageProps) => {
         <div className="flex">
           <div className="border-b w-3" />
 
-          <Link className="bg-slate-100 border-l border-t p-2 rounded-t-xl" href={`/admin/teams/${id}`}>
+          <Link className="bg-slate-100 border-l border-t p-2 rounded-t-xl" href={teamDetailsUrl}>
             Details
           </Link>
 
-          <Link className="border p-2 rounded-t-xl" href={`/admin/teams/${id}/players`}>
+          <Link className="border p-2 rounded-t-xl" href={teamPlayersUrl}>
             Players
           </Link>
 
