@@ -5,6 +5,8 @@ import prisma from '@db/prismaSingleton'
 
 import { generateUrls } from '@functions/team'
 
+import TeamForm from './_TeamForm'
+
 interface PageProps {
   params: { teamId: string },
 }
@@ -31,10 +33,10 @@ const Page = async (props: PageProps) => {
   const { teamDetailsUrl, teamPlayersUrl } = generateUrls(team)
 
   return (
-    <>
+    <div className="min-h-screen">
       <div className="font-bold mt-4 mx-4 text-center text-xl">{title}</div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col"> 
         <div className="flex">
           <div className="border-b w-3" />
 
@@ -50,10 +52,10 @@ const Page = async (props: PageProps) => {
         </div>
 
         <div className="bg-slate-100 p-3">
-          <div className="bg-white">Form here</div>  
+          <TeamForm team={team} />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
