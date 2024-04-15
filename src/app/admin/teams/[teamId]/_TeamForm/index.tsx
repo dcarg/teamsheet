@@ -1,9 +1,5 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-
 import type { Team } from '@prisma/client'
 
 import { Button } from '@components/shadcn/button'
@@ -18,20 +14,10 @@ import {
 } from '@components/shadcn/form'
 import { Input } from '@components/shadcn/input'
 
-const formSchema = z.object({
-  key: z.string().min(1, { message: 'Key is required' }),
-  primaryColor: z
-    .string()
-    .length(7, { message: 'Must be a hex code' })
-    .startsWith('#', { message: 'Must be a hex code' }),
-  secondaryColor: z
-    .string()
-    .length(7, { message: 'Must be a hex code' })
-    .startsWith('#', { message: 'Must be a hex code' }),
-  title: z.string().min(1, { message: 'Title is required' }),
-})
+import useTeamForm from '@hooks/useTeamForm'
 
-const onSubmit = (values: z.infer<typeof formSchema>) => {
+// z.infer<typeof formSchema>
+const onSubmit = (values) => {
   console.log(values)
 }
 
@@ -42,15 +28,7 @@ interface TeamFormProps {
 const TeamForm = (props: TeamFormProps) => {
   const { team } = props
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      key: '',
-      primaryColor: '',
-      secondaryColor: '',
-      title: '',
-    },
-  })
+  const form = useTeamForm(team)
 
   // TODO
   // 2. team update server action
