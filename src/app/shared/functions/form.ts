@@ -16,6 +16,7 @@
 //   key: 'allBlacks',
 //   title: 'All Blacks',
 // }
+// TODO fix types
 export const mergeDefaultStateWithRecord = <T>(defaultState: T, entity?: T) => {
   if (!entity) return defaultState
 

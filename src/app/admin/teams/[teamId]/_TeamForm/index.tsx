@@ -10,7 +10,6 @@ import { Button } from '@components/shadcn/button'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -19,11 +18,6 @@ import {
 import { Input } from '@components/shadcn/input'
 
 import useTeamForm, { formSchema } from '@hooks/useTeamForm'
-
-const onSubmit = (values: z.infer<typeof formSchema>) => {
-  console.log(values)
-  updateTeam(values)
-}
 
 interface TeamFormProps {
   team: Team,
@@ -34,9 +28,7 @@ const TeamForm = (props: TeamFormProps) => {
 
   const form = useTeamForm(team)
 
-  // TODO
-  // 2. team update server action
-  // 3. refactor form stuff to single hook if possible
+  const onSubmit = (values: z.infer<typeof formSchema>) => updateTeam({ ...values, id: team.id })
 
   return (
     <Form {...form}>
