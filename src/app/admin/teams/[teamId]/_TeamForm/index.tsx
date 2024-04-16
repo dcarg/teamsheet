@@ -36,19 +36,22 @@ const TeamForm = (props: TeamFormProps) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name="title"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="font-normal tracking-wider">Title</FormLabel>
+              <div className="flex justify-between">
+                <FormLabel className="font-normal tracking-wider">Title</FormLabel>
+
+                <FormMessage />
+              </div>
 
               <FormControl>
                 <Input {...field} />
               </FormControl>
 
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -58,13 +61,16 @@ const TeamForm = (props: TeamFormProps) => {
           name="key"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="font-normal tracking-wider">Key</FormLabel>
+              <div className="flex justify-between">
+                <FormLabel className="font-normal tracking-wider">Key</FormLabel>
+
+                <FormMessage />
+              </div>
 
               <FormControl>
                 <Input {...field} />
               </FormControl>
 
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -74,13 +80,16 @@ const TeamForm = (props: TeamFormProps) => {
           name="primaryColor"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="font-normal tracking-wider">Primary Color</FormLabel>
+              <div className="flex justify-between">
+                <FormLabel className="font-normal tracking-wider">Primary Color</FormLabel>
+
+                <FormMessage />
+              </div>
 
               <FormControl>
                 <Input {...field} />
               </FormControl>
 
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -90,7 +99,11 @@ const TeamForm = (props: TeamFormProps) => {
           name="secondaryColor"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="font-normal tracking-wider">Secondary Color</FormLabel>
+              <div className="flex justify-between">
+                <FormLabel className="font-normal tracking-wider">Secondary Color</FormLabel>
+
+                <FormMessage />
+              </div>
 
               <FormControl>
                 <Input {...field} />
