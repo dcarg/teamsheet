@@ -22,13 +22,7 @@ const Page = async (props: PageProps) => {
 
   if (!team) return notFound() 
 
-  const {
-    id,
-    key,
-    primaryColor,
-    secondaryColor,
-    title,
-  } = team
+  const { title } = team
 
   const { teamDetailsUrl, teamPlayersUrl } = generateUrls(team)
 

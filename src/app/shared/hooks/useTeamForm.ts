@@ -30,8 +30,9 @@ const useTeamForm = (team?: Team) => {
   const updatedDefaultState = updateDefaultState(defaultState, team)
 
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
     defaultValues: updatedDefaultState,
+    mode: 'onChange',
+    resolver: zodResolver(formSchema),
   })
 
   return form
