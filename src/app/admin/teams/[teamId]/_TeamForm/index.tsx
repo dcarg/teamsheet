@@ -43,7 +43,7 @@ const TeamForm = (props: TeamFormProps) => {
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between">
-                <FormLabel className="font-normal tracking-wider">Title</FormLabel>
+                <FormLabel className="text-sm font-normal tracking-wider">Title</FormLabel>
 
                 <FormMessage />
               </div>
@@ -61,7 +61,7 @@ const TeamForm = (props: TeamFormProps) => {
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between">
-                <FormLabel className="font-normal tracking-wider">Key</FormLabel>
+                <FormLabel className="text-sm font-normal tracking-wider">Key</FormLabel>
 
                 <FormMessage />
               </div>
@@ -79,7 +79,7 @@ const TeamForm = (props: TeamFormProps) => {
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between">
-                <FormLabel className="font-normal tracking-wider">Primary Color</FormLabel>
+                <FormLabel className="text-sm font-normal tracking-wider">Primary Color</FormLabel>
 
                 <FormMessage />
               </div>
@@ -97,7 +97,7 @@ const TeamForm = (props: TeamFormProps) => {
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between">
-                <FormLabel className="font-normal tracking-wider">Secondary Color</FormLabel>
+                <FormLabel className="text-sm font-normal tracking-wider">Secondary Color</FormLabel>
 
                 <FormMessage />
               </div>
