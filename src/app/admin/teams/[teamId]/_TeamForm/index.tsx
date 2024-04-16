@@ -16,6 +16,7 @@ import {
   FormMessage,
 } from '@components/shadcn/form'
 import { Input } from '@components/shadcn/input'
+import { useToast } from '@components/shadcn/use-toast'
 
 import useTeamForm, { formSchema } from '@hooks/useTeamForm'
 
@@ -28,7 +29,12 @@ const TeamForm = (props: TeamFormProps) => {
 
   const form = useTeamForm(team)
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => updateTeam({ ...values, id: team.id })
+  const { toast } = useToast()
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    updateTeam({ ...values, id: team.id })
+      .then(() => toast({ title: 'Team Updated' }))
+  }
 
   return (
     <Form {...form}>

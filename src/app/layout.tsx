@@ -10,6 +10,7 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false;
 
 import NavBar from '@components/NavBar'
+import { Toaster } from '@components/shadcn/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -71,6 +72,8 @@ export default function RootLayout({
         <div className="max-w-column w-full">
           {children}
         </div>
+
+        <Toaster />
       </body>
       <Script src="https://platform.twitter.com/widgets.js" />
     </html>
