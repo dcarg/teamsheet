@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Team } from '@prisma/client'
 
-import { updateDefaultState } from '@functions/form'
+import { mergeDefaultStateWithRecord } from '@functions/form'
 
 const defaultState = {
   key: '',
@@ -13,7 +13,7 @@ const defaultState = {
   title: '',
 }
 
-const formSchema = z.object({
+export const formSchema = z.object({
   key: z.string().min(1, { message: 'Key is required' }),
   primaryColor: z
     .string()
@@ -27,7 +27,7 @@ const formSchema = z.object({
 })
 
 const useTeamForm = (team?: Team) => {
-  const updatedDefaultState = updateDefaultState(defaultState, team)
+  const updatedDefaultState = mergeDefaultStateWithRecord(defaultState, team)
 
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: updatedDefaultState,

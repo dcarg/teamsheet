@@ -16,7 +16,7 @@
 //   key: 'allBlacks',
 //   title: 'All Blacks',
 // }
-export const updateDefaultState = (defaultState, entity) => {
+export const mergeDefaultStateWithRecord = <T>(defaultState: T, entity?: T) => {
   if (!entity) return defaultState
 
   const updatedState = Object.entries(defaultState).reduce((acc, stateEntry) => {

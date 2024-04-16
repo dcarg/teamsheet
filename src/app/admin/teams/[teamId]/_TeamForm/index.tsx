@@ -1,6 +1,10 @@
 'use client'
 
+import { z } from 'zod'
+
 import type { Team } from '@prisma/client'
+
+import { updateTeam } from '@actions/team' 
 
 import { Button } from '@components/shadcn/button'
 import {
@@ -14,11 +18,11 @@ import {
 } from '@components/shadcn/form'
 import { Input } from '@components/shadcn/input'
 
-import useTeamForm from '@hooks/useTeamForm'
+import useTeamForm, { formSchema } from '@hooks/useTeamForm'
 
-// z.infer<typeof formSchema>
-const onSubmit = (values) => {
+const onSubmit = (values: z.infer<typeof formSchema>) => {
   console.log(values)
+  updateTeam(values)
 }
 
 interface TeamFormProps {
