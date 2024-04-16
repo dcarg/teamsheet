@@ -51,7 +51,6 @@ const TeamForm = (props: TeamFormProps) => {
               <FormControl>
                 <Input {...field} />
               </FormControl>
-
             </FormItem>
           )}
         />
@@ -70,7 +69,6 @@ const TeamForm = (props: TeamFormProps) => {
               <FormControl>
                 <Input {...field} />
               </FormControl>
-
             </FormItem>
           )}
         />
@@ -89,7 +87,6 @@ const TeamForm = (props: TeamFormProps) => {
               <FormControl>
                 <Input {...field} />
               </FormControl>
-
             </FormItem>
           )}
         />
@@ -108,8 +105,6 @@ const TeamForm = (props: TeamFormProps) => {
               <FormControl>
                 <Input {...field} />
               </FormControl>
-
-              <FormMessage />
             </FormItem>
           )}
         />
