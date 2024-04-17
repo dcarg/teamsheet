@@ -128,7 +128,7 @@ const TeamForm = (props: TeamFormProps) => {
           )}
         />
 
-        <Button type="submit" variant="default">Submit</Button>
+        <Button type="submit" variant="creative">Submit</Button>
       </form>
     </Form>
   )

@@ -30,24 +30,8 @@ const Page = async (props: PageProps) => {
     <div className="min-h-screen">
       <div className="font-bold mt-4 mx-4 text-center text-xl">{title}</div>
 
-      <div className="flex flex-col"> 
-        <div className="flex">
-          <div className="border-b w-3" />
-
-          <Link className="bg-slate-100 border-l border-t p-2 rounded-t-xl" href={teamDetailsUrl}>
-            Details
-          </Link>
-
-          <Link className="border p-2 rounded-t-xl" href={teamPlayersUrl}>
-            Players
-          </Link>
-
-          <div className="grow border-b" />
-        </div>
-
-        <div className="bg-slate-100 p-3">
-          <TeamForm team={team} />
-        </div>
+      <div className="mx-4">
+        <TeamForm team={team} />
       </div>
     </div>
   )
