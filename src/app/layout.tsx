@@ -71,9 +71,10 @@ export default function RootLayout({
 
         <div className="max-w-column w-full">
           {children}
+
+         <Toaster />
         </div>
 
-        <Toaster />
       </body>
       <Script src="https://platform.twitter.com/widgets.js" />
     </html>

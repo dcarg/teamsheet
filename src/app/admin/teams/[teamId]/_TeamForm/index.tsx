@@ -28,6 +28,9 @@ const TeamForm = (props: TeamFormProps) => {
   const { team } = props
 
   const form = useTeamForm(team)
+  const { getValues } = form
+
+  const { primaryColor, secondaryColor } = getValues()
 
   const { toast } = useToast()
 
@@ -87,7 +90,14 @@ const TeamForm = (props: TeamFormProps) => {
               </div>
 
               <FormControl>
-                <Input {...field} />
+                <div className="flex items-center">
+                  <Input className="w-[calc(100%-38px)]" {...field} />
+
+                  <div
+                    className="border rounded-full ml-2 h-[30px] w-[30px]"
+                    style={{ backgroundColor: primaryColor }}
+                  />
+                </div>
               </FormControl>
             </FormItem>
           )}
@@ -105,7 +115,14 @@ const TeamForm = (props: TeamFormProps) => {
               </div>
 
               <FormControl>
-                <Input {...field} />
+                <div className="flex items-center">
+                  <Input className="w-[calc(100%-38px)]" {...field} />
+
+                  <div
+                    className="border rounded-full ml-2 h-[30px] w-[30px]"
+                    style={{ backgroundColor: secondaryColor }}
+                  />
+                </div>
               </FormControl>
             </FormItem>
           )}
