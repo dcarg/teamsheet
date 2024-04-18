@@ -36,7 +36,12 @@ const TeamForm = (props: TeamFormProps) => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     updateTeam({ ...values, id: team.id })
-      .then(() => toast({ title: 'Team Updated' }))
+      .then((response) => {
+        const { success, error } = response
+
+        if (success) toast({ title: 'Team Updated' })
+        toast({ title: error, variant: 'destructive' })
+      })
   }
 
   return (

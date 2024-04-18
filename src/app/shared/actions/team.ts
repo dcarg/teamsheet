@@ -16,12 +16,16 @@ type UpdateTeamPayload = Partial<CreateTeamPayload> & { id: number }
 export const updateTeam = async (payload: UpdateTeamPayload) => {
   const { id, ...payloadData } = payload
 
-  const team = await prisma.team.update({
-    where: { id },
-    data: payloadData,
-  })
+  try {
+    const team = await prisma.team.update({
+      where: { id },
+      data: payloadData,
+    })
+  
+    revalidateTag('team')
 
-  revalidateTag('team')
-
-  return team
+    return { success: true as const, data: team }
+  } catch(e) {
+    return { success: false as const, error: e?.message || 'Unknown Error' }
+  }
 }

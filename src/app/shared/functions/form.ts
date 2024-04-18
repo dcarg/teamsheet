@@ -16,8 +16,10 @@
 //   key: 'allBlacks',
 //   title: 'All Blacks',
 // }
-// TODO fix types
-export const mergeDefaultStateWithRecord = <T>(defaultState: T, entity?: T) => {
+export const mergeDefaultStateWithRecord = <T extends { [key: string]: any }>(
+  defaultState: T,
+  entity?: { [key: string]: any }
+) => {
   if (!entity) return defaultState
 
   const updatedState = Object.entries(defaultState).reduce((acc, stateEntry) => {
@@ -25,7 +27,7 @@ export const mergeDefaultStateWithRecord = <T>(defaultState: T, entity?: T) => {
     acc[key] = entity[key] || value
 
     return acc
-  }, {})
+  }, {} as T)
 
   return updatedState
 }
