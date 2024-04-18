@@ -64,7 +64,7 @@ const PlayerCard = (props: PlayerCardProps) => {
           </div>
         )}
 
-        <div className="font-bold truncate text-xs text-center mt-1">
+        <div className="font-bold truncate text-xs text-center mt-1 text-ellipsis w-20">
           {isPlayerSelected ? getPlayerTitle(player) : positionTitle}
         </div>
       </div>
