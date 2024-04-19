@@ -74,7 +74,6 @@ export default function RootLayout({
 
          <Toaster />
         </div>
-
       </body>
       <Script src="https://platform.twitter.com/widgets.js" />
     </html>
