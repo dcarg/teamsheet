@@ -2,6 +2,8 @@ import prisma from '@db/prismaSingleton'
 
 import PageHeader from '@components/PageHeader'
 
+import CreateTeamModal from '@modals/CreateTeamModal'
+
 import CreateTeamButton from './_CreateTeamButton'
 import ModalContent from './_ModalContent'
 import TeamListItem from './_TeamListItem'
@@ -23,6 +25,8 @@ const Page = async () => {
           <TeamListItem key={team.id} team={team} />
         ))}
       </div>
+
+      <CreateTeamModal />
     </ModalContent>
   )
 }
