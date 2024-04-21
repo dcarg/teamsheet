@@ -11,6 +11,20 @@ type CreateTeamPayload = {
   title: string,
 }
 
+export const createTeam = async (payload: CreateTeamPayload) => {
+  try {
+    const team = await prisma.team.create({
+      data: payload
+    })
+
+    revalidateTag('team')
+
+    return { success: true as const, data: team }
+  } catch(e) {
+    return { success: false as const, error: e?.message || 'Unknown Error' }
+  }
+}
+
 type UpdateTeamPayload = Partial<CreateTeamPayload> & { id: number }
 
 export const updateTeam = async (payload: UpdateTeamPayload) => {
