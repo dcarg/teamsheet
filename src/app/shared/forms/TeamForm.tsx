@@ -7,7 +7,9 @@ import type { Team } from '@prisma/client'
 import {
   createTeam as createTeamAction,
   updateTeam as updateTeamAction,
-} from '@actions/team' 
+} from '@actions/team'
+import type { FailedAction, SuccessfulAction } from '@actions/types'
+
 
 import { Button } from '@components/shadcn/button'
 import {
@@ -40,11 +42,19 @@ const updateTeam = async (team: Team, values: z.infer<typeof formSchema>, toast:
 }
 
 interface TeamFormProps {
+  callbacks?: {
+    afterActionFn?: (response: FailedAction & SuccessfulAction<Team>) => void,
+  },
   team?: Team,
 }
 
 const TeamForm = (props: TeamFormProps) => {
-  const { team } = props
+  const {
+    callbacks: {
+      afterActionFn,
+    },
+    team,
+  } = props
 
   const form = useTeamForm(team)
   const { getValues } = form
@@ -53,6 +63,7 @@ const TeamForm = (props: TeamFormProps) => {
 
   const { toast } = useToast()
 
+  // call afterActionFn in here
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     if (team) {
       updateTeam(team, values, toast)

@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation'
 
 import prisma from '@db/prismaSingleton'
 
-import { generateUrls } from '@functions/team'
+import TeamForm from '@forms/TeamForm'
 
-import TeamForm from './_TeamForm'
+import { generateUrls } from '@functions/team'
 
 interface PageProps {
   params: { teamId: string },
