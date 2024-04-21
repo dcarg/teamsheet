@@ -13,7 +13,7 @@ const CreateTeamModal = () => {
     callbacks: {
       closeCreateTeamModal,
     },
-    showCreateTeamModal
+    showCreateTeamModal,
   } = modalContextValue
 
   return (
