@@ -41,6 +41,7 @@ interface ShareBarProps {
 
 const ShareBar = (props: ShareBarProps) => {
   const { teamSheet } = props
+  const { editId, userId } = teamSheet
 
   const params: { competition: string, sport: string, team: string } = useParams()
   const {
@@ -51,19 +52,26 @@ const ShareBar = (props: ShareBarProps) => {
 
   const router = useRouter()
 
+  // WIP
+  // Can't use just editId & userId here as need to ensure its the current users team sheet to allow them to edit it!
+
   return (
     <div className="flex p-3">
-      <Link href={`/sport/${sportKey}`}>
+      <Link
+        href={userId ?
+        `/sport/${sportKey}/${competitionKey}/${teamKey}?teamSheetId=${editId}`
+        : `/sport/${sportKey}`
+        }
+      >
         <div className="p-2 border rounded bg-green-500 hover:bg-green-600 text-white font-semibold">
-          Create your own
+          {userId ? "Edit Team Sheet" : "+ Create Your Own"}
         </div>
       </Link>
 
       <Button
-        className="ml-2 w-[190px]"
+        className="ml-2 w-[190px] font-semibold"
         onClick={() => createTeamSheetAndRedirect({ competitionKey, sportKey, teamKey, teamSheet, router })}
-        text="Duplicate Team Sheet"
-        variant="create"
+        text="+ Duplicate Team Sheet"
       />
     </div>
   )
