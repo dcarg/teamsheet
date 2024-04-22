@@ -4,12 +4,8 @@ import { z } from 'zod'
 
 import type { Team } from '@prisma/client'
 
-import {
-  createTeam as createTeamAction,
-  updateTeam as updateTeamAction,
-} from '@actions/team'
-import type { FailedAction, SuccessfulAction } from '@actions/types'
-
+import { createTeam, updateTeam } from '@actions/team'
+import type { ServerAction } from '@actions/types'
 
 import { Button } from '@components/shadcn/button'
 import {
@@ -21,54 +17,36 @@ import {
   FormMessage,
 } from '@components/shadcn/form'
 import { Input } from '@components/shadcn/input'
-import { useToast } from '@components/shadcn/use-toast'
 
 import useTeamForm, { formSchema } from '@hooks/useTeamForm'
 
-const createTeam = async (values: z.infer<typeof formSchema>, toast: ReturnType<typeof useToast>['toast']) => {
-  const response = await createTeamAction(values)
-  const { success, error } = response
-
-  if (!success) return toast({ title: error, variant: 'destructive' })
-  toast({ title: 'Team Created' })
-}
-
-const updateTeam = async (team: Team, values: z.infer<typeof formSchema>, toast: ReturnType<typeof useToast>['toast']) => {
-  const response = await updateTeamAction({ ...values, id: team.id })
-  const { success, error } = response
-
-  if (!success) return toast({ title: error, variant: 'destructive' })
-  toast({ title: 'Team Updated' })
-}
-
 interface TeamFormProps {
   callbacks?: {
-    afterActionFn?: (response: FailedAction & SuccessfulAction<Team>) => void,
+    afterActionFn?: (response: ServerAction<Team>) => void,
   },
   team?: Team,
 }
 
 const TeamForm = (props: TeamFormProps) => {
   const {
-    callbacks: {
-      afterActionFn,
-    },
+    callbacks,
     team,
   } = props
+
+  const { afterActionFn } = callbacks || {}
 
   const form = useTeamForm(team)
   const { getValues } = form
 
   const { primaryColor, secondaryColor } = getValues()
 
-  const { toast } = useToast()
-
-  // call afterActionFn in here
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     if (team) {
-      updateTeam(team, values, toast)
+      const response = await updateTeam({ ...values, id: team.id, })
+      if (afterActionFn) afterActionFn(response)
     } else {
-      createTeam(values, toast)
+      const response = await createTeam(values)
+      if (afterActionFn) afterActionFn(response)
     }
   }
 

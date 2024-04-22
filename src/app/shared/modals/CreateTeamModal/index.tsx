@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import type { Team } from '@prisma/client'
 
-import type { FailedAction, SuccessfulAction } from '@actions/types'
+import type { ServerAction } from '@actions/types'
 
 import { useToast } from '@components/shadcn/use-toast'
 
@@ -25,10 +25,12 @@ const CreateTeamModal = () => {
 
   const { toast } = useToast()
 
-  const afterActionFn = (response: FailedAction & SuccessfulAction<Team>) => {
-    const { success, error } = response
+  const afterActionFn = (response: ServerAction<Team>) => {
+    const { success } = response
 
     if (!success) {
+      const { error } = response
+
       toast({ title: error, variant: 'destructive' })
     } else {
       toast({ title: 'Team Created' })
