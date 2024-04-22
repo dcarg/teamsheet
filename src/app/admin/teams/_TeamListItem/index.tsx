@@ -2,24 +2,28 @@ import Link from 'next/link'
 
 import type { Team } from '@prisma/client'
 
+import { generateUrls } from '@functions/team'
+
 interface TeamListItemProps {
   team: Team,
 }
 
 const TeamListItem = (props: TeamListItemProps) => {
   const {
+    team,
     team: {
-      id,
       primaryColor,
       secondaryColor,
       title,
     },
   } = props
 
+  const { teamDetailsUrl } = generateUrls(team)
+
   return (
     <Link
       className="p-3 mt-3 mx-3 border rounded-lg hover:bg-gray-50"
-      href={`/admin/teams/${id}`}
+      href={teamDetailsUrl}
     >
       <div className="flex justify-between">
         <div>{title}</div>
