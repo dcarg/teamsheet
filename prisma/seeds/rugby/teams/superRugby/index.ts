@@ -1,3 +1,5 @@
+import fantasyTeam from '../fantasy'
+
 import type { IdsObject } from '../../players'
 
 const getSuperRugbyTeams = (competitionIds: IdsObject) => {
@@ -6,6 +8,7 @@ const getSuperRugbyTeams = (competitionIds: IdsObject) => {
   } = competitionIds
 
   const superRugbyTeams = [
+    fantasyTeam,
     {
       key: 'blues',
       title: 'Blues',
