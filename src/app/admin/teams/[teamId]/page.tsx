@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation'
 
 import prisma from '@db/prismaSingleton'
 
-import TeamForm from '@forms/TeamForm'
-
 import { generateUrls } from '@functions/team'
+
+import TeamForm from './_TeamForm'
 
 interface PageProps {
   params: { teamId: string },
@@ -20,7 +20,7 @@ const Page = async (props: PageProps) => {
     where: { id: +teamId },
   })
 
-  if (!team) return notFound() 
+  if (!team) return notFound()
 
   const { title } = team
 
