@@ -2,12 +2,13 @@ import { notFound } from 'next/navigation'
 
 import prisma from '@db/prismaSingleton'
 
+import { getPlayers } from '@functions/players'
+import { teamSize } from '@functions/teamSheet'
+
 import Bench from '@components/Bench'
 import Field from '@components/Field'
 import NameForm from '@components/NameForm'
 import TopBar from '@components/TopBar'
-
-import { teamSize } from '@functions/teamSheet'
 
 import SelectPlayerModal from '@modals/SelectPlayerModal'
 
@@ -27,7 +28,7 @@ const Page = async (props: PageProps) => {
   const {
     params: {
       competition: competitionKey,
-      team: teamkey,
+      team: teamKey,
     },
     searchParams: { teamSheetId },
   } = props
@@ -41,38 +42,20 @@ const Page = async (props: PageProps) => {
 
   const team = await prisma.team.findUnique({
     where: {
-      key: teamkey,
+      key: teamKey,
     },
   })
   if (!team) return notFound()
 
-  const teamSheet = teamSheetId
-    ? await prisma.teamSheet.findUnique({
-      where: {
-        editId: teamSheetId,
-      },
-    })
-    : null
+  const players = await getPlayers(competitionKey, teamKey)
 
-  const players = await prisma.player.findMany({
+  const teamSheet = teamSheetId
+  ? await prisma.teamSheet.findUnique({
     where: {
-      teamMembers: {
-        some: {
-          team: {
-            key: teamkey,
-          },
-        },
-      },
+      editId: teamSheetId,
     },
-    include: {
-      playerPositions: {
-        include: {
-          position: true,
-        },
-      },
-    },
-    orderBy: { firstname: 'asc' },
   })
+  : null
 
   const hasTeamSheet = !!teamSheet
   const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null

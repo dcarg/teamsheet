@@ -1,3 +1,5 @@
+import prisma from '@db/prismaSingleton'
+
 import type { PlayerWithPositions } from '@types'
 
 export const getPlayerTitle = (player: PlayerWithPositions) => {
@@ -46,4 +48,57 @@ export const sortSelectedPlayers = (params: SortSelectedPlayersParams) => {
   const sortedPlayers = [...selectedPlayers, ...unselectedPlayers]
 
   return sortedPlayers
+}
+
+export const getPlayers = (competitionKey: string, teamKey: string) => {
+  if (!competitionKey || !teamKey) return []
+
+  if (teamKey === "fantasy"){
+    // competitionKey
+    // teamMember => teamId, playerId
+
+    // competitionTeam => teamId, competitionKey
+
+    // We have competitionKey
+
+    return prisma.player.findMany({
+      where: {
+        teamMembers: {
+          some: {
+            team: {
+              key: teamKey,
+            },
+          },
+        },
+      },
+      include: {
+        playerPositions: {
+          include: {
+            position: true,
+          },
+        },
+      },
+      orderBy: { firstname: 'asc' },
+    })
+  }
+
+  return prisma.player.findMany({
+    where: {
+      teamMembers: {
+        some: {
+          team: {
+            key: teamKey,
+          },
+        },
+      },
+    },
+    include: {
+      playerPositions: {
+        include: {
+          position: true,
+        },
+      },
+    },
+    orderBy: { firstname: 'asc' },
+  })
 }
