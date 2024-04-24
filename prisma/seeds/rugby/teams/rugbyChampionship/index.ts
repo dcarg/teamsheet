@@ -1,15 +1,12 @@
-import fantasyTeam from '../fantasy'
-
 import type { IdsObject } from '../../players'
 
-const getRugbyChampionShipTeams = (competitionIds: IdsObject) => {
+const getRugbyChampionshipTeams = (competitionIds: IdsObject) => {
   const {
     international: internationalId,
     rugbyChampionship: rugbyChampionshipId,
   } = competitionIds
 
   const rugbyChampionshipTeams = [
-    fantasyTeam,
     {
       key: 'wallabies',
       title: 'Wallabies',
@@ -41,4 +38,4 @@ const getRugbyChampionShipTeams = (competitionIds: IdsObject) => {
   return rugbyChampionshipTeams
 }
 
-export default getRugbyChampionShipTeams
+export default getRugbyChampionshipTeams

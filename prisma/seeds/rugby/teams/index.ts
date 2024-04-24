@@ -1,7 +1,8 @@
 import type { Competition } from '@prisma/client'
 
+import getFantasyTeams from './fantasy'
 import getInternationalTeams from './international'
-import getRugbyChampionShipTeams from './rugbyChampionship'
+import getRugbyChampionshipTeams from './rugbyChampionship'
 import getSuperRugbyTeams from './superRugby'
 
 export type IdsObject = { [key: string]: number }
@@ -13,8 +14,9 @@ const getTeams = (competitions: Competition[]) => {
   }, {})
 
    const teams = [
+    ...getFantasyTeams(competitionIds),
     ...getInternationalTeams(competitionIds),
-    ...getRugbyChampionShipTeams(competitionIds),
+    ...getRugbyChampionshipTeams(competitionIds),
     ...getSuperRugbyTeams(competitionIds),
   ]
 
