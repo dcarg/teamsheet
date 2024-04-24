@@ -20,7 +20,7 @@ const Page = async (props: PageProps) => {
     where: { id: +teamId },
   })
 
-  if (!team) return notFound() 
+  if (!team) return notFound()
 
   const { title } = team
 

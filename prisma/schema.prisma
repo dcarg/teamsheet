@@ -44,7 +44,7 @@ model Team {
   key String @unique
   primaryColor String
   secondaryColor String
-  tertiaryColor String
+  tertiaryColor String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

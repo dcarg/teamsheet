@@ -1,5 +1,11 @@
 import prisma from '@db/prismaSingleton'
 
+import PageHeader from '@components/PageHeader'
+
+import CreateTeamModal from '@modals/CreateTeamModal'
+
+import CreateTeamButton from './_CreateTeamButton'
+import ModalContent from './_ModalContent'
 import TeamListItem from './_TeamListItem'
 
 const Page = async () => {
@@ -8,13 +14,20 @@ const Page = async () => {
   })
 
   return (
-    <div className="flex flex-col">
-      <div className="font-bold mt-4 mx-4 text-center text-xl">Teams</div>
+    <ModalContent>
+      <div className="flex flex-col m-3">
+        <PageHeader
+          actionContent={<CreateTeamButton />}
+          title="Teams"
+        />
 
-      {teams.map(team => (
-        <TeamListItem key={team.id} team={team} />
-      ))}
-    </div>
+        {teams.map(team => (
+          <TeamListItem key={team.id} team={team} />
+        ))}
+      </div>
+
+      <CreateTeamModal />
+    </ModalContent>
   )
 }
 

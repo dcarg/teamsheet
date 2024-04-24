@@ -22,7 +22,7 @@ const TeamListItem = (props: TeamListItemProps) => {
 
   return (
     <Link
-      className="p-3 mt-3 mx-3 border rounded-lg hover:bg-gray-50"
+      className="p-3 mt-3 border rounded-lg hover:bg-gray-50"
       href={teamDetailsUrl}
     >
       <div className="flex justify-between">
