@@ -50,26 +50,23 @@ export const sortSelectedPlayers = (params: SortSelectedPlayersParams) => {
   return sortedPlayers
 }
 
-export const getPlayers = (competitionKey: string, teamKey: string) => {
-  if (!competitionKey || !teamKey) return []
+export const getPlayers = async (competitionId: number, teamKey: string) => {
+  if (!competitionId || !teamKey) return []
 
   if (teamKey === "fantasy"){
-    // competitionKey
-    // teamMember => teamId, playerId
-
-    // competitionTeam => teamId, competitionKey
-
-    // We have competitionKey
-
-    return prisma.player.findMany({
+    return await prisma.player.findMany({
       where: {
         teamMembers: {
           some: {
             team: {
-              key: teamKey,
-            },
-          },
-        },
+              competitionTeams: {
+                some: {
+                  competitionId,
+                }
+              }
+            }
+          }
+        }
       },
       include: {
         playerPositions: {
@@ -82,7 +79,7 @@ export const getPlayers = (competitionKey: string, teamKey: string) => {
     })
   }
 
-  return prisma.player.findMany({
+  return await prisma.player.findMany({
     where: {
       teamMembers: {
         some: {

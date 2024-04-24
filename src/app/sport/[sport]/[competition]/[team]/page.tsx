@@ -39,6 +39,7 @@ const Page = async (props: PageProps) => {
     },
   })
   if (!competition) return notFound()
+  const { id: competitionId } = competition
 
   const team = await prisma.team.findUnique({
     where: {
@@ -47,7 +48,7 @@ const Page = async (props: PageProps) => {
   })
   if (!team) return notFound()
 
-  const players = await getPlayers(competitionKey, teamKey)
+  const players = await getPlayers(competitionId, teamKey)
 
   const teamSheet = teamSheetId
   ? await prisma.teamSheet.findUnique({
