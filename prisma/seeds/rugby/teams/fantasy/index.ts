@@ -13,11 +13,9 @@ const getFantasyTeams = (competitionIds: IdsObject) => {
       secondaryColor: '#7393B3',
       tertiaryColor: '#FFFFFF',
       competitionTeams: {
-        create: competitionIdsArray.map(competitionId => (
-          { competitionId: competitionId }
-        ))
-      }
-    }
+        create: competitionIdsArray.map(competitionId => ({ competitionId }))
+      },
+    },
   ]
 
   return fantasyTeams

@@ -51,12 +51,12 @@ const Page = async (props: PageProps) => {
   const players = await getPlayers(competitionId, teamKey)
 
   const teamSheet = teamSheetId
-  ? await prisma.teamSheet.findUnique({
-    where: {
-      editId: teamSheetId,
-    },
-  })
-  : null
+    ? await prisma.teamSheet.findUnique({
+      where: {
+        editId: teamSheetId,
+      },
+    })
+    : null
 
   const hasTeamSheet = !!teamSheet
   const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null

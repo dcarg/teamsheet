@@ -62,11 +62,11 @@ export const getPlayers = async (competitionId: number, teamKey: string) => {
               competitionTeams: {
                 some: {
                   competitionId,
-                }
-              }
-            }
-          }
-        }
+                },
+              },
+            },
+          },
+        },
       },
       include: {
         playerPositions: {
