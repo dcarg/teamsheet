@@ -1,6 +1,6 @@
 import type { IdsObject } from '../../players'
 
-const getRugbyChampionShipTeams = (competitionIds: IdsObject) => {
+const getRugbyChampionshipTeams = (competitionIds: IdsObject) => {
   const {
     international: internationalId,
     rugbyChampionship: rugbyChampionshipId,
@@ -17,8 +17,8 @@ const getRugbyChampionShipTeams = (competitionIds: IdsObject) => {
         create: [
           { competitionId: internationalId },
           { competitionId: rugbyChampionshipId },
-        ]
-      }
+        ],
+      },
     },
     {
       key: 'allBlacks',
@@ -30,12 +30,12 @@ const getRugbyChampionShipTeams = (competitionIds: IdsObject) => {
         create: [
           { competitionId: internationalId },
           { competitionId: rugbyChampionshipId },
-        ]
-      }
-    }
+        ],
+      },
+    },
   ]
 
   return rugbyChampionshipTeams
 }
 
-export default getRugbyChampionShipTeams
+export default getRugbyChampionshipTeams

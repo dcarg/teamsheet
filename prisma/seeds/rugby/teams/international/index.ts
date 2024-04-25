@@ -17,8 +17,8 @@ const getInternationalTeams = (competitionIds: IdsObject) => {
         create: [
           { competitionId: internationalId },
           { competitionId: rugbyChampionshipId },
-        ]
-      }
+        ],
+      },
     },
     {
       key: 'allBlacks',
@@ -30,9 +30,9 @@ const getInternationalTeams = (competitionIds: IdsObject) => {
         create: [
           { competitionId: internationalId },
           { competitionId: rugbyChampionshipId },
-        ]
-      }
-    }
+        ],
+      },
+    },
   ]
 
   return internationalTeams
