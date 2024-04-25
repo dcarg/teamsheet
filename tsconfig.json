@@ -24,11 +24,13 @@
       "@components/*": ["./src/app/shared/components/*"],
       "@contexts/*": ["./src/app/shared/contexts/*.ts"],
       "@db/*": ["./src/db/*.ts"],
+      "@forms/*": ["./src/app/shared/forms/*"],
       "@functions/*": ["./src/app/shared/functions/*"],
       "@hooks/*": ["./src/app/shared/hooks/*"],
       "@logos/*": ["./public/logos/*"],
       "@modals/*": ["./src/app/shared/modals/*"],
-      "@types": ["./src/app/shared/types"]
+      "@types": ["./src/app/shared/types"],
+      "@utils": ["./src/app/shared/utils"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
