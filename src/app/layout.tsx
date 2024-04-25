@@ -2,6 +2,13 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import localFont from "next/font/local"
+
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+
+import { findOrCreateUser } from '@functions/user'
+
+import { GlobalContextProvider } from './globalContext'
+
 import './globals.css'
 
 // Load fontawesome css at the root of the app to stop 'flashing' icon
@@ -58,19 +65,26 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const { getUser } = getKindeServerSession()
+  const kindeUser = await getUser()
+
+  findOrCreateUser(kindeUser)
+
   return (
     <html lang="en">
       <body className={`${futura.className} ${inter.className} flex flex-col items-center`}>
-        <NavBar title="TEAMSHEET" />
+        <GlobalContextProvider>
+          <NavBar title="TEAMSHEET" />
 
-        <div className="max-w-column w-full">
-          {children}
-        </div>
+          <div className="max-w-column w-full">
+            {children}
+          </div>
+        </GlobalContextProvider>
       </body>
       <Script src="https://platform.twitter.com/widgets.js" />
     </html>

@@ -1,11 +1,15 @@
 'use client'
 
+import { useContext } from 'react'
+
 import Link from 'next/link'
 import { useParams, useRouter } from 'next/navigation'
 
 import type { TeamSheet } from '@prisma/client'
 
 import { createTeamSheet } from '@actions/teamSheet'
+
+import { useGlobalContext } from '../../../globalContext'
 
 import Button from '@components/Button'
 import { PlayerWithPositions } from '@types'
@@ -51,6 +55,10 @@ const ShareBar = (props: ShareBarProps) => {
   } = params
 
   const router = useRouter()
+
+  const globalContext = useGlobalContext()
+  const { currentUser } = globalContext
+  console.log('currentUser', currentUser)
 
   // WIP
   // Can't use just editId & userId here as need to ensure its the current users team sheet to allow them to edit it!
