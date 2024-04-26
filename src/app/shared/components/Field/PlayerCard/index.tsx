@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import { getPlayerTitle } from '@functions/players'
+import { findPlayerTeamForCompetition, getPlayerTitle } from '@functions/players'
 
 import type { PlayerWithPositions } from '@types'
 
@@ -24,15 +24,21 @@ const PlayerCard = (props: PlayerCardProps) => {
   const { className, nonInteractive, player, positions, positionTitle, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
-  const { callbacks, team } = teamContextValue
+  const { callbacks, competition, team } = teamContextValue
 
+  const playerTeam = findPlayerTeamForCompetition(competition.id, player)
+  const { 
+    primaryColor: playerTeamPrimaryColor,
+    secondaryColor: playerTeamSecondaryColor,
+  } = playerTeam || {}
+
+  const { primaryColor, secondaryColor } = team
+  
   const {
     openModal,
     setSelectedPositions,
     setSelectedTeamSheetLayoutId,
   } = callbacks || {}
-
-  const { primaryColor, secondaryColor } = team
 
   const isPlayerSelected = !!player
 
@@ -53,8 +59,8 @@ const PlayerCard = (props: PlayerCardProps) => {
           <PlayerIcon
             isFaded={!isPlayerSelected}
             number={teamSheetLayoutId}
-            primaryColor={primaryColor}
-            secondaryColor={secondaryColor}
+            primaryColor={playerTeamPrimaryColor || primaryColor}
+            secondaryColor={playerTeamSecondaryColor || secondaryColor}
           />
         </div>
 

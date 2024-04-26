@@ -1,3 +1,5 @@
+import type { Team } from '@prisma/client'
+
 import prisma from '@db/prismaSingleton'
 
 import type { PlayerWithPositions } from '@types'
@@ -74,6 +76,15 @@ export const getPlayers = async (competitionId: number, teamKey: string) => {
             position: true,
           },
         },
+        teamMembers: {
+          include: {
+            team: {
+              include: {
+                competitionTeams: true,
+              },
+            },
+          },
+        },
       },
       orderBy: { firstname: 'asc' },
     })
@@ -98,4 +109,23 @@ export const getPlayers = async (competitionId: number, teamKey: string) => {
     },
     orderBy: { firstname: 'asc' },
   })
+}
+
+export const findPlayerTeamForCompetition = (competitionId: number, player?: PlayerWithPositions): Team | null => {
+  if (!player) return null
+
+  const { teamMembers } = player
+  const teams = teamMembers.map(teamMember => teamMember.team)
+
+  const competitionTeams = teams.flatMap(team => team.competitionTeams)
+
+  let teamId = null
+  for (const competitionTeam of competitionTeams) {
+    if (competitionTeam.competitionId === competitionId) {
+      teamId = competitionTeam.teamId
+      break
+    }
+  }
+
+  return teams.find(team => team.id === teamId)!
 }
