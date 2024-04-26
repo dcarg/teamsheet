@@ -93,6 +93,7 @@ const SelectPlayerModal = () => {
         return (
           <PlayerListItem
             key={player.id}
+            competition={competition}
             disabled={isAlreadyAssigned}
             onClick={isAlreadyAssigned ? undefined : () => handlePlayerSelect({
               callbacks: { closeModal: closeModal! },

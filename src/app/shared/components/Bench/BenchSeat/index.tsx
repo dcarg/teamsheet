@@ -19,7 +19,7 @@ const BenchSeat = (props: BenchSeatProps) => {
   const { nonInteractive, player, positions, teamSheetLayoutId } = props
 
   const teamContextValue = useContext(TeamContext)
-  const { callbacks, team } = teamContextValue
+  const { callbacks, competition, team } = teamContextValue
   const {
     openModal,
     setSelectedPositions,
@@ -28,6 +28,7 @@ const BenchSeat = (props: BenchSeatProps) => {
 
   return (
     <PlayerListItem
+      competition={competition}
       nonInteractive={nonInteractive}
       onClick={nonInteractive ? undefined : () => {
         setSelectedPositions!(positions)
