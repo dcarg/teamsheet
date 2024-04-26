@@ -65,8 +65,18 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
 
 const Page = async (props: PageProps) => {
   const {
+    params: {
+      competition: competitionKey,
+    },
     searchParams: { teamSheetId },
   } = props
+
+  const competition = await prisma.competition.findUnique({
+    where: {
+      key: competitionKey,
+    },
+  })
+  if (!competition) return notFound()
 
   const teamSheet = teamSheetId
     ? await prisma.teamSheet.findUnique({
@@ -100,7 +110,7 @@ const Page = async (props: PageProps) => {
   })
 
   return (
-    <ShareContent players={players} team={teamSheet.team} teamSheet={teamSheet}>
+    <ShareContent competition={competition} players={players} team={teamSheet.team} teamSheet={teamSheet}>
       <ShareBar teamSheet={teamSheet} />
 
       <Field nonInteractive />
