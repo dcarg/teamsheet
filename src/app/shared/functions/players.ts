@@ -115,6 +115,9 @@ export const findPlayerTeamForCompetition = (competitionId: number, player?: Pla
   if (!player) return null
 
   const { teamMembers } = player
+
+  if (!teamMembers) return null
+
   const teams = teamMembers.map(teamMember => teamMember.team)
 
   const competitionTeams = teams.flatMap(team => team.competitionTeams)
