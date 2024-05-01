@@ -1,5 +1,7 @@
 import type { Team, TeamSheet } from '@prisma/client'
 
+import { findPlayerTeamForCompetition } from '@functions/players'
+
 import type { PlayerWithPositions } from '@types'
 
 import NonInteractivePlayerIcon from './NonInteractivePlayerIcon'
@@ -31,6 +33,7 @@ interface NonInteractiveFieldProps {
 
 const NonInteractiveField = (props: NonInteractiveFieldProps) => {
   const { team, teamSheet } = props
+  const { competitionId } = teamSheet
 
   const data = teamSheet.data as Partial<{ [key: string]: PlayerWithPositions }>
 
@@ -48,13 +51,19 @@ const NonInteractiveField = (props: NonInteractiveFieldProps) => {
         {teamSheetLayoutData.field.map(({ style, teamSheetLayoutId }) => {
           const player = data ? data[teamSheetLayoutId] : undefined
 
+          const team = findPlayerTeamForCompetition(competitionId, player)
+          const {
+            primaryColor: playerTeamPrimaryColor,
+            secondaryColor: playerTeamSecondaryColor,
+          } = team || {}
+
           return (
             <NonInteractivePlayerIcon
               key={teamSheetLayoutId}
               number={teamSheetLayoutId}
               player={player}
-              primaryColor={primaryColor}
-              secondaryColor={secondaryColor}
+              primaryColor={playerTeamPrimaryColor || primaryColor}
+              secondaryColor={playerTeamSecondaryColor || secondaryColor}
               style={style}
             />
           )

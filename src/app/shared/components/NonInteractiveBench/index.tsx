@@ -1,5 +1,7 @@
 import type { Team, TeamSheet } from '@prisma/client'
 
+import { findPlayerTeamForCompetition } from '@functions/players'
+
 import type { PlayerWithPositions } from '@types'
 
 import NonInteractiveBenchSeat from './NonInteractiveBenchSeat'
@@ -24,6 +26,7 @@ interface NonInteractiveBenchProps {
 
 const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
   const { team, teamSheet } = props
+  const { competitionId } = teamSheet
 
   const data = teamSheet.data as Partial<{ [key: string]: PlayerWithPositions }>
 
@@ -62,13 +65,19 @@ const NonInteractiveBench = (props: NonInteractiveBenchProps) => {
         {teamSheetLayoutData.bench.map(({ teamSheetLayoutId }) => {
           const player = data ? data[teamSheetLayoutId] : undefined
 
+          const team = findPlayerTeamForCompetition(competitionId, player)
+          const {
+            primaryColor: playerTeamPrimaryColor,
+            secondaryColor: playerTeamSecondaryColor,
+          } = team || {}
+
           return (
             <NonInteractiveBenchSeat
               key={teamSheetLayoutId}
               number={teamSheetLayoutId}
               player={player}
-              primaryColor={primaryColor}
-              secondaryColor={secondaryColor}
+              primaryColor={playerTeamPrimaryColor || primaryColor}
+              secondaryColor={playerTeamSecondaryColor || secondaryColor}
             />
           )
         })}

@@ -3,12 +3,15 @@ import React from 'react'
 import clsx from 'clsx'
 
 import type { PlayerWithPositions } from '@types'
-import type { Team } from '@prisma/client'
+import type { Competition, Team } from '@prisma/client'
 
 import PlayerIcon from '@components/PlayerIcon'
 import UnSelectPlayer from '@components/UnSelectPlayer'
 
+import { findPlayerTeamForCompetition } from '@functions/players'
+
 interface PlayerListItemProps {
+  competition: Competition,
   disabled?: boolean,
   nonInteractive?: boolean,
   onClick?: () => void,
@@ -18,7 +21,21 @@ interface PlayerListItemProps {
 }
 
 const PlayerListItem = (props: PlayerListItemProps) => {
-  const { disabled, nonInteractive, onClick, player, team, teamSheetLayoutId } = props
+  const {
+    competition,
+    disabled,
+    nonInteractive,
+    onClick,
+    player,
+    team,
+    teamSheetLayoutId,
+  } = props
+
+  const playerTeam = findPlayerTeamForCompetition(competition.id, player)
+  const { 
+    primaryColor: playerTeamPrimaryColor,
+    secondaryColor: playerTeamSecondaryColor,
+  } = playerTeam || {}
 
   const { primaryColor, secondaryColor } = team
 
@@ -45,8 +62,8 @@ const PlayerListItem = (props: PlayerListItemProps) => {
           <PlayerIcon
             isFaded={disabled}
             number={teamSheetLayoutId}
-            primaryColor={primaryColor}
-            secondaryColor={secondaryColor}
+            primaryColor={playerTeamPrimaryColor || primaryColor}
+            secondaryColor={playerTeamSecondaryColor || secondaryColor}
           />
         </div>
 

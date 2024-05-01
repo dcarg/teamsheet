@@ -8,6 +8,15 @@ export type PlayerWithPositions = Prisma.PlayerGetPayload<
           position: true,
         },
       },
+      teamMembers: {
+        include: {
+          team: {
+            include: {
+              competitionTeams: true,
+            },
+          },
+        },
+      },
     },
   }
 >
