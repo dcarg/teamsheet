@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import teamSheetLayoutData from '@functions/teamSheet'
+import teamSheetLayoutData, { fantasyBench } from '@functions/teamSheet'
 
 import type { PlayerWithPositions } from '@types'
 
@@ -12,10 +12,11 @@ import BenchSeat from './BenchSeat'
 
 interface BenchProps {
   nonInteractive?: boolean,
+  teamKey: string,
 }
 
 const Bench = (props: BenchProps) => {
-  const { nonInteractive } = props
+  const { nonInteractive, teamKey } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
@@ -24,9 +25,13 @@ const Bench = (props: BenchProps) => {
 
   const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null
 
+  const { bench } = teamSheetLayoutData
+
+  const benchData = teamKey == "fantasy" ? fantasyBench : bench
+
   return (
     <div className="m-auto mt-2 border">
-      {teamSheetLayoutData.bench.map(({ positions, teamSheetLayoutId }) => {
+      {benchData.map(({ positions, teamSheetLayoutId }) => {
         const player = data ? data[teamSheetLayoutId] : undefined
 
         return (

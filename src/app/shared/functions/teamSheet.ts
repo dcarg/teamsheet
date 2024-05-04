@@ -1,3 +1,15 @@
+
+export const fantasyBench = [
+  { teamSheetLayoutId: '16', positions: ['hooker'] },
+  { teamSheetLayoutId: '17', positions: ['prop'] },
+  { teamSheetLayoutId: '18', positions: ['prop', 'lock'] },
+  { teamSheetLayoutId: '19', positions: ['lock', 'backrow'] },
+  { teamSheetLayoutId: '20', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
+  { teamSheetLayoutId: '21', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
+  { teamSheetLayoutId: '22', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
+  { teamSheetLayoutId: '23', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
+]
+
 const teamSheetLayoutData = {
   field: [
     { teamSheetLayoutId: '1', positions: ['prop'], positionTitle: 'Prop', className: 'col-start-0 col-span-2' },
@@ -25,7 +37,7 @@ const teamSheetLayoutData = {
     { teamSheetLayoutId: '21', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
     { teamSheetLayoutId: '22', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
     { teamSheetLayoutId: '23', positions: ['lock', 'backrow', 'scrumhalf', 'flyhalf', 'centre', 'outsideBack'] },
-  ],
+  ]
 }
 
 export const teamSize = 23
