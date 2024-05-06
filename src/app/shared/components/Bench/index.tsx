@@ -20,13 +20,20 @@ const Bench = (props: BenchProps) => {
   const teamContextValue = useContext(TeamContext)
   const {
     teamSheet,
+    team,
   } = teamContextValue
+
+  const { key: teamKey } = team
 
   const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null
 
+  const { bench, fantasyBench } = teamSheetLayoutData
+
+  const benchData = teamKey == "fantasy" ? fantasyBench : bench
+
   return (
     <div className="m-auto mt-2 border">
-      {teamSheetLayoutData.bench.map(({ positions, teamSheetLayoutId }) => {
+      {benchData.map(({ positions, teamSheetLayoutId }) => {
         const player = data ? data[teamSheetLayoutId] : undefined
 
         return (
