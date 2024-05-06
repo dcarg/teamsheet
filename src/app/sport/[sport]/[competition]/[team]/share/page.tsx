@@ -109,15 +109,13 @@ const Page = async (props: PageProps) => {
     orderBy: { firstname: 'asc' },
   })
 
-  const teamKey = teamSheet?.team?.key
-
   return (
     <ShareContent competition={competition} players={players} team={teamSheet.team} teamSheet={teamSheet}>
       <ShareBar teamSheet={teamSheet} />
 
       <Field nonInteractive />
 
-      <Bench nonInteractive teamKey={teamKey} />
+      <Bench nonInteractive />
     </ShareContent>
   )
 }

@@ -70,7 +70,7 @@ const Page = async (props: PageProps) => {
 
       <Field />
 
-      <Bench teamKey={teamKey} />
+      <Bench />
 
       <SelectPlayerModal />
     </TeamContent>

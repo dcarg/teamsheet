@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import TeamContext from '@contexts/teamContext'
 
-import teamSheetLayoutData, { fantasyBench } from '@functions/teamSheet'
+import teamSheetLayoutData from '@functions/teamSheet'
 
 import type { PlayerWithPositions } from '@types'
 
@@ -12,20 +12,22 @@ import BenchSeat from './BenchSeat'
 
 interface BenchProps {
   nonInteractive?: boolean,
-  teamKey: string,
 }
 
 const Bench = (props: BenchProps) => {
-  const { nonInteractive, teamKey } = props
+  const { nonInteractive } = props
 
   const teamContextValue = useContext(TeamContext)
   const {
     teamSheet,
+    team,
   } = teamContextValue
+
+  const { key: teamKey } = team
 
   const data = teamSheet?.data as Partial<{ [key: string]: PlayerWithPositions }> | null
 
-  const { bench } = teamSheetLayoutData
+  const { bench, fantasyBench } = teamSheetLayoutData
 
   const benchData = teamKey == "fantasy" ? fantasyBench : bench
 
