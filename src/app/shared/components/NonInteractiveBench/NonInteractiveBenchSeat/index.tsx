@@ -17,7 +17,7 @@ const NonInteractiveBenchSeat = (props: NonInteractiveBenchSeatProps) => {
   const { playerPositions } = player || {}
   const playerPositionTitles = playerPositions?.map(playerPosition => playerPosition.position.title)
 
-  const playerTitle = `${player.firstname[0]}. ${player.lastname}`
+  const playerTitle = `${player.firstname}. ${player.lastname}`
 
   return (
     <div
